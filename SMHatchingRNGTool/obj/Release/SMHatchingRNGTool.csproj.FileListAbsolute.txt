@@ -6,3 +6,4 @@ C:\Users\quand\Documents\Visual Studio 2015\Projects\SM孵化乱数ツール\SMH
 C:\Users\quand\Documents\Visual Studio 2015\Projects\SM孵化乱数ツール\SMHatchingRNGTool\obj\Release\SMHatchingRNGTool.Form1.resources
 C:\Users\quand\Documents\Visual Studio 2015\Projects\SM孵化乱数ツール\SMHatchingRNGTool\obj\Release\SMHatchingRNGTool.Properties.Resources.resources
 C:\Users\quand\Documents\Visual Studio 2015\Projects\SM孵化乱数ツール\SMHatchingRNGTool\obj\Release\SMHatchingRNGTool.csproj.GenerateResource.Cache
+C:\Users\quand\Documents\Visual Studio 2015\Projects\SM孵化乱数ツール\SMHatchingRNGTool\obj\Release\SMHatchingRNGTool.csprojResolveAssemblyReference.cache
