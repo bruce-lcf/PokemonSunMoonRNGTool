@@ -17,6 +17,7 @@ namespace SMHatchingRNGTool
 
         public bool Heterogeneous;
         public int ParentAbility;
+        public bool Both_Everstone;
         public bool Everstone;
         public int TSV;
         private bool Homogeneous;
@@ -88,9 +89,9 @@ namespace SMHatchingRNGTool
             //性格 -- Nature
             egg.Nature = (int)(getRand() % 25);
 
-            //両親変わらず -- Everstone
+            //両親変わらず -- Both_Everstone
             //Chooses which parent if necessary; users should not intermix with Power items either.
-            if (Everstone)
+            if (Both_Everstone)
                 getRand();
 
             //特性 -- Ability
