@@ -67,7 +67,7 @@ namespace SMHatchingRNGTool
             switch (sex_ratio.SelectedIndex)
             {
                 case 0: sex_threshold = 126; break;
-                case 1: sex_threshold = 31; break;
+                case 1: sex_threshold = 30; break;
                 case 2: sex_threshold = 63; break;
                 case 3: sex_threshold = 189; break;
                 case 4: sex_threshold = 0; break;
@@ -418,6 +418,12 @@ namespace SMHatchingRNGTool
 
         private void NumericUpDown_Check(object sender, CancelEventArgs e)
         {
+            // > http://msdn.microsoft.com/en-us/library/system.windows.forms.numericupdown.hexadecimal.aspx
+            // > When the Hexadecimal property is set to true,
+            // > the Maximum property should be set to Int32.
+            // > MaxValue and the Minimum property should be set to Int32.MinValue.
+            // maximum of numeric is 0x7FFFFFFF?
+             
             NumericUpDown NumericUpDown = sender as NumericUpDown;
             Control ctrl = NumericUpDown;
             if (ctrl == null)
