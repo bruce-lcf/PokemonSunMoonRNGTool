@@ -142,7 +142,7 @@ namespace SMHatchingRNGTool
             row.SetValues(
                 i, result.FramesUsed, result.Seed128,
                 result.IVs[0], result.IVs[1], result.IVs[2], result.IVs[3], result.IVs[4], result.IVs[5],
-                genders[result.Gender], rng.Everstone ? "変わらず" : abilities[result.Ability], natures[result.Nature],
+                genders[result.Gender], abilities[result.Ability], rng.Everstone ? "変わらず" : natures[result.Nature],
                 true_pid, true_psv, result.EC.ToString("X8"), result.row_r.ToString("X8")
                 );
 
