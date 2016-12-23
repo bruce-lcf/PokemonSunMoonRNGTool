@@ -23,7 +23,7 @@
             status[2] = x ^ (y << TINYMT32_SH1);
             status[3] = y;
 
-            if (y % 2 == 1)
+            if ((y & 1) == 1)
             {
                 status[1] ^= param.mat1;
                 status[2] ^= param.mat2;
@@ -36,7 +36,7 @@
             uint t1 = status[0] + (status[2] >> TINYMT32_SH8);
 
             t0 ^= t1;
-            if (t1 % 2 == 1)
+            if ((t1 & 1) == 1)
             {
                 t0 ^= param.tmat;
             }

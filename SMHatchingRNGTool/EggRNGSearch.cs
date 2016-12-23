@@ -110,7 +110,7 @@ namespace SMHatchingRNGTool
                     if (egg.InheritStats[k] == egg.InheritStats[i])
                         goto repeat;
 
-                egg.InheritParents[i] = getRand() % 2;
+                egg.InheritParents[i] = getRand() & 1;
             }
 
             //基礎個体値 -- Base IVs
