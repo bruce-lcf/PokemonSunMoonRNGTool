@@ -84,7 +84,7 @@ namespace SMHatchingRNGTool
                 International = International.Checked,
                 ShinyCharm = omamori.Checked,
                 Heterogeneous = pre_ditto.Checked || post_ditto.Checked || Heterogeneity.Checked,
-                Everstone = pre_Items.SelectedIndex == 1 || post_Items.SelectedIndex == 1,
+                Everstone = pre_Items.SelectedIndex == 1 && post_Items.SelectedIndex == 1,
                 DestinyKnot = pre_Items.SelectedIndex == 2 || post_Items.SelectedIndex == 2,
                 ParentAbility = (!post_ditto.Checked ? post_ability : pre_ability).SelectedIndex,
                 ConciderTSV = k_TSV_shiny.Checked,
