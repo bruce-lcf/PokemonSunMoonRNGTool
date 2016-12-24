@@ -295,6 +295,7 @@ namespace SMHatchingRNGTool
                 Error("無性別ポケモンに対し、メタモンが選択されていません。");
             else
                 EggList_search();
+                EggList_cal_target();
         }
 
         private void EggList_search()
@@ -338,6 +339,34 @@ namespace SMHatchingRNGTool
 
             L_dataGridView.Rows.AddRange(list.ToArray());
             L_dataGridView.CurrentCell = null;
+        }
+
+        private void EggList_cal_target()
+        {
+            //Added function that shows how many number off eggs needed to receive and reject to advance foo number of frames
+            int target = (int)Target_frame.Value;
+            for (int co = 0; co < L_dataGridView.Rows.Count; co++)
+            {
+                if (target == 0)
+                {
+                    Repeat_times.Text = "消費：なし";
+                }
+                else if ((int)L_dataGridView[1, co].Value == target)
+                {
+                    Repeat_times.Text = $"消費：{(int)L_dataGridView[0, co - 1].Value}回受け取り";
+                    break;
+                }
+                else if ((int)L_dataGridView[1, co].Value > target)
+                {
+                    //Repeat_times.Text = $"消費：{(int)L_dataGridView[0, co - 1].Value - 1} Receive、{target - (int)L_dataGridView[1, co - 1].Value} Reject ";
+                    Repeat_times.Text = $"消費：{(int)L_dataGridView[0, co - 1].Value - 1}回受け取り、{target - (int)L_dataGridView[1, co - 1].Value}回拒否する";
+                    break;
+                }
+                else if (target > L_dataGridView.Rows.Count)
+                {
+                    Repeat_times.Text = "目標消費を小さく設定して下さい。";
+                }
+            }
         }
 
         private void Form1_Load(object sender, EventArgs e)

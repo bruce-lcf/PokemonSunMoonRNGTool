@@ -199,6 +199,9 @@
             this.CB_MainLanguage = new System.Windows.Forms.ToolStripComboBox();
             this.Menu_SaveConfig = new System.Windows.Forms.ToolStripMenuItem();
             this.Menu_TSV = new System.Windows.Forms.ToolStripMenuItem();
+            this.Repeat_times = new System.Windows.Forms.Label();
+            this.Target_frame = new System.Windows.Forms.NumericUpDown();
+            this.L_targetframe = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.k_dataGridView)).BeginInit();
             this.contextMenuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pre_parent1)).BeginInit();
@@ -249,6 +252,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.n_min)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.n_max)).BeginInit();
             this.menuStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Target_frame)).BeginInit();
             this.SuspendLayout();
             // 
             // k_dataGridView
@@ -277,10 +281,10 @@
             this.dgvS_ec,
             this.dgvS_rand});
             this.k_dataGridView.ContextMenuStrip = this.contextMenuStrip1;
-            this.k_dataGridView.Location = new System.Drawing.Point(6, 258);
+            this.k_dataGridView.Location = new System.Drawing.Point(6, 238);
             this.k_dataGridView.Name = "k_dataGridView";
             this.k_dataGridView.RowTemplate.Height = 21;
-            this.k_dataGridView.Size = new System.Drawing.Size(1102, 231);
+            this.k_dataGridView.Size = new System.Drawing.Size(1102, 213);
             this.k_dataGridView.TabIndex = 0;
             // 
             // dgvS_frame
@@ -342,21 +346,21 @@
             this.dgvS_gender.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
             this.dgvS_gender.HeaderText = "性別";
             this.dgvS_gender.Name = "dgvS_gender";
-            this.dgvS_gender.Width = 56;
+            this.dgvS_gender.Width = 54;
             // 
             // dgvS_ability
             // 
             this.dgvS_ability.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
             this.dgvS_ability.HeaderText = "特性";
             this.dgvS_ability.Name = "dgvS_ability";
-            this.dgvS_ability.Width = 56;
+            this.dgvS_ability.Width = 54;
             // 
             // dgvS_nature
             // 
             this.dgvS_nature.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
             this.dgvS_nature.HeaderText = "性格";
             this.dgvS_nature.Name = "dgvS_nature";
-            this.dgvS_nature.Width = 56;
+            this.dgvS_nature.Width = 54;
             // 
             // dgvS_pid
             // 
@@ -389,35 +393,35 @@
             this.mnuSelectAll,
             this.mnuSetEggSeed});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(222, 70);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(225, 70);
             // 
             // mnuCopy
             // 
             this.mnuCopy.Name = "mnuCopy";
-            this.mnuCopy.Size = new System.Drawing.Size(221, 22);
+            this.mnuCopy.Size = new System.Drawing.Size(224, 22);
             this.mnuCopy.Text = "コピー";
             this.mnuCopy.Click += new System.EventHandler(this.copyToolStripMenuItem_Click);
             // 
             // mnuSelectAll
             // 
             this.mnuSelectAll.Name = "mnuSelectAll";
-            this.mnuSelectAll.Size = new System.Drawing.Size(221, 22);
+            this.mnuSelectAll.Size = new System.Drawing.Size(224, 22);
             this.mnuSelectAll.Text = "全て選択";
             this.mnuSelectAll.Click += new System.EventHandler(this.SelectAllToolStripMenuItem_Click);
             // 
             // mnuSetEggSeed
             // 
             this.mnuSetEggSeed.Name = "mnuSetEggSeed";
-            this.mnuSetEggSeed.Size = new System.Drawing.Size(221, 22);
+            this.mnuSetEggSeed.Size = new System.Drawing.Size(224, 22);
             this.mnuSetEggSeed.Text = "連続孵化リストへseedを入れる";
             this.mnuSetEggSeed.Click += new System.EventHandler(this.Send2List);
             // 
             // post
             // 
             this.post.ForeColor = System.Drawing.Color.Red;
-            this.post.Location = new System.Drawing.Point(0, 120);
+            this.post.Location = new System.Drawing.Point(0, 111);
             this.post.Name = "post";
-            this.post.Size = new System.Drawing.Size(65, 20);
+            this.post.Size = new System.Drawing.Size(65, 18);
             this.post.TabIndex = 124;
             this.post.Text = "♀親";
             this.post.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -427,7 +431,7 @@
             // 
             this.pre_parent1.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.pre_parent1.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.pre_parent1.Location = new System.Drawing.Point(57, 41);
+            this.pre_parent1.Location = new System.Drawing.Point(57, 38);
             this.pre_parent1.Maximum = new decimal(new int[] {
             31,
             0,
@@ -447,9 +451,9 @@
             // pre
             // 
             this.pre.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.pre.Location = new System.Drawing.Point(-1, 21);
+            this.pre.Location = new System.Drawing.Point(-1, 19);
             this.pre.Name = "pre";
-            this.pre.Size = new System.Drawing.Size(65, 20);
+            this.pre.Size = new System.Drawing.Size(65, 18);
             this.pre.TabIndex = 9;
             this.pre.Text = "♂親";
             this.pre.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -458,9 +462,9 @@
             // L_pre_H
             // 
             this.L_pre_H.AutoSize = true;
-            this.L_pre_H.Location = new System.Drawing.Point(73, 25);
+            this.L_pre_H.Location = new System.Drawing.Point(73, 23);
             this.L_pre_H.Name = "L_pre_H";
-            this.L_pre_H.Size = new System.Drawing.Size(15, 13);
+            this.L_pre_H.Size = new System.Drawing.Size(13, 12);
             this.L_pre_H.TabIndex = 12;
             this.L_pre_H.Text = "H";
             // 
@@ -468,7 +472,7 @@
             // 
             this.post_parent1.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.post_parent1.ForeColor = System.Drawing.Color.Red;
-            this.post_parent1.Location = new System.Drawing.Point(58, 140);
+            this.post_parent1.Location = new System.Drawing.Point(58, 129);
             this.post_parent1.Maximum = new decimal(new int[] {
             31,
             0,
@@ -489,7 +493,7 @@
             // 
             this.post_parent2.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.post_parent2.ForeColor = System.Drawing.Color.Red;
-            this.post_parent2.Location = new System.Drawing.Point(109, 140);
+            this.post_parent2.Location = new System.Drawing.Point(109, 129);
             this.post_parent2.Maximum = new decimal(new int[] {
             31,
             0,
@@ -510,7 +514,7 @@
             // 
             this.post_parent3.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.post_parent3.ForeColor = System.Drawing.Color.Red;
-            this.post_parent3.Location = new System.Drawing.Point(160, 140);
+            this.post_parent3.Location = new System.Drawing.Point(160, 129);
             this.post_parent3.Maximum = new decimal(new int[] {
             31,
             0,
@@ -531,7 +535,7 @@
             // 
             this.post_parent4.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.post_parent4.ForeColor = System.Drawing.Color.Red;
-            this.post_parent4.Location = new System.Drawing.Point(211, 140);
+            this.post_parent4.Location = new System.Drawing.Point(211, 129);
             this.post_parent4.Maximum = new decimal(new int[] {
             31,
             0,
@@ -552,7 +556,7 @@
             // 
             this.post_parent5.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.post_parent5.ForeColor = System.Drawing.Color.Red;
-            this.post_parent5.Location = new System.Drawing.Point(262, 140);
+            this.post_parent5.Location = new System.Drawing.Point(262, 129);
             this.post_parent5.Maximum = new decimal(new int[] {
             31,
             0,
@@ -573,7 +577,7 @@
             // 
             this.post_parent6.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.post_parent6.ForeColor = System.Drawing.Color.Red;
-            this.post_parent6.Location = new System.Drawing.Point(312, 140);
+            this.post_parent6.Location = new System.Drawing.Point(312, 129);
             this.post_parent6.Maximum = new decimal(new int[] {
             31,
             0,
@@ -594,7 +598,7 @@
             // 
             this.pre_parent2.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.pre_parent2.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.pre_parent2.Location = new System.Drawing.Point(108, 41);
+            this.pre_parent2.Location = new System.Drawing.Point(108, 38);
             this.pre_parent2.Maximum = new decimal(new int[] {
             31,
             0,
@@ -614,9 +618,9 @@
             // L_pre_A
             // 
             this.L_pre_A.AutoSize = true;
-            this.L_pre_A.Location = new System.Drawing.Point(124, 25);
+            this.L_pre_A.Location = new System.Drawing.Point(124, 23);
             this.L_pre_A.Name = "L_pre_A";
-            this.L_pre_A.Size = new System.Drawing.Size(14, 13);
+            this.L_pre_A.Size = new System.Drawing.Size(13, 12);
             this.L_pre_A.TabIndex = 131;
             this.L_pre_A.Text = "A";
             // 
@@ -624,7 +628,7 @@
             // 
             this.pre_parent3.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.pre_parent3.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.pre_parent3.Location = new System.Drawing.Point(159, 41);
+            this.pre_parent3.Location = new System.Drawing.Point(159, 38);
             this.pre_parent3.Maximum = new decimal(new int[] {
             31,
             0,
@@ -644,9 +648,9 @@
             // L_pre_B
             // 
             this.L_pre_B.AutoSize = true;
-            this.L_pre_B.Location = new System.Drawing.Point(175, 25);
+            this.L_pre_B.Location = new System.Drawing.Point(175, 23);
             this.L_pre_B.Name = "L_pre_B";
-            this.L_pre_B.Size = new System.Drawing.Size(14, 13);
+            this.L_pre_B.Size = new System.Drawing.Size(13, 12);
             this.L_pre_B.TabIndex = 133;
             this.L_pre_B.Text = "B";
             // 
@@ -654,7 +658,7 @@
             // 
             this.pre_parent4.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.pre_parent4.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.pre_parent4.Location = new System.Drawing.Point(210, 41);
+            this.pre_parent4.Location = new System.Drawing.Point(210, 38);
             this.pre_parent4.Maximum = new decimal(new int[] {
             31,
             0,
@@ -674,9 +678,9 @@
             // L_pre_C
             // 
             this.L_pre_C.AutoSize = true;
-            this.L_pre_C.Location = new System.Drawing.Point(226, 25);
+            this.L_pre_C.Location = new System.Drawing.Point(226, 23);
             this.L_pre_C.Name = "L_pre_C";
-            this.L_pre_C.Size = new System.Drawing.Size(14, 13);
+            this.L_pre_C.Size = new System.Drawing.Size(13, 12);
             this.L_pre_C.TabIndex = 135;
             this.L_pre_C.Text = "C";
             // 
@@ -684,7 +688,7 @@
             // 
             this.pre_parent5.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.pre_parent5.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.pre_parent5.Location = new System.Drawing.Point(261, 41);
+            this.pre_parent5.Location = new System.Drawing.Point(261, 38);
             this.pre_parent5.Maximum = new decimal(new int[] {
             31,
             0,
@@ -704,9 +708,9 @@
             // L_pre_D
             // 
             this.L_pre_D.AutoSize = true;
-            this.L_pre_D.Location = new System.Drawing.Point(277, 25);
+            this.L_pre_D.Location = new System.Drawing.Point(277, 23);
             this.L_pre_D.Name = "L_pre_D";
-            this.L_pre_D.Size = new System.Drawing.Size(15, 13);
+            this.L_pre_D.Size = new System.Drawing.Size(13, 12);
             this.L_pre_D.TabIndex = 137;
             this.L_pre_D.Text = "D";
             // 
@@ -714,7 +718,7 @@
             // 
             this.pre_parent6.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.pre_parent6.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.pre_parent6.Location = new System.Drawing.Point(312, 41);
+            this.pre_parent6.Location = new System.Drawing.Point(312, 38);
             this.pre_parent6.Maximum = new decimal(new int[] {
             31,
             0,
@@ -734,9 +738,9 @@
             // L_pre_S
             // 
             this.L_pre_S.AutoSize = true;
-            this.L_pre_S.Location = new System.Drawing.Point(328, 25);
+            this.L_pre_S.Location = new System.Drawing.Point(328, 23);
             this.L_pre_S.Name = "L_pre_S";
-            this.L_pre_S.Size = new System.Drawing.Size(14, 13);
+            this.L_pre_S.Size = new System.Drawing.Size(12, 12);
             this.L_pre_S.TabIndex = 139;
             this.L_pre_S.Text = "S";
             // 
@@ -748,16 +752,16 @@
             "指定なし",
             "変わらず",
             "赤い糸"});
-            this.pre_Items.Location = new System.Drawing.Point(75, 81);
+            this.pre_Items.Location = new System.Drawing.Point(75, 75);
             this.pre_Items.Name = "pre_Items";
-            this.pre_Items.Size = new System.Drawing.Size(80, 21);
+            this.pre_Items.Size = new System.Drawing.Size(80, 20);
             this.pre_Items.TabIndex = 13;
             // 
             // L_PreItems
             // 
-            this.L_PreItems.Location = new System.Drawing.Point(6, 81);
+            this.L_PreItems.Location = new System.Drawing.Point(6, 75);
             this.L_PreItems.Name = "L_PreItems";
-            this.L_PreItems.Size = new System.Drawing.Size(63, 20);
+            this.L_PreItems.Size = new System.Drawing.Size(63, 18);
             this.L_PreItems.TabIndex = 153;
             this.L_PreItems.Text = "持ち物";
             this.L_PreItems.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -765,54 +769,54 @@
             // L_post_H
             // 
             this.L_post_H.AutoSize = true;
-            this.L_post_H.Location = new System.Drawing.Point(73, 124);
+            this.L_post_H.Location = new System.Drawing.Point(73, 114);
             this.L_post_H.Name = "L_post_H";
-            this.L_post_H.Size = new System.Drawing.Size(15, 13);
+            this.L_post_H.Size = new System.Drawing.Size(13, 12);
             this.L_post_H.TabIndex = 156;
             this.L_post_H.Text = "H";
             // 
             // L_post_A
             // 
             this.L_post_A.AutoSize = true;
-            this.L_post_A.Location = new System.Drawing.Point(124, 124);
+            this.L_post_A.Location = new System.Drawing.Point(124, 114);
             this.L_post_A.Name = "L_post_A";
-            this.L_post_A.Size = new System.Drawing.Size(14, 13);
+            this.L_post_A.Size = new System.Drawing.Size(13, 12);
             this.L_post_A.TabIndex = 157;
             this.L_post_A.Text = "A";
             // 
             // L_post_B
             // 
             this.L_post_B.AutoSize = true;
-            this.L_post_B.Location = new System.Drawing.Point(175, 124);
+            this.L_post_B.Location = new System.Drawing.Point(175, 114);
             this.L_post_B.Name = "L_post_B";
-            this.L_post_B.Size = new System.Drawing.Size(14, 13);
+            this.L_post_B.Size = new System.Drawing.Size(13, 12);
             this.L_post_B.TabIndex = 158;
             this.L_post_B.Text = "B";
             // 
             // L_post_C
             // 
             this.L_post_C.AutoSize = true;
-            this.L_post_C.Location = new System.Drawing.Point(226, 124);
+            this.L_post_C.Location = new System.Drawing.Point(226, 114);
             this.L_post_C.Name = "L_post_C";
-            this.L_post_C.Size = new System.Drawing.Size(14, 13);
+            this.L_post_C.Size = new System.Drawing.Size(13, 12);
             this.L_post_C.TabIndex = 159;
             this.L_post_C.Text = "C";
             // 
             // L_post_D
             // 
             this.L_post_D.AutoSize = true;
-            this.L_post_D.Location = new System.Drawing.Point(277, 124);
+            this.L_post_D.Location = new System.Drawing.Point(277, 114);
             this.L_post_D.Name = "L_post_D";
-            this.L_post_D.Size = new System.Drawing.Size(15, 13);
+            this.L_post_D.Size = new System.Drawing.Size(13, 12);
             this.L_post_D.TabIndex = 160;
             this.L_post_D.Text = "D";
             // 
             // L_post_S
             // 
             this.L_post_S.AutoSize = true;
-            this.L_post_S.Location = new System.Drawing.Point(328, 124);
+            this.L_post_S.Location = new System.Drawing.Point(328, 114);
             this.L_post_S.Name = "L_post_S";
-            this.L_post_S.Size = new System.Drawing.Size(14, 13);
+            this.L_post_S.Size = new System.Drawing.Size(12, 12);
             this.L_post_S.TabIndex = 161;
             this.L_post_S.Text = "S";
             // 
@@ -824,16 +828,16 @@
             "指定なし",
             "変わらず",
             "赤い糸"});
-            this.post_Items.Location = new System.Drawing.Point(75, 180);
+            this.post_Items.Location = new System.Drawing.Point(75, 166);
             this.post_Items.Name = "post_Items";
-            this.post_Items.Size = new System.Drawing.Size(80, 21);
+            this.post_Items.Size = new System.Drawing.Size(80, 20);
             this.post_Items.TabIndex = 16;
             // 
             // L_PostItems
             // 
-            this.L_PostItems.Location = new System.Drawing.Point(6, 179);
+            this.L_PostItems.Location = new System.Drawing.Point(6, 165);
             this.L_PostItems.Name = "L_PostItems";
-            this.L_PostItems.Size = new System.Drawing.Size(64, 20);
+            this.L_PostItems.Size = new System.Drawing.Size(64, 18);
             this.L_PostItems.TabIndex = 173;
             this.L_PostItems.Text = "持ち物";
             this.L_PostItems.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -879,9 +883,9 @@
             this.ek_groupBox1.Controls.Add(this.pre);
             this.ek_groupBox1.Controls.Add(this.pre_parent1);
             this.ek_groupBox1.Controls.Add(this.post);
-            this.ek_groupBox1.Location = new System.Drawing.Point(6, 7);
+            this.ek_groupBox1.Location = new System.Drawing.Point(6, 6);
             this.ek_groupBox1.Name = "ek_groupBox1";
-            this.ek_groupBox1.Size = new System.Drawing.Size(369, 245);
+            this.ek_groupBox1.Size = new System.Drawing.Size(369, 226);
             this.ek_groupBox1.TabIndex = 2;
             this.ek_groupBox1.TabStop = false;
             this.ek_groupBox1.Text = "親の情報";
@@ -889,9 +893,9 @@
             // Heterogeneity
             // 
             this.Heterogeneity.AutoSize = true;
-            this.Heterogeneity.Location = new System.Drawing.Point(33, 216);
+            this.Heterogeneity.Location = new System.Drawing.Point(33, 199);
             this.Heterogeneity.Name = "Heterogeneity";
-            this.Heterogeneity.Size = new System.Drawing.Size(86, 17);
+            this.Heterogeneity.Size = new System.Drawing.Size(84, 16);
             this.Heterogeneity.TabIndex = 179;
             this.Heterogeneity.Text = "異種間孵化";
             this.Heterogeneity.UseVisualStyleBackColor = true;
@@ -899,9 +903,9 @@
             // pre_ditto
             // 
             this.pre_ditto.AutoSize = true;
-            this.pre_ditto.Location = new System.Drawing.Point(293, 83);
+            this.pre_ditto.Location = new System.Drawing.Point(293, 77);
             this.pre_ditto.Name = "pre_ditto";
-            this.pre_ditto.Size = new System.Drawing.Size(60, 17);
+            this.pre_ditto.Size = new System.Drawing.Size(58, 16);
             this.pre_ditto.TabIndex = 15;
             this.pre_ditto.Text = "メタモン";
             this.pre_ditto.UseVisualStyleBackColor = true;
@@ -910,9 +914,9 @@
             // post_ditto
             // 
             this.post_ditto.AutoSize = true;
-            this.post_ditto.Location = new System.Drawing.Point(293, 182);
+            this.post_ditto.Location = new System.Drawing.Point(293, 168);
             this.post_ditto.Name = "post_ditto";
-            this.post_ditto.Size = new System.Drawing.Size(60, 17);
+            this.post_ditto.Size = new System.Drawing.Size(58, 16);
             this.post_ditto.TabIndex = 18;
             this.post_ditto.Text = "メタモン";
             this.post_ditto.UseVisualStyleBackColor = true;
@@ -920,9 +924,9 @@
             // 
             // L_PostAbility
             // 
-            this.L_PostAbility.Location = new System.Drawing.Point(161, 180);
+            this.L_PostAbility.Location = new System.Drawing.Point(161, 166);
             this.L_PostAbility.Name = "L_PostAbility";
-            this.L_PostAbility.Size = new System.Drawing.Size(62, 20);
+            this.L_PostAbility.Size = new System.Drawing.Size(62, 18);
             this.L_PostAbility.TabIndex = 178;
             this.L_PostAbility.Text = "特性";
             this.L_PostAbility.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -935,16 +939,16 @@
             "1",
             "2",
             "夢"});
-            this.post_ability.Location = new System.Drawing.Point(226, 180);
+            this.post_ability.Location = new System.Drawing.Point(226, 166);
             this.post_ability.Name = "post_ability";
-            this.post_ability.Size = new System.Drawing.Size(45, 21);
+            this.post_ability.Size = new System.Drawing.Size(45, 20);
             this.post_ability.TabIndex = 17;
             // 
             // L_PreAbility
             // 
-            this.L_PreAbility.Location = new System.Drawing.Point(161, 80);
+            this.L_PreAbility.Location = new System.Drawing.Point(161, 74);
             this.L_PreAbility.Name = "L_PreAbility";
-            this.L_PreAbility.Size = new System.Drawing.Size(62, 20);
+            this.L_PreAbility.Size = new System.Drawing.Size(62, 18);
             this.L_PreAbility.TabIndex = 176;
             this.L_PreAbility.Text = "特性";
             this.L_PreAbility.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -957,9 +961,9 @@
             "1",
             "2",
             "夢"});
-            this.pre_ability.Location = new System.Drawing.Point(226, 81);
+            this.pre_ability.Location = new System.Drawing.Point(226, 75);
             this.pre_ability.Name = "pre_ability";
-            this.pre_ability.Size = new System.Drawing.Size(45, 21);
+            this.pre_ability.Size = new System.Drawing.Size(45, 20);
             this.pre_ability.TabIndex = 14;
             // 
             // sex_ratio
@@ -974,16 +978,16 @@
             "♂のみ",
             "♀のみ",
             "無性別"});
-            this.sex_ratio.Location = new System.Drawing.Point(273, 213);
+            this.sex_ratio.Location = new System.Drawing.Point(273, 197);
             this.sex_ratio.Name = "sex_ratio";
-            this.sex_ratio.Size = new System.Drawing.Size(80, 21);
+            this.sex_ratio.Size = new System.Drawing.Size(80, 20);
             this.sex_ratio.TabIndex = 20;
             // 
             // L_sex_ratio
             // 
-            this.L_sex_ratio.Location = new System.Drawing.Point(159, 214);
+            this.L_sex_ratio.Location = new System.Drawing.Point(159, 198);
             this.L_sex_ratio.Name = "L_sex_ratio";
-            this.L_sex_ratio.Size = new System.Drawing.Size(108, 20);
+            this.L_sex_ratio.Size = new System.Drawing.Size(108, 18);
             this.L_sex_ratio.TabIndex = 122;
             this.L_sex_ratio.Text = "性別比";
             this.L_sex_ratio.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -991,9 +995,9 @@
             // International
             // 
             this.International.AutoSize = true;
-            this.International.Location = new System.Drawing.Point(22, 29);
+            this.International.Location = new System.Drawing.Point(22, 27);
             this.International.Name = "International";
-            this.International.Size = new System.Drawing.Size(74, 17);
+            this.International.Size = new System.Drawing.Size(72, 16);
             this.International.TabIndex = 52;
             this.International.Text = "国際孵化";
             this.International.UseVisualStyleBackColor = true;
@@ -1016,9 +1020,9 @@
             this.ek_groupBox2.Controls.Add(this.label15);
             this.ek_groupBox2.Controls.Add(this.L_k_range);
             this.ek_groupBox2.Controls.Add(this.label176);
-            this.ek_groupBox2.Location = new System.Drawing.Point(697, 7);
+            this.ek_groupBox2.Location = new System.Drawing.Point(697, 6);
             this.ek_groupBox2.Name = "ek_groupBox2";
-            this.ek_groupBox2.Size = new System.Drawing.Size(223, 245);
+            this.ek_groupBox2.Size = new System.Drawing.Size(223, 226);
             this.ek_groupBox2.TabIndex = 3;
             this.ek_groupBox2.TabStop = false;
             this.ek_groupBox2.Text = "検索範囲";
@@ -1027,7 +1031,7 @@
             // 
             this.status3.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.status3.Hexadecimal = true;
-            this.status3.Location = new System.Drawing.Point(118, 26);
+            this.status3.Location = new System.Drawing.Point(118, 24);
             this.status3.Name = "status3";
             this.status3.Size = new System.Drawing.Size(80, 22);
             this.status3.TabIndex = 70;
@@ -1043,7 +1047,7 @@
             // 
             this.status2.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.status2.Hexadecimal = true;
-            this.status2.Location = new System.Drawing.Point(118, 56);
+            this.status2.Location = new System.Drawing.Point(118, 52);
             this.status2.Name = "status2";
             this.status2.Size = new System.Drawing.Size(80, 22);
             this.status2.TabIndex = 71;
@@ -1059,7 +1063,7 @@
             // 
             this.status1.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.status1.Hexadecimal = true;
-            this.status1.Location = new System.Drawing.Point(118, 87);
+            this.status1.Location = new System.Drawing.Point(118, 80);
             this.status1.Name = "status1";
             this.status1.Size = new System.Drawing.Size(80, 22);
             this.status1.TabIndex = 72;
@@ -1075,7 +1079,7 @@
             // 
             this.status0.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.status0.Hexadecimal = true;
-            this.status0.Location = new System.Drawing.Point(118, 117);
+            this.status0.Location = new System.Drawing.Point(118, 108);
             this.status0.Name = "status0";
             this.status0.Size = new System.Drawing.Size(80, 22);
             this.status0.TabIndex = 73;
@@ -1090,7 +1094,7 @@
             // s_min
             // 
             this.s_min.Font = new System.Drawing.Font("Consolas", 9F);
-            this.s_min.Location = new System.Drawing.Point(20, 190);
+            this.s_min.Location = new System.Drawing.Point(20, 175);
             this.s_min.Maximum = new decimal(new int[] {
             999999999,
             0,
@@ -1110,7 +1114,7 @@
             0,
             0,
             0});
-            this.s_max.Location = new System.Drawing.Point(130, 190);
+            this.s_max.Location = new System.Drawing.Point(130, 175);
             this.s_max.Maximum = new decimal(new int[] {
             999999999,
             0,
@@ -1131,7 +1135,7 @@
             // 
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Consolas", 9F);
-            this.label13.Location = new System.Drawing.Point(15, 119);
+            this.label13.Location = new System.Drawing.Point(15, 110);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(70, 14);
             this.label13.TabIndex = 77;
@@ -1141,7 +1145,7 @@
             // 
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(91, 119);
+            this.label14.Location = new System.Drawing.Point(91, 110);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(21, 14);
             this.label14.TabIndex = 76;
@@ -1151,7 +1155,7 @@
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Consolas", 9F);
-            this.label11.Location = new System.Drawing.Point(15, 89);
+            this.label11.Location = new System.Drawing.Point(15, 82);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(70, 14);
             this.label11.TabIndex = 74;
@@ -1161,7 +1165,7 @@
             // 
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(91, 89);
+            this.label12.Location = new System.Drawing.Point(91, 82);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(21, 14);
             this.label12.TabIndex = 73;
@@ -1171,7 +1175,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Consolas", 9F);
-            this.label1.Location = new System.Drawing.Point(15, 59);
+            this.label1.Location = new System.Drawing.Point(15, 54);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(70, 14);
             this.label1.TabIndex = 71;
@@ -1181,7 +1185,7 @@
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(91, 59);
+            this.label9.Location = new System.Drawing.Point(91, 54);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(21, 14);
             this.label9.TabIndex = 70;
@@ -1191,7 +1195,7 @@
             // 
             this.label16.AutoSize = true;
             this.label16.Font = new System.Drawing.Font("Consolas", 9F);
-            this.label16.Location = new System.Drawing.Point(15, 28);
+            this.label16.Location = new System.Drawing.Point(15, 26);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(70, 14);
             this.label16.TabIndex = 68;
@@ -1201,7 +1205,7 @@
             // 
             this.label15.AutoSize = true;
             this.label15.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.Location = new System.Drawing.Point(91, 28);
+            this.label15.Location = new System.Drawing.Point(91, 26);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(21, 14);
             this.label15.TabIndex = 67;
@@ -1210,24 +1214,24 @@
             // L_k_range
             // 
             this.L_k_range.AutoSize = true;
-            this.L_k_range.Location = new System.Drawing.Point(18, 165);
+            this.L_k_range.Location = new System.Drawing.Point(18, 152);
             this.L_k_range.Name = "L_k_range";
-            this.L_k_range.Size = new System.Drawing.Size(43, 13);
+            this.L_k_range.Size = new System.Drawing.Size(41, 12);
             this.L_k_range.TabIndex = 64;
             this.L_k_range.Text = "消費数";
             // 
             // label176
             // 
-            this.label176.Location = new System.Drawing.Point(106, 195);
+            this.label176.Location = new System.Drawing.Point(106, 180);
             this.label176.Name = "label176";
-            this.label176.Size = new System.Drawing.Size(18, 17);
+            this.label176.Size = new System.Drawing.Size(18, 16);
             this.label176.TabIndex = 61;
             this.label176.Text = "～";
             // 
             // IVup2
             // 
             this.IVup2.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.IVup2.Location = new System.Drawing.Point(112, 62);
+            this.IVup2.Location = new System.Drawing.Point(112, 57);
             this.IVup2.Maximum = new decimal(new int[] {
             31,
             0,
@@ -1247,25 +1251,25 @@
             // label115
             // 
             this.label115.AutoSize = true;
-            this.label115.Location = new System.Drawing.Point(92, 102);
+            this.label115.Location = new System.Drawing.Point(92, 94);
             this.label115.Name = "label115";
-            this.label115.Size = new System.Drawing.Size(19, 13);
+            this.label115.Size = new System.Drawing.Size(17, 12);
             this.label115.TabIndex = 80;
             this.label115.Text = "～";
             // 
             // label114
             // 
             this.label114.AutoSize = true;
-            this.label114.Location = new System.Drawing.Point(92, 67);
+            this.label114.Location = new System.Drawing.Point(92, 62);
             this.label114.Name = "label114";
-            this.label114.Size = new System.Drawing.Size(19, 13);
+            this.label114.Size = new System.Drawing.Size(17, 12);
             this.label114.TabIndex = 78;
             this.label114.Text = "～";
             // 
             // IVup3
             // 
             this.IVup3.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.IVup3.Location = new System.Drawing.Point(112, 96);
+            this.IVup3.Location = new System.Drawing.Point(112, 89);
             this.IVup3.Maximum = new decimal(new int[] {
             31,
             0,
@@ -1285,7 +1289,7 @@
             // IVup1
             // 
             this.IVup1.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.IVup1.Location = new System.Drawing.Point(112, 27);
+            this.IVup1.Location = new System.Drawing.Point(112, 25);
             this.IVup1.Maximum = new decimal(new int[] {
             31,
             0,
@@ -1305,25 +1309,25 @@
             // label113
             // 
             this.label113.AutoSize = true;
-            this.label113.Location = new System.Drawing.Point(92, 137);
+            this.label113.Location = new System.Drawing.Point(92, 126);
             this.label113.Name = "label113";
-            this.label113.Size = new System.Drawing.Size(19, 13);
+            this.label113.Size = new System.Drawing.Size(17, 12);
             this.label113.TabIndex = 82;
             this.label113.Text = "～";
             // 
             // label112
             // 
             this.label112.AutoSize = true;
-            this.label112.Location = new System.Drawing.Point(92, 33);
+            this.label112.Location = new System.Drawing.Point(92, 30);
             this.label112.Name = "label112";
-            this.label112.Size = new System.Drawing.Size(19, 13);
+            this.label112.Size = new System.Drawing.Size(17, 12);
             this.label112.TabIndex = 76;
             this.label112.Text = "～";
             // 
             // IVup4
             // 
             this.IVup4.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.IVup4.Location = new System.Drawing.Point(112, 131);
+            this.IVup4.Location = new System.Drawing.Point(112, 121);
             this.IVup4.Maximum = new decimal(new int[] {
             31,
             0,
@@ -1343,7 +1347,7 @@
             // IVlow6
             // 
             this.IVlow6.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.IVlow6.Location = new System.Drawing.Point(45, 200);
+            this.IVlow6.Location = new System.Drawing.Point(45, 185);
             this.IVlow6.Maximum = new decimal(new int[] {
             31,
             0,
@@ -1358,7 +1362,7 @@
             // IVlow5
             // 
             this.IVlow5.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.IVlow5.Location = new System.Drawing.Point(45, 166);
+            this.IVlow5.Location = new System.Drawing.Point(45, 153);
             this.IVlow5.Maximum = new decimal(new int[] {
             31,
             0,
@@ -1373,16 +1377,16 @@
             // label110
             // 
             this.label110.AutoSize = true;
-            this.label110.Location = new System.Drawing.Point(92, 171);
+            this.label110.Location = new System.Drawing.Point(92, 158);
             this.label110.Name = "label110";
-            this.label110.Size = new System.Drawing.Size(19, 13);
+            this.label110.Size = new System.Drawing.Size(17, 12);
             this.label110.TabIndex = 84;
             this.label110.Text = "～";
             // 
             // IVlow4
             // 
             this.IVlow4.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.IVlow4.Location = new System.Drawing.Point(45, 131);
+            this.IVlow4.Location = new System.Drawing.Point(45, 121);
             this.IVlow4.Maximum = new decimal(new int[] {
             31,
             0,
@@ -1397,7 +1401,7 @@
             // IVup5
             // 
             this.IVup5.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.IVup5.Location = new System.Drawing.Point(112, 166);
+            this.IVup5.Location = new System.Drawing.Point(112, 153);
             this.IVup5.Maximum = new decimal(new int[] {
             31,
             0,
@@ -1417,7 +1421,7 @@
             // IVlow3
             // 
             this.IVlow3.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.IVlow3.Location = new System.Drawing.Point(45, 96);
+            this.IVlow3.Location = new System.Drawing.Point(45, 89);
             this.IVlow3.Maximum = new decimal(new int[] {
             31,
             0,
@@ -1432,7 +1436,7 @@
             // IVlow2
             // 
             this.IVlow2.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.IVlow2.Location = new System.Drawing.Point(45, 62);
+            this.IVlow2.Location = new System.Drawing.Point(45, 57);
             this.IVlow2.Maximum = new decimal(new int[] {
             31,
             0,
@@ -1447,16 +1451,16 @@
             // label109
             // 
             this.label109.AutoSize = true;
-            this.label109.Location = new System.Drawing.Point(92, 206);
+            this.label109.Location = new System.Drawing.Point(92, 190);
             this.label109.Name = "label109";
-            this.label109.Size = new System.Drawing.Size(19, 13);
+            this.label109.Size = new System.Drawing.Size(17, 12);
             this.label109.TabIndex = 86;
             this.label109.Text = "～";
             // 
             // IVlow1
             // 
             this.IVlow1.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.IVlow1.Location = new System.Drawing.Point(45, 27);
+            this.IVlow1.Location = new System.Drawing.Point(45, 25);
             this.IVlow1.Maximum = new decimal(new int[] {
             31,
             0,
@@ -1470,54 +1474,54 @@
             // 
             // L_search_H
             // 
-            this.L_search_H.Location = new System.Drawing.Point(1, 26);
+            this.L_search_H.Location = new System.Drawing.Point(1, 24);
             this.L_search_H.Name = "L_search_H";
-            this.L_search_H.Size = new System.Drawing.Size(40, 20);
+            this.L_search_H.Size = new System.Drawing.Size(40, 18);
             this.L_search_H.TabIndex = 38;
             this.L_search_H.Text = "H";
             this.L_search_H.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // L_search_A
             // 
-            this.L_search_A.Location = new System.Drawing.Point(1, 60);
+            this.L_search_A.Location = new System.Drawing.Point(1, 55);
             this.L_search_A.Name = "L_search_A";
-            this.L_search_A.Size = new System.Drawing.Size(40, 20);
+            this.L_search_A.Size = new System.Drawing.Size(40, 18);
             this.L_search_A.TabIndex = 40;
             this.L_search_A.Text = "A";
             this.L_search_A.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // L_search_B
             // 
-            this.L_search_B.Location = new System.Drawing.Point(1, 95);
+            this.L_search_B.Location = new System.Drawing.Point(1, 88);
             this.L_search_B.Name = "L_search_B";
-            this.L_search_B.Size = new System.Drawing.Size(40, 20);
+            this.L_search_B.Size = new System.Drawing.Size(40, 18);
             this.L_search_B.TabIndex = 42;
             this.L_search_B.Text = "B";
             this.L_search_B.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // L_search_C
             // 
-            this.L_search_C.Location = new System.Drawing.Point(1, 130);
+            this.L_search_C.Location = new System.Drawing.Point(1, 120);
             this.L_search_C.Name = "L_search_C";
-            this.L_search_C.Size = new System.Drawing.Size(40, 20);
+            this.L_search_C.Size = new System.Drawing.Size(40, 18);
             this.L_search_C.TabIndex = 44;
             this.L_search_C.Text = "C";
             this.L_search_C.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // L_search_D
             // 
-            this.L_search_D.Location = new System.Drawing.Point(1, 164);
+            this.L_search_D.Location = new System.Drawing.Point(1, 151);
             this.L_search_D.Name = "L_search_D";
-            this.L_search_D.Size = new System.Drawing.Size(40, 20);
+            this.L_search_D.Size = new System.Drawing.Size(40, 18);
             this.L_search_D.TabIndex = 46;
             this.L_search_D.Text = "D";
             this.L_search_D.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // L_search_S
             // 
-            this.L_search_S.Location = new System.Drawing.Point(1, 199);
+            this.L_search_S.Location = new System.Drawing.Point(1, 184);
             this.L_search_S.Name = "L_search_S";
-            this.L_search_S.Size = new System.Drawing.Size(40, 20);
+            this.L_search_S.Size = new System.Drawing.Size(40, 18);
             this.L_search_S.TabIndex = 48;
             this.L_search_S.Text = "S";
             this.L_search_S.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -1526,25 +1530,25 @@
             // 
             this.mezapaType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.mezapaType.FormattingEnabled = true;
-            this.mezapaType.Location = new System.Drawing.Point(222, 99);
+            this.mezapaType.Location = new System.Drawing.Point(222, 91);
             this.mezapaType.Name = "mezapaType";
-            this.mezapaType.Size = new System.Drawing.Size(80, 21);
+            this.mezapaType.Size = new System.Drawing.Size(80, 20);
             this.mezapaType.TabIndex = 39;
             // 
             // L_mezapa
             // 
-            this.L_mezapa.Location = new System.Drawing.Point(163, 99);
+            this.L_mezapa.Location = new System.Drawing.Point(163, 91);
             this.L_mezapa.Name = "L_mezapa";
-            this.L_mezapa.Size = new System.Drawing.Size(57, 20);
+            this.L_mezapa.Size = new System.Drawing.Size(57, 18);
             this.L_mezapa.TabIndex = 117;
             this.L_mezapa.Text = "めざパ";
             this.L_mezapa.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // L_ability
             // 
-            this.L_ability.Location = new System.Drawing.Point(163, 30);
+            this.L_ability.Location = new System.Drawing.Point(163, 28);
             this.L_ability.Name = "L_ability";
-            this.L_ability.Size = new System.Drawing.Size(57, 20);
+            this.L_ability.Size = new System.Drawing.Size(57, 18);
             this.L_ability.TabIndex = 116;
             this.L_ability.Text = "特性";
             this.L_ability.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -1558,16 +1562,16 @@
             "1",
             "2",
             "夢"});
-            this.ability.Location = new System.Drawing.Point(222, 29);
+            this.ability.Location = new System.Drawing.Point(222, 27);
             this.ability.Name = "ability";
-            this.ability.Size = new System.Drawing.Size(80, 21);
+            this.ability.Size = new System.Drawing.Size(80, 20);
             this.ability.TabIndex = 37;
             // 
             // L_sex
             // 
-            this.L_sex.Location = new System.Drawing.Point(163, 64);
+            this.L_sex.Location = new System.Drawing.Point(163, 59);
             this.L_sex.Name = "L_sex";
-            this.L_sex.Size = new System.Drawing.Size(57, 20);
+            this.L_sex.Size = new System.Drawing.Size(57, 18);
             this.L_sex.TabIndex = 120;
             this.L_sex.Text = "性別";
             this.L_sex.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -1581,9 +1585,9 @@
             "♂",
             "♀",
             "-"});
-            this.sex.Location = new System.Drawing.Point(222, 64);
+            this.sex.Location = new System.Drawing.Point(222, 59);
             this.sex.Name = "sex";
-            this.sex.Size = new System.Drawing.Size(80, 21);
+            this.sex.Size = new System.Drawing.Size(80, 20);
             this.sex.TabIndex = 38;
             // 
             // y_groupBox2
@@ -1621,9 +1625,9 @@
             this.y_groupBox2.Controls.Add(this.label115);
             this.y_groupBox2.Controls.Add(this.IVup2);
             this.y_groupBox2.Controls.Add(this.ability);
-            this.y_groupBox2.Location = new System.Drawing.Point(381, 7);
+            this.y_groupBox2.Location = new System.Drawing.Point(381, 6);
             this.y_groupBox2.Name = "y_groupBox2";
-            this.y_groupBox2.Size = new System.Drawing.Size(310, 245);
+            this.y_groupBox2.Size = new System.Drawing.Size(310, 226);
             this.y_groupBox2.TabIndex = 20;
             this.y_groupBox2.TabStop = false;
             this.y_groupBox2.Text = "目標個体";
@@ -1631,18 +1635,18 @@
             // Invalid_Refine
             // 
             this.Invalid_Refine.AutoSize = true;
-            this.Invalid_Refine.Location = new System.Drawing.Point(194, 205);
+            this.Invalid_Refine.Location = new System.Drawing.Point(194, 189);
             this.Invalid_Refine.Name = "Invalid_Refine";
-            this.Invalid_Refine.Size = new System.Drawing.Size(102, 17);
+            this.Invalid_Refine.Size = new System.Drawing.Size(100, 16);
             this.Invalid_Refine.TabIndex = 186;
             this.Invalid_Refine.Text = "絞り込みを無効";
             this.Invalid_Refine.UseVisualStyleBackColor = true;
             // 
             // L_ball
             // 
-            this.L_ball.Location = new System.Drawing.Point(163, 134);
+            this.L_ball.Location = new System.Drawing.Point(163, 124);
             this.L_ball.Name = "L_ball";
-            this.L_ball.Size = new System.Drawing.Size(57, 20);
+            this.L_ball.Size = new System.Drawing.Size(57, 18);
             this.L_ball.TabIndex = 122;
             this.L_ball.Text = "ボール";
             this.L_ball.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -1655,15 +1659,15 @@
             "指定なし",
             "先親",
             "後親"});
-            this.ball.Location = new System.Drawing.Point(222, 133);
+            this.ball.Location = new System.Drawing.Point(222, 123);
             this.ball.Name = "ball";
-            this.ball.Size = new System.Drawing.Size(80, 21);
+            this.ball.Size = new System.Drawing.Size(80, 20);
             this.ball.TabIndex = 40;
             // 
             // IVup6
             // 
             this.IVup6.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.IVup6.Location = new System.Drawing.Point(112, 200);
+            this.IVup6.Location = new System.Drawing.Point(112, 185);
             this.IVup6.Maximum = new decimal(new int[] {
             31,
             0,
@@ -1682,9 +1686,9 @@
             // 
             // k_search
             // 
-            this.k_search.Location = new System.Drawing.Point(926, 226);
+            this.k_search.Location = new System.Drawing.Point(926, 209);
             this.k_search.Name = "k_search";
-            this.k_search.Size = new System.Drawing.Size(75, 25);
+            this.k_search.Size = new System.Drawing.Size(75, 23);
             this.k_search.TabIndex = 176;
             this.k_search.Text = "計算";
             this.k_search.UseVisualStyleBackColor = true;
@@ -1693,9 +1697,9 @@
             // omamori
             // 
             this.omamori.AutoSize = true;
-            this.omamori.Location = new System.Drawing.Point(22, 56);
+            this.omamori.Location = new System.Drawing.Point(22, 52);
             this.omamori.Name = "omamori";
-            this.omamori.Size = new System.Drawing.Size(77, 17);
+            this.omamori.Size = new System.Drawing.Size(75, 16);
             this.omamori.TabIndex = 174;
             this.omamori.Text = "光るお守り";
             this.omamori.UseVisualStyleBackColor = true;
@@ -1709,9 +1713,9 @@
             this.groupBox1.Controls.Add(this.shiny);
             this.groupBox1.Controls.Add(this.International);
             this.groupBox1.Controls.Add(this.omamori);
-            this.groupBox1.Location = new System.Drawing.Point(926, 7);
+            this.groupBox1.Location = new System.Drawing.Point(926, 6);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(182, 213);
+            this.groupBox1.Size = new System.Drawing.Size(182, 197);
             this.groupBox1.TabIndex = 177;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "その他";
@@ -1724,7 +1728,7 @@
             0,
             0,
             0});
-            this.TSV.Location = new System.Drawing.Point(53, 140);
+            this.TSV.Location = new System.Drawing.Point(53, 129);
             this.TSV.Maximum = new decimal(new int[] {
             4096,
             0,
@@ -1737,9 +1741,9 @@
             // other_TSV
             // 
             this.other_TSV.AutoSize = true;
-            this.other_TSV.Location = new System.Drawing.Point(22, 182);
+            this.other_TSV.Location = new System.Drawing.Point(22, 168);
             this.other_TSV.Name = "other_TSV";
-            this.other_TSV.Size = new System.Drawing.Size(134, 17);
+            this.other_TSV.Size = new System.Drawing.Size(133, 16);
             this.other_TSV.TabIndex = 185;
             this.other_TSV.Text = "他TSVで色違いを探す";
             this.other_TSV.UseVisualStyleBackColor = true;
@@ -1749,9 +1753,9 @@
             this.k_TSV_shiny.AutoSize = true;
             this.k_TSV_shiny.Checked = true;
             this.k_TSV_shiny.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.k_TSV_shiny.Location = new System.Drawing.Point(22, 114);
+            this.k_TSV_shiny.Location = new System.Drawing.Point(22, 105);
             this.k_TSV_shiny.Name = "k_TSV_shiny";
-            this.k_TSV_shiny.Size = new System.Drawing.Size(150, 17);
+            this.k_TSV_shiny.Size = new System.Drawing.Size(149, 16);
             this.k_TSV_shiny.TabIndex = 184;
             this.k_TSV_shiny.Text = "TSVを考慮した計算をする";
             this.k_TSV_shiny.UseVisualStyleBackColor = true;
@@ -1761,7 +1765,7 @@
             // 
             this.label20.AutoSize = true;
             this.label20.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label20.Location = new System.Drawing.Point(19, 144);
+            this.label20.Location = new System.Drawing.Point(19, 133);
             this.label20.Name = "label20";
             this.label20.Size = new System.Drawing.Size(28, 14);
             this.label20.TabIndex = 180;
@@ -1770,9 +1774,9 @@
             // shiny
             // 
             this.shiny.AutoSize = true;
-            this.shiny.Location = new System.Drawing.Point(22, 83);
+            this.shiny.Location = new System.Drawing.Point(22, 77);
             this.shiny.Name = "shiny";
-            this.shiny.Size = new System.Drawing.Size(105, 17);
+            this.shiny.Size = new System.Drawing.Size(103, 16);
             this.shiny.TabIndex = 178;
             this.shiny.Text = "色違いのみ出力";
             this.shiny.UseVisualStyleBackColor = true;
@@ -1784,10 +1788,10 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tabControl1.Controls.Add(this.Tab_Search);
             this.tabControl1.Controls.Add(this.Tab_Egg);
-            this.tabControl1.Location = new System.Drawing.Point(12, 27);
+            this.tabControl1.Location = new System.Drawing.Point(12, 25);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(1122, 521);
+            this.tabControl1.Size = new System.Drawing.Size(1122, 481);
             this.tabControl1.TabIndex = 0;
             // 
             // Tab_Search
@@ -1801,7 +1805,7 @@
             this.Tab_Search.Location = new System.Drawing.Point(4, 22);
             this.Tab_Search.Name = "Tab_Search";
             this.Tab_Search.Padding = new System.Windows.Forms.Padding(3);
-            this.Tab_Search.Size = new System.Drawing.Size(1114, 495);
+            this.Tab_Search.Size = new System.Drawing.Size(1114, 455);
             this.Tab_Search.TabIndex = 0;
             this.Tab_Search.Text = "個体検索";
             this.Tab_Search.UseVisualStyleBackColor = true;
@@ -1814,16 +1818,16 @@
             this.Tab_Egg.Location = new System.Drawing.Point(4, 22);
             this.Tab_Egg.Name = "Tab_Egg";
             this.Tab_Egg.Padding = new System.Windows.Forms.Padding(3);
-            this.Tab_Egg.Size = new System.Drawing.Size(1114, 495);
+            this.Tab_Egg.Size = new System.Drawing.Size(1114, 455);
             this.Tab_Egg.TabIndex = 1;
             this.Tab_Egg.Text = "連続孵化リスト";
             this.Tab_Egg.UseVisualStyleBackColor = true;
             // 
             // List_search
             // 
-            this.List_search.Location = new System.Drawing.Point(154, 273);
+            this.List_search.Location = new System.Drawing.Point(154, 335);
             this.List_search.Name = "List_search";
-            this.List_search.Size = new System.Drawing.Size(75, 25);
+            this.List_search.Size = new System.Drawing.Size(75, 23);
             this.List_search.TabIndex = 182;
             this.List_search.Text = "計算";
             this.List_search.UseVisualStyleBackColor = true;
@@ -1854,10 +1858,10 @@
             this.dgvE_psv,
             this.dgvE_ec});
             this.L_dataGridView.ContextMenuStrip = this.contextMenuStrip2;
-            this.L_dataGridView.Location = new System.Drawing.Point(235, 7);
+            this.L_dataGridView.Location = new System.Drawing.Point(235, 6);
             this.L_dataGridView.Name = "L_dataGridView";
             this.L_dataGridView.RowTemplate.Height = 21;
-            this.L_dataGridView.Size = new System.Drawing.Size(873, 482);
+            this.L_dataGridView.Size = new System.Drawing.Size(873, 445);
             this.L_dataGridView.TabIndex = 0;
             // 
             // dgvE_frame
@@ -1919,21 +1923,21 @@
             this.dgvE_gender.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
             this.dgvE_gender.HeaderText = "性別";
             this.dgvE_gender.Name = "dgvE_gender";
-            this.dgvE_gender.Width = 56;
+            this.dgvE_gender.Width = 54;
             // 
             // dgvE_ability
             // 
             this.dgvE_ability.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
             this.dgvE_ability.HeaderText = "特性";
             this.dgvE_ability.Name = "dgvE_ability";
-            this.dgvE_ability.Width = 56;
+            this.dgvE_ability.Width = 54;
             // 
             // dgvE_nature
             // 
             this.dgvE_nature.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
             this.dgvE_nature.HeaderText = "性格";
             this.dgvE_nature.Name = "dgvE_nature";
-            this.dgvE_nature.Width = 56;
+            this.dgvE_nature.Width = 54;
             // 
             // dgvE_pid
             // 
@@ -1977,6 +1981,9 @@
             // 
             // groupBox5
             // 
+            this.groupBox5.Controls.Add(this.Repeat_times);
+            this.groupBox5.Controls.Add(this.Target_frame);
+            this.groupBox5.Controls.Add(this.L_targetframe);
             this.groupBox5.Controls.Add(this.L_status3a);
             this.groupBox5.Controls.Add(this.L_status2a);
             this.groupBox5.Controls.Add(this.L_status1a);
@@ -1994,9 +2001,9 @@
             this.groupBox5.Controls.Add(this.label70);
             this.groupBox5.Controls.Add(this.L_eggrange);
             this.groupBox5.Controls.Add(this.label72);
-            this.groupBox5.Location = new System.Drawing.Point(6, 7);
+            this.groupBox5.Location = new System.Drawing.Point(6, 6);
             this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Size = new System.Drawing.Size(223, 260);
+            this.groupBox5.Size = new System.Drawing.Size(223, 323);
             this.groupBox5.TabIndex = 180;
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "検索範囲";
@@ -2005,7 +2012,7 @@
             // 
             this.L_status3a.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.L_status3a.Hexadecimal = true;
-            this.L_status3a.Location = new System.Drawing.Point(118, 26);
+            this.L_status3a.Location = new System.Drawing.Point(118, 24);
             this.L_status3a.Name = "L_status3a";
             this.L_status3a.Size = new System.Drawing.Size(80, 22);
             this.L_status3a.TabIndex = 1;
@@ -2021,7 +2028,7 @@
             // 
             this.L_status2a.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.L_status2a.Hexadecimal = true;
-            this.L_status2a.Location = new System.Drawing.Point(118, 56);
+            this.L_status2a.Location = new System.Drawing.Point(118, 52);
             this.L_status2a.Name = "L_status2a";
             this.L_status2a.Size = new System.Drawing.Size(80, 22);
             this.L_status2a.TabIndex = 2;
@@ -2037,7 +2044,7 @@
             // 
             this.L_status1a.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.L_status1a.Hexadecimal = true;
-            this.L_status1a.Location = new System.Drawing.Point(118, 87);
+            this.L_status1a.Location = new System.Drawing.Point(118, 80);
             this.L_status1a.Name = "L_status1a";
             this.L_status1a.Size = new System.Drawing.Size(80, 22);
             this.L_status1a.TabIndex = 3;
@@ -2053,7 +2060,7 @@
             // 
             this.L_status0a.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.L_status0a.Hexadecimal = true;
-            this.L_status0a.Location = new System.Drawing.Point(118, 117);
+            this.L_status0a.Location = new System.Drawing.Point(118, 108);
             this.L_status0a.Name = "L_status0a";
             this.L_status0a.Size = new System.Drawing.Size(80, 22);
             this.L_status0a.TabIndex = 4;
@@ -2068,7 +2075,7 @@
             // n_min
             // 
             this.n_min.Font = new System.Drawing.Font("Consolas", 9F);
-            this.n_min.Location = new System.Drawing.Point(20, 189);
+            this.n_min.Location = new System.Drawing.Point(20, 174);
             this.n_min.Maximum = new decimal(new int[] {
             999999999,
             0,
@@ -2083,7 +2090,7 @@
             // n_max
             // 
             this.n_max.Font = new System.Drawing.Font("Consolas", 9F);
-            this.n_max.Location = new System.Drawing.Point(130, 189);
+            this.n_max.Location = new System.Drawing.Point(130, 174);
             this.n_max.Maximum = new decimal(new int[] {
             999999999,
             0,
@@ -2105,9 +2112,9 @@
             this.L_TSV_shiny.AutoSize = true;
             this.L_TSV_shiny.Checked = true;
             this.L_TSV_shiny.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.L_TSV_shiny.Location = new System.Drawing.Point(18, 228);
+            this.L_TSV_shiny.Location = new System.Drawing.Point(18, 210);
             this.L_TSV_shiny.Name = "L_TSV_shiny";
-            this.L_TSV_shiny.Size = new System.Drawing.Size(150, 17);
+            this.L_TSV_shiny.Size = new System.Drawing.Size(149, 16);
             this.L_TSV_shiny.TabIndex = 8;
             this.L_TSV_shiny.Text = "TSVを考慮した計算をする";
             this.L_TSV_shiny.UseVisualStyleBackColor = true;
@@ -2117,7 +2124,7 @@
             // 
             this.label63.AutoSize = true;
             this.label63.Font = new System.Drawing.Font("Consolas", 9F);
-            this.label63.Location = new System.Drawing.Point(15, 119);
+            this.label63.Location = new System.Drawing.Point(15, 110);
             this.label63.Name = "label63";
             this.label63.Size = new System.Drawing.Size(70, 14);
             this.label63.TabIndex = 77;
@@ -2127,7 +2134,7 @@
             // 
             this.label64.AutoSize = true;
             this.label64.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label64.Location = new System.Drawing.Point(91, 119);
+            this.label64.Location = new System.Drawing.Point(91, 110);
             this.label64.Name = "label64";
             this.label64.Size = new System.Drawing.Size(21, 14);
             this.label64.TabIndex = 76;
@@ -2137,7 +2144,7 @@
             // 
             this.label65.AutoSize = true;
             this.label65.Font = new System.Drawing.Font("Consolas", 9F);
-            this.label65.Location = new System.Drawing.Point(15, 89);
+            this.label65.Location = new System.Drawing.Point(15, 82);
             this.label65.Name = "label65";
             this.label65.Size = new System.Drawing.Size(70, 14);
             this.label65.TabIndex = 74;
@@ -2147,7 +2154,7 @@
             // 
             this.label66.AutoSize = true;
             this.label66.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label66.Location = new System.Drawing.Point(91, 89);
+            this.label66.Location = new System.Drawing.Point(91, 82);
             this.label66.Name = "label66";
             this.label66.Size = new System.Drawing.Size(21, 14);
             this.label66.TabIndex = 73;
@@ -2157,7 +2164,7 @@
             // 
             this.label67.AutoSize = true;
             this.label67.Font = new System.Drawing.Font("Consolas", 9F);
-            this.label67.Location = new System.Drawing.Point(15, 59);
+            this.label67.Location = new System.Drawing.Point(15, 54);
             this.label67.Name = "label67";
             this.label67.Size = new System.Drawing.Size(70, 14);
             this.label67.TabIndex = 71;
@@ -2167,7 +2174,7 @@
             // 
             this.label68.AutoSize = true;
             this.label68.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label68.Location = new System.Drawing.Point(91, 59);
+            this.label68.Location = new System.Drawing.Point(91, 54);
             this.label68.Name = "label68";
             this.label68.Size = new System.Drawing.Size(21, 14);
             this.label68.TabIndex = 70;
@@ -2177,7 +2184,7 @@
             // 
             this.label69.AutoSize = true;
             this.label69.Font = new System.Drawing.Font("Consolas", 9F);
-            this.label69.Location = new System.Drawing.Point(15, 28);
+            this.label69.Location = new System.Drawing.Point(15, 26);
             this.label69.Name = "label69";
             this.label69.Size = new System.Drawing.Size(70, 14);
             this.label69.TabIndex = 68;
@@ -2187,7 +2194,7 @@
             // 
             this.label70.AutoSize = true;
             this.label70.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label70.Location = new System.Drawing.Point(91, 28);
+            this.label70.Location = new System.Drawing.Point(91, 26);
             this.label70.Name = "label70";
             this.label70.Size = new System.Drawing.Size(21, 14);
             this.label70.TabIndex = 67;
@@ -2196,17 +2203,17 @@
             // L_eggrange
             // 
             this.L_eggrange.AutoSize = true;
-            this.L_eggrange.Location = new System.Drawing.Point(18, 165);
+            this.L_eggrange.Location = new System.Drawing.Point(16, 152);
             this.L_eggrange.Name = "L_eggrange";
-            this.L_eggrange.Size = new System.Drawing.Size(73, 13);
+            this.L_eggrange.Size = new System.Drawing.Size(71, 12);
             this.L_eggrange.TabIndex = 64;
             this.L_eggrange.Text = "受け取り回数";
             // 
             // label72
             // 
-            this.label72.Location = new System.Drawing.Point(106, 195);
+            this.label72.Location = new System.Drawing.Point(106, 180);
             this.label72.Name = "label72";
-            this.label72.Size = new System.Drawing.Size(18, 17);
+            this.label72.Size = new System.Drawing.Size(18, 16);
             this.label72.TabIndex = 61;
             this.label72.Text = "～";
             // 
@@ -2227,13 +2234,13 @@
             this.Menu_File.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.Menu_Exit});
             this.Menu_File.Name = "Menu_File";
-            this.Menu_File.Size = new System.Drawing.Size(37, 20);
+            this.Menu_File.Size = new System.Drawing.Size(39, 20);
             this.Menu_File.Text = "File";
             // 
             // Menu_Exit
             // 
             this.Menu_Exit.Name = "Menu_Exit";
-            this.Menu_Exit.Size = new System.Drawing.Size(92, 22);
+            this.Menu_Exit.Size = new System.Drawing.Size(96, 22);
             this.Menu_Exit.Text = "Exit";
             // 
             // Menu_Options
@@ -2243,7 +2250,7 @@
             this.Menu_SaveConfig,
             this.Menu_TSV});
             this.Menu_Options.Name = "Menu_Options";
-            this.Menu_Options.Size = new System.Drawing.Size(61, 20);
+            this.Menu_Options.Size = new System.Drawing.Size(63, 20);
             this.Menu_Options.Text = "Options";
             // 
             // Menu_Language
@@ -2251,7 +2258,7 @@
             this.Menu_Language.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.CB_MainLanguage});
             this.Menu_Language.Name = "Menu_Language";
-            this.Menu_Language.Size = new System.Drawing.Size(137, 22);
+            this.Menu_Language.Size = new System.Drawing.Size(143, 22);
             this.Menu_Language.Text = "Language";
             // 
             // CB_MainLanguage
@@ -2264,26 +2271,57 @@
             // Menu_SaveConfig
             // 
             this.Menu_SaveConfig.Name = "Menu_SaveConfig";
-            this.Menu_SaveConfig.Size = new System.Drawing.Size(137, 22);
+            this.Menu_SaveConfig.Size = new System.Drawing.Size(143, 22);
             this.Menu_SaveConfig.Text = "Save Config";
             this.Menu_SaveConfig.Click += new System.EventHandler(this.B_SaveConfig_Click);
             // 
             // Menu_TSV
             // 
             this.Menu_TSV.Name = "Menu_TSV";
-            this.Menu_TSV.Size = new System.Drawing.Size(137, 22);
+            this.Menu_TSV.Size = new System.Drawing.Size(143, 22);
             this.Menu_TSV.Text = "TSV List";
             this.Menu_TSV.Click += new System.EventHandler(this.B_TSV_Click);
             // 
+            // Repeat_times
+            // 
+            this.Repeat_times.AutoSize = true;
+            this.Repeat_times.Location = new System.Drawing.Point(16, 287);
+            this.Repeat_times.Name = "Repeat_times";
+            this.Repeat_times.Size = new System.Drawing.Size(164, 12);
+            this.Repeat_times.TabIndex = 84;
+            this.Repeat_times.Text = "消費：-回受け取り、-回拒否する";
+            // 
+            // Target_frame
+            // 
+            this.Target_frame.Font = new System.Drawing.Font("Consolas", 9F);
+            this.Target_frame.Location = new System.Drawing.Point(75, 247);
+            this.Target_frame.Maximum = new decimal(new int[] {
+            999999999,
+            0,
+            0,
+            0});
+            this.Target_frame.Name = "Target_frame";
+            this.Target_frame.Size = new System.Drawing.Size(80, 22);
+            this.Target_frame.TabIndex = 82;
+            // 
+            // L_targetframe
+            // 
+            this.L_targetframe.AutoSize = true;
+            this.L_targetframe.Location = new System.Drawing.Point(16, 250);
+            this.L_targetframe.Name = "L_targetframe";
+            this.L_targetframe.Size = new System.Drawing.Size(53, 12);
+            this.L_targetframe.TabIndex = 83;
+            this.L_targetframe.Text = "目標消費";
+            // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1146, 561);
+            this.ClientSize = new System.Drawing.Size(1146, 518);
             this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.tabControl1);
             this.MainMenuStrip = this.menuStrip1;
-            this.MinimumSize = new System.Drawing.Size(1162, 600);
+            this.MinimumSize = new System.Drawing.Size(1162, 557);
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Pokemon SunMoon Hatching RNG Tool";
@@ -2344,6 +2382,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.n_max)).EndInit();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Target_frame)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -2521,5 +2560,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dgvS_seed;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgvS_used;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgvS_frame;
+        private System.Windows.Forms.Label Repeat_times;
+        private System.Windows.Forms.NumericUpDown Target_frame;
+        private System.Windows.Forms.Label L_targetframe;
     }
 }

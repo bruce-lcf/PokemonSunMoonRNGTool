@@ -37,18 +37,19 @@
             this.RTB_TSV.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.RTB_TSV.Location = new System.Drawing.Point(12, 12);
+            this.RTB_TSV.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.RTB_TSV.Location = new System.Drawing.Point(12, 11);
             this.RTB_TSV.Name = "RTB_TSV";
-            this.RTB_TSV.Size = new System.Drawing.Size(160, 208);
+            this.RTB_TSV.Size = new System.Drawing.Size(160, 192);
             this.RTB_TSV.TabIndex = 0;
             this.RTB_TSV.Text = "";
             // 
             // B_Save
             // 
             this.B_Save.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.B_Save.Location = new System.Drawing.Point(97, 226);
+            this.B_Save.Location = new System.Drawing.Point(97, 209);
             this.B_Save.Name = "B_Save";
-            this.B_Save.Size = new System.Drawing.Size(75, 23);
+            this.B_Save.Size = new System.Drawing.Size(75, 21);
             this.B_Save.TabIndex = 1;
             this.B_Save.Text = "Save";
             this.B_Save.UseVisualStyleBackColor = true;
@@ -56,14 +57,14 @@
             // 
             // TSVEntry
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(184, 261);
+            this.ClientSize = new System.Drawing.Size(184, 241);
             this.Controls.Add(this.B_Save);
             this.Controls.Add(this.RTB_TSV);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.MinimumSize = new System.Drawing.Size(200, 300);
+            this.MinimumSize = new System.Drawing.Size(200, 280);
             this.Name = "TSVEntry";
             this.Text = "TSVEntry";
             this.ResumeLayout(false);
