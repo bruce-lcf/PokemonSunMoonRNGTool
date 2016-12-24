@@ -21,15 +21,15 @@ namespace SMHatchingRNGTool
         private string[] mezapa;
         private readonly string[] genders = { "♂", "♀", "-" };
         private readonly string[] abilities = { "1", "2", "夢" };
-        private static readonly string[] languages = {"ja", "en"};
-        private static readonly string[] any = {"指定なし", "Any"};
-        private static readonly string[] tempPID = {"仮性格値", "---"};
-        private static readonly string[] dream = {"夢", "H"};
-        private static readonly string[] first = {"先", "First"};
-        private static readonly string[] second = {"後", "Second"};
-        private static readonly string[] parent = {"親", " Parent"};
-        private static readonly string[] everstone = {"変わらず", "Everstone"};
-        private static readonly string[] destiny = { "赤い糸", "Destiny Knot"};
+        private static readonly string[] languages = {"ja", "en", "zh"};
+        private static readonly string[] any = {"指定なし", "Any", "无限制"};
+        private static readonly string[] tempPID = {"仮性格値", "---", "伪性格值"};
+        private static readonly string[] dream = {"夢", "H", "梦"};
+        private static readonly string[] first = {"先", "First", "父"};
+        private static readonly string[] second = {"後", "Second", "母"};
+        private static readonly string[] parent = {"親", " Parent", "方"};
+        private static readonly string[] everstone = {"変わらず", "Everstone", "不变之石"};
+        private static readonly string[] destiny = { "赤い糸", "Destiny Knot", "红线"};
         private static readonly string[] main_langlist =
             {
                 "日本語", // JPN
@@ -39,7 +39,7 @@ namespace SMHatchingRNGTool
                 //"Deutsch", // GER
                 //"Español", // SPA
                 //"한국어", // KOR
-                //"中文", // CHN
+                "中文", // CHN
                 //"Português", // Portuguese
             };
         private string curlanguage;

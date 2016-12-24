@@ -1,0 +1,121 @@
+﻿! Interface Customization File
+! Languages: Save this file accordingly and put it in the same folder as PKHeX's executable.
+! lang_en.txt = English
+! lang_jp.txt = Japanese
+! lang_fr.txt = French
+! lang_de.txt = German
+! lang_es.txt = Spanish
+! lang_it.txt = Italian
+! lang_ko.txt = Korean
+! lang_zh.txt = Chinese
+! lang_pt.txt = Portuguese
+! Make sure that each edit has a ' = ' between Control name and new Text!
+!
+! -----------------------------------------------------
+- DO NOT CHANGE THIS SECTION EXCEPT FORM NAME & TITLE
+! Form1 = Pokemon SunMoon Hatching RNG Tool
+- Change stuff below this line, not above.
+---------------------Menu Strip------------------------
+Menu_File = 文件
+Menu_Exit = 退出
+--
+Menu_Options = 设置
+Menu_Language = 语言
+Menu_SaveConfig = 保存设置
+Menu_TSV = TSV列表
+Menu_About = 关于
+--------------------Context Menus----------------------
+mnuCopy = 复制
+mnuSelectAll = 全选
+mnuSetEggSeed = 将此seed输入连续取蛋列表
+mnu2Copy = 复制
+mnu2SelectAll = 全选
+---------------------Search Tab------------------------
+Tab_Search = 个体值检索
+--
+ek_groupBox1 = 父母情况
+pre = 父方
+L_pre_H = H
+L_pre_A = A
+L_pre_B = B
+L_pre_C = C
+L_pre_D = D
+L_pre_S = S
+L_PreItems = 携带道具
+L_PreAbility = 特性
+pre_ditto = 百变怪
+post = 母方
+L_post_H = H
+L_post_A = A
+L_post_B = B
+L_post_C = C
+L_post_D = D
+L_post_S = S
+L_PostItems = 携带道具
+L_PostAbility = 特性
+post_ditto = 百变怪
+Heterogeneity = 异种生蛋
+L_sex_ratio = 性别比
+--
+y_groupBox2 = 目标个体
+L_search_H = H
+L_search_A = A
+L_search_B = B
+L_search_C = C
+L_search_D = D
+L_search_S = S
+L_ability = 特性
+L_sex = 性别
+L_mezapa = 觉醒力量
+L_ball = 球
+Invalid_Refine = 目标限制无效
+--
+ek_groupBox2 = 搜索范围
+L_k_range = 消耗数
+--
+groupBox1 = 其他
+International = 异国生蛋
+omamori = 闪耀护符
+shiny = 只显示闪光帧
+k_TSV_shiny = 计算时考虑TSV的影响
+other_tsv = 检索其他TSV的闪光
+k_search = 计算
+--
+dgvS_frame = 帧数
+dgvS_used = 取蛋消耗
+dgvS_seed = Seed
+dgvS_H = H
+dgvS_A = A
+dgvS_B = B
+dgvS_C = C
+dgvS_D = D
+dgvS_S = S
+dgvS_gender = 性别
+dgvS_ability = 特性
+dgvS_nature = 性格
+dgvS_pid = 性格值
+dgvS_psv = SV
+dgvS_ec = 加密常数
+dgvS_rand = 乱数列
+----------------------Egg Tab--------------------------
+Tab_Egg = 连续取蛋列表
+groupBox5 = 检索范围
+L_eggrange = 取蛋次数
+List_search = 计算
+L_TSV_shiny = 计算时考虑TSV的影响
+--
+dgvE_frame = 帧数
+dgvE_used = 取蛋消耗
+dgvE_seed = Seed
+dgvE_H = H
+dgvE_A = A
+dgvE_B = B
+dgvE_C = C
+dgvE_D = D
+dgvE_S = S
+dgvE_gender = 性别
+dgvE_ability = 特性
+dgvE_nature = 性格
+dgvE_pid = 性格值
+dgvE_psv = SV
+dgvE_ec = 加密常数
