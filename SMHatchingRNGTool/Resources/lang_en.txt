@@ -54,7 +54,7 @@ L_post_S = Spe
 L_PostItems = Item:
 L_PostAbility = Ability:
 post_ditto = Ditto
-Heterogeneity = Same Species
+Heterogeneity = Differ Species
 L_sex_ratio = Gender Ratio:
 --
 y_groupBox2 = Filters
