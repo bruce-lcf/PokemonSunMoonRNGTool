@@ -30,30 +30,30 @@
         {
             this.components = new System.ComponentModel.Container();
             this.k_dataGridView = new System.Windows.Forms.DataGridView();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column18 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column19 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column20 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column22 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvS_frame = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvS_used = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvS_seed = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvS_H = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvS_A = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvS_B = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvS_C = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvS_D = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvS_S = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvS_gender = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvS_ability = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvS_nature = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvS_pid = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvS_psv = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvS_ec = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvS_rand = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.copyToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.SelectAllToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.孵化リストへseedを入れるToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnuCopy = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnuSelectAll = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnuSetEggSeed = new System.Windows.Forms.ToolStripMenuItem();
             this.post = new System.Windows.Forms.Label();
             this.pre_parent1 = new System.Windows.Forms.NumericUpDown();
             this.pre = new System.Windows.Forms.Label();
-            this.label199 = new System.Windows.Forms.Label();
+            this.L_pre_H = new System.Windows.Forms.Label();
             this.post_parent1 = new System.Windows.Forms.NumericUpDown();
             this.post_parent2 = new System.Windows.Forms.NumericUpDown();
             this.post_parent3 = new System.Windows.Forms.NumericUpDown();
@@ -61,35 +61,35 @@
             this.post_parent5 = new System.Windows.Forms.NumericUpDown();
             this.post_parent6 = new System.Windows.Forms.NumericUpDown();
             this.pre_parent2 = new System.Windows.Forms.NumericUpDown();
-            this.label152 = new System.Windows.Forms.Label();
+            this.L_pre_A = new System.Windows.Forms.Label();
             this.pre_parent3 = new System.Windows.Forms.NumericUpDown();
-            this.label153 = new System.Windows.Forms.Label();
+            this.L_pre_B = new System.Windows.Forms.Label();
             this.pre_parent4 = new System.Windows.Forms.NumericUpDown();
-            this.label179 = new System.Windows.Forms.Label();
+            this.L_pre_C = new System.Windows.Forms.Label();
             this.pre_parent5 = new System.Windows.Forms.NumericUpDown();
-            this.label178 = new System.Windows.Forms.Label();
+            this.L_pre_D = new System.Windows.Forms.Label();
             this.pre_parent6 = new System.Windows.Forms.NumericUpDown();
-            this.label177 = new System.Windows.Forms.Label();
+            this.L_pre_S = new System.Windows.Forms.Label();
             this.pre_Items = new System.Windows.Forms.ComboBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.L_PreItems = new System.Windows.Forms.Label();
+            this.L_post_H = new System.Windows.Forms.Label();
+            this.L_post_A = new System.Windows.Forms.Label();
+            this.L_post_B = new System.Windows.Forms.Label();
+            this.L_post_C = new System.Windows.Forms.Label();
+            this.L_post_D = new System.Windows.Forms.Label();
+            this.L_post_S = new System.Windows.Forms.Label();
             this.post_Items = new System.Windows.Forms.ComboBox();
-            this.label10 = new System.Windows.Forms.Label();
+            this.L_PostItems = new System.Windows.Forms.Label();
             this.ek_groupBox1 = new System.Windows.Forms.GroupBox();
             this.Heterogeneity = new System.Windows.Forms.CheckBox();
             this.pre_ditto = new System.Windows.Forms.CheckBox();
             this.post_ditto = new System.Windows.Forms.CheckBox();
-            this.label19 = new System.Windows.Forms.Label();
+            this.L_PostAbility = new System.Windows.Forms.Label();
             this.post_ability = new System.Windows.Forms.ComboBox();
-            this.label18 = new System.Windows.Forms.Label();
+            this.L_PreAbility = new System.Windows.Forms.Label();
             this.pre_ability = new System.Windows.Forms.ComboBox();
             this.sex_ratio = new System.Windows.Forms.ComboBox();
-            this.label17 = new System.Windows.Forms.Label();
+            this.L_sex_ratio = new System.Windows.Forms.Label();
             this.International = new System.Windows.Forms.CheckBox();
             this.ek_groupBox2 = new System.Windows.Forms.GroupBox();
             this.status3 = new SMHatchingRNGTool.HexNumericUpdown();
@@ -106,7 +106,7 @@
             this.label9 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
-            this.label163 = new System.Windows.Forms.Label();
+            this.L_k_range = new System.Windows.Forms.Label();
             this.label176 = new System.Windows.Forms.Label();
             this.IVup2 = new System.Windows.Forms.NumericUpDown();
             this.label115 = new System.Windows.Forms.Label();
@@ -125,21 +125,21 @@
             this.IVlow2 = new System.Windows.Forms.NumericUpDown();
             this.label109 = new System.Windows.Forms.Label();
             this.IVlow1 = new System.Windows.Forms.NumericUpDown();
-            this.label105 = new System.Windows.Forms.Label();
-            this.label103 = new System.Windows.Forms.Label();
-            this.label48 = new System.Windows.Forms.Label();
-            this.label47 = new System.Windows.Forms.Label();
-            this.label45 = new System.Windows.Forms.Label();
-            this.label43 = new System.Windows.Forms.Label();
+            this.L_search_H = new System.Windows.Forms.Label();
+            this.L_search_A = new System.Windows.Forms.Label();
+            this.L_search_B = new System.Windows.Forms.Label();
+            this.L_search_C = new System.Windows.Forms.Label();
+            this.L_search_D = new System.Windows.Forms.Label();
+            this.L_search_S = new System.Windows.Forms.Label();
             this.mezapaType = new System.Windows.Forms.ComboBox();
-            this.label127 = new System.Windows.Forms.Label();
-            this.label104 = new System.Windows.Forms.Label();
+            this.L_mezapa = new System.Windows.Forms.Label();
+            this.L_ability = new System.Windows.Forms.Label();
             this.ability = new System.Windows.Forms.ComboBox();
-            this.label46 = new System.Windows.Forms.Label();
+            this.L_sex = new System.Windows.Forms.Label();
             this.sex = new System.Windows.Forms.ComboBox();
             this.y_groupBox2 = new System.Windows.Forms.GroupBox();
             this.Invalid_Refine = new System.Windows.Forms.CheckBox();
-            this.label21 = new System.Windows.Forms.Label();
+            this.L_ball = new System.Windows.Forms.Label();
             this.ball = new System.Windows.Forms.ComboBox();
             this.IVup6 = new System.Windows.Forms.NumericUpDown();
             this.k_search = new System.Windows.Forms.Button();
@@ -151,28 +151,28 @@
             this.label20 = new System.Windows.Forms.Label();
             this.shiny = new System.Windows.Forms.CheckBox();
             this.tabControl1 = new System.Windows.Forms.TabControl();
-            this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.Tab_Search = new System.Windows.Forms.TabPage();
+            this.Tab_Egg = new System.Windows.Forms.TabPage();
             this.List_search = new System.Windows.Forms.Button();
             this.L_dataGridView = new System.Windows.Forms.DataGridView();
-            this.Column21 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column23 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvE_frame = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvE_used = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvE_seed = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvE_H = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvE_A = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvE_B = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvE_C = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvE_D = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvE_S = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvE_gender = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvE_ability = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvE_nature = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvE_pid = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvE_psv = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvE_ec = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.contextMenuStrip2 = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnu2Copy = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnu2SelectAll = new System.Windows.Forms.ToolStripMenuItem();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.L_status3a = new SMHatchingRNGTool.HexNumericUpdown();
             this.L_status2a = new SMHatchingRNGTool.HexNumericUpdown();
@@ -189,9 +189,16 @@
             this.label68 = new System.Windows.Forms.Label();
             this.label69 = new System.Windows.Forms.Label();
             this.label70 = new System.Windows.Forms.Label();
-            this.label71 = new System.Windows.Forms.Label();
+            this.L_eggrange = new System.Windows.Forms.Label();
             this.label72 = new System.Windows.Forms.Label();
-            this.B_SaveConfig = new System.Windows.Forms.Button();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.Menu_File = new System.Windows.Forms.ToolStripMenuItem();
+            this.Menu_Exit = new System.Windows.Forms.ToolStripMenuItem();
+            this.Menu_Options = new System.Windows.Forms.ToolStripMenuItem();
+            this.Menu_Language = new System.Windows.Forms.ToolStripMenuItem();
+            this.CB_MainLanguage = new System.Windows.Forms.ToolStripComboBox();
+            this.Menu_SaveConfig = new System.Windows.Forms.ToolStripMenuItem();
+            this.Menu_TSV = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.k_dataGridView)).BeginInit();
             this.contextMenuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pre_parent1)).BeginInit();
@@ -230,8 +237,8 @@
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.TSV)).BeginInit();
             this.tabControl1.SuspendLayout();
-            this.tabPage1.SuspendLayout();
-            this.tabPage2.SuspendLayout();
+            this.Tab_Search.SuspendLayout();
+            this.Tab_Egg.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.L_dataGridView)).BeginInit();
             this.contextMenuStrip2.SuspendLayout();
             this.groupBox5.SuspendLayout();
@@ -241,182 +248,186 @@
             ((System.ComponentModel.ISupportInitialize)(this.L_status0a)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.n_min)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.n_max)).BeginInit();
+            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // k_dataGridView
             // 
             this.k_dataGridView.AllowUserToAddRows = false;
             this.k_dataGridView.AllowUserToResizeColumns = false;
+            this.k_dataGridView.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.k_dataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.k_dataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Column1,
-            this.Column12,
-            this.Column2,
-            this.Column4,
-            this.Column5,
-            this.Column6,
-            this.Column7,
-            this.Column8,
-            this.Column9,
-            this.Column18,
-            this.Column19,
-            this.Column20,
-            this.Column10,
-            this.Column22,
-            this.Column11,
-            this.Column3});
+            this.dgvS_frame,
+            this.dgvS_used,
+            this.dgvS_seed,
+            this.dgvS_H,
+            this.dgvS_A,
+            this.dgvS_B,
+            this.dgvS_C,
+            this.dgvS_D,
+            this.dgvS_S,
+            this.dgvS_gender,
+            this.dgvS_ability,
+            this.dgvS_nature,
+            this.dgvS_pid,
+            this.dgvS_psv,
+            this.dgvS_ec,
+            this.dgvS_rand});
             this.k_dataGridView.ContextMenuStrip = this.contextMenuStrip1;
-            this.k_dataGridView.Location = new System.Drawing.Point(6, 238);
+            this.k_dataGridView.Location = new System.Drawing.Point(6, 258);
             this.k_dataGridView.Name = "k_dataGridView";
             this.k_dataGridView.RowTemplate.Height = 21;
-            this.k_dataGridView.Size = new System.Drawing.Size(1102, 435);
+            this.k_dataGridView.Size = new System.Drawing.Size(1102, 231);
             this.k_dataGridView.TabIndex = 0;
             // 
-            // Column1
+            // dgvS_frame
             // 
-            this.Column1.HeaderText = "消費";
-            this.Column1.Name = "Column1";
-            this.Column1.Width = 54;
+            this.dgvS_frame.HeaderText = "消費";
+            this.dgvS_frame.Name = "dgvS_frame";
+            this.dgvS_frame.Width = 54;
             // 
-            // Column12
+            // dgvS_used
             // 
-            this.Column12.HeaderText = "受取";
-            this.Column12.Name = "Column12";
-            this.Column12.Width = 54;
+            this.dgvS_used.HeaderText = "受取";
+            this.dgvS_used.Name = "dgvS_used";
+            this.dgvS_used.Width = 54;
             // 
-            // Column2
+            // dgvS_seed
             // 
-            this.Column2.HeaderText = "Seed";
-            this.Column2.Name = "Column2";
-            this.Column2.Width = 270;
+            this.dgvS_seed.HeaderText = "Seed";
+            this.dgvS_seed.Name = "dgvS_seed";
+            this.dgvS_seed.Width = 270;
             // 
-            // Column4
+            // dgvS_H
             // 
-            this.Column4.HeaderText = "H";
-            this.Column4.Name = "Column4";
-            this.Column4.Width = 27;
+            this.dgvS_H.HeaderText = "H";
+            this.dgvS_H.Name = "dgvS_H";
+            this.dgvS_H.Width = 27;
             // 
-            // Column5
+            // dgvS_A
             // 
-            this.Column5.HeaderText = "A";
-            this.Column5.Name = "Column5";
-            this.Column5.Width = 27;
+            this.dgvS_A.HeaderText = "A";
+            this.dgvS_A.Name = "dgvS_A";
+            this.dgvS_A.Width = 27;
             // 
-            // Column6
+            // dgvS_B
             // 
-            this.Column6.HeaderText = "B";
-            this.Column6.Name = "Column6";
-            this.Column6.Width = 27;
+            this.dgvS_B.HeaderText = "B";
+            this.dgvS_B.Name = "dgvS_B";
+            this.dgvS_B.Width = 27;
             // 
-            // Column7
+            // dgvS_C
             // 
-            this.Column7.HeaderText = "C";
-            this.Column7.Name = "Column7";
-            this.Column7.Width = 27;
+            this.dgvS_C.HeaderText = "C";
+            this.dgvS_C.Name = "dgvS_C";
+            this.dgvS_C.Width = 27;
             // 
-            // Column8
+            // dgvS_D
             // 
-            this.Column8.HeaderText = "D";
-            this.Column8.Name = "Column8";
-            this.Column8.Width = 27;
+            this.dgvS_D.HeaderText = "D";
+            this.dgvS_D.Name = "dgvS_D";
+            this.dgvS_D.Width = 27;
             // 
-            // Column9
+            // dgvS_S
             // 
-            this.Column9.HeaderText = "S";
-            this.Column9.Name = "Column9";
-            this.Column9.Width = 27;
+            this.dgvS_S.HeaderText = "S";
+            this.dgvS_S.Name = "dgvS_S";
+            this.dgvS_S.Width = 27;
             // 
-            // Column18
+            // dgvS_gender
             // 
-            this.Column18.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.Column18.HeaderText = "性別";
-            this.Column18.Name = "Column18";
-            this.Column18.Width = 54;
+            this.dgvS_gender.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.dgvS_gender.HeaderText = "性別";
+            this.dgvS_gender.Name = "dgvS_gender";
+            this.dgvS_gender.Width = 56;
             // 
-            // Column19
+            // dgvS_ability
             // 
-            this.Column19.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.Column19.HeaderText = "特性";
-            this.Column19.Name = "Column19";
-            this.Column19.Width = 54;
+            this.dgvS_ability.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.dgvS_ability.HeaderText = "特性";
+            this.dgvS_ability.Name = "dgvS_ability";
+            this.dgvS_ability.Width = 56;
             // 
-            // Column20
+            // dgvS_nature
             // 
-            this.Column20.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.Column20.HeaderText = "性格";
-            this.Column20.Name = "Column20";
-            this.Column20.Width = 54;
+            this.dgvS_nature.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.dgvS_nature.HeaderText = "性格";
+            this.dgvS_nature.Name = "dgvS_nature";
+            this.dgvS_nature.Width = 56;
             // 
-            // Column10
+            // dgvS_pid
             // 
-            this.Column10.HeaderText = "性格値";
-            this.Column10.Name = "Column10";
-            this.Column10.Width = 66;
+            this.dgvS_pid.HeaderText = "性格値";
+            this.dgvS_pid.Name = "dgvS_pid";
+            this.dgvS_pid.Width = 66;
             // 
-            // Column22
+            // dgvS_psv
             // 
-            this.Column22.HeaderText = "SV";
-            this.Column22.Name = "Column22";
-            this.Column22.Width = 54;
+            this.dgvS_psv.HeaderText = "SV";
+            this.dgvS_psv.Name = "dgvS_psv";
+            this.dgvS_psv.Width = 54;
             // 
-            // Column11
+            // dgvS_ec
             // 
-            this.Column11.HeaderText = "暗号化定数";
-            this.Column11.Name = "Column11";
-            this.Column11.Width = 90;
+            this.dgvS_ec.HeaderText = "暗号化定数";
+            this.dgvS_ec.Name = "dgvS_ec";
+            this.dgvS_ec.Width = 90;
             // 
-            // Column3
+            // dgvS_rand
             // 
-            this.Column3.HeaderText = "乱数列";
-            this.Column3.Name = "Column3";
-            this.Column3.Width = 66;
+            this.dgvS_rand.HeaderText = "乱数列";
+            this.dgvS_rand.Name = "dgvS_rand";
+            this.dgvS_rand.Width = 66;
             // 
             // contextMenuStrip1
             // 
             this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.copyToolStripMenuItem,
-            this.SelectAllToolStripMenuItem,
-            this.孵化リストへseedを入れるToolStripMenuItem});
+            this.mnuCopy,
+            this.mnuSelectAll,
+            this.mnuSetEggSeed});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(225, 70);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(222, 70);
             // 
-            // copyToolStripMenuItem
+            // mnuCopy
             // 
-            this.copyToolStripMenuItem.Name = "copyToolStripMenuItem";
-            this.copyToolStripMenuItem.Size = new System.Drawing.Size(224, 22);
-            this.copyToolStripMenuItem.Text = "コピー";
-            this.copyToolStripMenuItem.Click += new System.EventHandler(this.copyToolStripMenuItem_Click);
+            this.mnuCopy.Name = "mnuCopy";
+            this.mnuCopy.Size = new System.Drawing.Size(221, 22);
+            this.mnuCopy.Text = "コピー";
+            this.mnuCopy.Click += new System.EventHandler(this.copyToolStripMenuItem_Click);
             // 
-            // SelectAllToolStripMenuItem
+            // mnuSelectAll
             // 
-            this.SelectAllToolStripMenuItem.Name = "SelectAllToolStripMenuItem";
-            this.SelectAllToolStripMenuItem.Size = new System.Drawing.Size(224, 22);
-            this.SelectAllToolStripMenuItem.Text = "全て選択";
-            this.SelectAllToolStripMenuItem.Click += new System.EventHandler(this.SelectAllToolStripMenuItem_Click);
+            this.mnuSelectAll.Name = "mnuSelectAll";
+            this.mnuSelectAll.Size = new System.Drawing.Size(221, 22);
+            this.mnuSelectAll.Text = "全て選択";
+            this.mnuSelectAll.Click += new System.EventHandler(this.SelectAllToolStripMenuItem_Click);
             // 
-            // 孵化リストへseedを入れるToolStripMenuItem
+            // mnuSetEggSeed
             // 
-            this.孵化リストへseedを入れるToolStripMenuItem.Name = "孵化リストへseedを入れるToolStripMenuItem";
-            this.孵化リストへseedを入れるToolStripMenuItem.Size = new System.Drawing.Size(224, 22);
-            this.孵化リストへseedを入れるToolStripMenuItem.Text = "連続孵化リストへseedを入れる";
-            this.孵化リストへseedを入れるToolStripMenuItem.Click += new System.EventHandler(this.Send2List);
+            this.mnuSetEggSeed.Name = "mnuSetEggSeed";
+            this.mnuSetEggSeed.Size = new System.Drawing.Size(221, 22);
+            this.mnuSetEggSeed.Text = "連続孵化リストへseedを入れる";
+            this.mnuSetEggSeed.Click += new System.EventHandler(this.Send2List);
             // 
             // post
             // 
-            this.post.AutoSize = true;
             this.post.ForeColor = System.Drawing.Color.Red;
-            this.post.Location = new System.Drawing.Point(23, 134);
+            this.post.Location = new System.Drawing.Point(0, 120);
             this.post.Name = "post";
-            this.post.Size = new System.Drawing.Size(29, 12);
+            this.post.Size = new System.Drawing.Size(65, 20);
             this.post.TabIndex = 124;
             this.post.Text = "♀親";
+            this.post.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.post.DoubleClick += new System.EventHandler(this.Change_color);
             // 
             // pre_parent1
             // 
             this.pre_parent1.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.pre_parent1.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.pre_parent1.Location = new System.Drawing.Point(57, 38);
+            this.pre_parent1.Location = new System.Drawing.Point(57, 41);
             this.pre_parent1.Maximum = new decimal(new int[] {
             31,
             0,
@@ -435,29 +446,29 @@
             // 
             // pre
             // 
-            this.pre.AutoSize = true;
             this.pre.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.pre.Location = new System.Drawing.Point(22, 43);
+            this.pre.Location = new System.Drawing.Point(-1, 21);
             this.pre.Name = "pre";
-            this.pre.Size = new System.Drawing.Size(29, 12);
+            this.pre.Size = new System.Drawing.Size(65, 20);
             this.pre.TabIndex = 9;
             this.pre.Text = "♂親";
+            this.pre.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.pre.DoubleClick += new System.EventHandler(this.Change_color);
             // 
-            // label199
+            // L_pre_H
             // 
-            this.label199.AutoSize = true;
-            this.label199.Location = new System.Drawing.Point(73, 23);
-            this.label199.Name = "label199";
-            this.label199.Size = new System.Drawing.Size(13, 12);
-            this.label199.TabIndex = 12;
-            this.label199.Text = "H";
+            this.L_pre_H.AutoSize = true;
+            this.L_pre_H.Location = new System.Drawing.Point(73, 25);
+            this.L_pre_H.Name = "L_pre_H";
+            this.L_pre_H.Size = new System.Drawing.Size(15, 13);
+            this.L_pre_H.TabIndex = 12;
+            this.L_pre_H.Text = "H";
             // 
             // post_parent1
             // 
             this.post_parent1.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.post_parent1.ForeColor = System.Drawing.Color.Red;
-            this.post_parent1.Location = new System.Drawing.Point(58, 129);
+            this.post_parent1.Location = new System.Drawing.Point(58, 140);
             this.post_parent1.Maximum = new decimal(new int[] {
             31,
             0,
@@ -478,7 +489,7 @@
             // 
             this.post_parent2.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.post_parent2.ForeColor = System.Drawing.Color.Red;
-            this.post_parent2.Location = new System.Drawing.Point(109, 129);
+            this.post_parent2.Location = new System.Drawing.Point(109, 140);
             this.post_parent2.Maximum = new decimal(new int[] {
             31,
             0,
@@ -499,7 +510,7 @@
             // 
             this.post_parent3.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.post_parent3.ForeColor = System.Drawing.Color.Red;
-            this.post_parent3.Location = new System.Drawing.Point(160, 129);
+            this.post_parent3.Location = new System.Drawing.Point(160, 140);
             this.post_parent3.Maximum = new decimal(new int[] {
             31,
             0,
@@ -520,7 +531,7 @@
             // 
             this.post_parent4.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.post_parent4.ForeColor = System.Drawing.Color.Red;
-            this.post_parent4.Location = new System.Drawing.Point(211, 129);
+            this.post_parent4.Location = new System.Drawing.Point(211, 140);
             this.post_parent4.Maximum = new decimal(new int[] {
             31,
             0,
@@ -541,7 +552,7 @@
             // 
             this.post_parent5.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.post_parent5.ForeColor = System.Drawing.Color.Red;
-            this.post_parent5.Location = new System.Drawing.Point(262, 129);
+            this.post_parent5.Location = new System.Drawing.Point(262, 140);
             this.post_parent5.Maximum = new decimal(new int[] {
             31,
             0,
@@ -562,7 +573,7 @@
             // 
             this.post_parent6.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.post_parent6.ForeColor = System.Drawing.Color.Red;
-            this.post_parent6.Location = new System.Drawing.Point(312, 129);
+            this.post_parent6.Location = new System.Drawing.Point(312, 140);
             this.post_parent6.Maximum = new decimal(new int[] {
             31,
             0,
@@ -583,7 +594,7 @@
             // 
             this.pre_parent2.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.pre_parent2.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.pre_parent2.Location = new System.Drawing.Point(108, 38);
+            this.pre_parent2.Location = new System.Drawing.Point(108, 41);
             this.pre_parent2.Maximum = new decimal(new int[] {
             31,
             0,
@@ -600,20 +611,20 @@
             this.pre_parent2.Enter += new System.EventHandler(this.NumericUpDown_Enter);
             this.pre_parent2.Validating += new System.ComponentModel.CancelEventHandler(this.NumericUpDown_Check);
             // 
-            // label152
+            // L_pre_A
             // 
-            this.label152.AutoSize = true;
-            this.label152.Location = new System.Drawing.Point(124, 23);
-            this.label152.Name = "label152";
-            this.label152.Size = new System.Drawing.Size(13, 12);
-            this.label152.TabIndex = 131;
-            this.label152.Text = "A";
+            this.L_pre_A.AutoSize = true;
+            this.L_pre_A.Location = new System.Drawing.Point(124, 25);
+            this.L_pre_A.Name = "L_pre_A";
+            this.L_pre_A.Size = new System.Drawing.Size(14, 13);
+            this.L_pre_A.TabIndex = 131;
+            this.L_pre_A.Text = "A";
             // 
             // pre_parent3
             // 
             this.pre_parent3.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.pre_parent3.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.pre_parent3.Location = new System.Drawing.Point(159, 38);
+            this.pre_parent3.Location = new System.Drawing.Point(159, 41);
             this.pre_parent3.Maximum = new decimal(new int[] {
             31,
             0,
@@ -630,20 +641,20 @@
             this.pre_parent3.Enter += new System.EventHandler(this.NumericUpDown_Enter);
             this.pre_parent3.Validating += new System.ComponentModel.CancelEventHandler(this.NumericUpDown_Check);
             // 
-            // label153
+            // L_pre_B
             // 
-            this.label153.AutoSize = true;
-            this.label153.Location = new System.Drawing.Point(175, 23);
-            this.label153.Name = "label153";
-            this.label153.Size = new System.Drawing.Size(13, 12);
-            this.label153.TabIndex = 133;
-            this.label153.Text = "B";
+            this.L_pre_B.AutoSize = true;
+            this.L_pre_B.Location = new System.Drawing.Point(175, 25);
+            this.L_pre_B.Name = "L_pre_B";
+            this.L_pre_B.Size = new System.Drawing.Size(14, 13);
+            this.L_pre_B.TabIndex = 133;
+            this.L_pre_B.Text = "B";
             // 
             // pre_parent4
             // 
             this.pre_parent4.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.pre_parent4.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.pre_parent4.Location = new System.Drawing.Point(210, 38);
+            this.pre_parent4.Location = new System.Drawing.Point(210, 41);
             this.pre_parent4.Maximum = new decimal(new int[] {
             31,
             0,
@@ -660,20 +671,20 @@
             this.pre_parent4.Enter += new System.EventHandler(this.NumericUpDown_Enter);
             this.pre_parent4.Validating += new System.ComponentModel.CancelEventHandler(this.NumericUpDown_Check);
             // 
-            // label179
+            // L_pre_C
             // 
-            this.label179.AutoSize = true;
-            this.label179.Location = new System.Drawing.Point(226, 23);
-            this.label179.Name = "label179";
-            this.label179.Size = new System.Drawing.Size(13, 12);
-            this.label179.TabIndex = 135;
-            this.label179.Text = "C";
+            this.L_pre_C.AutoSize = true;
+            this.L_pre_C.Location = new System.Drawing.Point(226, 25);
+            this.L_pre_C.Name = "L_pre_C";
+            this.L_pre_C.Size = new System.Drawing.Size(14, 13);
+            this.L_pre_C.TabIndex = 135;
+            this.L_pre_C.Text = "C";
             // 
             // pre_parent5
             // 
             this.pre_parent5.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.pre_parent5.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.pre_parent5.Location = new System.Drawing.Point(261, 38);
+            this.pre_parent5.Location = new System.Drawing.Point(261, 41);
             this.pre_parent5.Maximum = new decimal(new int[] {
             31,
             0,
@@ -690,20 +701,20 @@
             this.pre_parent5.Enter += new System.EventHandler(this.NumericUpDown_Enter);
             this.pre_parent5.Validating += new System.ComponentModel.CancelEventHandler(this.NumericUpDown_Check);
             // 
-            // label178
+            // L_pre_D
             // 
-            this.label178.AutoSize = true;
-            this.label178.Location = new System.Drawing.Point(277, 23);
-            this.label178.Name = "label178";
-            this.label178.Size = new System.Drawing.Size(13, 12);
-            this.label178.TabIndex = 137;
-            this.label178.Text = "D";
+            this.L_pre_D.AutoSize = true;
+            this.L_pre_D.Location = new System.Drawing.Point(277, 25);
+            this.L_pre_D.Name = "L_pre_D";
+            this.L_pre_D.Size = new System.Drawing.Size(15, 13);
+            this.L_pre_D.TabIndex = 137;
+            this.L_pre_D.Text = "D";
             // 
             // pre_parent6
             // 
             this.pre_parent6.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.pre_parent6.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.pre_parent6.Location = new System.Drawing.Point(312, 38);
+            this.pre_parent6.Location = new System.Drawing.Point(312, 41);
             this.pre_parent6.Maximum = new decimal(new int[] {
             31,
             0,
@@ -720,14 +731,14 @@
             this.pre_parent6.Enter += new System.EventHandler(this.NumericUpDown_Enter);
             this.pre_parent6.Validating += new System.ComponentModel.CancelEventHandler(this.NumericUpDown_Check);
             // 
-            // label177
+            // L_pre_S
             // 
-            this.label177.AutoSize = true;
-            this.label177.Location = new System.Drawing.Point(328, 23);
-            this.label177.Name = "label177";
-            this.label177.Size = new System.Drawing.Size(12, 12);
-            this.label177.TabIndex = 139;
-            this.label177.Text = "S";
+            this.L_pre_S.AutoSize = true;
+            this.L_pre_S.Location = new System.Drawing.Point(328, 25);
+            this.L_pre_S.Name = "L_pre_S";
+            this.L_pre_S.Size = new System.Drawing.Size(14, 13);
+            this.L_pre_S.TabIndex = 139;
+            this.L_pre_S.Text = "S";
             // 
             // pre_Items
             // 
@@ -737,73 +748,73 @@
             "指定なし",
             "変わらず",
             "赤い糸"});
-            this.pre_Items.Location = new System.Drawing.Point(75, 75);
+            this.pre_Items.Location = new System.Drawing.Point(75, 81);
             this.pre_Items.Name = "pre_Items";
-            this.pre_Items.Size = new System.Drawing.Size(80, 20);
+            this.pre_Items.Size = new System.Drawing.Size(80, 21);
             this.pre_Items.TabIndex = 13;
             // 
-            // label3
+            // L_PreItems
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(31, 78);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(38, 12);
-            this.label3.TabIndex = 153;
-            this.label3.Text = "持ち物";
+            this.L_PreItems.Location = new System.Drawing.Point(6, 81);
+            this.L_PreItems.Name = "L_PreItems";
+            this.L_PreItems.Size = new System.Drawing.Size(63, 20);
+            this.L_PreItems.TabIndex = 153;
+            this.L_PreItems.Text = "持ち物";
+            this.L_PreItems.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // label8
+            // L_post_H
             // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(73, 114);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(13, 12);
-            this.label8.TabIndex = 156;
-            this.label8.Text = "H";
+            this.L_post_H.AutoSize = true;
+            this.L_post_H.Location = new System.Drawing.Point(73, 124);
+            this.L_post_H.Name = "L_post_H";
+            this.L_post_H.Size = new System.Drawing.Size(15, 13);
+            this.L_post_H.TabIndex = 156;
+            this.L_post_H.Text = "H";
             // 
-            // label7
+            // L_post_A
             // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(124, 114);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(13, 12);
-            this.label7.TabIndex = 157;
-            this.label7.Text = "A";
+            this.L_post_A.AutoSize = true;
+            this.L_post_A.Location = new System.Drawing.Point(124, 124);
+            this.L_post_A.Name = "L_post_A";
+            this.L_post_A.Size = new System.Drawing.Size(14, 13);
+            this.L_post_A.TabIndex = 157;
+            this.L_post_A.Text = "A";
             // 
-            // label6
+            // L_post_B
             // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(175, 114);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(13, 12);
-            this.label6.TabIndex = 158;
-            this.label6.Text = "B";
+            this.L_post_B.AutoSize = true;
+            this.L_post_B.Location = new System.Drawing.Point(175, 124);
+            this.L_post_B.Name = "L_post_B";
+            this.L_post_B.Size = new System.Drawing.Size(14, 13);
+            this.L_post_B.TabIndex = 158;
+            this.L_post_B.Text = "B";
             // 
-            // label5
+            // L_post_C
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(226, 114);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(13, 12);
-            this.label5.TabIndex = 159;
-            this.label5.Text = "C";
+            this.L_post_C.AutoSize = true;
+            this.L_post_C.Location = new System.Drawing.Point(226, 124);
+            this.L_post_C.Name = "L_post_C";
+            this.L_post_C.Size = new System.Drawing.Size(14, 13);
+            this.L_post_C.TabIndex = 159;
+            this.L_post_C.Text = "C";
             // 
-            // label4
+            // L_post_D
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(277, 114);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(13, 12);
-            this.label4.TabIndex = 160;
-            this.label4.Text = "D";
+            this.L_post_D.AutoSize = true;
+            this.L_post_D.Location = new System.Drawing.Point(277, 124);
+            this.L_post_D.Name = "L_post_D";
+            this.L_post_D.Size = new System.Drawing.Size(15, 13);
+            this.L_post_D.TabIndex = 160;
+            this.L_post_D.Text = "D";
             // 
-            // label2
+            // L_post_S
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(328, 114);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(12, 12);
-            this.label2.TabIndex = 161;
-            this.label2.Text = "S";
+            this.L_post_S.AutoSize = true;
+            this.L_post_S.Location = new System.Drawing.Point(328, 124);
+            this.L_post_S.Name = "L_post_S";
+            this.L_post_S.Size = new System.Drawing.Size(14, 13);
+            this.L_post_S.TabIndex = 161;
+            this.L_post_S.Text = "S";
             // 
             // post_Items
             // 
@@ -813,50 +824,50 @@
             "指定なし",
             "変わらず",
             "赤い糸"});
-            this.post_Items.Location = new System.Drawing.Point(75, 166);
+            this.post_Items.Location = new System.Drawing.Point(75, 180);
             this.post_Items.Name = "post_Items";
-            this.post_Items.Size = new System.Drawing.Size(80, 20);
+            this.post_Items.Size = new System.Drawing.Size(80, 21);
             this.post_Items.TabIndex = 16;
             // 
-            // label10
+            // L_PostItems
             // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(31, 169);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(38, 12);
-            this.label10.TabIndex = 173;
-            this.label10.Text = "持ち物";
+            this.L_PostItems.Location = new System.Drawing.Point(6, 179);
+            this.L_PostItems.Name = "L_PostItems";
+            this.L_PostItems.Size = new System.Drawing.Size(64, 20);
+            this.L_PostItems.TabIndex = 173;
+            this.L_PostItems.Text = "持ち物";
+            this.L_PostItems.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // ek_groupBox1
             // 
             this.ek_groupBox1.Controls.Add(this.Heterogeneity);
             this.ek_groupBox1.Controls.Add(this.pre_ditto);
             this.ek_groupBox1.Controls.Add(this.post_ditto);
-            this.ek_groupBox1.Controls.Add(this.label19);
+            this.ek_groupBox1.Controls.Add(this.L_PostAbility);
             this.ek_groupBox1.Controls.Add(this.post_ability);
-            this.ek_groupBox1.Controls.Add(this.label18);
+            this.ek_groupBox1.Controls.Add(this.L_PreAbility);
             this.ek_groupBox1.Controls.Add(this.pre_ability);
             this.ek_groupBox1.Controls.Add(this.sex_ratio);
-            this.ek_groupBox1.Controls.Add(this.label17);
-            this.ek_groupBox1.Controls.Add(this.label10);
+            this.ek_groupBox1.Controls.Add(this.L_sex_ratio);
+            this.ek_groupBox1.Controls.Add(this.L_PostItems);
             this.ek_groupBox1.Controls.Add(this.post_Items);
-            this.ek_groupBox1.Controls.Add(this.label2);
-            this.ek_groupBox1.Controls.Add(this.label4);
-            this.ek_groupBox1.Controls.Add(this.label5);
-            this.ek_groupBox1.Controls.Add(this.label6);
-            this.ek_groupBox1.Controls.Add(this.label7);
-            this.ek_groupBox1.Controls.Add(this.label8);
-            this.ek_groupBox1.Controls.Add(this.label3);
+            this.ek_groupBox1.Controls.Add(this.L_post_S);
+            this.ek_groupBox1.Controls.Add(this.L_post_D);
+            this.ek_groupBox1.Controls.Add(this.L_post_C);
+            this.ek_groupBox1.Controls.Add(this.L_post_B);
+            this.ek_groupBox1.Controls.Add(this.L_post_A);
+            this.ek_groupBox1.Controls.Add(this.L_post_H);
+            this.ek_groupBox1.Controls.Add(this.L_PreItems);
             this.ek_groupBox1.Controls.Add(this.pre_Items);
-            this.ek_groupBox1.Controls.Add(this.label177);
+            this.ek_groupBox1.Controls.Add(this.L_pre_S);
             this.ek_groupBox1.Controls.Add(this.pre_parent6);
-            this.ek_groupBox1.Controls.Add(this.label178);
+            this.ek_groupBox1.Controls.Add(this.L_pre_D);
             this.ek_groupBox1.Controls.Add(this.pre_parent5);
-            this.ek_groupBox1.Controls.Add(this.label179);
+            this.ek_groupBox1.Controls.Add(this.L_pre_C);
             this.ek_groupBox1.Controls.Add(this.pre_parent4);
-            this.ek_groupBox1.Controls.Add(this.label153);
+            this.ek_groupBox1.Controls.Add(this.L_pre_B);
             this.ek_groupBox1.Controls.Add(this.pre_parent3);
-            this.ek_groupBox1.Controls.Add(this.label152);
+            this.ek_groupBox1.Controls.Add(this.L_pre_A);
             this.ek_groupBox1.Controls.Add(this.pre_parent2);
             this.ek_groupBox1.Controls.Add(this.post_parent6);
             this.ek_groupBox1.Controls.Add(this.post_parent5);
@@ -864,13 +875,13 @@
             this.ek_groupBox1.Controls.Add(this.post_parent3);
             this.ek_groupBox1.Controls.Add(this.post_parent2);
             this.ek_groupBox1.Controls.Add(this.post_parent1);
-            this.ek_groupBox1.Controls.Add(this.label199);
+            this.ek_groupBox1.Controls.Add(this.L_pre_H);
             this.ek_groupBox1.Controls.Add(this.pre);
             this.ek_groupBox1.Controls.Add(this.pre_parent1);
             this.ek_groupBox1.Controls.Add(this.post);
-            this.ek_groupBox1.Location = new System.Drawing.Point(6, 6);
+            this.ek_groupBox1.Location = new System.Drawing.Point(6, 7);
             this.ek_groupBox1.Name = "ek_groupBox1";
-            this.ek_groupBox1.Size = new System.Drawing.Size(369, 226);
+            this.ek_groupBox1.Size = new System.Drawing.Size(369, 245);
             this.ek_groupBox1.TabIndex = 2;
             this.ek_groupBox1.TabStop = false;
             this.ek_groupBox1.Text = "親の情報";
@@ -878,9 +889,9 @@
             // Heterogeneity
             // 
             this.Heterogeneity.AutoSize = true;
-            this.Heterogeneity.Location = new System.Drawing.Point(33, 199);
+            this.Heterogeneity.Location = new System.Drawing.Point(33, 216);
             this.Heterogeneity.Name = "Heterogeneity";
-            this.Heterogeneity.Size = new System.Drawing.Size(84, 16);
+            this.Heterogeneity.Size = new System.Drawing.Size(86, 17);
             this.Heterogeneity.TabIndex = 179;
             this.Heterogeneity.Text = "異種間孵化";
             this.Heterogeneity.UseVisualStyleBackColor = true;
@@ -888,9 +899,9 @@
             // pre_ditto
             // 
             this.pre_ditto.AutoSize = true;
-            this.pre_ditto.Location = new System.Drawing.Point(299, 77);
+            this.pre_ditto.Location = new System.Drawing.Point(293, 83);
             this.pre_ditto.Name = "pre_ditto";
-            this.pre_ditto.Size = new System.Drawing.Size(58, 16);
+            this.pre_ditto.Size = new System.Drawing.Size(60, 17);
             this.pre_ditto.TabIndex = 15;
             this.pre_ditto.Text = "メタモン";
             this.pre_ditto.UseVisualStyleBackColor = true;
@@ -899,22 +910,22 @@
             // post_ditto
             // 
             this.post_ditto.AutoSize = true;
-            this.post_ditto.Location = new System.Drawing.Point(299, 168);
+            this.post_ditto.Location = new System.Drawing.Point(293, 182);
             this.post_ditto.Name = "post_ditto";
-            this.post_ditto.Size = new System.Drawing.Size(58, 16);
+            this.post_ditto.Size = new System.Drawing.Size(60, 17);
             this.post_ditto.TabIndex = 18;
             this.post_ditto.Text = "メタモン";
             this.post_ditto.UseVisualStyleBackColor = true;
             this.post_ditto.Click += new System.EventHandler(this.Change_ditto);
             // 
-            // label19
+            // L_PostAbility
             // 
-            this.label19.AutoSize = true;
-            this.label19.Location = new System.Drawing.Point(175, 169);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(29, 12);
-            this.label19.TabIndex = 178;
-            this.label19.Text = "特性";
+            this.L_PostAbility.Location = new System.Drawing.Point(161, 180);
+            this.L_PostAbility.Name = "L_PostAbility";
+            this.L_PostAbility.Size = new System.Drawing.Size(62, 20);
+            this.L_PostAbility.TabIndex = 178;
+            this.L_PostAbility.Text = "特性";
+            this.L_PostAbility.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // post_ability
             // 
@@ -924,19 +935,19 @@
             "1",
             "2",
             "夢"});
-            this.post_ability.Location = new System.Drawing.Point(210, 166);
+            this.post_ability.Location = new System.Drawing.Point(226, 180);
             this.post_ability.Name = "post_ability";
-            this.post_ability.Size = new System.Drawing.Size(45, 20);
+            this.post_ability.Size = new System.Drawing.Size(45, 21);
             this.post_ability.TabIndex = 17;
             // 
-            // label18
+            // L_PreAbility
             // 
-            this.label18.AutoSize = true;
-            this.label18.Location = new System.Drawing.Point(175, 78);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(29, 12);
-            this.label18.TabIndex = 176;
-            this.label18.Text = "特性";
+            this.L_PreAbility.Location = new System.Drawing.Point(161, 80);
+            this.L_PreAbility.Name = "L_PreAbility";
+            this.L_PreAbility.Size = new System.Drawing.Size(62, 20);
+            this.L_PreAbility.TabIndex = 176;
+            this.L_PreAbility.Text = "特性";
+            this.L_PreAbility.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // pre_ability
             // 
@@ -946,9 +957,9 @@
             "1",
             "2",
             "夢"});
-            this.pre_ability.Location = new System.Drawing.Point(210, 75);
+            this.pre_ability.Location = new System.Drawing.Point(226, 81);
             this.pre_ability.Name = "pre_ability";
-            this.pre_ability.Size = new System.Drawing.Size(45, 20);
+            this.pre_ability.Size = new System.Drawing.Size(45, 21);
             this.pre_ability.TabIndex = 14;
             // 
             // sex_ratio
@@ -963,26 +974,26 @@
             "♂のみ",
             "♀のみ",
             "無性別"});
-            this.sex_ratio.Location = new System.Drawing.Point(273, 197);
+            this.sex_ratio.Location = new System.Drawing.Point(273, 213);
             this.sex_ratio.Name = "sex_ratio";
-            this.sex_ratio.Size = new System.Drawing.Size(80, 20);
+            this.sex_ratio.Size = new System.Drawing.Size(80, 21);
             this.sex_ratio.TabIndex = 20;
             // 
-            // label17
+            // L_sex_ratio
             // 
-            this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(226, 200);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(41, 12);
-            this.label17.TabIndex = 122;
-            this.label17.Text = "性別比";
+            this.L_sex_ratio.Location = new System.Drawing.Point(159, 214);
+            this.L_sex_ratio.Name = "L_sex_ratio";
+            this.L_sex_ratio.Size = new System.Drawing.Size(108, 20);
+            this.L_sex_ratio.TabIndex = 122;
+            this.L_sex_ratio.Text = "性別比";
+            this.L_sex_ratio.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // International
             // 
             this.International.AutoSize = true;
-            this.International.Location = new System.Drawing.Point(22, 27);
+            this.International.Location = new System.Drawing.Point(22, 29);
             this.International.Name = "International";
-            this.International.Size = new System.Drawing.Size(72, 16);
+            this.International.Size = new System.Drawing.Size(74, 17);
             this.International.TabIndex = 52;
             this.International.Text = "国際孵化";
             this.International.UseVisualStyleBackColor = true;
@@ -1003,11 +1014,11 @@
             this.ek_groupBox2.Controls.Add(this.label9);
             this.ek_groupBox2.Controls.Add(this.label16);
             this.ek_groupBox2.Controls.Add(this.label15);
-            this.ek_groupBox2.Controls.Add(this.label163);
+            this.ek_groupBox2.Controls.Add(this.L_k_range);
             this.ek_groupBox2.Controls.Add(this.label176);
-            this.ek_groupBox2.Location = new System.Drawing.Point(697, 6);
+            this.ek_groupBox2.Location = new System.Drawing.Point(697, 7);
             this.ek_groupBox2.Name = "ek_groupBox2";
-            this.ek_groupBox2.Size = new System.Drawing.Size(223, 226);
+            this.ek_groupBox2.Size = new System.Drawing.Size(223, 245);
             this.ek_groupBox2.TabIndex = 3;
             this.ek_groupBox2.TabStop = false;
             this.ek_groupBox2.Text = "検索範囲";
@@ -1016,7 +1027,7 @@
             // 
             this.status3.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.status3.Hexadecimal = true;
-            this.status3.Location = new System.Drawing.Point(118, 24);
+            this.status3.Location = new System.Drawing.Point(118, 26);
             this.status3.Name = "status3";
             this.status3.Size = new System.Drawing.Size(80, 22);
             this.status3.TabIndex = 70;
@@ -1032,7 +1043,7 @@
             // 
             this.status2.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.status2.Hexadecimal = true;
-            this.status2.Location = new System.Drawing.Point(118, 52);
+            this.status2.Location = new System.Drawing.Point(118, 56);
             this.status2.Name = "status2";
             this.status2.Size = new System.Drawing.Size(80, 22);
             this.status2.TabIndex = 71;
@@ -1048,7 +1059,7 @@
             // 
             this.status1.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.status1.Hexadecimal = true;
-            this.status1.Location = new System.Drawing.Point(118, 80);
+            this.status1.Location = new System.Drawing.Point(118, 87);
             this.status1.Name = "status1";
             this.status1.Size = new System.Drawing.Size(80, 22);
             this.status1.TabIndex = 72;
@@ -1064,7 +1075,7 @@
             // 
             this.status0.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.status0.Hexadecimal = true;
-            this.status0.Location = new System.Drawing.Point(118, 108);
+            this.status0.Location = new System.Drawing.Point(118, 117);
             this.status0.Name = "status0";
             this.status0.Size = new System.Drawing.Size(80, 22);
             this.status0.TabIndex = 73;
@@ -1079,7 +1090,7 @@
             // s_min
             // 
             this.s_min.Font = new System.Drawing.Font("Consolas", 9F);
-            this.s_min.Location = new System.Drawing.Point(20, 175);
+            this.s_min.Location = new System.Drawing.Point(20, 190);
             this.s_min.Maximum = new decimal(new int[] {
             999999999,
             0,
@@ -1099,7 +1110,7 @@
             0,
             0,
             0});
-            this.s_max.Location = new System.Drawing.Point(130, 175);
+            this.s_max.Location = new System.Drawing.Point(130, 190);
             this.s_max.Maximum = new decimal(new int[] {
             999999999,
             0,
@@ -1120,7 +1131,7 @@
             // 
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Consolas", 9F);
-            this.label13.Location = new System.Drawing.Point(15, 110);
+            this.label13.Location = new System.Drawing.Point(15, 119);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(70, 14);
             this.label13.TabIndex = 77;
@@ -1130,7 +1141,7 @@
             // 
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(91, 110);
+            this.label14.Location = new System.Drawing.Point(91, 119);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(21, 14);
             this.label14.TabIndex = 76;
@@ -1140,7 +1151,7 @@
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Consolas", 9F);
-            this.label11.Location = new System.Drawing.Point(15, 82);
+            this.label11.Location = new System.Drawing.Point(15, 89);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(70, 14);
             this.label11.TabIndex = 74;
@@ -1150,7 +1161,7 @@
             // 
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(91, 82);
+            this.label12.Location = new System.Drawing.Point(91, 89);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(21, 14);
             this.label12.TabIndex = 73;
@@ -1160,7 +1171,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Consolas", 9F);
-            this.label1.Location = new System.Drawing.Point(15, 54);
+            this.label1.Location = new System.Drawing.Point(15, 59);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(70, 14);
             this.label1.TabIndex = 71;
@@ -1170,7 +1181,7 @@
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(91, 54);
+            this.label9.Location = new System.Drawing.Point(91, 59);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(21, 14);
             this.label9.TabIndex = 70;
@@ -1180,7 +1191,7 @@
             // 
             this.label16.AutoSize = true;
             this.label16.Font = new System.Drawing.Font("Consolas", 9F);
-            this.label16.Location = new System.Drawing.Point(15, 26);
+            this.label16.Location = new System.Drawing.Point(15, 28);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(70, 14);
             this.label16.TabIndex = 68;
@@ -1190,33 +1201,33 @@
             // 
             this.label15.AutoSize = true;
             this.label15.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.Location = new System.Drawing.Point(91, 26);
+            this.label15.Location = new System.Drawing.Point(91, 28);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(21, 14);
             this.label15.TabIndex = 67;
             this.label15.Text = "0x";
             // 
-            // label163
+            // L_k_range
             // 
-            this.label163.AutoSize = true;
-            this.label163.Location = new System.Drawing.Point(18, 152);
-            this.label163.Name = "label163";
-            this.label163.Size = new System.Drawing.Size(41, 12);
-            this.label163.TabIndex = 64;
-            this.label163.Text = "消費数";
+            this.L_k_range.AutoSize = true;
+            this.L_k_range.Location = new System.Drawing.Point(18, 165);
+            this.L_k_range.Name = "L_k_range";
+            this.L_k_range.Size = new System.Drawing.Size(43, 13);
+            this.L_k_range.TabIndex = 64;
+            this.L_k_range.Text = "消費数";
             // 
             // label176
             // 
-            this.label176.Location = new System.Drawing.Point(106, 180);
+            this.label176.Location = new System.Drawing.Point(106, 195);
             this.label176.Name = "label176";
-            this.label176.Size = new System.Drawing.Size(18, 16);
+            this.label176.Size = new System.Drawing.Size(18, 17);
             this.label176.TabIndex = 61;
             this.label176.Text = "～";
             // 
             // IVup2
             // 
             this.IVup2.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.IVup2.Location = new System.Drawing.Point(115, 57);
+            this.IVup2.Location = new System.Drawing.Point(112, 62);
             this.IVup2.Maximum = new decimal(new int[] {
             31,
             0,
@@ -1236,25 +1247,25 @@
             // label115
             // 
             this.label115.AutoSize = true;
-            this.label115.Location = new System.Drawing.Point(92, 94);
+            this.label115.Location = new System.Drawing.Point(92, 102);
             this.label115.Name = "label115";
-            this.label115.Size = new System.Drawing.Size(17, 12);
+            this.label115.Size = new System.Drawing.Size(19, 13);
             this.label115.TabIndex = 80;
             this.label115.Text = "～";
             // 
             // label114
             // 
             this.label114.AutoSize = true;
-            this.label114.Location = new System.Drawing.Point(92, 62);
+            this.label114.Location = new System.Drawing.Point(92, 67);
             this.label114.Name = "label114";
-            this.label114.Size = new System.Drawing.Size(17, 12);
+            this.label114.Size = new System.Drawing.Size(19, 13);
             this.label114.TabIndex = 78;
             this.label114.Text = "～";
             // 
             // IVup3
             // 
             this.IVup3.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.IVup3.Location = new System.Drawing.Point(115, 89);
+            this.IVup3.Location = new System.Drawing.Point(112, 96);
             this.IVup3.Maximum = new decimal(new int[] {
             31,
             0,
@@ -1274,7 +1285,7 @@
             // IVup1
             // 
             this.IVup1.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.IVup1.Location = new System.Drawing.Point(115, 25);
+            this.IVup1.Location = new System.Drawing.Point(112, 27);
             this.IVup1.Maximum = new decimal(new int[] {
             31,
             0,
@@ -1294,25 +1305,25 @@
             // label113
             // 
             this.label113.AutoSize = true;
-            this.label113.Location = new System.Drawing.Point(92, 126);
+            this.label113.Location = new System.Drawing.Point(92, 137);
             this.label113.Name = "label113";
-            this.label113.Size = new System.Drawing.Size(17, 12);
+            this.label113.Size = new System.Drawing.Size(19, 13);
             this.label113.TabIndex = 82;
             this.label113.Text = "～";
             // 
             // label112
             // 
             this.label112.AutoSize = true;
-            this.label112.Location = new System.Drawing.Point(92, 30);
+            this.label112.Location = new System.Drawing.Point(92, 33);
             this.label112.Name = "label112";
-            this.label112.Size = new System.Drawing.Size(17, 12);
+            this.label112.Size = new System.Drawing.Size(19, 13);
             this.label112.TabIndex = 76;
             this.label112.Text = "～";
             // 
             // IVup4
             // 
             this.IVup4.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.IVup4.Location = new System.Drawing.Point(115, 121);
+            this.IVup4.Location = new System.Drawing.Point(112, 131);
             this.IVup4.Maximum = new decimal(new int[] {
             31,
             0,
@@ -1332,7 +1343,7 @@
             // IVlow6
             // 
             this.IVlow6.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.IVlow6.Location = new System.Drawing.Point(41, 185);
+            this.IVlow6.Location = new System.Drawing.Point(45, 200);
             this.IVlow6.Maximum = new decimal(new int[] {
             31,
             0,
@@ -1347,7 +1358,7 @@
             // IVlow5
             // 
             this.IVlow5.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.IVlow5.Location = new System.Drawing.Point(41, 153);
+            this.IVlow5.Location = new System.Drawing.Point(45, 166);
             this.IVlow5.Maximum = new decimal(new int[] {
             31,
             0,
@@ -1362,16 +1373,16 @@
             // label110
             // 
             this.label110.AutoSize = true;
-            this.label110.Location = new System.Drawing.Point(92, 158);
+            this.label110.Location = new System.Drawing.Point(92, 171);
             this.label110.Name = "label110";
-            this.label110.Size = new System.Drawing.Size(17, 12);
+            this.label110.Size = new System.Drawing.Size(19, 13);
             this.label110.TabIndex = 84;
             this.label110.Text = "～";
             // 
             // IVlow4
             // 
             this.IVlow4.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.IVlow4.Location = new System.Drawing.Point(41, 121);
+            this.IVlow4.Location = new System.Drawing.Point(45, 131);
             this.IVlow4.Maximum = new decimal(new int[] {
             31,
             0,
@@ -1386,7 +1397,7 @@
             // IVup5
             // 
             this.IVup5.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.IVup5.Location = new System.Drawing.Point(115, 153);
+            this.IVup5.Location = new System.Drawing.Point(112, 166);
             this.IVup5.Maximum = new decimal(new int[] {
             31,
             0,
@@ -1406,7 +1417,7 @@
             // IVlow3
             // 
             this.IVlow3.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.IVlow3.Location = new System.Drawing.Point(41, 89);
+            this.IVlow3.Location = new System.Drawing.Point(45, 96);
             this.IVlow3.Maximum = new decimal(new int[] {
             31,
             0,
@@ -1421,7 +1432,7 @@
             // IVlow2
             // 
             this.IVlow2.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.IVlow2.Location = new System.Drawing.Point(41, 57);
+            this.IVlow2.Location = new System.Drawing.Point(45, 62);
             this.IVlow2.Maximum = new decimal(new int[] {
             31,
             0,
@@ -1436,16 +1447,16 @@
             // label109
             // 
             this.label109.AutoSize = true;
-            this.label109.Location = new System.Drawing.Point(92, 190);
+            this.label109.Location = new System.Drawing.Point(92, 206);
             this.label109.Name = "label109";
-            this.label109.Size = new System.Drawing.Size(17, 12);
+            this.label109.Size = new System.Drawing.Size(19, 13);
             this.label109.TabIndex = 86;
             this.label109.Text = "～";
             // 
             // IVlow1
             // 
             this.IVlow1.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.IVlow1.Location = new System.Drawing.Point(41, 25);
+            this.IVlow1.Location = new System.Drawing.Point(45, 27);
             this.IVlow1.Maximum = new decimal(new int[] {
             31,
             0,
@@ -1457,86 +1468,86 @@
             this.IVlow1.Enter += new System.EventHandler(this.NumericUpDown_Enter);
             this.IVlow1.Validating += new System.ComponentModel.CancelEventHandler(this.NumericUpDown_Check);
             // 
-            // label105
+            // L_search_H
             // 
-            this.label105.AutoSize = true;
-            this.label105.Location = new System.Drawing.Point(22, 30);
-            this.label105.Name = "label105";
-            this.label105.Size = new System.Drawing.Size(13, 12);
-            this.label105.TabIndex = 38;
-            this.label105.Text = "H";
+            this.L_search_H.Location = new System.Drawing.Point(1, 26);
+            this.L_search_H.Name = "L_search_H";
+            this.L_search_H.Size = new System.Drawing.Size(40, 20);
+            this.L_search_H.TabIndex = 38;
+            this.L_search_H.Text = "H";
+            this.L_search_H.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // label103
+            // L_search_A
             // 
-            this.label103.AutoSize = true;
-            this.label103.Location = new System.Drawing.Point(22, 62);
-            this.label103.Name = "label103";
-            this.label103.Size = new System.Drawing.Size(13, 12);
-            this.label103.TabIndex = 40;
-            this.label103.Text = "A";
+            this.L_search_A.Location = new System.Drawing.Point(1, 60);
+            this.L_search_A.Name = "L_search_A";
+            this.L_search_A.Size = new System.Drawing.Size(40, 20);
+            this.L_search_A.TabIndex = 40;
+            this.L_search_A.Text = "A";
+            this.L_search_A.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // label48
+            // L_search_B
             // 
-            this.label48.AutoSize = true;
-            this.label48.Location = new System.Drawing.Point(22, 94);
-            this.label48.Name = "label48";
-            this.label48.Size = new System.Drawing.Size(13, 12);
-            this.label48.TabIndex = 42;
-            this.label48.Text = "B";
+            this.L_search_B.Location = new System.Drawing.Point(1, 95);
+            this.L_search_B.Name = "L_search_B";
+            this.L_search_B.Size = new System.Drawing.Size(40, 20);
+            this.L_search_B.TabIndex = 42;
+            this.L_search_B.Text = "B";
+            this.L_search_B.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // label47
+            // L_search_C
             // 
-            this.label47.AutoSize = true;
-            this.label47.Location = new System.Drawing.Point(22, 126);
-            this.label47.Name = "label47";
-            this.label47.Size = new System.Drawing.Size(13, 12);
-            this.label47.TabIndex = 44;
-            this.label47.Text = "C";
+            this.L_search_C.Location = new System.Drawing.Point(1, 130);
+            this.L_search_C.Name = "L_search_C";
+            this.L_search_C.Size = new System.Drawing.Size(40, 20);
+            this.L_search_C.TabIndex = 44;
+            this.L_search_C.Text = "C";
+            this.L_search_C.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // label45
+            // L_search_D
             // 
-            this.label45.AutoSize = true;
-            this.label45.Location = new System.Drawing.Point(22, 158);
-            this.label45.Name = "label45";
-            this.label45.Size = new System.Drawing.Size(13, 12);
-            this.label45.TabIndex = 46;
-            this.label45.Text = "D";
+            this.L_search_D.Location = new System.Drawing.Point(1, 164);
+            this.L_search_D.Name = "L_search_D";
+            this.L_search_D.Size = new System.Drawing.Size(40, 20);
+            this.L_search_D.TabIndex = 46;
+            this.L_search_D.Text = "D";
+            this.L_search_D.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // label43
+            // L_search_S
             // 
-            this.label43.AutoSize = true;
-            this.label43.Location = new System.Drawing.Point(22, 190);
-            this.label43.Name = "label43";
-            this.label43.Size = new System.Drawing.Size(12, 12);
-            this.label43.TabIndex = 48;
-            this.label43.Text = "S";
+            this.L_search_S.Location = new System.Drawing.Point(1, 199);
+            this.L_search_S.Name = "L_search_S";
+            this.L_search_S.Size = new System.Drawing.Size(40, 20);
+            this.L_search_S.TabIndex = 48;
+            this.L_search_S.Text = "S";
+            this.L_search_S.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // mezapaType
             // 
             this.mezapaType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.mezapaType.FormattingEnabled = true;
-            this.mezapaType.Location = new System.Drawing.Point(214, 91);
+            this.mezapaType.Location = new System.Drawing.Point(222, 99);
             this.mezapaType.Name = "mezapaType";
-            this.mezapaType.Size = new System.Drawing.Size(80, 20);
+            this.mezapaType.Size = new System.Drawing.Size(80, 21);
             this.mezapaType.TabIndex = 39;
             // 
-            // label127
+            // L_mezapa
             // 
-            this.label127.AutoSize = true;
-            this.label127.Location = new System.Drawing.Point(174, 94);
-            this.label127.Name = "label127";
-            this.label127.Size = new System.Drawing.Size(34, 12);
-            this.label127.TabIndex = 117;
-            this.label127.Text = "めざパ";
+            this.L_mezapa.Location = new System.Drawing.Point(163, 99);
+            this.L_mezapa.Name = "L_mezapa";
+            this.L_mezapa.Size = new System.Drawing.Size(57, 20);
+            this.L_mezapa.TabIndex = 117;
+            this.L_mezapa.Text = "めざパ";
+            this.L_mezapa.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // label104
+            // L_ability
             // 
-            this.label104.AutoSize = true;
-            this.label104.Location = new System.Drawing.Point(179, 30);
-            this.label104.Name = "label104";
-            this.label104.Size = new System.Drawing.Size(29, 12);
-            this.label104.TabIndex = 116;
-            this.label104.Text = "特性";
+            this.L_ability.Location = new System.Drawing.Point(163, 30);
+            this.L_ability.Name = "L_ability";
+            this.L_ability.Size = new System.Drawing.Size(57, 20);
+            this.L_ability.TabIndex = 116;
+            this.L_ability.Text = "特性";
+            this.L_ability.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // ability
             // 
@@ -1547,19 +1558,19 @@
             "1",
             "2",
             "夢"});
-            this.ability.Location = new System.Drawing.Point(214, 27);
+            this.ability.Location = new System.Drawing.Point(222, 29);
             this.ability.Name = "ability";
-            this.ability.Size = new System.Drawing.Size(80, 20);
+            this.ability.Size = new System.Drawing.Size(80, 21);
             this.ability.TabIndex = 37;
             // 
-            // label46
+            // L_sex
             // 
-            this.label46.AutoSize = true;
-            this.label46.Location = new System.Drawing.Point(179, 62);
-            this.label46.Name = "label46";
-            this.label46.Size = new System.Drawing.Size(29, 12);
-            this.label46.TabIndex = 120;
-            this.label46.Text = "性別";
+            this.L_sex.Location = new System.Drawing.Point(163, 64);
+            this.L_sex.Name = "L_sex";
+            this.L_sex.Size = new System.Drawing.Size(57, 20);
+            this.L_sex.TabIndex = 120;
+            this.L_sex.Text = "性別";
+            this.L_sex.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // sex
             // 
@@ -1570,27 +1581,27 @@
             "♂",
             "♀",
             "-"});
-            this.sex.Location = new System.Drawing.Point(214, 59);
+            this.sex.Location = new System.Drawing.Point(222, 64);
             this.sex.Name = "sex";
-            this.sex.Size = new System.Drawing.Size(80, 20);
+            this.sex.Size = new System.Drawing.Size(80, 21);
             this.sex.TabIndex = 38;
             // 
             // y_groupBox2
             // 
             this.y_groupBox2.Controls.Add(this.Invalid_Refine);
-            this.y_groupBox2.Controls.Add(this.label21);
+            this.y_groupBox2.Controls.Add(this.L_ball);
             this.y_groupBox2.Controls.Add(this.ball);
             this.y_groupBox2.Controls.Add(this.sex);
-            this.y_groupBox2.Controls.Add(this.label46);
-            this.y_groupBox2.Controls.Add(this.label104);
-            this.y_groupBox2.Controls.Add(this.label127);
+            this.y_groupBox2.Controls.Add(this.L_sex);
+            this.y_groupBox2.Controls.Add(this.L_ability);
+            this.y_groupBox2.Controls.Add(this.L_mezapa);
             this.y_groupBox2.Controls.Add(this.mezapaType);
-            this.y_groupBox2.Controls.Add(this.label43);
-            this.y_groupBox2.Controls.Add(this.label45);
-            this.y_groupBox2.Controls.Add(this.label47);
-            this.y_groupBox2.Controls.Add(this.label48);
-            this.y_groupBox2.Controls.Add(this.label103);
-            this.y_groupBox2.Controls.Add(this.label105);
+            this.y_groupBox2.Controls.Add(this.L_search_S);
+            this.y_groupBox2.Controls.Add(this.L_search_D);
+            this.y_groupBox2.Controls.Add(this.L_search_C);
+            this.y_groupBox2.Controls.Add(this.L_search_B);
+            this.y_groupBox2.Controls.Add(this.L_search_A);
+            this.y_groupBox2.Controls.Add(this.L_search_H);
             this.y_groupBox2.Controls.Add(this.IVup6);
             this.y_groupBox2.Controls.Add(this.IVlow1);
             this.y_groupBox2.Controls.Add(this.label109);
@@ -1610,9 +1621,9 @@
             this.y_groupBox2.Controls.Add(this.label115);
             this.y_groupBox2.Controls.Add(this.IVup2);
             this.y_groupBox2.Controls.Add(this.ability);
-            this.y_groupBox2.Location = new System.Drawing.Point(381, 6);
+            this.y_groupBox2.Location = new System.Drawing.Point(381, 7);
             this.y_groupBox2.Name = "y_groupBox2";
-            this.y_groupBox2.Size = new System.Drawing.Size(310, 226);
+            this.y_groupBox2.Size = new System.Drawing.Size(310, 245);
             this.y_groupBox2.TabIndex = 20;
             this.y_groupBox2.TabStop = false;
             this.y_groupBox2.Text = "目標個体";
@@ -1620,21 +1631,21 @@
             // Invalid_Refine
             // 
             this.Invalid_Refine.AutoSize = true;
-            this.Invalid_Refine.Location = new System.Drawing.Point(194, 189);
+            this.Invalid_Refine.Location = new System.Drawing.Point(194, 205);
             this.Invalid_Refine.Name = "Invalid_Refine";
-            this.Invalid_Refine.Size = new System.Drawing.Size(100, 16);
+            this.Invalid_Refine.Size = new System.Drawing.Size(102, 17);
             this.Invalid_Refine.TabIndex = 186;
             this.Invalid_Refine.Text = "絞り込みを無効";
             this.Invalid_Refine.UseVisualStyleBackColor = true;
             // 
-            // label21
+            // L_ball
             // 
-            this.label21.AutoSize = true;
-            this.label21.Location = new System.Drawing.Point(174, 126);
-            this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(35, 12);
-            this.label21.TabIndex = 122;
-            this.label21.Text = "ボール";
+            this.L_ball.Location = new System.Drawing.Point(163, 134);
+            this.L_ball.Name = "L_ball";
+            this.L_ball.Size = new System.Drawing.Size(57, 20);
+            this.L_ball.TabIndex = 122;
+            this.L_ball.Text = "ボール";
+            this.L_ball.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // ball
             // 
@@ -1644,15 +1655,15 @@
             "指定なし",
             "先親",
             "後親"});
-            this.ball.Location = new System.Drawing.Point(214, 123);
+            this.ball.Location = new System.Drawing.Point(222, 133);
             this.ball.Name = "ball";
-            this.ball.Size = new System.Drawing.Size(80, 20);
+            this.ball.Size = new System.Drawing.Size(80, 21);
             this.ball.TabIndex = 40;
             // 
             // IVup6
             // 
             this.IVup6.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.IVup6.Location = new System.Drawing.Point(115, 185);
+            this.IVup6.Location = new System.Drawing.Point(112, 200);
             this.IVup6.Maximum = new decimal(new int[] {
             31,
             0,
@@ -1671,9 +1682,9 @@
             // 
             // k_search
             // 
-            this.k_search.Location = new System.Drawing.Point(926, 209);
+            this.k_search.Location = new System.Drawing.Point(926, 226);
             this.k_search.Name = "k_search";
-            this.k_search.Size = new System.Drawing.Size(75, 23);
+            this.k_search.Size = new System.Drawing.Size(75, 25);
             this.k_search.TabIndex = 176;
             this.k_search.Text = "計算";
             this.k_search.UseVisualStyleBackColor = true;
@@ -1682,9 +1693,9 @@
             // omamori
             // 
             this.omamori.AutoSize = true;
-            this.omamori.Location = new System.Drawing.Point(22, 52);
+            this.omamori.Location = new System.Drawing.Point(22, 56);
             this.omamori.Name = "omamori";
-            this.omamori.Size = new System.Drawing.Size(75, 16);
+            this.omamori.Size = new System.Drawing.Size(77, 17);
             this.omamori.TabIndex = 174;
             this.omamori.Text = "光るお守り";
             this.omamori.UseVisualStyleBackColor = true;
@@ -1698,9 +1709,9 @@
             this.groupBox1.Controls.Add(this.shiny);
             this.groupBox1.Controls.Add(this.International);
             this.groupBox1.Controls.Add(this.omamori);
-            this.groupBox1.Location = new System.Drawing.Point(926, 6);
+            this.groupBox1.Location = new System.Drawing.Point(926, 7);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(182, 197);
+            this.groupBox1.Size = new System.Drawing.Size(182, 213);
             this.groupBox1.TabIndex = 177;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "その他";
@@ -1713,7 +1724,7 @@
             0,
             0,
             0});
-            this.TSV.Location = new System.Drawing.Point(53, 129);
+            this.TSV.Location = new System.Drawing.Point(53, 140);
             this.TSV.Maximum = new decimal(new int[] {
             4096,
             0,
@@ -1726,9 +1737,9 @@
             // other_TSV
             // 
             this.other_TSV.AutoSize = true;
-            this.other_TSV.Location = new System.Drawing.Point(22, 168);
+            this.other_TSV.Location = new System.Drawing.Point(22, 182);
             this.other_TSV.Name = "other_TSV";
-            this.other_TSV.Size = new System.Drawing.Size(133, 16);
+            this.other_TSV.Size = new System.Drawing.Size(134, 17);
             this.other_TSV.TabIndex = 185;
             this.other_TSV.Text = "他TSVで色違いを探す";
             this.other_TSV.UseVisualStyleBackColor = true;
@@ -1738,9 +1749,9 @@
             this.k_TSV_shiny.AutoSize = true;
             this.k_TSV_shiny.Checked = true;
             this.k_TSV_shiny.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.k_TSV_shiny.Location = new System.Drawing.Point(22, 105);
+            this.k_TSV_shiny.Location = new System.Drawing.Point(22, 114);
             this.k_TSV_shiny.Name = "k_TSV_shiny";
-            this.k_TSV_shiny.Size = new System.Drawing.Size(149, 16);
+            this.k_TSV_shiny.Size = new System.Drawing.Size(150, 17);
             this.k_TSV_shiny.TabIndex = 184;
             this.k_TSV_shiny.Text = "TSVを考慮した計算をする";
             this.k_TSV_shiny.UseVisualStyleBackColor = true;
@@ -1750,7 +1761,7 @@
             // 
             this.label20.AutoSize = true;
             this.label20.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label20.Location = new System.Drawing.Point(19, 133);
+            this.label20.Location = new System.Drawing.Point(19, 144);
             this.label20.Name = "label20";
             this.label20.Size = new System.Drawing.Size(28, 14);
             this.label20.TabIndex = 180;
@@ -1759,57 +1770,60 @@
             // shiny
             // 
             this.shiny.AutoSize = true;
-            this.shiny.Location = new System.Drawing.Point(22, 77);
+            this.shiny.Location = new System.Drawing.Point(22, 83);
             this.shiny.Name = "shiny";
-            this.shiny.Size = new System.Drawing.Size(103, 16);
+            this.shiny.Size = new System.Drawing.Size(105, 17);
             this.shiny.TabIndex = 178;
             this.shiny.Text = "色違いのみ出力";
             this.shiny.UseVisualStyleBackColor = true;
             // 
             // tabControl1
             // 
-            this.tabControl1.Controls.Add(this.tabPage1);
-            this.tabControl1.Controls.Add(this.tabPage2);
-            this.tabControl1.Location = new System.Drawing.Point(12, 12);
+            this.tabControl1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.tabControl1.Controls.Add(this.Tab_Search);
+            this.tabControl1.Controls.Add(this.Tab_Egg);
+            this.tabControl1.Location = new System.Drawing.Point(12, 27);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(1122, 705);
+            this.tabControl1.Size = new System.Drawing.Size(1122, 521);
             this.tabControl1.TabIndex = 0;
             // 
-            // tabPage1
+            // Tab_Search
             // 
-            this.tabPage1.Controls.Add(this.ek_groupBox1);
-            this.tabPage1.Controls.Add(this.y_groupBox2);
-            this.tabPage1.Controls.Add(this.k_search);
-            this.tabPage1.Controls.Add(this.groupBox1);
-            this.tabPage1.Controls.Add(this.k_dataGridView);
-            this.tabPage1.Controls.Add(this.ek_groupBox2);
-            this.tabPage1.Location = new System.Drawing.Point(4, 22);
-            this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(1114, 679);
-            this.tabPage1.TabIndex = 0;
-            this.tabPage1.Text = "個体検索";
-            this.tabPage1.UseVisualStyleBackColor = true;
+            this.Tab_Search.Controls.Add(this.ek_groupBox1);
+            this.Tab_Search.Controls.Add(this.y_groupBox2);
+            this.Tab_Search.Controls.Add(this.k_search);
+            this.Tab_Search.Controls.Add(this.groupBox1);
+            this.Tab_Search.Controls.Add(this.k_dataGridView);
+            this.Tab_Search.Controls.Add(this.ek_groupBox2);
+            this.Tab_Search.Location = new System.Drawing.Point(4, 22);
+            this.Tab_Search.Name = "Tab_Search";
+            this.Tab_Search.Padding = new System.Windows.Forms.Padding(3);
+            this.Tab_Search.Size = new System.Drawing.Size(1114, 495);
+            this.Tab_Search.TabIndex = 0;
+            this.Tab_Search.Text = "個体検索";
+            this.Tab_Search.UseVisualStyleBackColor = true;
             // 
-            // tabPage2
+            // Tab_Egg
             // 
-            this.tabPage2.Controls.Add(this.List_search);
-            this.tabPage2.Controls.Add(this.L_dataGridView);
-            this.tabPage2.Controls.Add(this.groupBox5);
-            this.tabPage2.Location = new System.Drawing.Point(4, 22);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(1114, 679);
-            this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "連続孵化リスト";
-            this.tabPage2.UseVisualStyleBackColor = true;
+            this.Tab_Egg.Controls.Add(this.List_search);
+            this.Tab_Egg.Controls.Add(this.L_dataGridView);
+            this.Tab_Egg.Controls.Add(this.groupBox5);
+            this.Tab_Egg.Location = new System.Drawing.Point(4, 22);
+            this.Tab_Egg.Name = "Tab_Egg";
+            this.Tab_Egg.Padding = new System.Windows.Forms.Padding(3);
+            this.Tab_Egg.Size = new System.Drawing.Size(1114, 495);
+            this.Tab_Egg.TabIndex = 1;
+            this.Tab_Egg.Text = "連続孵化リスト";
+            this.Tab_Egg.UseVisualStyleBackColor = true;
             // 
             // List_search
             // 
-            this.List_search.Location = new System.Drawing.Point(154, 252);
+            this.List_search.Location = new System.Drawing.Point(154, 273);
             this.List_search.Name = "List_search";
-            this.List_search.Size = new System.Drawing.Size(75, 23);
+            this.List_search.Size = new System.Drawing.Size(75, 25);
             this.List_search.TabIndex = 182;
             this.List_search.Text = "計算";
             this.List_search.UseVisualStyleBackColor = true;
@@ -1819,144 +1833,147 @@
             // 
             this.L_dataGridView.AllowUserToAddRows = false;
             this.L_dataGridView.AllowUserToResizeColumns = false;
+            this.L_dataGridView.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.L_dataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.L_dataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Column21,
-            this.dataGridViewTextBoxColumn1,
-            this.dataGridViewTextBoxColumn2,
-            this.dataGridViewTextBoxColumn3,
-            this.dataGridViewTextBoxColumn4,
-            this.dataGridViewTextBoxColumn5,
-            this.dataGridViewTextBoxColumn6,
-            this.dataGridViewTextBoxColumn7,
-            this.dataGridViewTextBoxColumn8,
-            this.dataGridViewTextBoxColumn9,
-            this.dataGridViewTextBoxColumn10,
-            this.dataGridViewTextBoxColumn11,
-            this.dataGridViewTextBoxColumn12,
-            this.Column23,
-            this.dataGridViewTextBoxColumn13});
+            this.dgvE_frame,
+            this.dgvE_used,
+            this.dgvE_seed,
+            this.dgvE_H,
+            this.dgvE_A,
+            this.dgvE_B,
+            this.dgvE_C,
+            this.dgvE_D,
+            this.dgvE_S,
+            this.dgvE_gender,
+            this.dgvE_ability,
+            this.dgvE_nature,
+            this.dgvE_pid,
+            this.dgvE_psv,
+            this.dgvE_ec});
             this.L_dataGridView.ContextMenuStrip = this.contextMenuStrip2;
-            this.L_dataGridView.Location = new System.Drawing.Point(235, 6);
+            this.L_dataGridView.Location = new System.Drawing.Point(235, 7);
             this.L_dataGridView.Name = "L_dataGridView";
             this.L_dataGridView.RowTemplate.Height = 21;
-            this.L_dataGridView.Size = new System.Drawing.Size(873, 667);
+            this.L_dataGridView.Size = new System.Drawing.Size(873, 482);
             this.L_dataGridView.TabIndex = 0;
             // 
-            // Column21
+            // dgvE_frame
             // 
-            this.Column21.HeaderText = "受取";
-            this.Column21.Name = "Column21";
-            this.Column21.Width = 54;
+            this.dgvE_frame.HeaderText = "受取";
+            this.dgvE_frame.Name = "dgvE_frame";
+            this.dgvE_frame.Width = 54;
             // 
-            // dataGridViewTextBoxColumn1
+            // dgvE_used
             // 
-            this.dataGridViewTextBoxColumn1.HeaderText = "消費";
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            this.dataGridViewTextBoxColumn1.Width = 54;
+            this.dgvE_used.HeaderText = "消費";
+            this.dgvE_used.Name = "dgvE_used";
+            this.dgvE_used.Width = 54;
             // 
-            // dataGridViewTextBoxColumn2
+            // dgvE_seed
             // 
-            this.dataGridViewTextBoxColumn2.HeaderText = "Seed";
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            this.dataGridViewTextBoxColumn2.Width = 270;
+            this.dgvE_seed.HeaderText = "Seed";
+            this.dgvE_seed.Name = "dgvE_seed";
+            this.dgvE_seed.Width = 270;
             // 
-            // dataGridViewTextBoxColumn3
+            // dgvE_H
             // 
-            this.dataGridViewTextBoxColumn3.HeaderText = "H";
-            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-            this.dataGridViewTextBoxColumn3.Width = 27;
+            this.dgvE_H.HeaderText = "H";
+            this.dgvE_H.Name = "dgvE_H";
+            this.dgvE_H.Width = 27;
             // 
-            // dataGridViewTextBoxColumn4
+            // dgvE_A
             // 
-            this.dataGridViewTextBoxColumn4.HeaderText = "A";
-            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
-            this.dataGridViewTextBoxColumn4.Width = 27;
+            this.dgvE_A.HeaderText = "A";
+            this.dgvE_A.Name = "dgvE_A";
+            this.dgvE_A.Width = 27;
             // 
-            // dataGridViewTextBoxColumn5
+            // dgvE_B
             // 
-            this.dataGridViewTextBoxColumn5.HeaderText = "B";
-            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
-            this.dataGridViewTextBoxColumn5.Width = 27;
+            this.dgvE_B.HeaderText = "B";
+            this.dgvE_B.Name = "dgvE_B";
+            this.dgvE_B.Width = 27;
             // 
-            // dataGridViewTextBoxColumn6
+            // dgvE_C
             // 
-            this.dataGridViewTextBoxColumn6.HeaderText = "C";
-            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
-            this.dataGridViewTextBoxColumn6.Width = 27;
+            this.dgvE_C.HeaderText = "C";
+            this.dgvE_C.Name = "dgvE_C";
+            this.dgvE_C.Width = 27;
             // 
-            // dataGridViewTextBoxColumn7
+            // dgvE_D
             // 
-            this.dataGridViewTextBoxColumn7.HeaderText = "D";
-            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
-            this.dataGridViewTextBoxColumn7.Width = 27;
+            this.dgvE_D.HeaderText = "D";
+            this.dgvE_D.Name = "dgvE_D";
+            this.dgvE_D.Width = 27;
             // 
-            // dataGridViewTextBoxColumn8
+            // dgvE_S
             // 
-            this.dataGridViewTextBoxColumn8.HeaderText = "S";
-            this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
-            this.dataGridViewTextBoxColumn8.Width = 27;
+            this.dgvE_S.HeaderText = "S";
+            this.dgvE_S.Name = "dgvE_S";
+            this.dgvE_S.Width = 27;
             // 
-            // dataGridViewTextBoxColumn9
+            // dgvE_gender
             // 
-            this.dataGridViewTextBoxColumn9.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.dataGridViewTextBoxColumn9.HeaderText = "性別";
-            this.dataGridViewTextBoxColumn9.Name = "dataGridViewTextBoxColumn9";
-            this.dataGridViewTextBoxColumn9.Width = 54;
+            this.dgvE_gender.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.dgvE_gender.HeaderText = "性別";
+            this.dgvE_gender.Name = "dgvE_gender";
+            this.dgvE_gender.Width = 56;
             // 
-            // dataGridViewTextBoxColumn10
+            // dgvE_ability
             // 
-            this.dataGridViewTextBoxColumn10.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.dataGridViewTextBoxColumn10.HeaderText = "特性";
-            this.dataGridViewTextBoxColumn10.Name = "dataGridViewTextBoxColumn10";
-            this.dataGridViewTextBoxColumn10.Width = 54;
+            this.dgvE_ability.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.dgvE_ability.HeaderText = "特性";
+            this.dgvE_ability.Name = "dgvE_ability";
+            this.dgvE_ability.Width = 56;
             // 
-            // dataGridViewTextBoxColumn11
+            // dgvE_nature
             // 
-            this.dataGridViewTextBoxColumn11.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.dataGridViewTextBoxColumn11.HeaderText = "性格";
-            this.dataGridViewTextBoxColumn11.Name = "dataGridViewTextBoxColumn11";
-            this.dataGridViewTextBoxColumn11.Width = 54;
+            this.dgvE_nature.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.dgvE_nature.HeaderText = "性格";
+            this.dgvE_nature.Name = "dgvE_nature";
+            this.dgvE_nature.Width = 56;
             // 
-            // dataGridViewTextBoxColumn12
+            // dgvE_pid
             // 
-            this.dataGridViewTextBoxColumn12.HeaderText = "性格値";
-            this.dataGridViewTextBoxColumn12.Name = "dataGridViewTextBoxColumn12";
-            this.dataGridViewTextBoxColumn12.Width = 66;
+            this.dgvE_pid.HeaderText = "性格値";
+            this.dgvE_pid.Name = "dgvE_pid";
+            this.dgvE_pid.Width = 66;
             // 
-            // Column23
+            // dgvE_psv
             // 
-            this.Column23.HeaderText = "SV";
-            this.Column23.Name = "Column23";
-            this.Column23.Width = 54;
+            this.dgvE_psv.HeaderText = "SV";
+            this.dgvE_psv.Name = "dgvE_psv";
+            this.dgvE_psv.Width = 54;
             // 
-            // dataGridViewTextBoxColumn13
+            // dgvE_ec
             // 
-            this.dataGridViewTextBoxColumn13.HeaderText = "暗号化定数";
-            this.dataGridViewTextBoxColumn13.Name = "dataGridViewTextBoxColumn13";
-            this.dataGridViewTextBoxColumn13.Width = 90;
+            this.dgvE_ec.HeaderText = "暗号化定数";
+            this.dgvE_ec.Name = "dgvE_ec";
+            this.dgvE_ec.Width = 90;
             // 
             // contextMenuStrip2
             // 
             this.contextMenuStrip2.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripMenuItem1,
-            this.toolStripMenuItem2});
+            this.mnu2Copy,
+            this.mnu2SelectAll});
             this.contextMenuStrip2.Name = "contextMenuStrip1";
             this.contextMenuStrip2.Size = new System.Drawing.Size(120, 48);
             // 
-            // toolStripMenuItem1
+            // mnu2Copy
             // 
-            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(119, 22);
-            this.toolStripMenuItem1.Text = "コピー";
-            this.toolStripMenuItem1.Click += new System.EventHandler(this.L_copyToolStripMenuItem_Click);
+            this.mnu2Copy.Name = "mnu2Copy";
+            this.mnu2Copy.Size = new System.Drawing.Size(119, 22);
+            this.mnu2Copy.Text = "コピー";
+            this.mnu2Copy.Click += new System.EventHandler(this.L_copyToolStripMenuItem_Click);
             // 
-            // toolStripMenuItem2
+            // mnu2SelectAll
             // 
-            this.toolStripMenuItem2.Name = "toolStripMenuItem2";
-            this.toolStripMenuItem2.Size = new System.Drawing.Size(119, 22);
-            this.toolStripMenuItem2.Text = "全て選択";
-            this.toolStripMenuItem2.Click += new System.EventHandler(this.L_SelectAllToolStripMenuItem_Click);
+            this.mnu2SelectAll.Name = "mnu2SelectAll";
+            this.mnu2SelectAll.Size = new System.Drawing.Size(119, 22);
+            this.mnu2SelectAll.Text = "全て選択";
+            this.mnu2SelectAll.Click += new System.EventHandler(this.L_SelectAllToolStripMenuItem_Click);
             // 
             // groupBox5
             // 
@@ -1975,11 +1992,11 @@
             this.groupBox5.Controls.Add(this.label68);
             this.groupBox5.Controls.Add(this.label69);
             this.groupBox5.Controls.Add(this.label70);
-            this.groupBox5.Controls.Add(this.label71);
+            this.groupBox5.Controls.Add(this.L_eggrange);
             this.groupBox5.Controls.Add(this.label72);
-            this.groupBox5.Location = new System.Drawing.Point(6, 6);
+            this.groupBox5.Location = new System.Drawing.Point(6, 7);
             this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Size = new System.Drawing.Size(223, 240);
+            this.groupBox5.Size = new System.Drawing.Size(223, 260);
             this.groupBox5.TabIndex = 180;
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "検索範囲";
@@ -1988,7 +2005,7 @@
             // 
             this.L_status3a.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.L_status3a.Hexadecimal = true;
-            this.L_status3a.Location = new System.Drawing.Point(118, 24);
+            this.L_status3a.Location = new System.Drawing.Point(118, 26);
             this.L_status3a.Name = "L_status3a";
             this.L_status3a.Size = new System.Drawing.Size(80, 22);
             this.L_status3a.TabIndex = 1;
@@ -2004,7 +2021,7 @@
             // 
             this.L_status2a.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.L_status2a.Hexadecimal = true;
-            this.L_status2a.Location = new System.Drawing.Point(118, 52);
+            this.L_status2a.Location = new System.Drawing.Point(118, 56);
             this.L_status2a.Name = "L_status2a";
             this.L_status2a.Size = new System.Drawing.Size(80, 22);
             this.L_status2a.TabIndex = 2;
@@ -2020,7 +2037,7 @@
             // 
             this.L_status1a.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.L_status1a.Hexadecimal = true;
-            this.L_status1a.Location = new System.Drawing.Point(118, 80);
+            this.L_status1a.Location = new System.Drawing.Point(118, 87);
             this.L_status1a.Name = "L_status1a";
             this.L_status1a.Size = new System.Drawing.Size(80, 22);
             this.L_status1a.TabIndex = 3;
@@ -2036,7 +2053,7 @@
             // 
             this.L_status0a.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.L_status0a.Hexadecimal = true;
-            this.L_status0a.Location = new System.Drawing.Point(118, 108);
+            this.L_status0a.Location = new System.Drawing.Point(118, 117);
             this.L_status0a.Name = "L_status0a";
             this.L_status0a.Size = new System.Drawing.Size(80, 22);
             this.L_status0a.TabIndex = 4;
@@ -2051,32 +2068,22 @@
             // n_min
             // 
             this.n_min.Font = new System.Drawing.Font("Consolas", 9F);
-            this.n_min.Location = new System.Drawing.Point(20, 174);
+            this.n_min.Location = new System.Drawing.Point(20, 189);
             this.n_min.Maximum = new decimal(new int[] {
             999999999,
-            0,
-            0,
-            0});
-            this.n_min.Minimum = new decimal(new int[] {
-            1,
             0,
             0,
             0});
             this.n_min.Name = "n_min";
             this.n_min.Size = new System.Drawing.Size(80, 22);
             this.n_min.TabIndex = 6;
-            this.n_min.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
             this.n_min.Enter += new System.EventHandler(this.NumericUpDown_Enter);
             this.n_min.Validating += new System.ComponentModel.CancelEventHandler(this.NumericUpDown_Check);
             // 
             // n_max
             // 
             this.n_max.Font = new System.Drawing.Font("Consolas", 9F);
-            this.n_max.Location = new System.Drawing.Point(130, 174);
+            this.n_max.Location = new System.Drawing.Point(130, 189);
             this.n_max.Maximum = new decimal(new int[] {
             999999999,
             0,
@@ -2098,9 +2105,9 @@
             this.L_TSV_shiny.AutoSize = true;
             this.L_TSV_shiny.Checked = true;
             this.L_TSV_shiny.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.L_TSV_shiny.Location = new System.Drawing.Point(18, 210);
+            this.L_TSV_shiny.Location = new System.Drawing.Point(18, 228);
             this.L_TSV_shiny.Name = "L_TSV_shiny";
-            this.L_TSV_shiny.Size = new System.Drawing.Size(149, 16);
+            this.L_TSV_shiny.Size = new System.Drawing.Size(150, 17);
             this.L_TSV_shiny.TabIndex = 8;
             this.L_TSV_shiny.Text = "TSVを考慮した計算をする";
             this.L_TSV_shiny.UseVisualStyleBackColor = true;
@@ -2110,7 +2117,7 @@
             // 
             this.label63.AutoSize = true;
             this.label63.Font = new System.Drawing.Font("Consolas", 9F);
-            this.label63.Location = new System.Drawing.Point(15, 110);
+            this.label63.Location = new System.Drawing.Point(15, 119);
             this.label63.Name = "label63";
             this.label63.Size = new System.Drawing.Size(70, 14);
             this.label63.TabIndex = 77;
@@ -2120,7 +2127,7 @@
             // 
             this.label64.AutoSize = true;
             this.label64.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label64.Location = new System.Drawing.Point(91, 110);
+            this.label64.Location = new System.Drawing.Point(91, 119);
             this.label64.Name = "label64";
             this.label64.Size = new System.Drawing.Size(21, 14);
             this.label64.TabIndex = 76;
@@ -2130,7 +2137,7 @@
             // 
             this.label65.AutoSize = true;
             this.label65.Font = new System.Drawing.Font("Consolas", 9F);
-            this.label65.Location = new System.Drawing.Point(15, 82);
+            this.label65.Location = new System.Drawing.Point(15, 89);
             this.label65.Name = "label65";
             this.label65.Size = new System.Drawing.Size(70, 14);
             this.label65.TabIndex = 74;
@@ -2140,7 +2147,7 @@
             // 
             this.label66.AutoSize = true;
             this.label66.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label66.Location = new System.Drawing.Point(91, 82);
+            this.label66.Location = new System.Drawing.Point(91, 89);
             this.label66.Name = "label66";
             this.label66.Size = new System.Drawing.Size(21, 14);
             this.label66.TabIndex = 73;
@@ -2150,7 +2157,7 @@
             // 
             this.label67.AutoSize = true;
             this.label67.Font = new System.Drawing.Font("Consolas", 9F);
-            this.label67.Location = new System.Drawing.Point(15, 54);
+            this.label67.Location = new System.Drawing.Point(15, 59);
             this.label67.Name = "label67";
             this.label67.Size = new System.Drawing.Size(70, 14);
             this.label67.TabIndex = 71;
@@ -2160,7 +2167,7 @@
             // 
             this.label68.AutoSize = true;
             this.label68.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label68.Location = new System.Drawing.Point(91, 54);
+            this.label68.Location = new System.Drawing.Point(91, 59);
             this.label68.Name = "label68";
             this.label68.Size = new System.Drawing.Size(21, 14);
             this.label68.TabIndex = 70;
@@ -2170,7 +2177,7 @@
             // 
             this.label69.AutoSize = true;
             this.label69.Font = new System.Drawing.Font("Consolas", 9F);
-            this.label69.Location = new System.Drawing.Point(15, 26);
+            this.label69.Location = new System.Drawing.Point(15, 28);
             this.label69.Name = "label69";
             this.label69.Size = new System.Drawing.Size(70, 14);
             this.label69.TabIndex = 68;
@@ -2180,50 +2187,105 @@
             // 
             this.label70.AutoSize = true;
             this.label70.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label70.Location = new System.Drawing.Point(91, 26);
+            this.label70.Location = new System.Drawing.Point(91, 28);
             this.label70.Name = "label70";
             this.label70.Size = new System.Drawing.Size(21, 14);
             this.label70.TabIndex = 67;
             this.label70.Text = "0x";
             // 
-            // label71
+            // L_eggrange
             // 
-            this.label71.AutoSize = true;
-            this.label71.Location = new System.Drawing.Point(18, 152);
-            this.label71.Name = "label71";
-            this.label71.Size = new System.Drawing.Size(71, 12);
-            this.label71.TabIndex = 64;
-            this.label71.Text = "受け取り回数";
+            this.L_eggrange.AutoSize = true;
+            this.L_eggrange.Location = new System.Drawing.Point(18, 165);
+            this.L_eggrange.Name = "L_eggrange";
+            this.L_eggrange.Size = new System.Drawing.Size(73, 13);
+            this.L_eggrange.TabIndex = 64;
+            this.L_eggrange.Text = "受け取り回数";
             // 
             // label72
             // 
-            this.label72.Location = new System.Drawing.Point(106, 180);
+            this.label72.Location = new System.Drawing.Point(106, 195);
             this.label72.Name = "label72";
-            this.label72.Size = new System.Drawing.Size(18, 16);
+            this.label72.Size = new System.Drawing.Size(18, 17);
             this.label72.TabIndex = 61;
             this.label72.Text = "～";
             // 
-            // B_SaveConfig
+            // menuStrip1
             // 
-            this.B_SaveConfig.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.B_SaveConfig.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.B_SaveConfig.Location = new System.Drawing.Point(1036, 5);
-            this.B_SaveConfig.Name = "B_SaveConfig";
-            this.B_SaveConfig.Size = new System.Drawing.Size(98, 23);
-            this.B_SaveConfig.TabIndex = 180;
-            this.B_SaveConfig.Text = "Save Config";
-            this.B_SaveConfig.UseVisualStyleBackColor = true;
-            this.B_SaveConfig.Click += new System.EventHandler(this.B_SaveConfig_Click);
+            this.menuStrip1.BackColor = System.Drawing.Color.Transparent;
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.Menu_File,
+            this.Menu_Options});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(1146, 24);
+            this.menuStrip1.TabIndex = 181;
+            this.menuStrip1.Text = "menuStrip1";
+            // 
+            // Menu_File
+            // 
+            this.Menu_File.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.Menu_Exit});
+            this.Menu_File.Name = "Menu_File";
+            this.Menu_File.Size = new System.Drawing.Size(37, 20);
+            this.Menu_File.Text = "File";
+            // 
+            // Menu_Exit
+            // 
+            this.Menu_Exit.Name = "Menu_Exit";
+            this.Menu_Exit.Size = new System.Drawing.Size(92, 22);
+            this.Menu_Exit.Text = "Exit";
+            // 
+            // Menu_Options
+            // 
+            this.Menu_Options.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.Menu_Language,
+            this.Menu_SaveConfig,
+            this.Menu_TSV});
+            this.Menu_Options.Name = "Menu_Options";
+            this.Menu_Options.Size = new System.Drawing.Size(61, 20);
+            this.Menu_Options.Text = "Options";
+            // 
+            // Menu_Language
+            // 
+            this.Menu_Language.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.CB_MainLanguage});
+            this.Menu_Language.Name = "Menu_Language";
+            this.Menu_Language.Size = new System.Drawing.Size(137, 22);
+            this.Menu_Language.Text = "Language";
+            // 
+            // CB_MainLanguage
+            // 
+            this.CB_MainLanguage.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.CB_MainLanguage.Name = "CB_MainLanguage";
+            this.CB_MainLanguage.Size = new System.Drawing.Size(121, 23);
+            this.CB_MainLanguage.SelectedIndexChanged += new System.EventHandler(this.changeLanguage);
+            // 
+            // Menu_SaveConfig
+            // 
+            this.Menu_SaveConfig.Name = "Menu_SaveConfig";
+            this.Menu_SaveConfig.Size = new System.Drawing.Size(137, 22);
+            this.Menu_SaveConfig.Text = "Save Config";
+            this.Menu_SaveConfig.Click += new System.EventHandler(this.B_SaveConfig_Click);
+            // 
+            // Menu_TSV
+            // 
+            this.Menu_TSV.Name = "Menu_TSV";
+            this.Menu_TSV.Size = new System.Drawing.Size(137, 22);
+            this.Menu_TSV.Text = "TSV List";
+            this.Menu_TSV.Click += new System.EventHandler(this.B_TSV_Click);
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1146, 729);
-            this.Controls.Add(this.B_SaveConfig);
+            this.ClientSize = new System.Drawing.Size(1146, 561);
+            this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.tabControl1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MainMenuStrip = this.menuStrip1;
+            this.MinimumSize = new System.Drawing.Size(1162, 600);
             this.Name = "Form1";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Pokemon SunMoon Hatching RNG Tool";
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.k_dataGridView)).EndInit();
@@ -2268,8 +2330,8 @@
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.TSV)).EndInit();
             this.tabControl1.ResumeLayout(false);
-            this.tabPage1.ResumeLayout(false);
-            this.tabPage2.ResumeLayout(false);
+            this.Tab_Search.ResumeLayout(false);
+            this.Tab_Egg.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.L_dataGridView)).EndInit();
             this.contextMenuStrip2.ResumeLayout(false);
             this.groupBox5.ResumeLayout(false);
@@ -2280,7 +2342,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.L_status0a)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.n_min)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.n_max)).EndInit();
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -2290,7 +2355,7 @@
         private System.Windows.Forms.Label post;
         private System.Windows.Forms.NumericUpDown pre_parent1;
         private System.Windows.Forms.Label pre;
-        private System.Windows.Forms.Label label199;
+        private System.Windows.Forms.Label L_pre_H;
         private System.Windows.Forms.NumericUpDown post_parent1;
         private System.Windows.Forms.NumericUpDown post_parent2;
         private System.Windows.Forms.NumericUpDown post_parent3;
@@ -2298,31 +2363,31 @@
         private System.Windows.Forms.NumericUpDown post_parent5;
         private System.Windows.Forms.NumericUpDown post_parent6;
         private System.Windows.Forms.NumericUpDown pre_parent2;
-        private System.Windows.Forms.Label label152;
+        private System.Windows.Forms.Label L_pre_A;
         private System.Windows.Forms.NumericUpDown pre_parent3;
-        private System.Windows.Forms.Label label153;
+        private System.Windows.Forms.Label L_pre_B;
         private System.Windows.Forms.NumericUpDown pre_parent4;
-        private System.Windows.Forms.Label label179;
+        private System.Windows.Forms.Label L_pre_C;
         private System.Windows.Forms.NumericUpDown pre_parent5;
-        private System.Windows.Forms.Label label178;
+        private System.Windows.Forms.Label L_pre_D;
         private System.Windows.Forms.NumericUpDown pre_parent6;
-        private System.Windows.Forms.Label label177;
+        private System.Windows.Forms.Label L_pre_S;
         private System.Windows.Forms.ComboBox pre_Items;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label L_PreItems;
+        private System.Windows.Forms.Label L_post_H;
+        private System.Windows.Forms.Label L_post_A;
+        private System.Windows.Forms.Label L_post_B;
+        private System.Windows.Forms.Label L_post_C;
+        private System.Windows.Forms.Label L_post_D;
+        private System.Windows.Forms.Label L_post_S;
         private System.Windows.Forms.ComboBox post_Items;
-        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label L_PostItems;
         private System.Windows.Forms.GroupBox ek_groupBox1;
         private System.Windows.Forms.CheckBox International;
         private System.Windows.Forms.GroupBox ek_groupBox2;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.Label label163;
+        private System.Windows.Forms.Label L_k_range;
         private System.Windows.Forms.Label label176;
         private System.Windows.Forms.NumericUpDown IVup2;
         private System.Windows.Forms.Label label115;
@@ -2341,24 +2406,24 @@
         private System.Windows.Forms.NumericUpDown IVlow2;
         private System.Windows.Forms.Label label109;
         private System.Windows.Forms.NumericUpDown IVlow1;
-        private System.Windows.Forms.Label label105;
-        private System.Windows.Forms.Label label103;
-        private System.Windows.Forms.Label label48;
-        private System.Windows.Forms.Label label47;
-        private System.Windows.Forms.Label label45;
-        private System.Windows.Forms.Label label43;
+        private System.Windows.Forms.Label L_search_H;
+        private System.Windows.Forms.Label L_search_A;
+        private System.Windows.Forms.Label L_search_B;
+        private System.Windows.Forms.Label L_search_C;
+        private System.Windows.Forms.Label L_search_D;
+        private System.Windows.Forms.Label L_search_S;
         private System.Windows.Forms.ComboBox mezapaType;
-        private System.Windows.Forms.Label label127;
-        private System.Windows.Forms.Label label104;
+        private System.Windows.Forms.Label L_mezapa;
+        private System.Windows.Forms.Label L_ability;
         private System.Windows.Forms.ComboBox ability;
-        private System.Windows.Forms.Label label46;
+        private System.Windows.Forms.Label L_sex;
         private System.Windows.Forms.ComboBox sex;
         private System.Windows.Forms.GroupBox y_groupBox2;
         private System.Windows.Forms.NumericUpDown IVup6;
         private System.Windows.Forms.Button k_search;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem copyToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem SelectAllToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem mnuCopy;
+        private System.Windows.Forms.ToolStripMenuItem mnuSelectAll;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label11;
@@ -2366,22 +2431,22 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.ComboBox sex_ratio;
-        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.Label L_sex_ratio;
         private System.Windows.Forms.CheckBox omamori;
-        private System.Windows.Forms.Label label19;
+        private System.Windows.Forms.Label L_PostAbility;
         private System.Windows.Forms.ComboBox post_ability;
-        private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.Label L_PreAbility;
         private System.Windows.Forms.ComboBox pre_ability;
         private System.Windows.Forms.CheckBox post_ditto;
         private System.Windows.Forms.CheckBox pre_ditto;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label label20;
         private System.Windows.Forms.CheckBox shiny;
-        private System.Windows.Forms.Label label21;
+        private System.Windows.Forms.Label L_ball;
         private System.Windows.Forms.ComboBox ball;
         private System.Windows.Forms.TabControl tabControl1;
-        private System.Windows.Forms.TabPage tabPage1;
-        private System.Windows.Forms.TabPage tabPage2;
+        private System.Windows.Forms.TabPage Tab_Search;
+        private System.Windows.Forms.TabPage Tab_Egg;
         private System.Windows.Forms.Button List_search;
         private System.Windows.Forms.DataGridView L_dataGridView;
         private System.Windows.Forms.GroupBox groupBox5;
@@ -2393,30 +2458,15 @@
         private System.Windows.Forms.Label label68;
         private System.Windows.Forms.Label label69;
         private System.Windows.Forms.Label label70;
-        private System.Windows.Forms.Label label71;
+        private System.Windows.Forms.Label L_eggrange;
         private System.Windows.Forms.Label label72;
-        private System.Windows.Forms.ToolStripMenuItem 孵化リストへseedを入れるToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem mnuSetEggSeed;
         private System.Windows.Forms.CheckBox L_TSV_shiny;
         private System.Windows.Forms.CheckBox k_TSV_shiny;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip2;
-        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
-        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem2;
+        private System.Windows.Forms.ToolStripMenuItem mnu2Copy;
+        private System.Windows.Forms.ToolStripMenuItem mnu2SelectAll;
         private System.Windows.Forms.CheckBox Heterogeneity;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column21;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn8;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn9;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn10;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn11;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn12;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column23;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn13;
         private System.Windows.Forms.CheckBox other_TSV;
         private System.Windows.Forms.CheckBox Invalid_Refine;
         private System.Windows.Forms.NumericUpDown s_min;
@@ -2424,23 +2474,6 @@
         private System.Windows.Forms.NumericUpDown TSV;
         private System.Windows.Forms.NumericUpDown n_min;
         private System.Windows.Forms.NumericUpDown n_max;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column12;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column8;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column9;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column18;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column19;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column20;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column10;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column22;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column11;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
-        private System.Windows.Forms.Button B_SaveConfig;
         private HexNumericUpdown status0;
         private HexNumericUpdown status3;
         private HexNumericUpdown status2;
@@ -2449,6 +2482,44 @@
         private HexNumericUpdown L_status2a;
         private HexNumericUpdown L_status1a;
         private HexNumericUpdown L_status0a;
+        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem Menu_File;
+        private System.Windows.Forms.ToolStripMenuItem Menu_Exit;
+        private System.Windows.Forms.ToolStripMenuItem Menu_Options;
+        private System.Windows.Forms.ToolStripMenuItem Menu_TSV;
+        private System.Windows.Forms.ToolStripMenuItem Menu_SaveConfig;
+        private System.Windows.Forms.ToolStripMenuItem Menu_Language;
+        private System.Windows.Forms.ToolStripComboBox CB_MainLanguage;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgvE_frame;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgvE_used;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgvE_seed;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgvE_H;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgvE_A;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgvE_B;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgvE_C;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgvE_D;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgvE_S;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgvE_gender;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgvE_pid;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgvE_ec;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgvE_psv;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgvE_nature;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgvE_ability;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgvS_rand;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgvS_ec;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgvS_psv;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgvS_pid;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgvS_nature;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgvS_ability;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgvS_gender;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgvS_S;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgvS_D;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgvS_C;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgvS_B;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgvS_A;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgvS_H;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgvS_seed;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgvS_used;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgvS_frame;
     }
 }
-

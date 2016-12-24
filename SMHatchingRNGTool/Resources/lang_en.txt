@@ -1,0 +1,121 @@
+﻿! Interface Customization File
+! Languages: Save this file accordingly and put it in the same folder as PKHeX's executable.
+! lang_en.txt = English
+! lang_jp.txt = Japanese
+! lang_fr.txt = French
+! lang_de.txt = German
+! lang_es.txt = Spanish
+! lang_it.txt = Italian
+! lang_ko.txt = Korean
+! lang_zh.txt = Chinese
+! lang_pt.txt = Portuguese
+! Make sure that each edit has a ' = ' between Control name and new Text!
+!
+! -----------------------------------------------------
+- DO NOT CHANGE THIS SECTION EXCEPT FORM NAME & TITLE
+! Form1 = Pokemon SunMoon Hatching RNG Tool
+- Change stuff below this line, not above.
+---------------------Menu Strip------------------------
+Menu_File = File
+Menu_Exit = Exit
+--
+Menu_Options = Options
+Menu_Language = Language
+Menu_SaveConfig = Save Config
+Menu_TSV = TSV List
+Menu_About = About
+--------------------Context Menus----------------------
+mnuCopy = Copy
+mnuSelectAll = Select All
+mnuSetEggSeed = Copy seed to Other Tab
+mnu2Copy = Copy
+mnu2SelectAll = Select All
+---------------------Search Tab------------------------
+Tab_Search = Search
+--
+ek_groupBox1 = Parents
+pre = ♂ Parent:
+L_pre_H = HP
+L_pre_A = Atk
+L_pre_B = Def
+L_pre_C = SpA
+L_pre_D = SpD
+L_pre_S = Spe
+L_PreItems = Item:
+L_PreAbility = Ability:
+pre_ditto = Ditto
+post = ♀ Parent:
+L_post_H = HP
+L_post_A = Atk
+L_post_B = Def
+L_post_C = SpA
+L_post_D = SpD
+L_post_S = Spe
+L_PostItems = Item:
+L_PostAbility = Ability:
+post_ditto = Ditto
+Heterogeneity = Same Species
+L_sex_ratio = Gender Ratio:
+--
+y_groupBox2 = Filters
+L_search_H = HP
+L_search_A = Atk
+L_search_B = Def
+L_search_C = SpA
+L_search_D = SpD
+L_search_S = Spe
+L_ability = Ability:
+L_sex = Gender:
+L_mezapa = HP Type:
+L_ball = Ball:
+Invalid_Refine = Ignore Filters
+--
+ek_groupBox2 = RNG Info
+L_k_range = Range
+--
+groupBox1 = Search Settings
+International = International (Masuda)
+omamori = Shiny Charm
+shiny = Shiny Only
+k_TSV_shiny = Update if Foreign TSV
+other_tsv = Use TSV List (trade away)
+k_search = Search
+--
+dgvS_frame = Frame
+dgvS_used = Used
+dgvS_seed = Seed
+dgvS_H = HP
+dgvS_A = Atk
+dgvS_B = Def
+dgvS_C = SpA
+dgvS_D = SpD
+dgvS_S = Spe
+dgvS_gender = Gender
+dgvS_ability = Ability
+dgvS_nature = Nature
+dgvS_pid = PID
+dgvS_psv = PSV
+dgvS_ec = EC
+dgvS_rand = Rand
+----------------------Egg Tab--------------------------
+Tab_Egg = Egg List
+groupBox5 = RNG Info
+L_eggrange = Range
+List_search = Search
+L_TSV_shiny = Update if Foreign TSV
+--
+dgvE_frame = Frame
+dgvE_used = Used
+dgvE_seed = Seed
+dgvE_H = HP
+dgvE_A = Atk
+dgvE_B = Def
+dgvE_C = SpA
+dgvE_D = SpD
+dgvE_S = Spe
+dgvE_gender = Gender
+dgvE_ability = Ability
+dgvE_nature = Nature
+dgvE_pid = PID
+dgvE_psv = PSV
+dgvE_ec = EC

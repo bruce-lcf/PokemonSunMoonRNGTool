@@ -1,0 +1,121 @@
+﻿! Interface Customization File
+! Languages: Save this file accordingly and put it in the same folder as PKHeX's executable.
+! lang_en.txt = English
+! lang_jp.txt = Japanese
+! lang_fr.txt = French
+! lang_de.txt = German
+! lang_es.txt = Spanish
+! lang_it.txt = Italian
+! lang_ko.txt = Korean
+! lang_zh.txt = Chinese
+! lang_pt.txt = Portuguese
+! Make sure that each edit has a ' = ' between Control name and new Text!
+!
+! -----------------------------------------------------
+- DO NOT CHANGE THIS SECTION EXCEPT FORM NAME & TITLE
+! Form1 = Pokemon SunMoon Hatching RNG Tool
+- Change stuff below this line, not above.
+---------------------Menu Strip------------------------
+Menu_File = ファイル
+Menu_Exit = やめる
+--
+Menu_Options = 設定
+Menu_Language = 言語
+Menu_SaveConfig = 設定を保存
+Menu_TSV = TSVリスト
+Menu_About = について
+--------------------Context Menus----------------------
+mnuCopy = コピー
+mnuSelectAll = 全て選択
+mnuSetEggSeed = 連続孵化リストへseedを入れる
+mnu2Copy = コピー
+mnu2SelectAll = 全て選択
+---------------------Search Tab------------------------
+Tab_Search = 個体検索
+--
+ek_groupBox1 = 親の情報
+pre = ♂親
+L_pre_H = H
+L_pre_A = A
+L_pre_B = B
+L_pre_C = C
+L_pre_D = D
+L_pre_S = S
+L_PreItems = 持ち物
+L_PreAbility = 特性
+pre_ditto = メタモン
+post = ♀親
+L_post_H = H
+L_post_A = A
+L_post_B = B
+L_post_C = C
+L_post_D = D
+L_post_S = S
+L_PostItems = 持ち物
+L_PostAbility = 特性
+post_ditto = メタモン
+Heterogeneity = 異種間孵化
+L_sex_ratio = 性別比
+--
+y_groupBox2 = 目標個体
+L_search_H = H
+L_search_A = A
+L_search_B = B
+L_search_C = C
+L_search_D = D
+L_search_S = S
+L_ability = 特性
+L_sex = 性別
+L_mezapa = めざパ
+L_ball = ボール
+Invalid_Refine = 絞り込みを無効
+--
+ek_groupBox2 = 検索範囲
+L_k_range = 消費数
+--
+groupBox1 = その他
+International = 国際孵化
+omamori = 光るお守り
+shiny = 色違いのみ出力
+k_TSV_shiny = TSVを考慮した計算をする
+other_tsv = 他TSVで色違いを探す
+k_search = 計算
+--
+dgvS_frame = 消費
+dgvS_used = 受取
+dgvS_seed = Seed
+dgvS_H = H
+dgvS_A = A
+dgvS_B = B
+dgvS_C = C
+dgvS_D = D
+dgvS_S = S
+dgvS_gender = 性別
+dgvS_ability = 特性
+dgvS_nature = 性格
+dgvS_pid = 性格値
+dgvS_psv = SV
+dgvS_ec = 暗号化定数
+dgvS_rand = 乱数列
+----------------------Egg Tab--------------------------
+Tab_Egg = 連続孵化リスト
+groupBox5 = 検索範囲
+L_eggrange = 受け取り回数
+List_search = 計算
+L_TSV_shiny = TSVを考慮した計算をする
+--
+dgvE_frame = 消費
+dgvE_used = 受取
+dgvE_seed = Seed
+dgvE_H = H
+dgvE_A = A
+dgvE_B = B
+dgvE_C = C
+dgvE_D = D
+dgvE_S = S
+dgvE_gender = 性別
+dgvE_ability = 特性
+dgvE_nature = 性格
+dgvE_pid = 性格値
+dgvE_psv = SV
+dgvE_ec = 暗号化定数

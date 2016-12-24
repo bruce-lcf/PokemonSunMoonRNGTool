@@ -2,45 +2,96 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Drawing;
+using System.Globalization;
 using System.IO;
 using System.Linq;
 using System.Windows.Forms;
+using static PKHeX.Util;
 
 namespace SMHatchingRNGTool
 {
     public partial class Form1 : Form
     {
-
-        #region deta
-        private readonly string[] natures =
-        {
-            "がんばりや", "さみしがり", "ゆうかん", "いじっぱり",
-            "やんちゃ", "ずぶとい", "すなお", "のんき", "わんぱく",
-            "のうてんき", "おくびょう", "せっかち", "まじめ", "ようき",
-            "むじゃき", "ひかえめ", "おっとり", "れいせい", "てれや",
-            "うっかりや", "おだやか", "おとなしい",
-            "なまいき", "しんちょう", "きまぐれ"
-        };
-
-
-        private readonly string[] mezapa =
-        {
-            "指定なし",
-            "格闘", "飛行", "毒", "地面", "岩",
-            "虫", "ゴースト", "鋼", "炎", "水",
-            "草", "電気", "エスパー", "氷", "ドラゴン",
-            "悪",
-        };
-        #endregion
-
+        private const string PATH_CONFIG = "config.txt";
+        private const string PATH_TSV = "TSV.txt";
         private int[] other_tsv = new int[0];
-        private readonly string[] row_iden = { "H", "A", "B", "C", "D", "S" };
+
+        #region Translation
+        private string[] natures;
+        private string[] mezapa;
         private readonly string[] genders = { "♂", "♀", "-" };
         private readonly string[] abilities = { "1", "2", "夢" };
+        private static readonly string[] languages = {"ja", "en"};
+        private static readonly string[] any = {"指定なし", "Any"};
+        private static readonly string[] tempPID = {"仮性格値", "---"};
+        private static readonly string[] dream = {"夢", "H"};
+        private static readonly string[] first = {"先", "First"};
+        private static readonly string[] second = {"後", "Second"};
+        private static readonly string[] parent = {"親", " Parent"};
+        private static readonly string[] everstone = {"変わらず", "Everstone"};
+        private static readonly string[] destiny = { "赤い糸", "Destiny Knot"};
+        private static readonly string[] main_langlist =
+            {
+                "日本語", // JPN
+                "English", // ENG
+                //"Français", // FRE
+                //"Italiano", // ITA
+                //"Deutsch", // GER
+                //"Español", // SPA
+                //"한국어", // KOR
+                //"中文", // CHN
+                //"Português", // Portuguese
+            };
+        private string curlanguage;
+        private string STR_ANY = "指定なし";
+        private string STR_TEMP_PID = "仮性格値";
+        private string STR_DREAM = "夢";
+        private string STR_FIRST = "先";
+        private string STR_SECOND = "後";
+        private string STR_PARENT = "親";
+        private string STR_EVERSTONE = "変わらず";
+        private string STR_DESTINY = "赤い糸";
+        #endregion
 
         public Form1()
         {
             InitializeComponent();
+        }
+
+        private void changeLanguage(object sender, EventArgs e)
+        {
+            Menu_Options.DropDown.Close();
+            int l = CB_MainLanguage.SelectedIndex;
+            string lang = languages[l];
+            if (lang == curlanguage)
+                return;
+
+            curlanguage = lang;
+            TranslateInterface(this, curlanguage); // Translate the UI to language.
+
+            natures = getStringList("natures", curlanguage);
+            mezapa = getStringList("types", curlanguage);
+
+            STR_ANY = any[l];
+            STR_TEMP_PID = tempPID[l];
+            STR_DREAM = dream[l];
+            STR_FIRST = first[l];
+            STR_SECOND = second[l];
+            STR_PARENT = parent[l];
+            STR_EVERSTONE = everstone[l];
+            STR_DESTINY = destiny[l];
+
+            pre_Items.Items[0] = post_Items.Items[0] = ability.Items[0] = sex.Items[0] = ball.Items[0] = STR_ANY;
+            pre_ability.Items[2] = post_ability.Items[2] = ability.Items[3] = abilities[2] = STR_DREAM;
+
+            ball.Items[1] = STR_FIRST + STR_PARENT;
+            ball.Items[2] = STR_SECOND + STR_PARENT;
+            pre_Items.Items[1] = post_Items.Items[1] = STR_EVERSTONE;
+            pre_Items.Items[2] = post_Items.Items[2] = STR_DESTINY;
+
+            mezapaType.Items[0] = STR_ANY;
+            for (int i = 1; i < mezapa.Length - 1; i++)
+                mezapaType.Items[i] = mezapa[i];
         }
 
         private SearchSetting getSettings()
@@ -136,14 +187,14 @@ namespace SMHatchingRNGTool
         private DataGridViewRow getRow(int i, EggRNGSearch rng, EggRNGSearch.EggRNGResult result, DataGridView dgv)
         {
             var true_psv = rng.PIDRerolls > 0 ? result.PSV.ToString("d") : "-";
-            string true_pid = International.Checked || omamori.Checked ? result.PID.ToString("X8") : "仮性格値";
+            string true_pid = International.Checked || omamori.Checked ? result.PID.ToString("X8") : STR_TEMP_PID;
 
             DataGridViewRow row = new DataGridViewRow();
             row.CreateCells(dgv);
             row.SetValues(
                 i, result.FramesUsed, result.Seed128,
                 result.IVs[0], result.IVs[1], result.IVs[2], result.IVs[3], result.IVs[4], result.IVs[5],
-                genders[result.Gender], abilities[result.Ability], rng.Everstone ? "変わらず" : natures[result.Nature],
+                genders[result.Gender], abilities[result.Ability], rng.Everstone ? STR_EVERSTONE : natures[result.Nature],
                 true_pid, true_psv, result.EC.ToString("X8"), result.row_r.ToString("X8")
                 );
 
@@ -301,8 +352,13 @@ namespace SMHatchingRNGTool
             dgvPropertyInfo.SetValue(k_dataGridView, true, null);
             dgvPropertyInfo.SetValue(L_dataGridView, true, null);
 
-            foreach (string t in mezapa)
-                mezapaType.Items.Add(t);
+            for (int i = 0; i < 17; i++)
+                mezapaType.Items.Add("");
+
+            foreach (var cbItem in main_langlist)
+                CB_MainLanguage.Items.Add(cbItem);
+            CB_MainLanguage.SelectedIndex = 0;
+            changeLanguage(null, null);
 
             pre_Items.SelectedIndex = 0;
             post_Items.SelectedIndex = 0;
@@ -320,9 +376,9 @@ namespace SMHatchingRNGTool
 
         private void loadConfig()
         {
-            if (File.Exists("config.txt"))
+            if (File.Exists(PATH_CONFIG))
             {
-                string[] list = File.ReadAllLines("config.txt");
+                string[] list = File.ReadAllLines(PATH_CONFIG);
                 if (list.Length != 5)
                     return;
 
@@ -335,13 +391,13 @@ namespace SMHatchingRNGTool
                 uint s3, s2, s1, s0;
 
 
-                if (!uint.TryParse(st0, System.Globalization.NumberStyles.HexNumber, null, out s0))
+                if (!uint.TryParse(st0, NumberStyles.HexNumber, null, out s0))
                     Error("status[0]に不正な値が含まれています。");
-                else if (!uint.TryParse(st1, System.Globalization.NumberStyles.HexNumber, null, out s1))
+                else if (!uint.TryParse(st1, NumberStyles.HexNumber, null, out s1))
                     Error("status[1]に不正な値が含まれています。");
-                else if (!uint.TryParse(st2, System.Globalization.NumberStyles.HexNumber, null, out s2))
+                else if (!uint.TryParse(st2, NumberStyles.HexNumber, null, out s2))
                     Error("status[2]に不正な値が含まれています。");
-                else if (!uint.TryParse(st3, System.Globalization.NumberStyles.HexNumber, null, out s3))
+                else if (!uint.TryParse(st3, NumberStyles.HexNumber, null, out s3))
                     Error("status[3]に不正な値が含まれています。");
                 else if (!ushort.TryParse(tsvstr, out tsv))
                     Error("TSVに不正な値が含まれています。");
@@ -358,17 +414,17 @@ namespace SMHatchingRNGTool
             }
             else
             {
-                Error("config.txtが存在しません。\nデフォルトの設定を読み込みます。");
+                Error(PATH_CONFIG+"が存在しません。\nデフォルトの設定を読み込みます。");
             }
         }
 
         private bool loadTSV()
         {
-            if (!File.Exists("TSV.txt"))
+            if (!File.Exists(PATH_TSV))
                 return false;
 
             //test.txtを1行ずつ読み込んでいき、末端(何もない行)までwhile文で繰り返す
-            string[] list = File.ReadAllLines("TSV.txt");
+            string[] list = File.ReadAllLines(PATH_TSV);
             int[] tsvs = new int[list.Length];
 
             for (int i = 0; i < list.Length; i++)
@@ -507,12 +563,6 @@ namespace SMHatchingRNGTool
             post_parent6.ForeColor = post.ForeColor;
         }
 
-        private static void Error(string msg)
-        {
-            System.Media.SystemSounds.Exclamation.Play();
-            MessageBox.Show(msg, "Error", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-        }
-
         private void B_SaveConfig_Click(object sender, EventArgs e)
         {
             string[] lines =
@@ -525,25 +575,32 @@ namespace SMHatchingRNGTool
             };
             try
             {
-                File.WriteAllLines("config.txt", lines);
+                File.WriteAllLines(PATH_CONFIG, lines);
             }
             catch
             {
-                Error("config.txtに保存出来ません。");
+                Error(PATH_CONFIG+"に保存出来ません。");
             }
         }
 
         private void ConsiderTSVcheck(object sender, EventArgs e)
         {
-            if ((sender as CheckBox)?.Checked ?? false)
+            k_TSV_shiny.Checked = L_TSV_shiny.Checked = (sender as CheckBox)?.Checked ?? false;
+        }
+
+        private void B_TSV_Click(object sender, EventArgs e)
+        {
+            var editor = new TSVEntry(other_tsv);
+            editor.ShowDialog();
+            other_tsv = editor.other_tsv;
+
+            try
             {
-                L_TSV_shiny.Checked = true;
-                k_TSV_shiny.Checked = true;
+                File.WriteAllLines(PATH_TSV, other_tsv.Select(i => i.ToString()).ToArray());
             }
-            else
+            catch
             {
-                L_TSV_shiny.Checked = false;
-                k_TSV_shiny.Checked = false;
+                Error($"Unable to save {PATH_TSV}.");
             }
         }
     }

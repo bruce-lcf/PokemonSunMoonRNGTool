@@ -102,7 +102,7 @@ namespace SMHatchingRNGTool
             egg.InheritParents = new uint[InheritIVs];
             for (int i = 0; i < InheritIVs; i++)
             {
-            repeat:
+                repeat:
                 egg.InheritStats[i] = getRand() % 6;
 
                 // Scan for duplicate IV

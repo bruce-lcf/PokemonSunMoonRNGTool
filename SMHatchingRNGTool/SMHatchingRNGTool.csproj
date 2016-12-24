@@ -50,15 +50,8 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
-    <Reference Include="System.Xml.Linq" />
-    <Reference Include="System.Data.DataSetExtensions" />
-    <Reference Include="Microsoft.CSharp" />
-    <Reference Include="System.Data" />
-    <Reference Include="System.Deployment" />
     <Reference Include="System.Drawing" />
-    <Reference Include="System.Net.Http" />
     <Reference Include="System.Windows.Forms" />
-    <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="EggRNGSearch.cs" />
@@ -76,6 +69,13 @@
     <Compile Include="SearchSetting.cs" />
     <Compile Include="TinyMT.cs" />
     <Compile Include="TinyMTParameter.cs" />
+    <Compile Include="TSVEntry.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TSVEntry.Designer.cs">
+      <DependentUpon>TSVEntry.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Util\FormUtil.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -89,6 +89,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="TSVEntry.resx">
+      <DependentUpon>TSVEntry.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -113,6 +116,30 @@
       <ProductName>.NET Framework 3.5 SP1</ProductName>
       <Install>false</Install>
     </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\text_Natures_en.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\text_Natures_ja.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\text_Species_en.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\text_Species_ja.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\text_Types_en.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\text_Types_ja.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lang_en.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lang_ja.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
