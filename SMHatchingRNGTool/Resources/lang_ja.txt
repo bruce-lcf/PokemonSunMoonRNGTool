@@ -119,3 +119,4 @@ dgvE_nature = 性格
 dgvE_pid = 性格値
 dgvE_psv = SV
 dgvE_ec = 暗号化定数
+dgvE_rand = 乱数列

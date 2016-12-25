@@ -119,3 +119,4 @@ dgvE_nature = Nature
 dgvE_pid = PID
 dgvE_psv = PSV
 dgvE_ec = EC
+dgvE_rand = Rand
