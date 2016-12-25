@@ -170,6 +170,7 @@
             this.dgvE_pid = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvE_psv = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvE_ec = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.dgvE_rand = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.contextMenuStrip2 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.mnu2Copy = new System.Windows.Forms.ToolStripMenuItem();
             this.mnu2SelectAll = new System.Windows.Forms.ToolStripMenuItem();
@@ -1856,7 +1857,8 @@
             this.dgvE_nature,
             this.dgvE_pid,
             this.dgvE_psv,
-            this.dgvE_ec});
+            this.dgvE_ec,
+			this.dgvE_rand});
             this.L_dataGridView.ContextMenuStrip = this.contextMenuStrip2;
             this.L_dataGridView.Location = new System.Drawing.Point(235, 6);
             this.L_dataGridView.Name = "L_dataGridView";
@@ -1956,6 +1958,12 @@
             this.dgvE_ec.HeaderText = "暗号化定数";
             this.dgvE_ec.Name = "dgvE_ec";
             this.dgvE_ec.Width = 90;
+			//
+			// dgvE_rand
+			//
+			this.dgvE_rand.HeaderText = "乱数列";
+			this.dgvE_rand.Name = "dgvE_rand";
+			this.dgvE_rand.Width = 90;
             // 
             // contextMenuStrip2
             // 
@@ -2541,6 +2549,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dgvE_gender;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgvE_pid;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgvE_ec;
+		private System.Windows.Forms.DataGridViewTextBoxColumn dgvE_rand;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgvE_psv;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgvE_nature;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgvE_ability;
