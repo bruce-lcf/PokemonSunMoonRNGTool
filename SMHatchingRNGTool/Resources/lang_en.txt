@@ -103,9 +103,10 @@ groupBox5 = RNG Info
 L_eggrange = Range
 List_search = Search
 L_TSV_shiny = Update if Foreign TSV
+L_targetframe = Target Frame
 --
-dgvE_frame = Frame
-dgvE_used = Used
+dgvE_frame = Egg
+dgvE_used = Frame
 dgvE_seed = Seed
 dgvE_H = HP
 dgvE_A = Atk

@@ -170,7 +170,7 @@
             this.dgvE_pid = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvE_psv = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvE_ec = new System.Windows.Forms.DataGridViewTextBoxColumn();
-			this.dgvE_rand = new System.Windows.Forms.DataGridViewTextBoxColumn();
+		this.dgvE_rand = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.contextMenuStrip2 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.mnu2Copy = new System.Windows.Forms.ToolStripMenuItem();
             this.mnu2SelectAll = new System.Windows.Forms.ToolStripMenuItem();
@@ -298,7 +298,7 @@
             // 
             this.dgvS_used.HeaderText = "受取";
             this.dgvS_used.Name = "dgvS_used";
-            this.dgvS_used.Width = 54;
+            this.dgvS_used.Width = 80;
             // 
             // dgvS_seed
             // 
@@ -1858,7 +1858,7 @@
             this.dgvE_pid,
             this.dgvE_psv,
             this.dgvE_ec,
-			this.dgvE_rand});
+		this.dgvE_rand});
             this.L_dataGridView.ContextMenuStrip = this.contextMenuStrip2;
             this.L_dataGridView.Location = new System.Drawing.Point(235, 6);
             this.L_dataGridView.Name = "L_dataGridView";
@@ -1958,12 +1958,12 @@
             this.dgvE_ec.HeaderText = "暗号化定数";
             this.dgvE_ec.Name = "dgvE_ec";
             this.dgvE_ec.Width = 90;
-			//
-			// dgvE_rand
-			//
-			this.dgvE_rand.HeaderText = "乱数列";
-			this.dgvE_rand.Name = "dgvE_rand";
-			this.dgvE_rand.Width = 90;
+		//
+		// dgvE_rand
+		//
+		this.dgvE_rand.HeaderText = "乱数列";
+		this.dgvE_rand.Name = "dgvE_rand";
+		this.dgvE_rand.Width = 90;
             // 
             // contextMenuStrip2
             // 
@@ -2250,6 +2250,7 @@
             this.Menu_Exit.Name = "Menu_Exit";
             this.Menu_Exit.Size = new System.Drawing.Size(96, 22);
             this.Menu_Exit.Text = "Exit";
+			this.Menu_Exit.Click += new System.EventHandler(this.mainMenuExit);
             // 
             // Menu_Options
             // 
@@ -2297,12 +2298,12 @@
             this.Repeat_times.Name = "Repeat_times";
             this.Repeat_times.Size = new System.Drawing.Size(164, 12);
             this.Repeat_times.TabIndex = 84;
-            this.Repeat_times.Text = "消費：-回受け取り、-回拒否する";
+            this.Repeat_times.Text = " ";
             // 
             // Target_frame
             // 
             this.Target_frame.Font = new System.Drawing.Font("Consolas", 9F);
-            this.Target_frame.Location = new System.Drawing.Point(75, 247);
+            this.Target_frame.Location = new System.Drawing.Point(90, 247);
             this.Target_frame.Maximum = new decimal(new int[] {
             999999999,
             0,
@@ -2549,7 +2550,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dgvE_gender;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgvE_pid;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgvE_ec;
-		private System.Windows.Forms.DataGridViewTextBoxColumn dgvE_rand;
+	  private System.Windows.Forms.DataGridViewTextBoxColumn dgvE_rand;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgvE_psv;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgvE_nature;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgvE_ability;

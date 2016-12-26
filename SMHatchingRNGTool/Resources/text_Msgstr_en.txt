@@ -1,0 +1,20 @@
+﻿Frame: lower limit > upper limit.
+HP: lower limit > upper limit.
+Atk: lower limit > upper limit.
+Def: lower limit > upper limit.
+SpA: lower limit > upper limit.
+SpD: lower limit > upper limit.
+Spe: lower limit > upper limit.
+is out of range.
+Genderless Pokémon can breed only with Ditto.
+Accept
+eggs and then reject
+eggs.
+Target frame exceeds the range of list.
+is invalid.
+doesn't exist.
+Loading default Config.
+rows TSV:
+Not selected.
+Please select Seed from results.
+is unable to save.

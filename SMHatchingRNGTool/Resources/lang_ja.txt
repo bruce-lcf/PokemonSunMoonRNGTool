@@ -103,9 +103,10 @@ groupBox5 = 検索範囲
 L_eggrange = 受け取り回数
 List_search = 計算
 L_TSV_shiny = TSVを考慮した計算をする
+L_targetframe = 目標消費
 --
-dgvE_frame = 消費
-dgvE_used = 受取
+dgvE_frame = 受取
+dgvE_used = 消費
 dgvE_seed = Seed
 dgvE_H = H
 dgvE_A = A

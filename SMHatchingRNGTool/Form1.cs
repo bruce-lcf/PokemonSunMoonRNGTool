@@ -19,6 +19,7 @@ namespace SMHatchingRNGTool
         #region Translation
         private string[] natures;
         private string[] mezapa;
+        private string[] msgstr;
         private readonly string[] genders = { "♂", "♀", "-" };
         private readonly string[] abilities = { "1", "2", "夢" };
         private static readonly string[] languages = {"ja", "en", "zh"};
@@ -30,6 +31,8 @@ namespace SMHatchingRNGTool
         private static readonly string[] parent = {"親", " Parent", "方"};
         private static readonly string[] everstone = {"変わらず", "Everstone", "不变之石"};
         private static readonly string[] destiny = { "赤い糸", "Destiny Knot", "红线"};
+        private static readonly string[] only = { "のみ", " Only", " 100%"};
+        private static readonly string[] genderless = { "無性別", "Genderless", "无性别"};
         private static readonly string[] main_langlist =
             {
                 "日本語", // JPN
@@ -51,6 +54,8 @@ namespace SMHatchingRNGTool
         private string STR_PARENT = "親";
         private string STR_EVERSTONE = "変わらず";
         private string STR_DESTINY = "赤い糸";
+        private string STR_ONLY = "のみ";
+        private string STR_GENDERLESS = "無性別";
         #endregion
 
         public Form1()
@@ -71,6 +76,7 @@ namespace SMHatchingRNGTool
 
             natures = getStringList("natures", curlanguage);
             mezapa = getStringList("types", curlanguage);
+            msgstr = getStringList("msgstr", curlanguage);
 
             STR_ANY = any[l];
             STR_TEMP_PID = tempPID[l];
@@ -80,6 +86,8 @@ namespace SMHatchingRNGTool
             STR_PARENT = parent[l];
             STR_EVERSTONE = everstone[l];
             STR_DESTINY = destiny[l];
+            STR_ONLY = only[l];
+            STR_GENDERLESS = genderless[l];
 
             pre_Items.Items[0] = post_Items.Items[0] = ability.Items[0] = sex.Items[0] = ball.Items[0] = STR_ANY;
             pre_ability.Items[2] = post_ability.Items[2] = ability.Items[3] = abilities[2] = STR_DREAM;
@@ -88,6 +96,10 @@ namespace SMHatchingRNGTool
             ball.Items[2] = STR_SECOND + STR_PARENT;
             pre_Items.Items[1] = post_Items.Items[1] = STR_EVERSTONE;
             pre_Items.Items[2] = post_Items.Items[2] = STR_DESTINY;
+
+            sex_ratio.Items[4] = "♂" + STR_ONLY;
+            sex_ratio.Items[5] = "♀" + STR_ONLY;
+            sex_ratio.Items[6] = STR_GENDERLESS;
 
             mezapaType.Items[0] = STR_ANY;
             for (int i = 1; i < mezapa.Length - 1; i++)
@@ -213,23 +225,23 @@ namespace SMHatchingRNGTool
         private void search_Click(object sender, EventArgs e)
         {
             if (s_min.Value > s_max.Value)
-                Error("消費数が 下限 ＞上限 になっています。");
+                Error(msgstr[0]);
             else if (IVlow1.Value > IVup1.Value)
-                Error("Hの個体値が 下限 ＞上限 になっています。");
+                Error(msgstr[1]);
             else if (IVlow2.Value > IVup2.Value)
-                Error("Aの個体値が 下限 ＞上限 になっています。");
+                Error(msgstr[2]);
             else if (IVlow3.Value > IVup3.Value)
-                Error("Bの個体値が 下限 ＞上限 になっています。");
+                Error(msgstr[3]);
             else if (IVlow4.Value > IVup4.Value)
-                Error("Cの個体値が 下限 ＞上限 になっています。");
+                Error(msgstr[4]);
             else if (IVlow5.Value > IVup5.Value)
-                Error("Dの個体値が 下限 ＞上限 になっています。");
+                Error(msgstr[5]);
             else if (IVlow6.Value > IVup6.Value)
-                Error("Sの個体値が 下限 ＞上限 になっています。");
+                Error(msgstr[6]);
             else if (0 > TSV.Value || TSV.Value > 4095)
-                Error("TSVの上限下限が閾値を超えています。");
+                Error("TSV" + msgstr[7]);
             else if (sex_ratio.SelectedIndex == 6 && !(post_ditto.Checked || pre_ditto.Checked))
-                Error("無性別ポケモンに対し、メタモンが選択されていません。");
+                Error(msgstr[8]);
             else
                 search();
         }
@@ -276,23 +288,23 @@ namespace SMHatchingRNGTool
         private void List_search_Click(object sender, EventArgs e)
         {
             if (s_min.Value > s_max.Value)
-                Error("消費数が 下限 ＞上限 になっています。");
+                Error(msgstr[0]);
             else if (IVlow1.Value > IVup1.Value)
-                Error("Hの個体値が 下限 ＞上限 になっています。");
+                Error(msgstr[1]);
             else if (IVlow2.Value > IVup2.Value)
-                Error("Aの個体値が 下限 ＞上限 になっています。");
+                Error(msgstr[2]);
             else if (IVlow3.Value > IVup3.Value)
-                Error("Bの個体値が 下限 ＞上限 になっています。");
+                Error(msgstr[3]);
             else if (IVlow4.Value > IVup4.Value)
-                Error("Cの個体値が 下限 ＞上限 になっています。");
+                Error(msgstr[4]);
             else if (IVlow5.Value > IVup5.Value)
-                Error("Dの個体値が 下限 ＞上限 になっています。");
+                Error(msgstr[5]);
             else if (IVlow6.Value > IVup6.Value)
-                Error("Sの個体値が 下限 ＞上限 になっています。");
+                Error(msgstr[6]);
             else if (0 > TSV.Value || TSV.Value > 4095)
-                Error("TSVの上限下限が閾値を超えています。");
+				Error("TSV" + msgstr[7]);
             else if (sex_ratio.SelectedIndex == 6 && !(post_ditto.Checked || pre_ditto.Checked))
-                Error("無性別ポケモンに対し、メタモンが選択されていません。");
+                Error(msgstr[8]);
             else
                 EggList_search();
                 EggList_cal_target();
@@ -345,26 +357,17 @@ namespace SMHatchingRNGTool
         {
             //Added function that shows how many number off eggs needed to receive and reject to advance foo number of frames
             int target = (int)Target_frame.Value;
-            for (int co = 0; co < L_dataGridView.Rows.Count; co++)
+            for (int co = 1; co < L_dataGridView.Rows.Count; co++)
             {
-                if (target == 0)
-                {
-                    Repeat_times.Text = "消費：なし";
-                }
-                else if ((int)L_dataGridView[1, co].Value == target)
-                {
-                    Repeat_times.Text = $"消費：{(int)L_dataGridView[0, co - 1].Value}回受け取り";
-                    break;
-                }
-                else if ((int)L_dataGridView[1, co].Value > target)
+                if ((int)L_dataGridView[1, co].Value >= target)
                 {
                     //Repeat_times.Text = $"消費：{(int)L_dataGridView[0, co - 1].Value - 1} Receive、{target - (int)L_dataGridView[1, co - 1].Value} Reject ";
-                    Repeat_times.Text = $"消費：{(int)L_dataGridView[0, co - 1].Value - 1}回受け取り、{target - (int)L_dataGridView[1, co - 1].Value}回拒否する";
+                    Repeat_times.Text = msgstr[9]+$" {(int)L_dataGridView[0, co - 1].Value - 1} "+msgstr[10]+$" {target - (int)L_dataGridView[1, co - 1].Value} " +msgstr[11];
                     break;
                 }
                 else if (target > L_dataGridView.Rows.Count)
                 {
-                    Repeat_times.Text = "目標消費を小さく設定して下さい。";
+                    Repeat_times.Text = msgstr[12];
                 }
             }
         }
@@ -421,17 +424,17 @@ namespace SMHatchingRNGTool
 
 
                 if (!uint.TryParse(st0, NumberStyles.HexNumber, null, out s0))
-                    Error("status[0]に不正な値が含まれています。");
+					Error("status[0]"+ msgstr[13]);
                 else if (!uint.TryParse(st1, NumberStyles.HexNumber, null, out s1))
-                    Error("status[1]に不正な値が含まれています。");
+                    Error("status[1]"+ msgstr[13]);
                 else if (!uint.TryParse(st2, NumberStyles.HexNumber, null, out s2))
-                    Error("status[2]に不正な値が含まれています。");
+                    Error("status[2]"+ msgstr[13]);
                 else if (!uint.TryParse(st3, NumberStyles.HexNumber, null, out s3))
-                    Error("status[3]に不正な値が含まれています。");
+                    Error("status[3]"+ msgstr[13]);
                 else if (!ushort.TryParse(tsvstr, out tsv))
-                    Error("TSVに不正な値が含まれています。");
+                    Error("TSV"+ msgstr[13]);
                 else if (tsv > 4095)
-                    Error("TSVの上限下限が閾値を超えています。");
+                    Error("TSV"+ msgstr[7]);
                 else
                 {
                     status3.Value = L_status3a.Value = s3;
@@ -443,7 +446,7 @@ namespace SMHatchingRNGTool
             }
             else
             {
-                Error(PATH_CONFIG+"が存在しません。\nデフォルトの設定を読み込みます。");
+                Error(PATH_CONFIG + msgstr[14] +"\n" + msgstr[15]);
             }
         }
 
@@ -462,13 +465,13 @@ namespace SMHatchingRNGTool
                 int val;
                 if (!int.TryParse(v, out val)) // not number
                 {
-                    string message = $"{i + 1}番目のTSV:{v}に不正な値が含まれています。";
+                    string message = $"{i + 1}" + msgstr[16] + $"{v}" + msgstr[13];
                     Error(message);
                     return false;
                 }
                 if (0 > val || val > 4095)
                 {
-                    string message = $"{i + 1}番目のTSV:{v}が上限下限が閾値を超えています。";
+                    string message = $"{i + 1}" + msgstr[16] + $"{v}" + msgstr[7];
                     Error(message);
                     return false;
                 }
@@ -492,7 +495,7 @@ namespace SMHatchingRNGTool
             }
             catch (ArgumentNullException)
             {
-                Error("選択されていません");
+                Error(msgstr[17]);
             }
         }
 
@@ -537,7 +540,7 @@ namespace SMHatchingRNGTool
             }
             catch (NullReferenceException)
             {
-                Error("検索結果からseedを選択して下さい");
+                Error(msgstr[18]);
             }
         }
 
@@ -549,7 +552,7 @@ namespace SMHatchingRNGTool
             }
             catch (ArgumentNullException)
             {
-                Error("選択されていません");
+                Error(msgstr[17]);
             }
         }
 
@@ -608,7 +611,7 @@ namespace SMHatchingRNGTool
             }
             catch
             {
-                Error(PATH_CONFIG+"に保存出来ません。");
+                Error(PATH_CONFIG+msgstr[19]);
             }
         }
 
@@ -629,8 +632,13 @@ namespace SMHatchingRNGTool
             }
             catch
             {
-                Error($"Unable to save {PATH_TSV}.");
+                Error(PATH_TSV+msgstr[19]);
             }
         }
+
+		private void mainMenuExit(object sender, EventArgs e)
+		{
+			Close();
+		}
     }
 }
