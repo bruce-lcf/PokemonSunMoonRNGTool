@@ -359,10 +359,14 @@ namespace SMHatchingRNGTool
             int target = (int)Target_frame.Value;
             for (int co = 1; co < L_dataGridView.Rows.Count; co++)
             {
-                if ((int)L_dataGridView[1, co].Value >= target)
+                if ((int)L_dataGridView[1, co].Value == target)
                 {
-                    //Repeat_times.Text = $"消費：{(int)L_dataGridView[0, co - 1].Value - 1} Receive、{target - (int)L_dataGridView[1, co - 1].Value} Reject ";
-                    Repeat_times.Text = msgstr[9]+$" {(int)L_dataGridView[0, co - 1].Value - 1} "+msgstr[10]+$" {target - (int)L_dataGridView[1, co - 1].Value} " +msgstr[11];
+                    Repeat_times.Text = msgstr[9] + $" {(int)L_dataGridView[0, co - 1].Value} " + msgstr[10];
+                    break;
+                }
+                else if ((int)L_dataGridView[1, co].Value > target)
+                {
+                    Repeat_times.Text = msgstr[9] + $" {(int)L_dataGridView[0, co - 1].Value - 1} " + msgstr[10] + $" {target - (int)L_dataGridView[1, co - 1].Value} " + msgstr[11];
                     break;
                 }
                 else if (target > L_dataGridView.Rows.Count)
