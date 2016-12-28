@@ -763,10 +763,16 @@
             this.pre_Items.Items.AddRange(new object[] {
             "指定なし",
             "変わらず",
-            "赤い糸"});
+            "赤い糸",
+            "H-パワーウエイト",
+            "A-パワーリスト",
+            "B-パワーベルト",
+            "C-パワーレンズ",
+            "D-パワーバンド",
+            "S-パワーアンクル"});
             this.pre_Items.Location = new System.Drawing.Point(75, 75);
             this.pre_Items.Name = "pre_Items";
-            this.pre_Items.Size = new System.Drawing.Size(80, 20);
+            this.pre_Items.Size = new System.Drawing.Size(100, 20);
             this.pre_Items.TabIndex = 13;
             // 
             // L_PreItems
@@ -839,10 +845,16 @@
             this.post_Items.Items.AddRange(new object[] {
             "指定なし",
             "変わらず",
-            "赤い糸"});
+            "赤い糸",
+            "H-パワーウエイト",
+            "A-パワーリスト",
+            "B-パワーベルト",
+            "C-パワーレンズ",
+            "D-パワーバンド",
+            "S-パワーアンクル"});
             this.post_Items.Location = new System.Drawing.Point(75, 166);
             this.post_Items.Name = "post_Items";
-            this.post_Items.Size = new System.Drawing.Size(80, 20);
+            this.post_Items.Size = new System.Drawing.Size(100, 20);
             this.post_Items.TabIndex = 16;
             // 
             // L_PostItems
@@ -936,9 +948,9 @@
             // 
             // L_PostAbility
             // 
-            this.L_PostAbility.Location = new System.Drawing.Point(161, 167);
+            this.L_PostAbility.Location = new System.Drawing.Point(181, 167);
             this.L_PostAbility.Name = "L_PostAbility";
-            this.L_PostAbility.Size = new System.Drawing.Size(62, 18);
+            this.L_PostAbility.Size = new System.Drawing.Size(42, 18);
             this.L_PostAbility.TabIndex = 178;
             this.L_PostAbility.Text = "特性";
             this.L_PostAbility.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -958,9 +970,9 @@
             // 
             // L_PreAbility
             // 
-            this.L_PreAbility.Location = new System.Drawing.Point(161, 76);
+            this.L_PreAbility.Location = new System.Drawing.Point(181, 76);
             this.L_PreAbility.Name = "L_PreAbility";
-            this.L_PreAbility.Size = new System.Drawing.Size(62, 18);
+            this.L_PreAbility.Size = new System.Drawing.Size(42, 18);
             this.L_PreAbility.TabIndex = 176;
             this.L_PreAbility.Text = "特性";
             this.L_PreAbility.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
