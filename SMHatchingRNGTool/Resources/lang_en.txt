@@ -64,6 +64,7 @@ L_search_B = Def
 L_search_C = SpA
 L_search_D = SpD
 L_search_S = Spe
+L_nature = Nature:
 L_ability = Ability:
 L_sex = Gender:
 L_mezapa = HP Type:

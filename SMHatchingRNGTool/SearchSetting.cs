@@ -2,6 +2,7 @@ namespace SMHatchingRNGTool
 {
     public class SearchSetting
     {
+        public int Nature = -1;
         public int Ability = -1;
         public int Gender = -1;
         public int Ball = -1;

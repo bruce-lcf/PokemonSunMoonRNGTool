@@ -64,6 +64,7 @@ L_search_B = B
 L_search_C = C
 L_search_D = D
 L_search_S = S
+L_nature = 性格
 L_ability = 特性
 L_sex = 性別
 L_mezapa = めざパ

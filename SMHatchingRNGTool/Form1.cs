@@ -102,8 +102,12 @@ namespace SMHatchingRNGTool
             sex_ratio.Items[6] = STR_GENDERLESS;
 
             mezapaType.Items[0] = STR_ANY;
+            nature.Items[0] = STR_ANY;
             for (int i = 1; i < mezapa.Length - 1; i++)
                 mezapaType.Items[i] = mezapa[i];
+
+            for (int i = 0; i < natures.Length; i++)
+                nature.Items[i + 1] = natures[i];
         }
 
         private SearchSetting getSettings()
@@ -112,6 +116,7 @@ namespace SMHatchingRNGTool
             int[] IVlow = { (int)IVlow1.Value, (int)IVlow2.Value, (int)IVlow3.Value, (int)IVlow4.Value, (int)IVlow5.Value, (int)IVlow6.Value, };
             return new SearchSetting
             {
+                Nature = nature.SelectedIndex - 1,
                 Ability = ability.SelectedIndex - 1,
                 Gender = sex.SelectedIndex - 1,
                 HPType = mezapaType.SelectedIndex - 1,
@@ -186,6 +191,9 @@ namespace SMHatchingRNGTool
             if (!setting.validIVs(result.IVs))
                 return false;
             if (!setting.mezapa_check(result.IVs))
+                return false;
+
+            if (setting.Nature != -1 && setting.Nature != result.Nature)
                 return false;
             if (setting.Ability != -1 && setting.Ability != result.Ability)
                 return false;
@@ -390,6 +398,8 @@ namespace SMHatchingRNGTool
 
             for (int i = 0; i < 17; i++)
                 mezapaType.Items.Add("");
+            for (int i = 0; i < 26; i++)
+                nature.Items.Add("");
 
             foreach (var cbItem in main_langlist)
                 CB_MainLanguage.Items.Add(cbItem);
@@ -399,6 +409,7 @@ namespace SMHatchingRNGTool
             pre_Items.SelectedIndex = 0;
             post_Items.SelectedIndex = 0;
             mezapaType.SelectedIndex = 0;
+            nature.SelectedIndex = 0;
             ability.SelectedIndex = 0;
             pre_ability.SelectedIndex = 0;
             post_ability.SelectedIndex = 0;
