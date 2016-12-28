@@ -27,13 +27,14 @@ Menu_About = About
 --------------------Context Menus----------------------
 mnuCopy = Copy
 mnuSelectAll = Select All
+mnuSetSearchSeed = Copy seed to This Tab
 mnuSetEggSeed = Copy seed to Other Tab
 mnu2Copy = Copy
 mnu2SelectAll = Select All
 ---------------------Search Tab------------------------
 Tab_Search = Search
 --
-ek_groupBox1 = Parents
+Parents_Info = Parents
 pre = ♂ Parent:
 L_pre_H = HP
 L_pre_A = Atk
@@ -57,7 +58,7 @@ post_ditto = Ditto
 Heterogeneity = Differ Species
 L_sex_ratio = Gender Ratio:
 --
-y_groupBox2 = Filters
+Filters = Filters
 L_search_H = HP
 L_search_A = Atk
 L_search_B = Def
@@ -71,10 +72,10 @@ L_mezapa = HP Type:
 L_ball = Ball:
 Invalid_Refine = Ignore Filters
 --
-ek_groupBox2 = RNG Info
+RNGInfo = RNG Info
 L_k_range = Range
 --
-groupBox1 = Search Settings
+SearchSettings = Search Settings
 International = International (Masuda)
 omamori = Shiny Charm
 shiny = Shiny Only
@@ -100,7 +101,7 @@ dgvS_ec = EC
 dgvS_rand = Rand
 ----------------------Egg Tab--------------------------
 Tab_Egg = Egg List
-groupBox5 = RNG Info
+L_RNGInfo = RNG Info
 L_eggrange = Range
 List_search = Search
 L_TSV_shiny = Update if Foreign TSV

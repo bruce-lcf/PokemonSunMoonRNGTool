@@ -27,13 +27,14 @@ Menu_About = について
 --------------------Context Menus----------------------
 mnuCopy = コピー
 mnuSelectAll = 全て選択
+mnuSetSearchSeed = 検索範囲へseedを入れる
 mnuSetEggSeed = 連続孵化リストへseedを入れる
 mnu2Copy = コピー
 mnu2SelectAll = 全て選択
 ---------------------Search Tab------------------------
 Tab_Search = 個体検索
 --
-ek_groupBox1 = 親の情報
+Parents_Info = 親の情報
 pre = ♂親
 L_pre_H = H
 L_pre_A = A
@@ -57,7 +58,7 @@ post_ditto = メタモン
 Heterogeneity = 異種間孵化
 L_sex_ratio = 性別比
 --
-y_groupBox2 = 目標個体
+Filters = フィルター
 L_search_H = H
 L_search_A = A
 L_search_B = B
@@ -71,10 +72,10 @@ L_mezapa = めざパ
 L_ball = ボール
 Invalid_Refine = 絞り込みを無効
 --
-ek_groupBox2 = 検索範囲
+RNGInfo = 検索範囲
 L_k_range = 消費数
 --
-groupBox1 = その他
+SearchSettings = その他
 International = 国際孵化
 omamori = 光るお守り
 shiny = 色違いのみ出力
@@ -100,7 +101,7 @@ dgvS_ec = 暗号化定数
 dgvS_rand = 乱数列
 ----------------------Egg Tab--------------------------
 Tab_Egg = 連続孵化リスト
-groupBox5 = 検索範囲
+L_RNGInfo = 検索範囲
 L_eggrange = 受け取り回数
 List_search = 計算
 L_TSV_shiny = TSVを考慮した計算をする

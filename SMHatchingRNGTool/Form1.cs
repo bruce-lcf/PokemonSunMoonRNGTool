@@ -559,6 +559,23 @@ namespace SMHatchingRNGTool
             }
         }
 
+        private void Send2SearchSeed(object sender, EventArgs e)
+        {
+            try
+            {
+                var seed = (string)k_dataGridView.CurrentRow.Cells[2].Value;
+                string[] Data = seed.Split(',');
+                status3.Value = Convert.ToUInt32(Data[0], 16);
+                status2.Value = Convert.ToUInt32(Data[1], 16);
+                status1.Value = Convert.ToUInt32(Data[2], 16);
+                status0.Value = Convert.ToUInt32(Data[3], 16);
+            }
+            catch (NullReferenceException)
+            {
+                Error(msgstr[18]);
+            }
+        }
+
         private void L_copyToolStripMenuItem_Click(object sender, EventArgs e)
         {
             try

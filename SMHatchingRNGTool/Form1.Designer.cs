@@ -49,6 +49,7 @@
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.mnuCopy = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuSelectAll = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnuSetSearchSeed = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuSetEggSeed = new System.Windows.Forms.ToolStripMenuItem();
             this.post = new System.Windows.Forms.Label();
             this.pre_parent1 = new System.Windows.Forms.NumericUpDown();
@@ -80,7 +81,7 @@
             this.L_post_S = new System.Windows.Forms.Label();
             this.post_Items = new System.Windows.Forms.ComboBox();
             this.L_PostItems = new System.Windows.Forms.Label();
-            this.ek_groupBox1 = new System.Windows.Forms.GroupBox();
+            this.Parents_Info = new System.Windows.Forms.GroupBox();
             this.Heterogeneity = new System.Windows.Forms.CheckBox();
             this.pre_ditto = new System.Windows.Forms.CheckBox();
             this.post_ditto = new System.Windows.Forms.CheckBox();
@@ -91,7 +92,11 @@
             this.sex_ratio = new System.Windows.Forms.ComboBox();
             this.L_sex_ratio = new System.Windows.Forms.Label();
             this.International = new System.Windows.Forms.CheckBox();
-            this.ek_groupBox2 = new System.Windows.Forms.GroupBox();
+            this.RNGInfo = new System.Windows.Forms.GroupBox();
+            this.status3 = new SMHatchingRNGTool.HexNumericUpdown();
+            this.status2 = new SMHatchingRNGTool.HexNumericUpdown();
+            this.status1 = new SMHatchingRNGTool.HexNumericUpdown();
+            this.status0 = new SMHatchingRNGTool.HexNumericUpdown();
             this.s_min = new System.Windows.Forms.NumericUpDown();
             this.s_max = new System.Windows.Forms.NumericUpDown();
             this.label13 = new System.Windows.Forms.Label();
@@ -133,14 +138,16 @@
             this.ability = new System.Windows.Forms.ComboBox();
             this.L_sex = new System.Windows.Forms.Label();
             this.sex = new System.Windows.Forms.ComboBox();
-            this.y_groupBox2 = new System.Windows.Forms.GroupBox();
+            this.Filters = new System.Windows.Forms.GroupBox();
+            this.L_nature = new System.Windows.Forms.Label();
+            this.nature = new System.Windows.Forms.ComboBox();
             this.Invalid_Refine = new System.Windows.Forms.CheckBox();
             this.L_ball = new System.Windows.Forms.Label();
             this.ball = new System.Windows.Forms.ComboBox();
             this.IVup6 = new System.Windows.Forms.NumericUpDown();
             this.k_search = new System.Windows.Forms.Button();
             this.omamori = new System.Windows.Forms.CheckBox();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.SearchSettings = new System.Windows.Forms.GroupBox();
             this.TSV = new System.Windows.Forms.NumericUpDown();
             this.other_TSV = new System.Windows.Forms.CheckBox();
             this.k_TSV_shiny = new System.Windows.Forms.CheckBox();
@@ -170,10 +177,14 @@
             this.contextMenuStrip2 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.mnu2Copy = new System.Windows.Forms.ToolStripMenuItem();
             this.mnu2SelectAll = new System.Windows.Forms.ToolStripMenuItem();
-            this.groupBox5 = new System.Windows.Forms.GroupBox();
+            this.L_RNGInfo = new System.Windows.Forms.GroupBox();
             this.Repeat_times = new System.Windows.Forms.Label();
             this.Target_frame = new System.Windows.Forms.NumericUpDown();
             this.L_targetframe = new System.Windows.Forms.Label();
+            this.L_status3a = new SMHatchingRNGTool.HexNumericUpdown();
+            this.L_status2a = new SMHatchingRNGTool.HexNumericUpdown();
+            this.L_status1a = new SMHatchingRNGTool.HexNumericUpdown();
+            this.L_status0a = new SMHatchingRNGTool.HexNumericUpdown();
             this.n_min = new System.Windows.Forms.NumericUpDown();
             this.n_max = new System.Windows.Forms.NumericUpDown();
             this.L_TSV_shiny = new System.Windows.Forms.CheckBox();
@@ -195,16 +206,6 @@
             this.CB_MainLanguage = new System.Windows.Forms.ToolStripComboBox();
             this.Menu_SaveConfig = new System.Windows.Forms.ToolStripMenuItem();
             this.Menu_TSV = new System.Windows.Forms.ToolStripMenuItem();
-            this.status3 = new SMHatchingRNGTool.HexNumericUpdown();
-            this.status2 = new SMHatchingRNGTool.HexNumericUpdown();
-            this.status1 = new SMHatchingRNGTool.HexNumericUpdown();
-            this.status0 = new SMHatchingRNGTool.HexNumericUpdown();
-            this.L_status3a = new SMHatchingRNGTool.HexNumericUpdown();
-            this.L_status2a = new SMHatchingRNGTool.HexNumericUpdown();
-            this.L_status1a = new SMHatchingRNGTool.HexNumericUpdown();
-            this.L_status0a = new SMHatchingRNGTool.HexNumericUpdown();
-            this.L_nature = new System.Windows.Forms.Label();
-            this.nature = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.k_dataGridView)).BeginInit();
             this.contextMenuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pre_parent1)).BeginInit();
@@ -219,8 +220,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.pre_parent4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pre_parent5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pre_parent6)).BeginInit();
-            this.ek_groupBox1.SuspendLayout();
-            this.ek_groupBox2.SuspendLayout();
+            this.Parents_Info.SuspendLayout();
+            this.RNGInfo.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.status3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.status2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.status1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.status0)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.s_min)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.s_max)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.IVup2)).BeginInit();
@@ -234,28 +239,24 @@
             ((System.ComponentModel.ISupportInitialize)(this.IVlow3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.IVlow2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.IVlow1)).BeginInit();
-            this.y_groupBox2.SuspendLayout();
+            this.Filters.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.IVup6)).BeginInit();
-            this.groupBox1.SuspendLayout();
+            this.SearchSettings.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.TSV)).BeginInit();
             this.tabControl1.SuspendLayout();
             this.Tab_Search.SuspendLayout();
             this.Tab_Egg.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.L_dataGridView)).BeginInit();
             this.contextMenuStrip2.SuspendLayout();
-            this.groupBox5.SuspendLayout();
+            this.L_RNGInfo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Target_frame)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.n_min)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.n_max)).BeginInit();
-            this.menuStrip1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.status3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.status2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.status1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.status0)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.L_status3a)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.L_status2a)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.L_status1a)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.L_status0a)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.n_min)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.n_max)).BeginInit();
+            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // k_dataGridView
@@ -394,9 +395,10 @@
             this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.mnuCopy,
             this.mnuSelectAll,
+            this.mnuSetSearchSeed,
             this.mnuSetEggSeed});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(225, 70);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(225, 92);
             // 
             // mnuCopy
             // 
@@ -411,6 +413,13 @@
             this.mnuSelectAll.Size = new System.Drawing.Size(224, 22);
             this.mnuSelectAll.Text = "全て選択";
             this.mnuSelectAll.Click += new System.EventHandler(this.SelectAllToolStripMenuItem_Click);
+            // 
+            // mnuSetSearchSeed
+            // 
+            this.mnuSetSearchSeed.Name = "mnuSetSearchSeed";
+            this.mnuSetSearchSeed.Size = new System.Drawing.Size(224, 22);
+            this.mnuSetSearchSeed.Text = "検索範囲へseedを入れる";
+            this.mnuSetSearchSeed.Click += new System.EventHandler(this.Send2SearchSeed);
             // 
             // mnuSetEggSeed
             // 
@@ -845,53 +854,53 @@
             this.L_PostItems.Text = "持ち物";
             this.L_PostItems.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // ek_groupBox1
+            // Parents_Info
             // 
-            this.ek_groupBox1.Controls.Add(this.Heterogeneity);
-            this.ek_groupBox1.Controls.Add(this.pre_ditto);
-            this.ek_groupBox1.Controls.Add(this.post_ditto);
-            this.ek_groupBox1.Controls.Add(this.L_PostAbility);
-            this.ek_groupBox1.Controls.Add(this.post_ability);
-            this.ek_groupBox1.Controls.Add(this.L_PreAbility);
-            this.ek_groupBox1.Controls.Add(this.pre_ability);
-            this.ek_groupBox1.Controls.Add(this.sex_ratio);
-            this.ek_groupBox1.Controls.Add(this.L_sex_ratio);
-            this.ek_groupBox1.Controls.Add(this.L_PostItems);
-            this.ek_groupBox1.Controls.Add(this.post_Items);
-            this.ek_groupBox1.Controls.Add(this.L_post_S);
-            this.ek_groupBox1.Controls.Add(this.L_post_D);
-            this.ek_groupBox1.Controls.Add(this.L_post_C);
-            this.ek_groupBox1.Controls.Add(this.L_post_B);
-            this.ek_groupBox1.Controls.Add(this.L_post_A);
-            this.ek_groupBox1.Controls.Add(this.L_post_H);
-            this.ek_groupBox1.Controls.Add(this.L_PreItems);
-            this.ek_groupBox1.Controls.Add(this.pre_Items);
-            this.ek_groupBox1.Controls.Add(this.L_pre_S);
-            this.ek_groupBox1.Controls.Add(this.pre_parent6);
-            this.ek_groupBox1.Controls.Add(this.L_pre_D);
-            this.ek_groupBox1.Controls.Add(this.pre_parent5);
-            this.ek_groupBox1.Controls.Add(this.L_pre_C);
-            this.ek_groupBox1.Controls.Add(this.pre_parent4);
-            this.ek_groupBox1.Controls.Add(this.L_pre_B);
-            this.ek_groupBox1.Controls.Add(this.pre_parent3);
-            this.ek_groupBox1.Controls.Add(this.L_pre_A);
-            this.ek_groupBox1.Controls.Add(this.pre_parent2);
-            this.ek_groupBox1.Controls.Add(this.post_parent6);
-            this.ek_groupBox1.Controls.Add(this.post_parent5);
-            this.ek_groupBox1.Controls.Add(this.post_parent4);
-            this.ek_groupBox1.Controls.Add(this.post_parent3);
-            this.ek_groupBox1.Controls.Add(this.post_parent2);
-            this.ek_groupBox1.Controls.Add(this.post_parent1);
-            this.ek_groupBox1.Controls.Add(this.L_pre_H);
-            this.ek_groupBox1.Controls.Add(this.pre);
-            this.ek_groupBox1.Controls.Add(this.pre_parent1);
-            this.ek_groupBox1.Controls.Add(this.post);
-            this.ek_groupBox1.Location = new System.Drawing.Point(6, 6);
-            this.ek_groupBox1.Name = "ek_groupBox1";
-            this.ek_groupBox1.Size = new System.Drawing.Size(369, 226);
-            this.ek_groupBox1.TabIndex = 2;
-            this.ek_groupBox1.TabStop = false;
-            this.ek_groupBox1.Text = "親の情報";
+            this.Parents_Info.Controls.Add(this.Heterogeneity);
+            this.Parents_Info.Controls.Add(this.pre_ditto);
+            this.Parents_Info.Controls.Add(this.post_ditto);
+            this.Parents_Info.Controls.Add(this.L_PostAbility);
+            this.Parents_Info.Controls.Add(this.post_ability);
+            this.Parents_Info.Controls.Add(this.L_PreAbility);
+            this.Parents_Info.Controls.Add(this.pre_ability);
+            this.Parents_Info.Controls.Add(this.sex_ratio);
+            this.Parents_Info.Controls.Add(this.L_sex_ratio);
+            this.Parents_Info.Controls.Add(this.L_PostItems);
+            this.Parents_Info.Controls.Add(this.post_Items);
+            this.Parents_Info.Controls.Add(this.L_post_S);
+            this.Parents_Info.Controls.Add(this.L_post_D);
+            this.Parents_Info.Controls.Add(this.L_post_C);
+            this.Parents_Info.Controls.Add(this.L_post_B);
+            this.Parents_Info.Controls.Add(this.L_post_A);
+            this.Parents_Info.Controls.Add(this.L_post_H);
+            this.Parents_Info.Controls.Add(this.L_PreItems);
+            this.Parents_Info.Controls.Add(this.pre_Items);
+            this.Parents_Info.Controls.Add(this.L_pre_S);
+            this.Parents_Info.Controls.Add(this.pre_parent6);
+            this.Parents_Info.Controls.Add(this.L_pre_D);
+            this.Parents_Info.Controls.Add(this.pre_parent5);
+            this.Parents_Info.Controls.Add(this.L_pre_C);
+            this.Parents_Info.Controls.Add(this.pre_parent4);
+            this.Parents_Info.Controls.Add(this.L_pre_B);
+            this.Parents_Info.Controls.Add(this.pre_parent3);
+            this.Parents_Info.Controls.Add(this.L_pre_A);
+            this.Parents_Info.Controls.Add(this.pre_parent2);
+            this.Parents_Info.Controls.Add(this.post_parent6);
+            this.Parents_Info.Controls.Add(this.post_parent5);
+            this.Parents_Info.Controls.Add(this.post_parent4);
+            this.Parents_Info.Controls.Add(this.post_parent3);
+            this.Parents_Info.Controls.Add(this.post_parent2);
+            this.Parents_Info.Controls.Add(this.post_parent1);
+            this.Parents_Info.Controls.Add(this.L_pre_H);
+            this.Parents_Info.Controls.Add(this.pre);
+            this.Parents_Info.Controls.Add(this.pre_parent1);
+            this.Parents_Info.Controls.Add(this.post);
+            this.Parents_Info.Location = new System.Drawing.Point(6, 6);
+            this.Parents_Info.Name = "Parents_Info";
+            this.Parents_Info.Size = new System.Drawing.Size(369, 226);
+            this.Parents_Info.TabIndex = 2;
+            this.Parents_Info.TabStop = false;
+            this.Parents_Info.Text = "親の情報";
             // 
             // Heterogeneity
             // 
@@ -1005,30 +1014,94 @@
             this.International.Text = "国際孵化";
             this.International.UseVisualStyleBackColor = true;
             // 
-            // ek_groupBox2
+            // RNGInfo
             // 
-            this.ek_groupBox2.Controls.Add(this.status3);
-            this.ek_groupBox2.Controls.Add(this.status2);
-            this.ek_groupBox2.Controls.Add(this.status1);
-            this.ek_groupBox2.Controls.Add(this.status0);
-            this.ek_groupBox2.Controls.Add(this.s_min);
-            this.ek_groupBox2.Controls.Add(this.s_max);
-            this.ek_groupBox2.Controls.Add(this.label13);
-            this.ek_groupBox2.Controls.Add(this.label14);
-            this.ek_groupBox2.Controls.Add(this.label11);
-            this.ek_groupBox2.Controls.Add(this.label12);
-            this.ek_groupBox2.Controls.Add(this.label1);
-            this.ek_groupBox2.Controls.Add(this.label9);
-            this.ek_groupBox2.Controls.Add(this.label16);
-            this.ek_groupBox2.Controls.Add(this.label15);
-            this.ek_groupBox2.Controls.Add(this.L_k_range);
-            this.ek_groupBox2.Controls.Add(this.label176);
-            this.ek_groupBox2.Location = new System.Drawing.Point(697, 6);
-            this.ek_groupBox2.Name = "ek_groupBox2";
-            this.ek_groupBox2.Size = new System.Drawing.Size(223, 226);
-            this.ek_groupBox2.TabIndex = 3;
-            this.ek_groupBox2.TabStop = false;
-            this.ek_groupBox2.Text = "検索範囲";
+            this.RNGInfo.Controls.Add(this.status3);
+            this.RNGInfo.Controls.Add(this.status2);
+            this.RNGInfo.Controls.Add(this.status1);
+            this.RNGInfo.Controls.Add(this.status0);
+            this.RNGInfo.Controls.Add(this.s_min);
+            this.RNGInfo.Controls.Add(this.s_max);
+            this.RNGInfo.Controls.Add(this.label13);
+            this.RNGInfo.Controls.Add(this.label14);
+            this.RNGInfo.Controls.Add(this.label11);
+            this.RNGInfo.Controls.Add(this.label12);
+            this.RNGInfo.Controls.Add(this.label1);
+            this.RNGInfo.Controls.Add(this.label9);
+            this.RNGInfo.Controls.Add(this.label16);
+            this.RNGInfo.Controls.Add(this.label15);
+            this.RNGInfo.Controls.Add(this.L_k_range);
+            this.RNGInfo.Controls.Add(this.label176);
+            this.RNGInfo.Location = new System.Drawing.Point(697, 6);
+            this.RNGInfo.Name = "RNGInfo";
+            this.RNGInfo.Size = new System.Drawing.Size(223, 226);
+            this.RNGInfo.TabIndex = 3;
+            this.RNGInfo.TabStop = false;
+            this.RNGInfo.Text = "検索範囲";
+            // 
+            // status3
+            // 
+            this.status3.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.status3.Hexadecimal = true;
+            this.status3.Location = new System.Drawing.Point(118, 24);
+            this.status3.Name = "status3";
+            this.status3.Size = new System.Drawing.Size(80, 22);
+            this.status3.TabIndex = 70;
+            this.status3.Value = new decimal(new int[] {
+            305419896,
+            0,
+            0,
+            0});
+            this.status3.Enter += new System.EventHandler(this.NumericUpDown_Enter);
+            this.status3.Validating += new System.ComponentModel.CancelEventHandler(this.NumericUpDown_Check);
+            // 
+            // status2
+            // 
+            this.status2.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.status2.Hexadecimal = true;
+            this.status2.Location = new System.Drawing.Point(118, 52);
+            this.status2.Name = "status2";
+            this.status2.Size = new System.Drawing.Size(80, 22);
+            this.status2.TabIndex = 71;
+            this.status2.Value = new decimal(new int[] {
+            -559023410,
+            0,
+            0,
+            0});
+            this.status2.Enter += new System.EventHandler(this.NumericUpDown_Enter);
+            this.status2.Validating += new System.ComponentModel.CancelEventHandler(this.NumericUpDown_Check);
+            // 
+            // status1
+            // 
+            this.status1.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.status1.Hexadecimal = true;
+            this.status1.Location = new System.Drawing.Point(118, 80);
+            this.status1.Name = "status1";
+            this.status1.Size = new System.Drawing.Size(80, 22);
+            this.status1.TabIndex = 72;
+            this.status1.Value = new decimal(new int[] {
+            -559038737,
+            0,
+            0,
+            0});
+            this.status1.Enter += new System.EventHandler(this.NumericUpDown_Enter);
+            this.status1.Validating += new System.ComponentModel.CancelEventHandler(this.NumericUpDown_Check);
+            // 
+            // status0
+            // 
+            this.status0.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.status0.Hexadecimal = true;
+            this.status0.Location = new System.Drawing.Point(118, 108);
+            this.status0.Name = "status0";
+            this.status0.Size = new System.Drawing.Size(80, 22);
+            this.status0.TabIndex = 73;
+            this.status0.Value = new decimal(new int[] {
+            -1091568946,
+            0,
+            0,
+            0});
+            this.status0.Enter += new System.EventHandler(this.NumericUpDown_Enter);
+            this.status0.Validating += new System.ComponentModel.CancelEventHandler(this.NumericUpDown_Check);
             // 
             // s_min
             // 
@@ -1529,49 +1602,67 @@
             this.sex.Size = new System.Drawing.Size(80, 20);
             this.sex.TabIndex = 38;
             // 
-            // y_groupBox2
+            // Filters
             // 
-            this.y_groupBox2.Controls.Add(this.L_nature);
-            this.y_groupBox2.Controls.Add(this.nature);
-            this.y_groupBox2.Controls.Add(this.Invalid_Refine);
-            this.y_groupBox2.Controls.Add(this.L_ball);
-            this.y_groupBox2.Controls.Add(this.ball);
-            this.y_groupBox2.Controls.Add(this.sex);
-            this.y_groupBox2.Controls.Add(this.L_sex);
-            this.y_groupBox2.Controls.Add(this.L_ability);
-            this.y_groupBox2.Controls.Add(this.L_mezapa);
-            this.y_groupBox2.Controls.Add(this.mezapaType);
-            this.y_groupBox2.Controls.Add(this.L_search_S);
-            this.y_groupBox2.Controls.Add(this.L_search_D);
-            this.y_groupBox2.Controls.Add(this.L_search_C);
-            this.y_groupBox2.Controls.Add(this.L_search_B);
-            this.y_groupBox2.Controls.Add(this.L_search_A);
-            this.y_groupBox2.Controls.Add(this.L_search_H);
-            this.y_groupBox2.Controls.Add(this.IVup6);
-            this.y_groupBox2.Controls.Add(this.IVlow1);
-            this.y_groupBox2.Controls.Add(this.label109);
-            this.y_groupBox2.Controls.Add(this.IVlow2);
-            this.y_groupBox2.Controls.Add(this.IVlow3);
-            this.y_groupBox2.Controls.Add(this.IVup5);
-            this.y_groupBox2.Controls.Add(this.IVlow4);
-            this.y_groupBox2.Controls.Add(this.label110);
-            this.y_groupBox2.Controls.Add(this.IVlow5);
-            this.y_groupBox2.Controls.Add(this.IVlow6);
-            this.y_groupBox2.Controls.Add(this.IVup4);
-            this.y_groupBox2.Controls.Add(this.label112);
-            this.y_groupBox2.Controls.Add(this.label113);
-            this.y_groupBox2.Controls.Add(this.IVup1);
-            this.y_groupBox2.Controls.Add(this.IVup3);
-            this.y_groupBox2.Controls.Add(this.label114);
-            this.y_groupBox2.Controls.Add(this.label115);
-            this.y_groupBox2.Controls.Add(this.IVup2);
-            this.y_groupBox2.Controls.Add(this.ability);
-            this.y_groupBox2.Location = new System.Drawing.Point(381, 6);
-            this.y_groupBox2.Name = "y_groupBox2";
-            this.y_groupBox2.Size = new System.Drawing.Size(310, 226);
-            this.y_groupBox2.TabIndex = 20;
-            this.y_groupBox2.TabStop = false;
-            this.y_groupBox2.Text = "目標個体";
+            this.Filters.Controls.Add(this.L_nature);
+            this.Filters.Controls.Add(this.nature);
+            this.Filters.Controls.Add(this.Invalid_Refine);
+            this.Filters.Controls.Add(this.L_ball);
+            this.Filters.Controls.Add(this.ball);
+            this.Filters.Controls.Add(this.sex);
+            this.Filters.Controls.Add(this.L_sex);
+            this.Filters.Controls.Add(this.L_ability);
+            this.Filters.Controls.Add(this.L_mezapa);
+            this.Filters.Controls.Add(this.mezapaType);
+            this.Filters.Controls.Add(this.L_search_S);
+            this.Filters.Controls.Add(this.L_search_D);
+            this.Filters.Controls.Add(this.L_search_C);
+            this.Filters.Controls.Add(this.L_search_B);
+            this.Filters.Controls.Add(this.L_search_A);
+            this.Filters.Controls.Add(this.L_search_H);
+            this.Filters.Controls.Add(this.IVup6);
+            this.Filters.Controls.Add(this.IVlow1);
+            this.Filters.Controls.Add(this.label109);
+            this.Filters.Controls.Add(this.IVlow2);
+            this.Filters.Controls.Add(this.IVlow3);
+            this.Filters.Controls.Add(this.IVup5);
+            this.Filters.Controls.Add(this.IVlow4);
+            this.Filters.Controls.Add(this.label110);
+            this.Filters.Controls.Add(this.IVlow5);
+            this.Filters.Controls.Add(this.IVlow6);
+            this.Filters.Controls.Add(this.IVup4);
+            this.Filters.Controls.Add(this.label112);
+            this.Filters.Controls.Add(this.label113);
+            this.Filters.Controls.Add(this.IVup1);
+            this.Filters.Controls.Add(this.IVup3);
+            this.Filters.Controls.Add(this.label114);
+            this.Filters.Controls.Add(this.label115);
+            this.Filters.Controls.Add(this.IVup2);
+            this.Filters.Controls.Add(this.ability);
+            this.Filters.Location = new System.Drawing.Point(381, 6);
+            this.Filters.Name = "Filters";
+            this.Filters.Size = new System.Drawing.Size(310, 226);
+            this.Filters.TabIndex = 20;
+            this.Filters.TabStop = false;
+            this.Filters.Text = "フィルター";
+            // 
+            // L_nature
+            // 
+            this.L_nature.Location = new System.Drawing.Point(163, 26);
+            this.L_nature.Name = "L_nature";
+            this.L_nature.Size = new System.Drawing.Size(57, 18);
+            this.L_nature.TabIndex = 188;
+            this.L_nature.Text = "性格";
+            this.L_nature.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // nature
+            // 
+            this.nature.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.nature.FormattingEnabled = true;
+            this.nature.Location = new System.Drawing.Point(222, 25);
+            this.nature.Name = "nature";
+            this.nature.Size = new System.Drawing.Size(80, 20);
+            this.nature.TabIndex = 187;
             // 
             // Invalid_Refine
             // 
@@ -1645,21 +1736,21 @@
             this.omamori.Text = "光るお守り";
             this.omamori.UseVisualStyleBackColor = true;
             // 
-            // groupBox1
+            // SearchSettings
             // 
-            this.groupBox1.Controls.Add(this.TSV);
-            this.groupBox1.Controls.Add(this.other_TSV);
-            this.groupBox1.Controls.Add(this.k_TSV_shiny);
-            this.groupBox1.Controls.Add(this.label20);
-            this.groupBox1.Controls.Add(this.shiny);
-            this.groupBox1.Controls.Add(this.International);
-            this.groupBox1.Controls.Add(this.omamori);
-            this.groupBox1.Location = new System.Drawing.Point(926, 6);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(182, 197);
-            this.groupBox1.TabIndex = 177;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "その他";
+            this.SearchSettings.Controls.Add(this.TSV);
+            this.SearchSettings.Controls.Add(this.other_TSV);
+            this.SearchSettings.Controls.Add(this.k_TSV_shiny);
+            this.SearchSettings.Controls.Add(this.label20);
+            this.SearchSettings.Controls.Add(this.shiny);
+            this.SearchSettings.Controls.Add(this.International);
+            this.SearchSettings.Controls.Add(this.omamori);
+            this.SearchSettings.Location = new System.Drawing.Point(926, 6);
+            this.SearchSettings.Name = "SearchSettings";
+            this.SearchSettings.Size = new System.Drawing.Size(182, 197);
+            this.SearchSettings.TabIndex = 177;
+            this.SearchSettings.TabStop = false;
+            this.SearchSettings.Text = "その他";
             // 
             // TSV
             // 
@@ -1737,12 +1828,12 @@
             // 
             // Tab_Search
             // 
-            this.Tab_Search.Controls.Add(this.ek_groupBox1);
-            this.Tab_Search.Controls.Add(this.y_groupBox2);
+            this.Tab_Search.Controls.Add(this.Parents_Info);
+            this.Tab_Search.Controls.Add(this.Filters);
             this.Tab_Search.Controls.Add(this.k_search);
-            this.Tab_Search.Controls.Add(this.groupBox1);
+            this.Tab_Search.Controls.Add(this.SearchSettings);
             this.Tab_Search.Controls.Add(this.k_dataGridView);
-            this.Tab_Search.Controls.Add(this.ek_groupBox2);
+            this.Tab_Search.Controls.Add(this.RNGInfo);
             this.Tab_Search.Location = new System.Drawing.Point(4, 22);
             this.Tab_Search.Name = "Tab_Search";
             this.Tab_Search.Padding = new System.Windows.Forms.Padding(3);
@@ -1755,7 +1846,7 @@
             // 
             this.Tab_Egg.Controls.Add(this.List_search);
             this.Tab_Egg.Controls.Add(this.L_dataGridView);
-            this.Tab_Egg.Controls.Add(this.groupBox5);
+            this.Tab_Egg.Controls.Add(this.L_RNGInfo);
             this.Tab_Egg.Location = new System.Drawing.Point(4, 22);
             this.Tab_Egg.Name = "Tab_Egg";
             this.Tab_Egg.Padding = new System.Windows.Forms.Padding(3);
@@ -1927,34 +2018,34 @@
             this.mnu2SelectAll.Text = "全て選択";
             this.mnu2SelectAll.Click += new System.EventHandler(this.L_SelectAllToolStripMenuItem_Click);
             // 
-            // groupBox5
+            // L_RNGInfo
             // 
-            this.groupBox5.Controls.Add(this.Repeat_times);
-            this.groupBox5.Controls.Add(this.Target_frame);
-            this.groupBox5.Controls.Add(this.L_targetframe);
-            this.groupBox5.Controls.Add(this.L_status3a);
-            this.groupBox5.Controls.Add(this.L_status2a);
-            this.groupBox5.Controls.Add(this.L_status1a);
-            this.groupBox5.Controls.Add(this.L_status0a);
-            this.groupBox5.Controls.Add(this.n_min);
-            this.groupBox5.Controls.Add(this.n_max);
-            this.groupBox5.Controls.Add(this.L_TSV_shiny);
-            this.groupBox5.Controls.Add(this.label63);
-            this.groupBox5.Controls.Add(this.label64);
-            this.groupBox5.Controls.Add(this.label65);
-            this.groupBox5.Controls.Add(this.label66);
-            this.groupBox5.Controls.Add(this.label67);
-            this.groupBox5.Controls.Add(this.label68);
-            this.groupBox5.Controls.Add(this.label69);
-            this.groupBox5.Controls.Add(this.label70);
-            this.groupBox5.Controls.Add(this.L_eggrange);
-            this.groupBox5.Controls.Add(this.label72);
-            this.groupBox5.Location = new System.Drawing.Point(6, 6);
-            this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Size = new System.Drawing.Size(223, 323);
-            this.groupBox5.TabIndex = 180;
-            this.groupBox5.TabStop = false;
-            this.groupBox5.Text = "検索範囲";
+            this.L_RNGInfo.Controls.Add(this.Repeat_times);
+            this.L_RNGInfo.Controls.Add(this.Target_frame);
+            this.L_RNGInfo.Controls.Add(this.L_targetframe);
+            this.L_RNGInfo.Controls.Add(this.L_status3a);
+            this.L_RNGInfo.Controls.Add(this.L_status2a);
+            this.L_RNGInfo.Controls.Add(this.L_status1a);
+            this.L_RNGInfo.Controls.Add(this.L_status0a);
+            this.L_RNGInfo.Controls.Add(this.n_min);
+            this.L_RNGInfo.Controls.Add(this.n_max);
+            this.L_RNGInfo.Controls.Add(this.L_TSV_shiny);
+            this.L_RNGInfo.Controls.Add(this.label63);
+            this.L_RNGInfo.Controls.Add(this.label64);
+            this.L_RNGInfo.Controls.Add(this.label65);
+            this.L_RNGInfo.Controls.Add(this.label66);
+            this.L_RNGInfo.Controls.Add(this.label67);
+            this.L_RNGInfo.Controls.Add(this.label68);
+            this.L_RNGInfo.Controls.Add(this.label69);
+            this.L_RNGInfo.Controls.Add(this.label70);
+            this.L_RNGInfo.Controls.Add(this.L_eggrange);
+            this.L_RNGInfo.Controls.Add(this.label72);
+            this.L_RNGInfo.Location = new System.Drawing.Point(6, 6);
+            this.L_RNGInfo.Name = "L_RNGInfo";
+            this.L_RNGInfo.Size = new System.Drawing.Size(223, 323);
+            this.L_RNGInfo.TabIndex = 180;
+            this.L_RNGInfo.TabStop = false;
+            this.L_RNGInfo.Text = "検索範囲";
             // 
             // Repeat_times
             // 
@@ -1986,6 +2077,70 @@
             this.L_targetframe.Size = new System.Drawing.Size(53, 12);
             this.L_targetframe.TabIndex = 83;
             this.L_targetframe.Text = "目標消費";
+            // 
+            // L_status3a
+            // 
+            this.L_status3a.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.L_status3a.Hexadecimal = true;
+            this.L_status3a.Location = new System.Drawing.Point(118, 24);
+            this.L_status3a.Name = "L_status3a";
+            this.L_status3a.Size = new System.Drawing.Size(80, 22);
+            this.L_status3a.TabIndex = 1;
+            this.L_status3a.Value = new decimal(new int[] {
+            305419896,
+            0,
+            0,
+            0});
+            this.L_status3a.Enter += new System.EventHandler(this.NumericUpDown_Enter);
+            this.L_status3a.Validating += new System.ComponentModel.CancelEventHandler(this.NumericUpDown_Check);
+            // 
+            // L_status2a
+            // 
+            this.L_status2a.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.L_status2a.Hexadecimal = true;
+            this.L_status2a.Location = new System.Drawing.Point(118, 52);
+            this.L_status2a.Name = "L_status2a";
+            this.L_status2a.Size = new System.Drawing.Size(80, 22);
+            this.L_status2a.TabIndex = 2;
+            this.L_status2a.Value = new decimal(new int[] {
+            -559023410,
+            0,
+            0,
+            0});
+            this.L_status2a.Enter += new System.EventHandler(this.NumericUpDown_Enter);
+            this.L_status2a.Validating += new System.ComponentModel.CancelEventHandler(this.NumericUpDown_Check);
+            // 
+            // L_status1a
+            // 
+            this.L_status1a.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.L_status1a.Hexadecimal = true;
+            this.L_status1a.Location = new System.Drawing.Point(118, 80);
+            this.L_status1a.Name = "L_status1a";
+            this.L_status1a.Size = new System.Drawing.Size(80, 22);
+            this.L_status1a.TabIndex = 3;
+            this.L_status1a.Value = new decimal(new int[] {
+            -559038737,
+            0,
+            0,
+            0});
+            this.L_status1a.Enter += new System.EventHandler(this.NumericUpDown_Enter);
+            this.L_status1a.Validating += new System.ComponentModel.CancelEventHandler(this.NumericUpDown_Check);
+            // 
+            // L_status0a
+            // 
+            this.L_status0a.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.L_status0a.Hexadecimal = true;
+            this.L_status0a.Location = new System.Drawing.Point(118, 108);
+            this.L_status0a.Name = "L_status0a";
+            this.L_status0a.Size = new System.Drawing.Size(80, 22);
+            this.L_status0a.TabIndex = 4;
+            this.L_status0a.Value = new decimal(new int[] {
+            -1091568946,
+            0,
+            0,
+            0});
+            this.L_status0a.Enter += new System.EventHandler(this.NumericUpDown_Enter);
+            this.L_status0a.Validating += new System.ComponentModel.CancelEventHandler(this.NumericUpDown_Check);
             // 
             // n_min
             // 
@@ -2198,152 +2353,6 @@
             this.Menu_TSV.Text = "TSV List";
             this.Menu_TSV.Click += new System.EventHandler(this.B_TSV_Click);
             // 
-            // status3
-            // 
-            this.status3.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.status3.Hexadecimal = true;
-            this.status3.Location = new System.Drawing.Point(118, 24);
-            this.status3.Name = "status3";
-            this.status3.Size = new System.Drawing.Size(80, 22);
-            this.status3.TabIndex = 70;
-            this.status3.Value = new decimal(new int[] {
-            305419896,
-            0,
-            0,
-            0});
-            this.status3.Enter += new System.EventHandler(this.NumericUpDown_Enter);
-            this.status3.Validating += new System.ComponentModel.CancelEventHandler(this.NumericUpDown_Check);
-            // 
-            // status2
-            // 
-            this.status2.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.status2.Hexadecimal = true;
-            this.status2.Location = new System.Drawing.Point(118, 52);
-            this.status2.Name = "status2";
-            this.status2.Size = new System.Drawing.Size(80, 22);
-            this.status2.TabIndex = 71;
-            this.status2.Value = new decimal(new int[] {
-            -559023410,
-            0,
-            0,
-            0});
-            this.status2.Enter += new System.EventHandler(this.NumericUpDown_Enter);
-            this.status2.Validating += new System.ComponentModel.CancelEventHandler(this.NumericUpDown_Check);
-            // 
-            // status1
-            // 
-            this.status1.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.status1.Hexadecimal = true;
-            this.status1.Location = new System.Drawing.Point(118, 80);
-            this.status1.Name = "status1";
-            this.status1.Size = new System.Drawing.Size(80, 22);
-            this.status1.TabIndex = 72;
-            this.status1.Value = new decimal(new int[] {
-            -559038737,
-            0,
-            0,
-            0});
-            this.status1.Enter += new System.EventHandler(this.NumericUpDown_Enter);
-            this.status1.Validating += new System.ComponentModel.CancelEventHandler(this.NumericUpDown_Check);
-            // 
-            // status0
-            // 
-            this.status0.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.status0.Hexadecimal = true;
-            this.status0.Location = new System.Drawing.Point(118, 108);
-            this.status0.Name = "status0";
-            this.status0.Size = new System.Drawing.Size(80, 22);
-            this.status0.TabIndex = 73;
-            this.status0.Value = new decimal(new int[] {
-            -1091568946,
-            0,
-            0,
-            0});
-            this.status0.Enter += new System.EventHandler(this.NumericUpDown_Enter);
-            this.status0.Validating += new System.ComponentModel.CancelEventHandler(this.NumericUpDown_Check);
-            // 
-            // L_status3a
-            // 
-            this.L_status3a.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.L_status3a.Hexadecimal = true;
-            this.L_status3a.Location = new System.Drawing.Point(118, 24);
-            this.L_status3a.Name = "L_status3a";
-            this.L_status3a.Size = new System.Drawing.Size(80, 22);
-            this.L_status3a.TabIndex = 1;
-            this.L_status3a.Value = new decimal(new int[] {
-            305419896,
-            0,
-            0,
-            0});
-            this.L_status3a.Enter += new System.EventHandler(this.NumericUpDown_Enter);
-            this.L_status3a.Validating += new System.ComponentModel.CancelEventHandler(this.NumericUpDown_Check);
-            // 
-            // L_status2a
-            // 
-            this.L_status2a.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.L_status2a.Hexadecimal = true;
-            this.L_status2a.Location = new System.Drawing.Point(118, 52);
-            this.L_status2a.Name = "L_status2a";
-            this.L_status2a.Size = new System.Drawing.Size(80, 22);
-            this.L_status2a.TabIndex = 2;
-            this.L_status2a.Value = new decimal(new int[] {
-            -559023410,
-            0,
-            0,
-            0});
-            this.L_status2a.Enter += new System.EventHandler(this.NumericUpDown_Enter);
-            this.L_status2a.Validating += new System.ComponentModel.CancelEventHandler(this.NumericUpDown_Check);
-            // 
-            // L_status1a
-            // 
-            this.L_status1a.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.L_status1a.Hexadecimal = true;
-            this.L_status1a.Location = new System.Drawing.Point(118, 80);
-            this.L_status1a.Name = "L_status1a";
-            this.L_status1a.Size = new System.Drawing.Size(80, 22);
-            this.L_status1a.TabIndex = 3;
-            this.L_status1a.Value = new decimal(new int[] {
-            -559038737,
-            0,
-            0,
-            0});
-            this.L_status1a.Enter += new System.EventHandler(this.NumericUpDown_Enter);
-            this.L_status1a.Validating += new System.ComponentModel.CancelEventHandler(this.NumericUpDown_Check);
-            // 
-            // L_status0a
-            // 
-            this.L_status0a.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.L_status0a.Hexadecimal = true;
-            this.L_status0a.Location = new System.Drawing.Point(118, 108);
-            this.L_status0a.Name = "L_status0a";
-            this.L_status0a.Size = new System.Drawing.Size(80, 22);
-            this.L_status0a.TabIndex = 4;
-            this.L_status0a.Value = new decimal(new int[] {
-            -1091568946,
-            0,
-            0,
-            0});
-            this.L_status0a.Enter += new System.EventHandler(this.NumericUpDown_Enter);
-            this.L_status0a.Validating += new System.ComponentModel.CancelEventHandler(this.NumericUpDown_Check);
-            // 
-            // L_nature
-            // 
-            this.L_nature.Location = new System.Drawing.Point(163, 26);
-            this.L_nature.Name = "L_nature";
-            this.L_nature.Size = new System.Drawing.Size(57, 18);
-            this.L_nature.TabIndex = 188;
-            this.L_nature.Text = "性格";
-            this.L_nature.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // nature
-            // 
-            this.nature.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.nature.FormattingEnabled = true;
-            this.nature.Location = new System.Drawing.Point(222, 25);
-            this.nature.Name = "nature";
-            this.nature.Size = new System.Drawing.Size(80, 20);
-            this.nature.TabIndex = 187;
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -2371,10 +2380,14 @@
             ((System.ComponentModel.ISupportInitialize)(this.pre_parent4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pre_parent5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pre_parent6)).EndInit();
-            this.ek_groupBox1.ResumeLayout(false);
-            this.ek_groupBox1.PerformLayout();
-            this.ek_groupBox2.ResumeLayout(false);
-            this.ek_groupBox2.PerformLayout();
+            this.Parents_Info.ResumeLayout(false);
+            this.Parents_Info.PerformLayout();
+            this.RNGInfo.ResumeLayout(false);
+            this.RNGInfo.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.status3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.status2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.status1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.status0)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.s_min)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.s_max)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.IVup2)).EndInit();
@@ -2388,32 +2401,28 @@
             ((System.ComponentModel.ISupportInitialize)(this.IVlow3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.IVlow2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.IVlow1)).EndInit();
-            this.y_groupBox2.ResumeLayout(false);
-            this.y_groupBox2.PerformLayout();
+            this.Filters.ResumeLayout(false);
+            this.Filters.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.IVup6)).EndInit();
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
+            this.SearchSettings.ResumeLayout(false);
+            this.SearchSettings.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.TSV)).EndInit();
             this.tabControl1.ResumeLayout(false);
             this.Tab_Search.ResumeLayout(false);
             this.Tab_Egg.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.L_dataGridView)).EndInit();
             this.contextMenuStrip2.ResumeLayout(false);
-            this.groupBox5.ResumeLayout(false);
-            this.groupBox5.PerformLayout();
+            this.L_RNGInfo.ResumeLayout(false);
+            this.L_RNGInfo.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Target_frame)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.n_min)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.n_max)).EndInit();
-            this.menuStrip1.ResumeLayout(false);
-            this.menuStrip1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.status3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.status2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.status1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.status0)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.L_status3a)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.L_status2a)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.L_status1a)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.L_status0a)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.n_min)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.n_max)).EndInit();
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -2452,9 +2461,9 @@
         private System.Windows.Forms.Label L_post_S;
         private System.Windows.Forms.ComboBox post_Items;
         private System.Windows.Forms.Label L_PostItems;
-        private System.Windows.Forms.GroupBox ek_groupBox1;
+        private System.Windows.Forms.GroupBox Parents_Info;
         private System.Windows.Forms.CheckBox International;
-        private System.Windows.Forms.GroupBox ek_groupBox2;
+        private System.Windows.Forms.GroupBox RNGInfo;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Label L_k_range;
@@ -2488,7 +2497,7 @@
         private System.Windows.Forms.ComboBox ability;
         private System.Windows.Forms.Label L_sex;
         private System.Windows.Forms.ComboBox sex;
-        private System.Windows.Forms.GroupBox y_groupBox2;
+        private System.Windows.Forms.GroupBox Filters;
         private System.Windows.Forms.NumericUpDown IVup6;
         private System.Windows.Forms.Button k_search;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
@@ -2509,7 +2518,7 @@
         private System.Windows.Forms.ComboBox pre_ability;
         private System.Windows.Forms.CheckBox post_ditto;
         private System.Windows.Forms.CheckBox pre_ditto;
-        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.GroupBox SearchSettings;
         private System.Windows.Forms.Label label20;
         private System.Windows.Forms.CheckBox shiny;
         private System.Windows.Forms.Label L_ball;
@@ -2519,7 +2528,7 @@
         private System.Windows.Forms.TabPage Tab_Egg;
         private System.Windows.Forms.Button List_search;
         private System.Windows.Forms.DataGridView L_dataGridView;
-        private System.Windows.Forms.GroupBox groupBox5;
+        private System.Windows.Forms.GroupBox L_RNGInfo;
         private System.Windows.Forms.Label label63;
         private System.Windows.Forms.Label label64;
         private System.Windows.Forms.Label label65;
@@ -2597,5 +2606,6 @@
         private System.Windows.Forms.Label L_targetframe;
         private System.Windows.Forms.Label L_nature;
         private System.Windows.Forms.ComboBox nature;
+        private System.Windows.Forms.ToolStripMenuItem mnuSetSearchSeed;
     }
 }

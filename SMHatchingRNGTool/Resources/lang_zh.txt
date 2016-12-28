@@ -27,13 +27,14 @@ Menu_About = 关于
 --------------------Context Menus----------------------
 mnuCopy = 复制
 mnuSelectAll = 全选
+mnuSetSearchSeed = Copy seed to This Tab
 mnuSetEggSeed = 将此seed输入连续取蛋列表
 mnu2Copy = 复制
 mnu2SelectAll = 全选
 ---------------------Search Tab------------------------
 Tab_Search = 个体检索
 --
-ek_groupBox1 = 父母信息
+Parents_Info = 父母信息
 pre = 父方
 L_pre_H = H
 L_pre_A = A
@@ -57,7 +58,7 @@ post_ditto = 百变怪
 Heterogeneity = 异种生蛋
 L_sex_ratio = 性别比
 --
-y_groupBox2 = 目标个体
+Filters = 目标个体
 L_search_H = H
 L_search_A = A
 L_search_B = B
@@ -71,10 +72,10 @@ L_mezapa = 觉醒力量
 L_ball = 球
 Invalid_Refine = 取消筛选
 --
-ek_groupBox2 = 搜索范围
+RNGInfo = 搜索范围
 L_k_range = 帧数
 --
-groupBox1 = 其他
+SearchSettings = 其他
 International = 异语言生蛋
 omamori = 闪耀护符
 shiny = 只显示闪光帧
@@ -100,7 +101,7 @@ dgvS_ec = 加密常数
 dgvS_rand = 乱数列
 ----------------------Egg Tab--------------------------
 Tab_Egg = 连续取蛋列表
-groupBox5 = 检索范围
+L_RNGInfo = 检索范围
 L_eggrange = 取蛋次数
 List_search = 计算
 L_TSV_shiny = 计算时考虑TSV的影响
