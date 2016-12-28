@@ -154,6 +154,15 @@
   <data name="text_types_zh" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\text_Types_zh.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
   </data>
+  <data name="text_items_en" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\text_Items_en.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;Windows-1252</value>
+  </data>
+  <data name="text_items_ja" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\text_Items_ja.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="text_items_zh" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\text_Items_zh.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
   <data name="text_msgstr_en" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\text_Msgstr_en.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;Windows-1252</value>
   </data>

@@ -27,7 +27,7 @@ Menu_About = 关于
 --------------------Context Menus----------------------
 mnuCopy = 复制
 mnuSelectAll = 全选
-mnuSetSearchSeed = Copy seed to This Tab
+mnuSetSearchSeed = 将此seed输入当前搜索范围
 mnuSetEggSeed = 将此seed输入连续取蛋列表
 mnu2Copy = 复制
 mnu2SelectAll = 全选

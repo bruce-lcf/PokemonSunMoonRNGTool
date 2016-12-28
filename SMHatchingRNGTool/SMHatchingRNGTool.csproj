@@ -104,6 +104,9 @@
     <None Include="Resources\text_Msgstr_en.txt" />
     <None Include="Resources\text_Msgstr_ja.txt" />
     <None Include="Resources\text_Msgstr_zh.txt" />
+    <None Include="Resources\text_Items_zh.txt" />
+    <None Include="Resources\text_Items_ja.txt" />
+    <None Include="Resources\text_Items_en.txt" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

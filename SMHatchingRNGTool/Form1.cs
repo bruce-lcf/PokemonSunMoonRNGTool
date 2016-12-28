@@ -19,6 +19,7 @@ namespace SMHatchingRNGTool
         #region Translation
         private string[] natures;
         private string[] mezapa;
+		private string[] items;
         private string[] msgstr;
         private readonly string[] genders = { "♂", "♀", "-" };
         private readonly string[] abilities = { "1", "2", "夢" };
@@ -29,8 +30,6 @@ namespace SMHatchingRNGTool
         private static readonly string[] first = {"先", "First", "父"};
         private static readonly string[] second = {"後", "Second", "母"};
         private static readonly string[] parent = {"親", " Parent", "方"};
-        private static readonly string[] everstone = {"変わらず", "Everstone", "不变之石"};
-        private static readonly string[] destiny = { "赤い糸", "Destiny Knot", "红线"};
         private static readonly string[] only = { "のみ", " Only", " 100%"};
         private static readonly string[] genderless = { "無性別", "Genderless", "无性别"};
         private static readonly string[] main_langlist =
@@ -52,8 +51,6 @@ namespace SMHatchingRNGTool
         private string STR_FIRST = "先";
         private string STR_SECOND = "後";
         private string STR_PARENT = "親";
-        private string STR_EVERSTONE = "変わらず";
-        private string STR_DESTINY = "赤い糸";
         private string STR_ONLY = "のみ";
         private string STR_GENDERLESS = "無性別";
         #endregion
@@ -76,6 +73,7 @@ namespace SMHatchingRNGTool
 
             natures = getStringList("natures", curlanguage);
             mezapa = getStringList("types", curlanguage);
+            items = getStringList("items",curlanguage);
             msgstr = getStringList("msgstr", curlanguage);
 
             STR_ANY = any[l];
@@ -84,8 +82,6 @@ namespace SMHatchingRNGTool
             STR_FIRST = first[l];
             STR_SECOND = second[l];
             STR_PARENT = parent[l];
-            STR_EVERSTONE = everstone[l];
-            STR_DESTINY = destiny[l];
             STR_ONLY = only[l];
             STR_GENDERLESS = genderless[l];
 
@@ -94,8 +90,6 @@ namespace SMHatchingRNGTool
 
             ball.Items[1] = STR_FIRST + STR_PARENT;
             ball.Items[2] = STR_SECOND + STR_PARENT;
-            pre_Items.Items[1] = post_Items.Items[1] = STR_EVERSTONE;
-            pre_Items.Items[2] = post_Items.Items[2] = STR_DESTINY;
 
             sex_ratio.Items[4] = "♂" + STR_ONLY;
             sex_ratio.Items[5] = "♀" + STR_ONLY;
@@ -103,6 +97,9 @@ namespace SMHatchingRNGTool
 
             mezapaType.Items[0] = STR_ANY;
             nature.Items[0] = STR_ANY;
+            for (int i = 0; i < items.Length; i++)
+                pre_Items.Items[i+1] = post_Items.Items[i+1] = items[i];
+
             for (int i = 1; i < mezapa.Length - 1; i++)
                 mezapaType.Items[i] = mezapa[i];
 
@@ -218,7 +215,7 @@ namespace SMHatchingRNGTool
             row.SetValues(
                 i, result.FramesUsed, result.Seed128,
                 result.IVs[0], result.IVs[1], result.IVs[2], result.IVs[3], result.IVs[4], result.IVs[5],
-                genders[result.Gender], abilities[result.Ability], rng.Everstone ? STR_EVERSTONE : natures[result.Nature],
+                genders[result.Gender], abilities[result.Ability], rng.Everstone ? items[0] : natures[result.Nature],
                 true_pid, true_psv, result.EC.ToString("X8"), result.row_r.ToString("X8")
                 );
 
