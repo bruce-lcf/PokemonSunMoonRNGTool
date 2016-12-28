@@ -1,4 +1,7 @@
 # SMHatchingRNGTool
+
+[![Build status](https://ci.appveyor.com/api/projects/status/github/Quandra/smhatchingrngtool?branch=master&svg=true)](https://ci.appveyor.com/project/Quandra/smhatchingrngtool)
+
 The Pokemon SunMoon Hatching RNG Tool
 
 ## Description
