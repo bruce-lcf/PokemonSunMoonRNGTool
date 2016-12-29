@@ -101,20 +101,27 @@ namespace SMHatchingRNGTool
             //特性 -- Ability
             egg.Ability = getRandomAbility(ParentAbility, getRand() % 100);
 
-            //最初の遺伝箇所 -- IV Inheritance
             egg.InheritStats = new uint[InheritIVs];
             egg.InheritParents = new uint[InheritIVs];
+
+            //両親パワー系 -- Both_PowerItem
+            //Chooses which parent if necessary
+            if (Both_PowerItems)
+            {
+                egg.InheritParents[0] = (getRand() & 1) == 0 ? (uint)0 : 1;
+                egg.InheritStats[0] = egg.InheritParents[0] == 0 ? (uint)MalePowerStat : (uint)FemalePowerStat;
+            }
+            else if (PowerItems)
+            {
+                egg.InheritParents[0] = MalePowerStat > -1 ? (uint)0 : 1;
+                egg.InheritStats[0] = egg.InheritParents[0] == 0 ? (uint)MalePowerStat : (uint)FemalePowerStat;
+            }
+
             for (int i = 0; i < InheritIVs; i++)
             {
-                if ((i == 0)&&(PowerItems))
-                {
-                    if (Both_PowerItems)
-                        egg.InheritParents[0] = (getRand() & 1) == 0 ? (uint)0 : 1 ;
-                    else
-                        egg.InheritParents[0] = MalePowerStat > -1 ? (uint)0 : 1 ;
-                    egg.InheritStats[0] = egg.InheritParents[0] == 0 ? (uint)MalePowerStat : (uint)FemalePowerStat;
+                if ((i == 0) && PowerItems)
                     continue;
-                }
+
                 repeat:
                 egg.InheritStats[i] = getRand() % 6;
 

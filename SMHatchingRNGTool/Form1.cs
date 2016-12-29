@@ -97,8 +97,9 @@ namespace SMHatchingRNGTool
 
             mezapaType.Items[0] = STR_ANY;
             nature.Items[0] = STR_ANY;
+
             for (int i = 0; i < items.Length; i++)
-                pre_Items.Items[i+1] = post_Items.Items[i+1] = items[i];
+                pre_Items.Items[i + 1] = post_Items.Items[i + 1] = items[i];
 
             for (int i = 1; i < mezapa.Length - 1; i++)
                 mezapaType.Items[i] = mezapa[i];
