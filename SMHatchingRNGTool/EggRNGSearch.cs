@@ -49,7 +49,7 @@ namespace SMHatchingRNGTool
             public readonly int[] BaseIV = new int[6];
             public uint[] InheritStats;
             public uint[] InheritParents;
-            public int Gender, Ability, Nature, Ball;
+            public int Gender, Ability, Nature, Ball, BE_InheritParents;
             public uint PID, EC;
             public bool Shiny;
             public int FramesUsed;
@@ -96,7 +96,7 @@ namespace SMHatchingRNGTool
             //両親変わらず -- Both_Everstone
             //Chooses which parent if necessary; users should not intermix with Power items either.
             if (Both_Everstone)
-                getRand();
+                egg.BE_InheritParents = (int)(getRand() & 1);
 
             //特性 -- Ability
             egg.Ability = getRandomAbility(ParentAbility, getRand() % 100);
@@ -165,6 +165,7 @@ namespace SMHatchingRNGTool
             egg.FramesUsed = FramesUsed;
             return egg;
         }
+
         private uint getRand()
         {
             var r = tiny.temper();

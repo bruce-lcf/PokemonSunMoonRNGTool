@@ -17,7 +17,7 @@
 - Change stuff below this line, not above.
 ---------------------Menu Strip------------------------
 Menu_File = ファイル
-Menu_Exit = やめる
+Menu_Exit = 終了する
 --
 Menu_Options = 設定
 Menu_Language = 言語
