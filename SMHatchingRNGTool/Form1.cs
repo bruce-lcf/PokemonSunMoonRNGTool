@@ -22,7 +22,7 @@ namespace SMHatchingRNGTool
         private string[] natures;
         private string[] mezapa;
 		private string[] items;
-        private string[] msgstr;
+        public string[] msgstr;
         private readonly string[] genders = { "♂", "♀", "-" };
         private readonly string[] abilities = { "1", "2", "夢" };
         private static readonly string[] languages = {"ja", "en", "zh"};
@@ -254,6 +254,8 @@ namespace SMHatchingRNGTool
                 Error("TSV" + msgstr[7]);
             else if (sex_ratio.SelectedIndex == 6 && !(post_ditto.Checked || pre_ditto.Checked))
                 Error(msgstr[8]);
+            else if (sex_ratio.SelectedIndex == 6 && pre_ditto.Checked)
+                Error(msgstr[9]);
             else
                 search();
         }
@@ -317,6 +319,8 @@ namespace SMHatchingRNGTool
 				Error("TSV" + msgstr[7]);
             else if (sex_ratio.SelectedIndex == 6 && !(post_ditto.Checked || pre_ditto.Checked))
                 Error(msgstr[8]);
+            else if (sex_ratio.SelectedIndex == 6 && pre_ditto.Checked)
+                Error(msgstr[9]);
             else
                 EggList_search();
                 EggList_cal_target();
@@ -373,17 +377,17 @@ namespace SMHatchingRNGTool
             {
                 if ((int)L_dataGridView[1, co].Value == target)
                 {
-                    Repeat_times.Text = msgstr[9] + $" {(int)L_dataGridView[0, co - 1].Value} " + msgstr[10];
+                    Repeat_times.Text = msgstr[10] + $" {(int)L_dataGridView[0, co - 1].Value} " + msgstr[11];
                     break;
                 }
                 else if ((int)L_dataGridView[1, co].Value > target)
                 {
-                    Repeat_times.Text = msgstr[9] + $" {(int)L_dataGridView[0, co - 1].Value - 1} " + msgstr[10] + $" {target - (int)L_dataGridView[1, co - 1].Value} " + msgstr[11];
+                    Repeat_times.Text = msgstr[10] + $" {(int)L_dataGridView[0, co - 1].Value - 1} " + msgstr[11] + $" {target - (int)L_dataGridView[1, co - 1].Value} " + msgstr[12];
                     break;
                 }
                 else if (target > L_dataGridView.Rows.Count)
                 {
-                    Repeat_times.Text = msgstr[12];
+                    Repeat_times.Text = msgstr[13];
                 }
             }
         }
@@ -444,15 +448,15 @@ namespace SMHatchingRNGTool
 
 
                 if (!uint.TryParse(st0, NumberStyles.HexNumber, null, out s0))
-					Error("status[0]"+ msgstr[13]);
+					Error("status[0]"+ msgstr[14]);
                 else if (!uint.TryParse(st1, NumberStyles.HexNumber, null, out s1))
-                    Error("status[1]"+ msgstr[13]);
+                    Error("status[1]"+ msgstr[14]);
                 else if (!uint.TryParse(st2, NumberStyles.HexNumber, null, out s2))
-                    Error("status[2]"+ msgstr[13]);
+                    Error("status[2]"+ msgstr[14]);
                 else if (!uint.TryParse(st3, NumberStyles.HexNumber, null, out s3))
-                    Error("status[3]"+ msgstr[13]);
+                    Error("status[3]"+ msgstr[14]);
                 else if (!ushort.TryParse(tsvstr, out tsv))
-                    Error("TSV"+ msgstr[13]);
+                    Error("TSV"+ msgstr[14]);
                 else if (tsv > 4095)
                     Error("TSV"+ msgstr[7]);
                 else
@@ -466,7 +470,7 @@ namespace SMHatchingRNGTool
             }
             else
             {
-                Error(PATH_CONFIG + msgstr[14] +"\n" + msgstr[15]);
+                Error(PATH_CONFIG + msgstr[15] +"\n" + msgstr[16]);
             }
         }
 
@@ -484,13 +488,13 @@ namespace SMHatchingRNGTool
                 int val;
                 if (!int.TryParse(v, out val)) // not number
                 {
-                    string message = $"{i + 1}" + msgstr[16] + $"{v}" + msgstr[13];
+                    string message = $"{i + 1}" + msgstr[17] + $"{v}" + msgstr[14];
                     Error(message);
                     return false;
                 }
                 if (0 > val || val > 4095)
                 {
-                    string message = $"{i + 1}" + msgstr[16] + $"{v}" + msgstr[7];
+                    string message = $"{i + 1}" + msgstr[17] + $"{v}" + msgstr[7];
                     Error(message);
                     return false;
                 }
@@ -547,7 +551,7 @@ namespace SMHatchingRNGTool
             }
             catch (ArgumentNullException)
             {
-                Error(msgstr[17]);
+                Error(msgstr[18]);
             }
         }
 
@@ -592,7 +596,7 @@ namespace SMHatchingRNGTool
             }
             catch (NullReferenceException)
             {
-                Error(msgstr[18]);
+                Error(msgstr[19]);
             }
         }
 
@@ -609,7 +613,7 @@ namespace SMHatchingRNGTool
             }
             catch (NullReferenceException)
             {
-                Error(msgstr[18]);
+                Error(msgstr[19]);
             }
         }
 
@@ -621,7 +625,7 @@ namespace SMHatchingRNGTool
             }
             catch (ArgumentNullException)
             {
-                Error(msgstr[17]);
+                Error(msgstr[18]);
             }
         }
 
@@ -680,7 +684,7 @@ namespace SMHatchingRNGTool
             }
             catch
             {
-                Error(PATH_CONFIG+msgstr[19]);
+                Error(PATH_CONFIG+msgstr[20]);
             }
         }
 
@@ -701,7 +705,7 @@ namespace SMHatchingRNGTool
             }
             catch
             {
-                Error(PATH_TSV + msgstr[19]);
+                Error(PATH_TSV + msgstr[20]);
             }
         }
 
