@@ -117,6 +117,7 @@ namespace SMHatchingRNGTool
                 egg.InheritStats[0] = egg.InheritParents[0] == 0 ? (uint)MalePowerStat : (uint)FemalePowerStat;
             }
 
+            //遺伝箇所 -- IV Inheritance
             for (int i = 0; i < InheritIVs; i++)
             {
                 if ((i == 0) && PowerItems)
