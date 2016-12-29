@@ -23,6 +23,7 @@ Menu_Options = Options
 Menu_Language = Language
 Menu_SaveConfig = Save Config
 Menu_TSV = TSV List
+Menu_ParentsList = Parents List
 Menu_About = About
 --------------------Context Menus----------------------
 mnuCopy = Copy

@@ -66,6 +66,7 @@
             this.MinimizeBox = false;
             this.MinimumSize = new System.Drawing.Size(200, 280);
             this.Name = "TSVEntry";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "TSVEntry";
             this.ResumeLayout(false);
 

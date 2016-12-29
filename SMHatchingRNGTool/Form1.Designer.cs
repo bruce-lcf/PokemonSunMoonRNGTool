@@ -93,10 +93,6 @@
             this.L_sex_ratio = new System.Windows.Forms.Label();
             this.International = new System.Windows.Forms.CheckBox();
             this.RNGInfo = new System.Windows.Forms.GroupBox();
-            this.status3 = new SMHatchingRNGTool.HexNumericUpdown();
-            this.status2 = new SMHatchingRNGTool.HexNumericUpdown();
-            this.status1 = new SMHatchingRNGTool.HexNumericUpdown();
-            this.status0 = new SMHatchingRNGTool.HexNumericUpdown();
             this.s_min = new System.Windows.Forms.NumericUpDown();
             this.s_max = new System.Windows.Forms.NumericUpDown();
             this.label13 = new System.Windows.Forms.Label();
@@ -181,10 +177,6 @@
             this.Repeat_times = new System.Windows.Forms.Label();
             this.Target_frame = new System.Windows.Forms.NumericUpDown();
             this.L_targetframe = new System.Windows.Forms.Label();
-            this.L_status3a = new SMHatchingRNGTool.HexNumericUpdown();
-            this.L_status2a = new SMHatchingRNGTool.HexNumericUpdown();
-            this.L_status1a = new SMHatchingRNGTool.HexNumericUpdown();
-            this.L_status0a = new SMHatchingRNGTool.HexNumericUpdown();
             this.n_min = new System.Windows.Forms.NumericUpDown();
             this.n_max = new System.Windows.Forms.NumericUpDown();
             this.L_TSV_shiny = new System.Windows.Forms.CheckBox();
@@ -206,6 +198,15 @@
             this.CB_MainLanguage = new System.Windows.Forms.ToolStripComboBox();
             this.Menu_SaveConfig = new System.Windows.Forms.ToolStripMenuItem();
             this.Menu_TSV = new System.Windows.Forms.ToolStripMenuItem();
+            this.Menu_ParentsList = new System.Windows.Forms.ToolStripMenuItem();
+            this.status3 = new SMHatchingRNGTool.HexNumericUpdown();
+            this.status2 = new SMHatchingRNGTool.HexNumericUpdown();
+            this.status1 = new SMHatchingRNGTool.HexNumericUpdown();
+            this.status0 = new SMHatchingRNGTool.HexNumericUpdown();
+            this.L_status3a = new SMHatchingRNGTool.HexNumericUpdown();
+            this.L_status2a = new SMHatchingRNGTool.HexNumericUpdown();
+            this.L_status1a = new SMHatchingRNGTool.HexNumericUpdown();
+            this.L_status0a = new SMHatchingRNGTool.HexNumericUpdown();
             ((System.ComponentModel.ISupportInitialize)(this.k_dataGridView)).BeginInit();
             this.contextMenuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pre_parent1)).BeginInit();
@@ -222,10 +223,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pre_parent6)).BeginInit();
             this.Parents_Info.SuspendLayout();
             this.RNGInfo.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.status3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.status2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.status1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.status0)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.s_min)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.s_max)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.IVup2)).BeginInit();
@@ -250,13 +247,17 @@
             this.contextMenuStrip2.SuspendLayout();
             this.L_RNGInfo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Target_frame)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.n_min)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.n_max)).BeginInit();
+            this.menuStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.status3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.status2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.status1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.status0)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.L_status3a)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.L_status2a)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.L_status1a)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.L_status0a)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.n_min)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.n_max)).BeginInit();
-            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // k_dataGridView
@@ -1050,70 +1051,6 @@
             this.RNGInfo.TabIndex = 3;
             this.RNGInfo.TabStop = false;
             this.RNGInfo.Text = "検索範囲";
-            // 
-            // status3
-            // 
-            this.status3.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.status3.Hexadecimal = true;
-            this.status3.Location = new System.Drawing.Point(118, 24);
-            this.status3.Name = "status3";
-            this.status3.Size = new System.Drawing.Size(80, 22);
-            this.status3.TabIndex = 70;
-            this.status3.Value = new decimal(new int[] {
-            305419896,
-            0,
-            0,
-            0});
-            this.status3.Enter += new System.EventHandler(this.NumericUpDown_Enter);
-            this.status3.Validating += new System.ComponentModel.CancelEventHandler(this.NumericUpDown_Check);
-            // 
-            // status2
-            // 
-            this.status2.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.status2.Hexadecimal = true;
-            this.status2.Location = new System.Drawing.Point(118, 52);
-            this.status2.Name = "status2";
-            this.status2.Size = new System.Drawing.Size(80, 22);
-            this.status2.TabIndex = 71;
-            this.status2.Value = new decimal(new int[] {
-            -559023410,
-            0,
-            0,
-            0});
-            this.status2.Enter += new System.EventHandler(this.NumericUpDown_Enter);
-            this.status2.Validating += new System.ComponentModel.CancelEventHandler(this.NumericUpDown_Check);
-            // 
-            // status1
-            // 
-            this.status1.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.status1.Hexadecimal = true;
-            this.status1.Location = new System.Drawing.Point(118, 80);
-            this.status1.Name = "status1";
-            this.status1.Size = new System.Drawing.Size(80, 22);
-            this.status1.TabIndex = 72;
-            this.status1.Value = new decimal(new int[] {
-            -559038737,
-            0,
-            0,
-            0});
-            this.status1.Enter += new System.EventHandler(this.NumericUpDown_Enter);
-            this.status1.Validating += new System.ComponentModel.CancelEventHandler(this.NumericUpDown_Check);
-            // 
-            // status0
-            // 
-            this.status0.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.status0.Hexadecimal = true;
-            this.status0.Location = new System.Drawing.Point(118, 108);
-            this.status0.Name = "status0";
-            this.status0.Size = new System.Drawing.Size(80, 22);
-            this.status0.TabIndex = 73;
-            this.status0.Value = new decimal(new int[] {
-            -1091568946,
-            0,
-            0,
-            0});
-            this.status0.Enter += new System.EventHandler(this.NumericUpDown_Enter);
-            this.status0.Validating += new System.ComponentModel.CancelEventHandler(this.NumericUpDown_Check);
             // 
             // s_min
             // 
@@ -2090,70 +2027,6 @@
             this.L_targetframe.TabIndex = 83;
             this.L_targetframe.Text = "目標消費";
             // 
-            // L_status3a
-            // 
-            this.L_status3a.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.L_status3a.Hexadecimal = true;
-            this.L_status3a.Location = new System.Drawing.Point(118, 24);
-            this.L_status3a.Name = "L_status3a";
-            this.L_status3a.Size = new System.Drawing.Size(80, 22);
-            this.L_status3a.TabIndex = 1;
-            this.L_status3a.Value = new decimal(new int[] {
-            305419896,
-            0,
-            0,
-            0});
-            this.L_status3a.Enter += new System.EventHandler(this.NumericUpDown_Enter);
-            this.L_status3a.Validating += new System.ComponentModel.CancelEventHandler(this.NumericUpDown_Check);
-            // 
-            // L_status2a
-            // 
-            this.L_status2a.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.L_status2a.Hexadecimal = true;
-            this.L_status2a.Location = new System.Drawing.Point(118, 52);
-            this.L_status2a.Name = "L_status2a";
-            this.L_status2a.Size = new System.Drawing.Size(80, 22);
-            this.L_status2a.TabIndex = 2;
-            this.L_status2a.Value = new decimal(new int[] {
-            -559023410,
-            0,
-            0,
-            0});
-            this.L_status2a.Enter += new System.EventHandler(this.NumericUpDown_Enter);
-            this.L_status2a.Validating += new System.ComponentModel.CancelEventHandler(this.NumericUpDown_Check);
-            // 
-            // L_status1a
-            // 
-            this.L_status1a.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.L_status1a.Hexadecimal = true;
-            this.L_status1a.Location = new System.Drawing.Point(118, 80);
-            this.L_status1a.Name = "L_status1a";
-            this.L_status1a.Size = new System.Drawing.Size(80, 22);
-            this.L_status1a.TabIndex = 3;
-            this.L_status1a.Value = new decimal(new int[] {
-            -559038737,
-            0,
-            0,
-            0});
-            this.L_status1a.Enter += new System.EventHandler(this.NumericUpDown_Enter);
-            this.L_status1a.Validating += new System.ComponentModel.CancelEventHandler(this.NumericUpDown_Check);
-            // 
-            // L_status0a
-            // 
-            this.L_status0a.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.L_status0a.Hexadecimal = true;
-            this.L_status0a.Location = new System.Drawing.Point(118, 108);
-            this.L_status0a.Name = "L_status0a";
-            this.L_status0a.Size = new System.Drawing.Size(80, 22);
-            this.L_status0a.TabIndex = 4;
-            this.L_status0a.Value = new decimal(new int[] {
-            -1091568946,
-            0,
-            0,
-            0});
-            this.L_status0a.Enter += new System.EventHandler(this.NumericUpDown_Enter);
-            this.L_status0a.Validating += new System.ComponentModel.CancelEventHandler(this.NumericUpDown_Check);
-            // 
             // n_min
             // 
             this.n_min.Font = new System.Drawing.Font("Consolas", 9F);
@@ -2331,7 +2204,8 @@
             this.Menu_Options.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.Menu_Language,
             this.Menu_SaveConfig,
-            this.Menu_TSV});
+            this.Menu_TSV,
+            this.Menu_ParentsList});
             this.Menu_Options.Name = "Menu_Options";
             this.Menu_Options.Size = new System.Drawing.Size(63, 20);
             this.Menu_Options.Text = "Options";
@@ -2341,7 +2215,7 @@
             this.Menu_Language.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.CB_MainLanguage});
             this.Menu_Language.Name = "Menu_Language";
-            this.Menu_Language.Size = new System.Drawing.Size(143, 22);
+            this.Menu_Language.Size = new System.Drawing.Size(152, 22);
             this.Menu_Language.Text = "Language";
             // 
             // CB_MainLanguage
@@ -2354,16 +2228,151 @@
             // Menu_SaveConfig
             // 
             this.Menu_SaveConfig.Name = "Menu_SaveConfig";
-            this.Menu_SaveConfig.Size = new System.Drawing.Size(143, 22);
+            this.Menu_SaveConfig.Size = new System.Drawing.Size(152, 22);
             this.Menu_SaveConfig.Text = "Save Config";
             this.Menu_SaveConfig.Click += new System.EventHandler(this.B_SaveConfig_Click);
             // 
             // Menu_TSV
             // 
             this.Menu_TSV.Name = "Menu_TSV";
-            this.Menu_TSV.Size = new System.Drawing.Size(143, 22);
+            this.Menu_TSV.Size = new System.Drawing.Size(152, 22);
             this.Menu_TSV.Text = "TSV List";
             this.Menu_TSV.Click += new System.EventHandler(this.B_TSV_Click);
+            // 
+            // Menu_ParentsList
+            // 
+            this.Menu_ParentsList.Name = "Menu_ParentsList";
+            this.Menu_ParentsList.Size = new System.Drawing.Size(152, 22);
+            this.Menu_ParentsList.Text = "Parents List";
+            this.Menu_ParentsList.Click += new System.EventHandler(this.B_Parents_Click);
+            // 
+            // status3
+            // 
+            this.status3.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.status3.Hexadecimal = true;
+            this.status3.Location = new System.Drawing.Point(118, 24);
+            this.status3.Name = "status3";
+            this.status3.Size = new System.Drawing.Size(80, 22);
+            this.status3.TabIndex = 70;
+            this.status3.Value = new decimal(new int[] {
+            305419896,
+            0,
+            0,
+            0});
+            this.status3.Enter += new System.EventHandler(this.NumericUpDown_Enter);
+            this.status3.Validating += new System.ComponentModel.CancelEventHandler(this.NumericUpDown_Check);
+            // 
+            // status2
+            // 
+            this.status2.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.status2.Hexadecimal = true;
+            this.status2.Location = new System.Drawing.Point(118, 52);
+            this.status2.Name = "status2";
+            this.status2.Size = new System.Drawing.Size(80, 22);
+            this.status2.TabIndex = 71;
+            this.status2.Value = new decimal(new int[] {
+            -559023410,
+            0,
+            0,
+            0});
+            this.status2.Enter += new System.EventHandler(this.NumericUpDown_Enter);
+            this.status2.Validating += new System.ComponentModel.CancelEventHandler(this.NumericUpDown_Check);
+            // 
+            // status1
+            // 
+            this.status1.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.status1.Hexadecimal = true;
+            this.status1.Location = new System.Drawing.Point(118, 80);
+            this.status1.Name = "status1";
+            this.status1.Size = new System.Drawing.Size(80, 22);
+            this.status1.TabIndex = 72;
+            this.status1.Value = new decimal(new int[] {
+            -559038737,
+            0,
+            0,
+            0});
+            this.status1.Enter += new System.EventHandler(this.NumericUpDown_Enter);
+            this.status1.Validating += new System.ComponentModel.CancelEventHandler(this.NumericUpDown_Check);
+            // 
+            // status0
+            // 
+            this.status0.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.status0.Hexadecimal = true;
+            this.status0.Location = new System.Drawing.Point(118, 108);
+            this.status0.Name = "status0";
+            this.status0.Size = new System.Drawing.Size(80, 22);
+            this.status0.TabIndex = 73;
+            this.status0.Value = new decimal(new int[] {
+            -1091568946,
+            0,
+            0,
+            0});
+            this.status0.Enter += new System.EventHandler(this.NumericUpDown_Enter);
+            this.status0.Validating += new System.ComponentModel.CancelEventHandler(this.NumericUpDown_Check);
+            // 
+            // L_status3a
+            // 
+            this.L_status3a.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.L_status3a.Hexadecimal = true;
+            this.L_status3a.Location = new System.Drawing.Point(118, 24);
+            this.L_status3a.Name = "L_status3a";
+            this.L_status3a.Size = new System.Drawing.Size(80, 22);
+            this.L_status3a.TabIndex = 1;
+            this.L_status3a.Value = new decimal(new int[] {
+            305419896,
+            0,
+            0,
+            0});
+            this.L_status3a.Enter += new System.EventHandler(this.NumericUpDown_Enter);
+            this.L_status3a.Validating += new System.ComponentModel.CancelEventHandler(this.NumericUpDown_Check);
+            // 
+            // L_status2a
+            // 
+            this.L_status2a.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.L_status2a.Hexadecimal = true;
+            this.L_status2a.Location = new System.Drawing.Point(118, 52);
+            this.L_status2a.Name = "L_status2a";
+            this.L_status2a.Size = new System.Drawing.Size(80, 22);
+            this.L_status2a.TabIndex = 2;
+            this.L_status2a.Value = new decimal(new int[] {
+            -559023410,
+            0,
+            0,
+            0});
+            this.L_status2a.Enter += new System.EventHandler(this.NumericUpDown_Enter);
+            this.L_status2a.Validating += new System.ComponentModel.CancelEventHandler(this.NumericUpDown_Check);
+            // 
+            // L_status1a
+            // 
+            this.L_status1a.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.L_status1a.Hexadecimal = true;
+            this.L_status1a.Location = new System.Drawing.Point(118, 80);
+            this.L_status1a.Name = "L_status1a";
+            this.L_status1a.Size = new System.Drawing.Size(80, 22);
+            this.L_status1a.TabIndex = 3;
+            this.L_status1a.Value = new decimal(new int[] {
+            -559038737,
+            0,
+            0,
+            0});
+            this.L_status1a.Enter += new System.EventHandler(this.NumericUpDown_Enter);
+            this.L_status1a.Validating += new System.ComponentModel.CancelEventHandler(this.NumericUpDown_Check);
+            // 
+            // L_status0a
+            // 
+            this.L_status0a.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.L_status0a.Hexadecimal = true;
+            this.L_status0a.Location = new System.Drawing.Point(118, 108);
+            this.L_status0a.Name = "L_status0a";
+            this.L_status0a.Size = new System.Drawing.Size(80, 22);
+            this.L_status0a.TabIndex = 4;
+            this.L_status0a.Value = new decimal(new int[] {
+            -1091568946,
+            0,
+            0,
+            0});
+            this.L_status0a.Enter += new System.EventHandler(this.NumericUpDown_Enter);
+            this.L_status0a.Validating += new System.ComponentModel.CancelEventHandler(this.NumericUpDown_Check);
             // 
             // Form1
             // 
@@ -2396,10 +2405,6 @@
             this.Parents_Info.PerformLayout();
             this.RNGInfo.ResumeLayout(false);
             this.RNGInfo.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.status3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.status2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.status1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.status0)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.s_min)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.s_max)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.IVup2)).EndInit();
@@ -2427,14 +2432,18 @@
             this.L_RNGInfo.ResumeLayout(false);
             this.L_RNGInfo.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Target_frame)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.L_status3a)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.L_status2a)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.L_status1a)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.L_status0a)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.n_min)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.n_max)).EndInit();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.status3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.status2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.status1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.status0)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.L_status3a)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.L_status2a)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.L_status1a)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.L_status0a)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -2444,24 +2453,12 @@
 
         private System.Windows.Forms.DataGridView k_dataGridView;
         private System.Windows.Forms.Label post;
-        private System.Windows.Forms.NumericUpDown pre_parent1;
         private System.Windows.Forms.Label pre;
         private System.Windows.Forms.Label L_pre_H;
-        private System.Windows.Forms.NumericUpDown post_parent1;
-        private System.Windows.Forms.NumericUpDown post_parent2;
-        private System.Windows.Forms.NumericUpDown post_parent3;
-        private System.Windows.Forms.NumericUpDown post_parent4;
-        private System.Windows.Forms.NumericUpDown post_parent5;
-        private System.Windows.Forms.NumericUpDown post_parent6;
-        private System.Windows.Forms.NumericUpDown pre_parent2;
         private System.Windows.Forms.Label L_pre_A;
-        private System.Windows.Forms.NumericUpDown pre_parent3;
         private System.Windows.Forms.Label L_pre_B;
-        private System.Windows.Forms.NumericUpDown pre_parent4;
         private System.Windows.Forms.Label L_pre_C;
-        private System.Windows.Forms.NumericUpDown pre_parent5;
         private System.Windows.Forms.Label L_pre_D;
-        private System.Windows.Forms.NumericUpDown pre_parent6;
         private System.Windows.Forms.Label L_pre_S;
         private System.Windows.Forms.ComboBox pre_Items;
         private System.Windows.Forms.Label L_PreItems;
@@ -2593,7 +2590,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dgvE_gender;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgvE_pid;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgvE_ec;
-	  private System.Windows.Forms.DataGridViewTextBoxColumn dgvE_rand;
+	    private System.Windows.Forms.DataGridViewTextBoxColumn dgvE_rand;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgvE_psv;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgvE_nature;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgvE_ability;
@@ -2619,5 +2616,18 @@
         private System.Windows.Forms.Label L_nature;
         private System.Windows.Forms.ComboBox nature;
         private System.Windows.Forms.ToolStripMenuItem mnuSetSearchSeed;
+        private System.Windows.Forms.ToolStripMenuItem Menu_ParentsList;
+        public System.Windows.Forms.NumericUpDown pre_parent1;
+        public System.Windows.Forms.NumericUpDown pre_parent2;
+        public System.Windows.Forms.NumericUpDown pre_parent3;
+        public System.Windows.Forms.NumericUpDown pre_parent4;
+        public System.Windows.Forms.NumericUpDown pre_parent5;
+        public System.Windows.Forms.NumericUpDown pre_parent6;
+        public System.Windows.Forms.NumericUpDown post_parent1;
+        public System.Windows.Forms.NumericUpDown post_parent2;
+        public System.Windows.Forms.NumericUpDown post_parent3;
+        public System.Windows.Forms.NumericUpDown post_parent4;
+        public System.Windows.Forms.NumericUpDown post_parent5;
+        public System.Windows.Forms.NumericUpDown post_parent6;
     }
 }

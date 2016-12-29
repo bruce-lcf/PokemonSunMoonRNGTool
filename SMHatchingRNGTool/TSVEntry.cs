@@ -20,7 +20,6 @@ namespace SMHatchingRNGTool
         }
         private int[] getTSV()
         {
-
             string[] lines = RTB_TSV.Lines;
             int[] tsvs = new int[lines.Length];
             for (int i = 0; i < lines.Length; i++)

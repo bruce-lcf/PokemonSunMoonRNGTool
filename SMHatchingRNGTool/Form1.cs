@@ -14,7 +14,9 @@ namespace SMHatchingRNGTool
     {
         private const string PATH_CONFIG = "config.txt";
         private const string PATH_TSV = "TSV.txt";
+        private const string PATH_PARENTS = "parents.csv";
         private int[] other_tsv = new int[0];
+        private string[] parents_list = new string[0];
 
         #region Translation
         private string[] natures;
@@ -421,6 +423,7 @@ namespace SMHatchingRNGTool
 
             loadConfig();
             other_TSV.Enabled = loadTSV();
+            Menu_ParentsList.Enabled = loadParents();
         }
 
         private void loadConfig()
@@ -472,7 +475,6 @@ namespace SMHatchingRNGTool
             if (!File.Exists(PATH_TSV))
                 return false;
 
-            //test.txtを1行ずつ読み込んでいき、末端(何もない行)までwhile文で繰り返す
             string[] list = File.ReadAllLines(PATH_TSV);
             int[] tsvs = new int[list.Length];
 
@@ -496,6 +498,39 @@ namespace SMHatchingRNGTool
             }
 
             other_tsv = tsvs;
+            return true;
+        }
+
+        private bool loadParents()
+        {
+            if (!File.Exists(PATH_PARENTS))
+                return false;
+
+            string[] list = File.ReadAllLines(PATH_PARENTS);
+
+            for (int i = 0; i < list.Length; i++)
+            {
+                var Data = list[i].Split(',');
+                int value;
+
+                if (Data.Length > 7)
+                    return false;
+
+                for (int j = 1; j < Data.Length; j++)
+                {
+                    if (!int.TryParse(Data[j], out value)) // not number
+                    {
+                        return false;
+                    }
+                    value = Convert.ToInt32(Data[j]);
+                    if (0 > value || value > 31)
+                    {
+                        return false;
+                    }
+                }
+            }
+
+            parents_list = list;
             return true;
         }
 
@@ -666,11 +701,18 @@ namespace SMHatchingRNGTool
             }
             catch
             {
-                Error(PATH_TSV+msgstr[19]);
+                Error(PATH_TSV + msgstr[19]);
             }
         }
 
-		private void mainMenuExit(object sender, EventArgs e)
+        private void B_Parents_Click(object sender, EventArgs e)
+        {
+            var editor = new ParentsEntry(parents_list);
+            editor.form1 = this;
+            editor.ShowDialog();
+        }
+
+        private void mainMenuExit(object sender, EventArgs e)
 		{
 			Close();
 		}

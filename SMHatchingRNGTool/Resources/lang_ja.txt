@@ -23,6 +23,7 @@ Menu_Options = 設定
 Menu_Language = 言語
 Menu_SaveConfig = 設定を保存
 Menu_TSV = TSVリスト
+Menu_ParentsList = 親リスト
 Menu_About = について
 --------------------Context Menus----------------------
 mnuCopy = コピー
