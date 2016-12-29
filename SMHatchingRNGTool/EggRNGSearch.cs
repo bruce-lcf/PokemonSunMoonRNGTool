@@ -19,6 +19,10 @@ namespace SMHatchingRNGTool
         public int ParentAbility;
         public bool Both_Everstone;
         public bool Everstone;
+        public bool Both_PowerItems;
+        public bool PowerItems;
+        public int MalePowerStat, FemalePowerStat; 
+
         public int TSV;
         private bool Homogeneous;
         private int InheritIVs;
@@ -102,6 +106,15 @@ namespace SMHatchingRNGTool
             egg.InheritParents = new uint[InheritIVs];
             for (int i = 0; i < InheritIVs; i++)
             {
+                if ((i == 0)&&(PowerItems))
+                {
+                    if (Both_PowerItems)
+                        egg.InheritParents[0] = (getRand() & 1) == 0 ? (uint)0 : 1 ;
+                    else
+                        egg.InheritParents[0] = MalePowerStat > -1 ? (uint)0 : 1 ;
+                    egg.InheritStats[0] = egg.InheritParents[0] == 0 ? (uint)MalePowerStat : (uint)FemalePowerStat;
+                    continue;
+                }
                 repeat:
                 egg.InheritStats[i] = getRand() % 6;
 
