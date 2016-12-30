@@ -29,8 +29,8 @@ namespace SMHatchingRNGTool
         private static readonly string[] any = {"指定なし", "Any", "无限制"};
         private static readonly string[] tempPID = {"仮性格値", "---", "伪性格值"};
         private static readonly string[] dream = {"夢", "H", "梦"};
-        private static readonly string[] first = {"先", "First", "父"};
-        private static readonly string[] second = {"後", "Second", "母"};
+        private static readonly string[] first = {"先", "Male", "父"};
+        private static readonly string[] second = {"後", "Female", "母"};
         private static readonly string[] parent = {"親", " Parent", "方"};
         private static readonly string[] only = { "のみ", " Only", " 100%"};
         private static readonly string[] genderless = { "無性別", "Genderless", "无性别"};

@@ -28,8 +28,8 @@ Menu_About = About
 --------------------Context Menus----------------------
 mnuCopy = Copy
 mnuSelectAll = Select All
-mnuSetSearchSeed = Copy seed to This Tab
-mnuSetEggSeed = Copy seed to Other Tab
+mnuSetSearchSeed = Copy seed to this tab
+mnuSetEggSeed = Copy seed to other tab
 mnu2Copy = Copy
 mnu2SelectAll = Select All
 ---------------------Search Tab------------------------
@@ -56,7 +56,7 @@ L_post_S = Spe
 L_PostItems = Item:
 L_PostAbility = Ability:
 post_ditto = Ditto
-Heterogeneity = Differ Species
+Heterogeneity = Different species
 L_sex_ratio = Gender Ratio:
 --
 Filters = Filters
@@ -71,21 +71,21 @@ L_ability = Ability:
 L_sex = Gender:
 L_mezapa = HP Type:
 L_ball = Ball:
-Invalid_Refine = Ignore Filters
+Invalid_Refine = Disable filters
 --
 RNGInfo = RNG Info
 L_k_range = Range
 --
 SearchSettings = Search Settings
-International = International (Masuda)
+International = Masuda Method
 omamori = Shiny Charm
 shiny = Shiny Only
-k_TSV_shiny = Update if Foreign TSV
-other_tsv = Use TSV List (trade away)
+k_TSV_shiny = Generate using TSV
+other_tsv = Search TSV list matches
 k_search = Search
 --
 dgvS_frame = Frame
-dgvS_used = Used
+dgvS_used = Frames adv. by receiving
 dgvS_seed = Seed
 dgvS_H = HP
 dgvS_A = Atk
@@ -105,7 +105,7 @@ Tab_Egg = Egg List
 L_RNGInfo = RNG Info
 L_eggrange = Range
 List_search = Search
-L_TSV_shiny = Update if Foreign TSV
+L_TSV_shiny = Use TSV when generating
 L_targetframe = Target Frame
 --
 dgvE_frame = Egg
