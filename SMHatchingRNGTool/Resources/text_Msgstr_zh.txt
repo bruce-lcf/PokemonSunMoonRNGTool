@@ -7,7 +7,7 @@ HP个体值下限大于上限。
 速度个体值下限大于上限。
 超过范围。
 无性别宝可梦 父母一方必须为百变怪。
-Genderless Pokemon will be first parent(Male parent) when it was deposited with Ditto
+无性别宝可梦在与百变怪生蛋时应被视作父方。
 接受
 个蛋后拒绝
 次
