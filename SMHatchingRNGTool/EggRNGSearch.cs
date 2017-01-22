@@ -77,10 +77,10 @@ namespace SMHatchingRNGTool
             seed.CopyTo(egg.Seed, 0);
             FramesUsed = 0; // Reset Frame Counter
 
-            //最初の消費 Initial Consumption
-            egg.row_r = getRand();
+            //乱数値 -- Rand
+            egg.row_r = tiny.temper();
 
-            //性別 Gender
+            //性別 -- Gender
             if (GenderRandom)
                 egg.Gender = getRand() % 252 >= GenderRatio ? 0 : 1;
             else if (GenderMale)
@@ -159,7 +159,8 @@ namespace SMHatchingRNGTool
             if (Homogeneous) // Same Species (no Ditto)
                 egg.Ball = getRand() % 100 >= 50 ? 0 : 1;
 
-            //something
+            //謎の消費 -- Something
+            getRand();
             getRand();
 
             egg.FramesUsed = FramesUsed;
@@ -168,8 +169,8 @@ namespace SMHatchingRNGTool
 
         private uint getRand()
         {
-            var r = tiny.temper();
             tiny.nextState();
+            var r = tiny.temper();
             ++FramesUsed;
             return r;
         }
