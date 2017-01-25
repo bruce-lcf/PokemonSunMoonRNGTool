@@ -25,7 +25,7 @@ namespace SMHatchingRNGTool
         public string[] msgstr;
         private readonly string[] genders = { "♂", "♀", "-" };
         private readonly string[] abilities = { "1", "2", "夢" };
-        private static readonly string[] languages = {"ja", "en", "zh"};
+        private static readonly string[] languages = {"ja", "en", "cn", "zh"};
         private static readonly string[] any = {"指定なし", "Any", "无限制"};
         private static readonly string[] tempPID = {"仮性格値", "---", "伪性格值"};
         private static readonly string[] dream = {"夢", "H", "梦"};
@@ -43,7 +43,8 @@ namespace SMHatchingRNGTool
                 //"Deutsch", // GER
                 //"Español", // SPA
                 //"한국어", // KOR
-                "中文", // CHN
+                "簡體中文", // CN
+                "繁體中文", // ZH
                 //"Português", // Portuguese
             };
         private string curlanguage;
