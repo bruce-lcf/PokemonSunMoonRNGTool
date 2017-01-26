@@ -172,4 +172,22 @@
   <data name="text_msgstr_zh" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\text_Msgstr_zh.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
   </data>
+  <data name="lang_cn" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\lang_cn.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="text_items_cn" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\text_Items_cn.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="text_msgstr_cn" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\text_Msgstr_cn.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="text_natures_cn" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\text_Natures_cn.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="text_species_cn" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\text_Species_cn.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="text_types_cn" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\text_Types_cn.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
 </root>

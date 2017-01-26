@@ -163,9 +163,15 @@
     <None Include="Resources\lang_ja.txt" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\lang_cn.txt" />
     <Content Include="Resources\lang_zh.txt" />
+    <None Include="Resources\text_Items_cn.txt" />
+    <None Include="Resources\text_Msgstr_cn.txt" />
+    <None Include="Resources\text_Natures_cn.txt" />
     <Content Include="Resources\text_Natures_zh.txt" />
+    <None Include="Resources\text_Species_cn.txt" />
     <Content Include="Resources\text_Species_zh.txt" />
+    <None Include="Resources\text_Types_cn.txt" />
     <Content Include="Resources\text_Types_zh.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

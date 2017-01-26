@@ -70,12 +70,35 @@ namespace PokemonSunMoonRNGTool.Properties {
         ///! lang_es.txt = Spanish
         ///! lang_it.txt = Italian
         ///! lang_ko.txt = Korean
-        ///! lang_zh.txt = Chinese
+        ///! lang_cn.txt = Simplified Chinese
+        ///! lang_zh.txt = Traditional Chinese
         ///! lang_pt.txt = Portuguese
         ///! Make sure that each edit has a &apos; = &apos; between Control name and new Text!
         ///!
-        ///! -----------------------------------------------------
-        ///- DO NOT CHANGE THIS SECT [残りの文字列は切り詰められました]&quot;; に類似しているローカライズされた文字列を検索します。
+        ///! -------------------------------- [残りの文字列は切り詰められました]&quot;; に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string lang_cn {
+            get {
+                return ResourceManager.GetString("lang_cn", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   ! Interface Customization File
+        ///! Languages: Save this file accordingly and put it in the same folder as PKHeX&apos;s executable.
+        ///! lang_en.txt = English
+        ///! lang_jp.txt = Japanese
+        ///! lang_fr.txt = French
+        ///! lang_de.txt = German
+        ///! lang_es.txt = Spanish
+        ///! lang_it.txt = Italian
+        ///! lang_ko.txt = Korean
+        ///! lang_cn.txt = Simplified Chinese
+        ///! lang_zh.txt = Traditional Chinese
+        ///! lang_pt.txt = Portuguese
+        ///! Make sure that each edit has a &apos; = &apos; between Control name and new Text!
+        ///!
+        ///! -------------------------------- [残りの文字列は切り詰められました]&quot;; に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string lang_en {
             get {
@@ -93,12 +116,12 @@ namespace PokemonSunMoonRNGTool.Properties {
         ///! lang_es.txt = Spanish
         ///! lang_it.txt = Italian
         ///! lang_ko.txt = Korean
-        ///! lang_zh.txt = Chinese
+        ///! lang_cn.txt = Simplified Chinese
+        ///! lang_zh.txt = Traditional Chinese
         ///! lang_pt.txt = Portuguese
         ///! Make sure that each edit has a &apos; = &apos; between Control name and new Text!
         ///!
-        ///! -----------------------------------------------------
-        ///- DO NOT CHANGE THIS SECT [残りの文字列は切り詰められました]&quot;; に類似しているローカライズされた文字列を検索します。
+        ///! -------------------------------- [残りの文字列は切り詰められました]&quot;; に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string lang_ja {
             get {
@@ -116,16 +139,32 @@ namespace PokemonSunMoonRNGTool.Properties {
         ///! lang_es.txt = Spanish
         ///! lang_it.txt = Italian
         ///! lang_ko.txt = Korean
-        ///! lang_zh.txt = Chinese
+        ///! lang_cn.txt = Simplified Chinese
+        ///! lang_zh.txt = Traditional Chinese
         ///! lang_pt.txt = Portuguese
         ///! Make sure that each edit has a &apos; = &apos; between Control name and new Text!
         ///!
-        ///! -----------------------------------------------------
-        ///- DO NOT CHANGE THIS SECT [残りの文字列は切り詰められました]&quot;; に類似しているローカライズされた文字列を検索します。
+        ///! -------------------------------- [残りの文字列は切り詰められました]&quot;; に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string lang_zh {
             get {
                 return ResourceManager.GetString("lang_zh", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   不变之石
+        ///红线
+        ///力量负重
+        ///力量护腕
+        ///力量腰带
+        ///力量镜
+        ///力量束带
+        ///力量护踝 に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string text_items_cn {
+            get {
+                return ResourceManager.GetString("text_items_cn", resourceCulture);
             }
         }
         
@@ -162,18 +201,47 @@ namespace PokemonSunMoonRNGTool.Properties {
         }
         
         /// <summary>
-        ///   不变之石
-        ///红线
-        ///力量负重
-        ///力量护腕
-        ///力量腰带
-        ///力量镜
-        ///力量束带
-        ///力量护踝 に類似しているローカライズされた文字列を検索します。
+        ///   不變之石
+        ///紅線
+        ///力量負重
+        ///力量護腕
+        ///力量腰帶
+        ///力量鏡
+        ///力量束帶
+        ///力量護踝 に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string text_items_zh {
             get {
                 return ResourceManager.GetString("text_items_zh", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   帧数下限大于上限。
+        ///HP个体值下限大于上限。
+        ///攻击个体值下限大于上限。
+        ///防御个体值下限大于上限。
+        ///特攻个体值下限大于上限。
+        ///特防个体值下限大于上限。
+        ///速度个体值下限大于上限。
+        ///超过范围。
+        ///无性别宝可梦 父母一方必须为百变怪。
+        ///无性别宝可梦在与百变怪生蛋时应被视作父方。
+        ///接受
+        ///个蛋后拒绝
+        ///次
+        ///目标帧数超出列表范围。
+        ///不正确。
+        ///不存在，
+        ///使用默认设置。
+        ///行的TSV:
+        ///没有选择
+        ///请在检索结果中选择Seed。
+        ///保存失败。 に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string text_msgstr_cn {
+            get {
+                return ResourceManager.GetString("text_msgstr_cn", resourceCulture);
             }
         }
         
@@ -233,31 +301,64 @@ namespace PokemonSunMoonRNGTool.Properties {
         }
         
         /// <summary>
-        ///   帧数下限大于上限。
-        ///HP个体值下限大于上限。
-        ///攻击个体值下限大于上限。
-        ///防御个体值下限大于上限。
-        ///特攻个体值下限大于上限。
-        ///特防个体值下限大于上限。
-        ///速度个体值下限大于上限。
-        ///超过范围。
-        ///无性别宝可梦 父母一方必须为百变怪。
-        ///无性别宝可梦在与百变怪生蛋时应被视作父方。
+        ///   幀數下限大於上限。
+        ///HP個體值下限大於上限。
+        ///攻擊個體值下限大於上限。
+        ///防御個體值下限大於上限。
+        ///特攻個體值下限大於上限。
+        ///特防個體值下限大於上限。
+        ///速度個體值下限大於上限。
+        ///超過範圍。
+        ///無性別寶可夢 父母一方必須為百變怪。
+        ///無性別寶可夢在與百變怪生蛋時應被視作父方。
         ///接受
-        ///个蛋后拒绝
+        ///個蛋後拒絕
         ///次
-        ///目标帧数超出列表范围。
-        ///不正确。
+        ///目標幀數超出列表範圍。
+        ///不正確。
         ///不存在，
-        ///使用默认设置。
+        ///使用默認設定。
         ///行的TSV:
-        ///没有选择
-        ///请在检索结果中选择Seed。
-        ///保存失败。 に類似しているローカライズされた文字列を検索します。
+        ///沒有選擇
+        ///請在檢索結果中選擇Seed。
+        ///保存失敗。 に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string text_msgstr_zh {
             get {
                 return ResourceManager.GetString("text_msgstr_zh", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   勤奋
+        ///怕寂寞
+        ///勇敢
+        ///固执
+        ///顽皮
+        ///大胆
+        ///坦率
+        ///悠闲
+        ///淘气
+        ///乐天
+        ///胆小
+        ///急躁
+        ///认真
+        ///爽朗
+        ///天真
+        ///内敛
+        ///慢吞吞
+        ///冷静
+        ///害羞
+        ///马虎
+        ///温和
+        ///温顺
+        ///自大
+        ///慎重
+        ///浮躁 に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string text_natures_cn {
+            get {
+                return ResourceManager.GetString("text_natures_cn", resourceCulture);
             }
         }
         
@@ -328,28 +429,28 @@ namespace PokemonSunMoonRNGTool.Properties {
         }
         
         /// <summary>
-        ///   勤奋
+        ///   ﻿勤奮
         ///怕寂寞
         ///勇敢
-        ///固执
-        ///顽皮
-        ///大胆
+        ///固執
+        ///頑皮
+        ///大膽
         ///坦率
-        ///悠闲
-        ///淘气
-        ///乐天
-        ///胆小
+        ///悠閑
+        ///淘氣
+        ///樂天
+        ///膽小
         ///急躁
-        ///认真
+        ///認真
         ///爽朗
         ///天真
-        ///内敛
+        ///內斂
         ///慢吞吞
-        ///冷静
+        ///冷靜
         ///害羞
-        ///马虎
-        ///温和
-        ///温顺
+        ///馬虎
+        ///溫和
+        ///溫順
         ///自大
         ///慎重
         ///浮躁 に類似しているローカライズされた文字列を検索します。
@@ -357,6 +458,119 @@ namespace PokemonSunMoonRNGTool.Properties {
         internal static string text_natures_zh {
             get {
                 return ResourceManager.GetString("text_natures_zh", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   蛋
+        ///妙蛙种子
+        ///妙蛙草
+        ///妙蛙花
+        ///小火龙
+        ///火恐龙
+        ///喷火龙
+        ///杰尼龟
+        ///卡咪龟
+        ///水箭龟
+        ///绿毛虫
+        ///铁甲蛹
+        ///巴大蝶
+        ///独角虫
+        ///铁壳蛹
+        ///大针蜂
+        ///波波
+        ///比比鸟
+        ///大比鸟
+        ///小拉达
+        ///拉达
+        ///烈雀
+        ///大嘴雀
+        ///阿柏蛇
+        ///阿柏怪
+        ///皮卡丘
+        ///雷丘
+        ///穿山鼠
+        ///穿山王
+        ///尼多兰
+        ///尼多娜
+        ///尼多后
+        ///尼多朗
+        ///尼多力诺
+        ///尼多王
+        ///皮皮
+        ///皮可西
+        ///六尾
+        ///九尾
+        ///胖丁
+        ///胖可丁
+        ///超音蝠
+        ///大嘴蝠
+        ///走路草
+        ///臭臭花
+        ///霸王花
+        ///派拉斯
+        ///派拉斯特
+        ///毛球
+        ///摩鲁蛾
+        ///地鼠
+        ///三地鼠
+        ///喵喵
+        ///猫老大
+        ///可达鸭
+        ///哥达鸭
+        ///猴怪
+        ///火暴猴
+        ///卡蒂狗
+        ///风速狗
+        ///蚊香蝌蚪
+        ///蚊香君
+        ///蚊香泳士
+        ///凯西
+        ///勇基拉
+        ///胡地
+        ///腕力
+        ///豪力
+        ///怪力
+        ///喇叭芽
+        ///口呆花
+        ///大食花
+        ///玛瑙水母
+        ///毒刺水母
+        ///小拳石
+        ///隆隆石
+        ///隆隆岩
+        ///小火马
+        ///烈焰马
+        ///呆呆兽
+        ///呆壳兽
+        ///小磁怪
+        ///三合一磁怪
+        ///大葱鸭
+        ///嘟嘟
+        ///嘟嘟利
+        ///小海狮
+        ///白海狮
+        ///臭泥
+        ///臭臭泥
+        ///大舌贝
+        ///刺甲贝
+        ///鬼斯
+        ///鬼斯通
+        ///耿鬼
+        ///大岩蛇
+        ///催眠貘
+        ///引梦貘人
+        ///大钳蟹
+        ///巨钳蟹
+        ///霹雳电球
+        ///顽皮雷弹
+        ///蛋蛋
+        ///椰蛋树
+        ///卡拉卡拉 [残りの文字列は切り詰められました]&quot;; に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string text_species_cn {
+            get {
+                return ResourceManager.GetString("text_species_cn", resourceCulture);
             }
         }
         
@@ -513,26 +727,26 @@ namespace PokemonSunMoonRNGTool.Properties {
         
         /// <summary>
         ///   蛋
-        ///妙蛙种子
+        ///妙蛙種子
         ///妙蛙草
         ///妙蛙花
-        ///小火龙
-        ///火恐龙
-        ///喷火龙
-        ///杰尼龟
-        ///卡咪龟
-        ///水箭龟
-        ///绿毛虫
-        ///铁甲蛹
+        ///小火龍
+        ///火恐龍
+        ///噴火龍
+        ///杰尼龜
+        ///卡咪龜
+        ///水箭龜
+        ///綠毛蟲
+        ///鐵甲蛹
         ///巴大蝶
-        ///独角虫
-        ///铁壳蛹
-        ///大针蜂
+        ///獨角蟲
+        ///鐵殼蛹
+        ///大針蜂
         ///波波
-        ///比比鸟
-        ///大比鸟
-        ///小拉达
-        ///拉达
+        ///比比鳥
+        ///大比鳥
+        ///小拉達
+        ///拉達
         ///烈雀
         ///大嘴雀
         ///阿柏蛇
@@ -541,11 +755,11 @@ namespace PokemonSunMoonRNGTool.Properties {
         ///雷丘
         ///穿山鼠
         ///穿山王
-        ///尼多兰
+        ///尼多蘭
         ///尼多娜
         ///尼多后
         ///尼多朗
-        ///尼多力诺
+        ///尼多力諾
         ///尼多王
         ///皮皮
         ///皮可西
@@ -561,21 +775,21 @@ namespace PokemonSunMoonRNGTool.Properties {
         ///派拉斯
         ///派拉斯特
         ///毛球
-        ///摩鲁蛾
+        ///摩魯蛾
         ///地鼠
         ///三地鼠
         ///喵喵
-        ///猫老大
-        ///可达鸭
-        ///哥达鸭
+        ///貓老大
+        ///可達鴨
+        ///哥達鴨
         ///猴怪
         ///火暴猴
         ///卡蒂狗
-        ///风速狗
+        ///風速狗
         ///蚊香蝌蚪
         ///蚊香君
         ///蚊香泳士
-        ///凯西
+        ///凱西
         ///勇基拉
         ///胡地
         ///腕力
@@ -584,43 +798,69 @@ namespace PokemonSunMoonRNGTool.Properties {
         ///喇叭芽
         ///口呆花
         ///大食花
-        ///玛瑙水母
+        ///瑪瑙水母
         ///毒刺水母
         ///小拳石
         ///隆隆石
         ///隆隆岩
-        ///小火马
-        ///烈焰马
-        ///呆呆兽
-        ///呆壳兽
+        ///小火馬
+        ///烈焰馬
+        ///呆呆獸
+        ///呆殼獸
         ///小磁怪
         ///三合一磁怪
-        ///大葱鸭
+        ///大蔥鴨
         ///嘟嘟
         ///嘟嘟利
-        ///小海狮
-        ///白海狮
+        ///小海獅
+        ///白海獅
         ///臭泥
         ///臭臭泥
-        ///大舌贝
-        ///刺甲贝
+        ///大舌貝
+        ///刺甲貝
         ///鬼斯
         ///鬼斯通
         ///耿鬼
         ///大岩蛇
         ///催眠貘
-        ///引梦貘人
-        ///大钳蟹
-        ///巨钳蟹
-        ///霹雳电球
-        ///顽皮雷弹
+        ///引夢貘人
+        ///大鉗蟹
+        ///巨鉗蟹
+        ///霹靂電球
+        ///頑皮雷彈
         ///蛋蛋
-        ///椰蛋树
+        ///椰蛋樹
         ///卡拉卡拉 [残りの文字列は切り詰められました]&quot;; に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string text_species_zh {
             get {
                 return ResourceManager.GetString("text_species_zh", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   一般
+        ///格斗
+        ///飞行
+        ///毒
+        ///地面
+        ///岩石
+        ///虫
+        ///幽灵
+        ///钢
+        ///火
+        ///水
+        ///草
+        ///电
+        ///超能力
+        ///冰
+        ///龙
+        ///恶
+        ///妖精 に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string text_types_cn {
+            get {
+                return ResourceManager.GetString("text_types_cn", resourceCulture);
             }
         }
         
@@ -678,22 +918,22 @@ namespace PokemonSunMoonRNGTool.Properties {
         
         /// <summary>
         ///   一般
-        ///格斗
-        ///飞行
+        ///格鬥
+        ///飛行
         ///毒
         ///地面
         ///岩石
-        ///虫
-        ///幽灵
-        ///钢
+        ///蟲
+        ///幽靈
+        ///鋼
         ///火
         ///水
         ///草
-        ///电
+        ///電
         ///超能力
         ///冰
-        ///龙
-        ///恶
+        ///龍
+        ///惡
         ///妖精 に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string text_types_zh {
