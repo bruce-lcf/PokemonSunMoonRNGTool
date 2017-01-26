@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Windows.Forms;
 
-namespace SMHatchingRNGTool
+namespace PokemonSunMoonRNGTool
 {
     public partial class ParentsEntry : Form
     {

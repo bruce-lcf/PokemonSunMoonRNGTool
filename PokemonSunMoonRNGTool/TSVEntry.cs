@@ -1,7 +1,7 @@
 ﻿using System.Linq;
 using System.Windows.Forms;
 
-namespace SMHatchingRNGTool
+namespace PokemonSunMoonRNGTool
 {
     public partial class TSVEntry : Form
     {

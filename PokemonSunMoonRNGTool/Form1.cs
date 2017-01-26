@@ -8,7 +8,7 @@ using System.Linq;
 using System.Windows.Forms;
 using static PKHeX.Util;
 
-namespace SMHatchingRNGTool
+namespace PokemonSunMoonRNGTool
 {
     public partial class Form1 : Form
     {
@@ -17,6 +17,17 @@ namespace SMHatchingRNGTool
         private const string PATH_PARENTS = "parents.csv";
         private int[] other_tsv = new int[0];
         private string[] parents_list = new string[0];
+
+        public string[,] pokedex =
+        {
+            { "カプ・コケコ", "70", "115", "85", "95", "75", "130"},
+            { "カプ・テテフ", "70", "85", "75", "130", "115", "95"},
+            { "カプ・ブルル", "70", "130", "115", "85", "95", "75"},
+            { "カプ・レヒレ", "70", "75", "115", "95", "130", "85"},
+            { "ソルガレオ", "137", "137", "107", "113", "89", "97"},
+            { "ルナアーラ", "137", "113", "89", "137", "107", "97"},
+            { "タイプ：ヌル", "95", "95", "95", "95", "95", "59"},
+        };
 
         #region Translation
         private string[] natures;
@@ -75,7 +86,7 @@ namespace SMHatchingRNGTool
 
             natures = getStringList("natures", curlanguage);
             mezapa = getStringList("types", curlanguage);
-            items = getStringList("items",curlanguage);
+            items = getStringList("items", curlanguage);
             msgstr = getStringList("msgstr", curlanguage);
 
             STR_ANY = any[l];
@@ -98,23 +109,27 @@ namespace SMHatchingRNGTool
             sex_ratio.Items[6] = STR_GENDERLESS;
 
             mezapaType.Items[0] = STR_ANY;
+            St_mezapaType.Items[0] = STR_ANY;
             nature.Items[0] = STR_ANY;
+            St_nature.Items[0] = STR_ANY;
+            St_Synchro_nature.Items[0] = STR_ANY;
 
             for (int i = 0; i < items.Length; i++)
                 pre_Items.Items[i + 1] = post_Items.Items[i + 1] = items[i];
 
             for (int i = 1; i < mezapa.Length - 1; i++)
-                mezapaType.Items[i] = mezapa[i];
-
+                St_mezapaType.Items[i] = mezapaType.Items[i] = mezapa[i];
+            
             for (int i = 0; i < natures.Length; i++)
-                nature.Items[i + 1] = natures[i];
+                St_Synchro_nature.Items[i + 1] = St_nature.Items[i + 1] = nature.Items[i + 1] = natures[i];
+            
         }
 
-        private SearchSetting getSettings()
+        private EggSearchSetting EgggetSettings()
         {
             int[] IVup = { (int)IVup1.Value, (int)IVup2.Value, (int)IVup3.Value, (int)IVup4.Value, (int)IVup5.Value, (int)IVup6.Value, };
             int[] IVlow = { (int)IVlow1.Value, (int)IVlow2.Value, (int)IVlow3.Value, (int)IVlow4.Value, (int)IVlow5.Value, (int)IVlow6.Value, };
-            return new SearchSetting
+            return new EggSearchSetting
             {
                 Nature = nature.SelectedIndex - 1,
                 Ability = ability.SelectedIndex - 1,
@@ -127,7 +142,26 @@ namespace SMHatchingRNGTool
             };
         }
 
-        private EggRNGSearch getRNGSettings()
+        private StationarySearchSetting StationarygetSettings()
+        {
+            int[] IVup = { (int)St_IVup1.Value, (int)St_IVup2.Value, (int)St_IVup3.Value, (int)St_IVup4.Value, (int)St_IVup5.Value, (int)St_IVup6.Value, };
+            int[] IVlow = { (int)St_IVlow1.Value, (int)St_IVlow2.Value, (int)St_IVlow3.Value, (int)St_IVlow4.Value, (int)St_IVlow5.Value, (int)St_IVlow6.Value, };
+            int[] Status = { (int)St_stats1.Value, (int)St_stats2.Value, (int)St_stats3.Value, (int)St_stats4.Value, (int)St_stats5.Value, (int)St_stats6.Value, };
+
+            return new StationarySearchSetting
+            {
+                Nature = St_nature.SelectedIndex - 1,
+                HPType = St_mezapaType.SelectedIndex - 1,
+                IVlow = IVlow,
+                IVup = IVup,
+                Status = Status,
+                Skip = St_Invalid_Refine.Checked,
+                Pokemon = St_pokedex.SelectedIndex,
+                Lv = (int)St_Lv.Value
+            };
+        }
+
+        private EggRNGSearch getEggRNGSettings()
         {
             int[] pre_parent = { (int)pre_parent1.Value, (int)pre_parent2.Value, (int)pre_parent3.Value, (int)pre_parent4.Value, (int)pre_parent5.Value, (int)pre_parent6.Value, };
             int[] post_parent = { (int)post_parent1.Value, (int)post_parent2.Value, (int)post_parent3.Value, (int)post_parent4.Value, (int)post_parent5.Value, (int)post_parent6.Value, };
@@ -170,7 +204,18 @@ namespace SMHatchingRNGTool
             return rng;
         }
 
-        private bool frameMatch(EggRNGSearch.EggRNGResult result, SearchSetting setting)
+        private StationaryRNGSearch getStationaryRNGSettings()
+        {
+            var rng = new StationaryRNGSearch
+            {
+                Synchro_Stat = St_Synchro_nature.SelectedIndex - 1,
+                TSV = (int)St_TSV.Value,
+                TypeNull = TypeNull.Checked
+            };
+            return rng;
+        }
+
+        private bool EggframeMatch(EggRNGSearch.EggRNGResult result, EggSearchSetting setting)
         {
             //ここで弾く
             if (setting.Skip)
@@ -207,7 +252,34 @@ namespace SMHatchingRNGTool
             return true;
         }
 
-        private DataGridViewRow getRow(int i, EggRNGSearch rng, EggRNGSearch.EggRNGResult result, DataGridView dgv)
+        private bool StationaryframeMatch(StationaryRNGSearch.StationaryRNGResult result, StationarySearchSetting setting)
+        {
+            //ここで弾く
+            if (setting.Skip)
+                return true;
+
+            if (St_shiny.Checked && !result.Shiny)
+                return false;
+
+            if (!setting.validStatus(result, setting) && St_search_Status.Checked)
+                return false;
+
+            if (St_search_IV.Checked && !setting.validIVs(result.IVs))
+                return false;
+            
+            if (!setting.mezapa_check(result.IVs))
+                return false;
+
+            if (St_SynchroOnly.Checked && !result.Synchronize)
+                return false;
+
+            if (setting.Nature != -1 && setting.Nature != result.Nature)
+                return false;
+
+            return true;
+        }
+
+        private DataGridViewRow getRow_Egg(int i, EggRNGSearch rng, EggRNGSearch.EggRNGResult result, DataGridView dgv)
         {
             var true_psv = rng.PIDRerolls > 0 ? result.PSV.ToString("d") : "-";
             string true_pid = International.Checked || omamori.Checked ? result.PID.ToString("X8") : STR_TEMP_PID;
@@ -234,7 +306,32 @@ namespace SMHatchingRNGTool
             return row;
         }
 
-        private void search_Click(object sender, EventArgs e)
+        private DataGridViewRow getRow_Sta(int i, StationaryRNGSearch rng, StationaryRNGSearch.StationaryRNGResult result, DataGridView dgv)
+        {
+            int tolerance = (int)i - Convert.ToInt32(St_TargetFrame.Text);
+            string true_nature = natures[result.Nature];
+            var SynchronizeFlag = result.Synchronize ? "o" : "-";
+            string[] status = new string[6];
+            for (int j = 0; j < 6; j++)
+                status[j] = St_Status_display.Checked ? result.p_Status[j].ToString() : "-";
+
+            DataGridViewRow row = new DataGridViewRow();
+            row.CreateCells(dgv);
+
+            row.SetValues(
+                i, tolerance,
+                result.IVs[0], result.IVs[1], result.IVs[2], result.IVs[3], result.IVs[4], result.IVs[5],
+                true_nature, SynchronizeFlag, status[0], status[1], status[2], status[3], status[4], status[5], result.PSV, result.row_r.ToString("X16")
+                );
+
+            if (result.Shiny)
+            {
+                row.DefaultCellStyle.BackColor = Color.LightCyan;
+            }
+            return row;
+        }
+
+        private void EggSearch_Click(object sender, EventArgs e)
         {
             if (s_min.Value > s_max.Value)
                 Error(msgstr[0]);
@@ -257,10 +354,10 @@ namespace SMHatchingRNGTool
             else if (sex_ratio.SelectedIndex == 6 && pre_ditto.Checked)
                 Error(msgstr[9]);
             else
-                search();
+                EggSearch();
         }
 
-        private void search()
+        private void EggSearch()
         {
             int min = (int)s_min.Value;
             int max = (int)s_max.Value;
@@ -279,8 +376,8 @@ namespace SMHatchingRNGTool
             List<DataGridViewRow> list = new List<DataGridViewRow>();
             k_dataGridView.Rows.Clear();
 
-            var setting = getSettings();
-            var rng = getRNGSettings();
+            var setting = EgggetSettings();
+            var rng = getEggRNGSettings();
 
             for (int i = 0; i < min; i++)
                 tiny.nextState();
@@ -290,16 +387,16 @@ namespace SMHatchingRNGTool
                 tiny.status.CopyTo(st, 0);
                 EggRNGSearch.EggRNGResult result = rng.Generate(st);
 
-                if (!frameMatch(result, setting))
+                if (!EggframeMatch(result, setting))
                     continue;
-                list.Add(getRow(i, rng, result, k_dataGridView));
+                list.Add(getRow_Egg(i, rng, result, k_dataGridView));
             }
 
             k_dataGridView.Rows.AddRange(list.ToArray());
             k_dataGridView.CurrentCell = null;
         }
 
-        private void List_search_Click(object sender, EventArgs e)
+        private void EggList_Search_Click(object sender, EventArgs e)
         {
             if (s_min.Value > s_max.Value)
                 Error(msgstr[0]);
@@ -322,11 +419,11 @@ namespace SMHatchingRNGTool
             else if (sex_ratio.SelectedIndex == 6 && pre_ditto.Checked)
                 Error(msgstr[9]);
             else
-                EggList_search();
-                EggList_cal_target();
+                EggList_Search();
+                EggList_calc_target();
         }
 
-        private void EggList_search()
+        private void EggList_Search()
         {
             int min = (int)n_min.Value;
             int max = (int)n_max.Value;
@@ -345,7 +442,7 @@ namespace SMHatchingRNGTool
             List<DataGridViewRow> list = new List<DataGridViewRow>();
             L_dataGridView.Rows.Clear();
 
-            var rng = getRNGSettings();
+            var rng = getEggRNGSettings();
             int frameCount = 0;
             for (int i = 1; i <= max; i++)
             {
@@ -358,7 +455,7 @@ namespace SMHatchingRNGTool
 
                 if (i >= min)
                 {
-                    var row = getRow(i, rng, result, L_dataGridView);
+                    var row = getRow_Egg(i, rng, result, L_dataGridView);
                     list.Add(row);
                 }
                 // Continue adjacents
@@ -369,7 +466,7 @@ namespace SMHatchingRNGTool
             L_dataGridView.CurrentCell = null;
         }
 
-        private void EggList_cal_target()
+        private void EggList_calc_target()
         {
             //Added function that shows how many number off eggs needed to receive and reject to advance foo number of frames
             int target = (int)Target_frame.Value;
@@ -394,6 +491,7 @@ namespace SMHatchingRNGTool
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            St_dataGridView.DefaultCellStyle.Font = new Font("Consolas", 9);
             k_dataGridView.DefaultCellStyle.Font = new Font("Consolas", 9);
             L_dataGridView.DefaultCellStyle.Font = new Font("Consolas", 9);
             k_dataGridView.Columns[9].DefaultCellStyle.Font = new Font("ＭＳ ゴシック", 9);
@@ -401,13 +499,28 @@ namespace SMHatchingRNGTool
 
             Type dgvtype = typeof(DataGridView);
             System.Reflection.PropertyInfo dgvPropertyInfo = dgvtype.GetProperty("DoubleBuffered", System.Reflection.BindingFlags.Instance | System.Reflection.BindingFlags.NonPublic);
+            dgvPropertyInfo.SetValue(St_dataGridView, true, null);
             dgvPropertyInfo.SetValue(k_dataGridView, true, null);
             dgvPropertyInfo.SetValue(L_dataGridView, true, null);
 
             for (int i = 0; i < 17; i++)
+            {
                 mezapaType.Items.Add("");
+                St_mezapaType.Items.Add("");
+            }
+
             for (int i = 0; i < 26; i++)
+            {
                 nature.Items.Add("");
+                St_nature.Items.Add("");
+                St_Synchro_nature.Items.Add("");
+            }
+
+            for (int i = 0; i < pokedex.GetLength(0); i++)
+            {
+                St_pokedex.Items.Add("");
+                St_pokedex.Items[i] = pokedex[i, 0];
+            }
 
             foreach (var cbItem in main_langlist)
                 CB_MainLanguage.Items.Add(cbItem);
@@ -425,9 +538,38 @@ namespace SMHatchingRNGTool
             sex_ratio.SelectedIndex = 0;
             ball.SelectedIndex = 0;
 
+            St_mezapaType.SelectedIndex = 0;
+            St_nature.SelectedIndex = 0;
+            St_Synchro_nature.SelectedIndex = 0;
+            St_pokedex.SelectedIndex = 0;
+
             loadConfig();
             other_TSV.Enabled = loadTSV();
             Menu_ParentsList.Enabled = loadParents();
+
+            St_IVlow1.Visible = true;
+            St_IVlow2.Visible = true;
+            St_IVlow3.Visible = true;
+            St_IVlow4.Visible = true;
+            St_IVlow5.Visible = true;
+            St_IVlow6.Visible = true;
+
+            St_IVup1.Visible = true;
+            St_IVup2.Visible = true;
+            St_IVup3.Visible = true;
+            St_IVup4.Visible = true;
+            St_IVup5.Visible = true;
+            St_IVup6.Visible = true;
+
+            St_stats1.Visible = false;
+            St_stats2.Visible = false;
+            St_stats3.Visible = false;
+            St_stats4.Visible = false;
+            St_stats5.Visible = false;
+            St_stats6.Visible = false;
+
+            St_pokedex.Enabled = false;
+            St_Lv.Enabled = false;
         }
 
         private void loadConfig()
@@ -720,5 +862,142 @@ namespace SMHatchingRNGTool
 		{
 			Close();
 		}
+
+        private void Stationary_Search_Click(object sender, EventArgs e)
+        {
+            if (St_min.Value > St_max.Value)
+                Error(msgstr[0]);
+            else if (St_IVlow1.Value > St_IVup1.Value)
+                Error(msgstr[1]);
+            else if (St_IVlow2.Value > St_IVup2.Value)
+                Error(msgstr[2]);
+            else if (St_IVlow3.Value > St_IVup3.Value)
+                Error(msgstr[3]);
+            else if (St_IVlow4.Value > St_IVup4.Value)
+                Error(msgstr[4]);
+            else if (St_IVlow5.Value > St_IVup5.Value)
+                Error(msgstr[5]);
+            else if (St_IVlow6.Value > St_IVup6.Value)
+                Error(msgstr[6]);
+            else if (0 > St_TSV.Value || St_TSV.Value > 4095)
+                Error("TSV" + msgstr[7]);
+            else
+                StationarySearch();
+        }
+
+        private void St_search_IV_CheckedChanged(object sender, EventArgs e)
+        {
+            if (St_search_IV.Checked)
+            {
+                St_IVlow1.Visible = true;
+                St_IVlow2.Visible = true;
+                St_IVlow3.Visible = true;
+                St_IVlow4.Visible = true;
+                St_IVlow5.Visible = true;
+                St_IVlow6.Visible = true;
+
+                St_IVup1.Visible = true;
+                St_IVup2.Visible = true;
+                St_IVup3.Visible = true;
+                St_IVup4.Visible = true;
+                St_IVup5.Visible = true;
+                St_IVup6.Visible = true;
+
+                St_stats1.Visible = false;
+                St_stats2.Visible = false;
+                St_stats3.Visible = false;
+                St_stats4.Visible = false;
+                St_stats5.Visible = false;
+                St_stats6.Visible = false;
+
+                St_Status_display.Visible = true;
+
+                if (St_Status_display.Checked)
+                {
+                    St_pokedex.Enabled = true;
+                    St_Lv.Enabled = true;
+                }
+                else
+                {
+                    St_pokedex.Enabled = false;
+                    St_Lv.Enabled = false;
+                }
+
+            }
+            else
+            {
+                St_IVlow1.Visible = false;
+                St_IVlow2.Visible = false;
+                St_IVlow3.Visible = false;
+                St_IVlow4.Visible = false;
+                St_IVlow5.Visible = false;
+                St_IVlow6.Visible = false;
+
+                St_IVup1.Visible = false;
+                St_IVup2.Visible = false;
+                St_IVup3.Visible = false;
+                St_IVup4.Visible = false;
+                St_IVup5.Visible = false;
+                St_IVup6.Visible = false;
+
+                St_stats1.Visible = true;
+                St_stats2.Visible = true;
+                St_stats3.Visible = true;
+                St_stats4.Visible = true;
+                St_stats5.Visible = true;
+                St_stats6.Visible = true;
+
+                St_Status_display.Visible = false;
+                St_pokedex.Enabled = true;
+                St_Lv.Enabled = true;
+            }
+        }
+
+        private void StationarySearch()
+        {
+            int InitialSeed = (int)St_InitialSeed.Value;
+            int min = (int)St_min.Value;
+            int max = (int)St_max.Value;
+
+            SFMT sfmt = new SFMT(InitialSeed, 19937);
+            SFMT seed = new SFMT(InitialSeed, 19937);
+            List<DataGridViewRow> list = new List<DataGridViewRow>();
+            St_dataGridView.Rows.Clear();
+
+            var setting = StationarygetSettings();
+            var rng = getStationaryRNGSettings();
+
+            for (int i = 0; i < min; i++)
+                sfmt.NextUInt64();
+
+            for (int i = min; i <= max; i++, sfmt.NextUInt64())
+            {
+                seed = (SFMT)sfmt.DeepCopy();
+                StationaryRNGSearch.StationaryRNGResult result = rng.Generate(seed);
+
+                if (i >= min)
+                {
+                    if (!StationaryframeMatch(result, setting))
+                        continue;
+                    list.Add(getRow_Sta(i, rng, result, St_dataGridView));
+                }
+            }
+            St_dataGridView.Rows.AddRange(list.ToArray());
+            St_dataGridView.CurrentCell = null;
+        }
+
+        private void St_check_display_Click(object sender, EventArgs e)
+        {
+            if (St_Status_display.Checked)
+            {
+                St_pokedex.Enabled = true;
+                St_Lv.Enabled = true;
+            }
+            else
+            {
+                St_pokedex.Enabled = false;
+                St_Lv.Enabled = false;
+            }
+        }
     }
 }

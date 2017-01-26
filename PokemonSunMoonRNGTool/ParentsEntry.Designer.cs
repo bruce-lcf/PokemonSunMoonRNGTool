@@ -1,4 +1,4 @@
-﻿namespace SMHatchingRNGTool
+﻿namespace PokemonSunMoonRNGTool
 {
     partial class ParentsEntry
     {

@@ -1,6 +1,6 @@
-namespace SMHatchingRNGTool
+namespace PokemonSunMoonRNGTool
 {
-    public class SearchSetting
+    public class EggSearchSetting
     {
         public int Nature = -1;
         public int Ability = -1;

@@ -13,7 +13,7 @@
 !
 ! -----------------------------------------------------
 - DO NOT CHANGE THIS SECTION EXCEPT FORM NAME & TITLE
-! Form1 = Pokemon SunMoon Hatching RNG Tool
+! Form1 = Pokemon SunMoon RNG Tool
 - Change stuff below this line, not above.
 ---------------------Menu Strip------------------------
 Menu_File = File
