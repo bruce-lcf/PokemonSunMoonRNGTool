@@ -34,7 +34,7 @@ mnuSetEggSeed = 連続孵化リストへseedを入れる
 mnu2Copy = コピー
 mnu2SelectAll = 全て選択
 ---------------------Search Tab------------------------
-Tab_Search = 個体検索
+Tab_EggSearch = 個体検索
 --
 Parents_Info = 親の情報
 pre = ♂親
@@ -102,7 +102,7 @@ dgvS_psv = SV
 dgvS_ec = 暗号化定数
 dgvS_rand = 乱数列
 ----------------------Egg Tab--------------------------
-Tab_Egg = 連続孵化リスト
+Tab_EggList = 連続孵化リスト
 L_RNGInfo = 検索範囲
 L_eggrange = 受け取り回数
 List_search = 計算

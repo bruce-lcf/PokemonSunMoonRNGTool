@@ -34,7 +34,7 @@ mnuSetEggSeed = 將此Seed輸入連續取蛋列表
 mnu2Copy = 複製
 mnu2SelectAll = 全選
 ---------------------Search Tab------------------------
-Tab_Search = 個體檢索
+Tab_EggSearch = 個體檢索
 --
 Parents_Info = 父母訊息
 pre = 父方
@@ -102,7 +102,7 @@ dgvS_psv = SV
 dgvS_ec = 加密常數
 dgvS_rand = 亂數列
 ----------------------Egg Tab--------------------------
-Tab_Egg = 連續取蛋列表
+Tab_EggList = 連續取蛋列表
 L_RNGInfo = 檢索範圍
 L_eggrange = 取蛋次數
 List_search = 計算

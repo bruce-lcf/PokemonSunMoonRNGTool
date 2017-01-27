@@ -34,7 +34,7 @@ mnuSetEggSeed = Copy seed to other tab
 mnu2Copy = Copy
 mnu2SelectAll = Select All
 ---------------------Search Tab------------------------
-Tab_Search = Search
+Tab_EggSearch = Search
 --
 Parents_Info = Parents
 pre = ♂ Parent:
@@ -102,7 +102,7 @@ dgvS_psv = PSV
 dgvS_ec = EC
 dgvS_rand = Rand
 ----------------------Egg Tab--------------------------
-Tab_Egg = Egg List
+Tab_EggList = Egg List
 L_RNGInfo = RNG Info
 L_eggrange = Range
 List_search = Search

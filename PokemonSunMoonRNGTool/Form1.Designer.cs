@@ -30,6 +30,7 @@
         {
             this.components = new System.ComponentModel.Container();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.k_dataGridView = new System.Windows.Forms.DataGridView();
             this.dgvS_frame = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvS_used = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -94,10 +95,6 @@
             this.L_sex_ratio = new System.Windows.Forms.Label();
             this.International = new System.Windows.Forms.CheckBox();
             this.RNGInfo = new System.Windows.Forms.GroupBox();
-            this.status3 = new PokemonSunMoonRNGTool.HexNumericUpdown();
-            this.status2 = new PokemonSunMoonRNGTool.HexNumericUpdown();
-            this.status1 = new PokemonSunMoonRNGTool.HexNumericUpdown();
-            this.status0 = new PokemonSunMoonRNGTool.HexNumericUpdown();
             this.s_min = new System.Windows.Forms.NumericUpDown();
             this.s_max = new System.Windows.Forms.NumericUpDown();
             this.label13 = new System.Windows.Forms.Label();
@@ -155,8 +152,8 @@
             this.label20 = new System.Windows.Forms.Label();
             this.shiny = new System.Windows.Forms.CheckBox();
             this.tabControl1 = new System.Windows.Forms.TabControl();
-            this.Tab_Search = new System.Windows.Forms.TabPage();
-            this.Tab_Egg = new System.Windows.Forms.TabPage();
+            this.Tab_EggSearch = new System.Windows.Forms.TabPage();
+            this.Tab_EggList = new System.Windows.Forms.TabPage();
             this.List_search = new System.Windows.Forms.Button();
             this.L_dataGridView = new System.Windows.Forms.DataGridView();
             this.dgvE_frame = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -182,10 +179,6 @@
             this.Repeat_times = new System.Windows.Forms.Label();
             this.Target_frame = new System.Windows.Forms.NumericUpDown();
             this.L_targetframe = new System.Windows.Forms.Label();
-            this.L_status3a = new PokemonSunMoonRNGTool.HexNumericUpdown();
-            this.L_status2a = new PokemonSunMoonRNGTool.HexNumericUpdown();
-            this.L_status1a = new PokemonSunMoonRNGTool.HexNumericUpdown();
-            this.L_status0a = new PokemonSunMoonRNGTool.HexNumericUpdown();
             this.n_min = new System.Windows.Forms.NumericUpDown();
             this.n_max = new System.Windows.Forms.NumericUpDown();
             this.L_TSV_shiny = new System.Windows.Forms.CheckBox();
@@ -209,17 +202,10 @@
             this.Menu_TSV = new System.Windows.Forms.ToolStripMenuItem();
             this.Menu_ParentsList = new System.Windows.Forms.ToolStripMenuItem();
             this.tabControl2 = new System.Windows.Forms.TabControl();
-            this.StationaryTab = new System.Windows.Forms.TabPage();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.St_SynchroOnly = new System.Windows.Forms.CheckBox();
-            this.TypeNull = new System.Windows.Forms.CheckBox();
-            this.St_TSV = new System.Windows.Forms.NumericUpDown();
-            this.St_shiny = new System.Windows.Forms.CheckBox();
-            this.label8 = new System.Windows.Forms.Label();
-            this.Stationary_List = new System.Windows.Forms.Button();
-            this.Stationary_Search = new System.Windows.Forms.Button();
+            this.Tab_Stationary = new System.Windows.Forms.TabPage();
+            this.tabControl3 = new System.Windows.Forms.TabControl();
+            this.Tab_StationarySearch = new System.Windows.Forms.TabPage();
             this.k_groupBox1 = new System.Windows.Forms.GroupBox();
-            this.St_InitialSeed = new PokemonSunMoonRNGTool.HexNumericUpdown();
             this.label7 = new System.Windows.Forms.Label();
             this.St_UpdateFrame = new System.Windows.Forms.Button();
             this.label50 = new System.Windows.Forms.Label();
@@ -231,25 +217,12 @@
             this.St_max = new System.Windows.Forms.NumericUpDown();
             this.St_TargetFrame = new System.Windows.Forms.NumericUpDown();
             this.St_TargetFrame_Range = new System.Windows.Forms.NumericUpDown();
-            this.St_dataGridView = new System.Windows.Forms.DataGridView();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column20 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column14 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column15 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column16 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column17 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column18 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column19 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.St_SynchroOnly = new System.Windows.Forms.CheckBox();
+            this.TypeNull = new System.Windows.Forms.CheckBox();
+            this.St_TSV = new System.Windows.Forms.NumericUpDown();
+            this.St_shiny = new System.Windows.Forms.CheckBox();
+            this.label8 = new System.Windows.Forms.Label();
             this.k_groupBox2 = new System.Windows.Forms.GroupBox();
             this.St_stats1 = new System.Windows.Forms.NumericUpDown();
             this.St_stats2 = new System.Windows.Forms.NumericUpDown();
@@ -295,8 +268,82 @@
             this.label42 = new System.Windows.Forms.Label();
             this.St_IVup2 = new System.Windows.Forms.NumericUpDown();
             this.St_Synchro_nature = new System.Windows.Forms.ComboBox();
-            this.EggTab = new System.Windows.Forms.TabPage();
+            this.Stationary_List = new System.Windows.Forms.Button();
+            this.St_dataGridView = new System.Windows.Forms.DataGridView();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column20 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column14 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column15 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column16 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column17 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column18 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column19 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Stationary_Search = new System.Windows.Forms.Button();
+            this.Tab_StationaryClock = new System.Windows.Forms.TabPage();
+            this.Clock_groupBox = new System.Windows.Forms.GroupBox();
+            this.Clock_3 = new System.Windows.Forms.Button();
+            this.Clock_0 = new System.Windows.Forms.Button();
+            this.Clock_16 = new System.Windows.Forms.Button();
+            this.Clock_1 = new System.Windows.Forms.Button();
+            this.Clock_15 = new System.Windows.Forms.Button();
+            this.Clock_2 = new System.Windows.Forms.Button();
+            this.Clock_14 = new System.Windows.Forms.Button();
+            this.Clock_4 = new System.Windows.Forms.Button();
+            this.Clock_13 = new System.Windows.Forms.Button();
+            this.Clock_5 = new System.Windows.Forms.Button();
+            this.Clock_12 = new System.Windows.Forms.Button();
+            this.Clock_6 = new System.Windows.Forms.Button();
+            this.Clock_11 = new System.Windows.Forms.Button();
+            this.Clock_7 = new System.Windows.Forms.Button();
+            this.Clock_10 = new System.Windows.Forms.Button();
+            this.Clock_8 = new System.Windows.Forms.Button();
+            this.Clock_9 = new System.Windows.Forms.Button();
+            this.Tab_Egg = new System.Windows.Forms.TabPage();
             this.other = new System.Windows.Forms.TabPage();
+            this.printPreviewDialog1 = new System.Windows.Forms.PrintPreviewDialog();
+            this.button_Clock_0 = new System.Windows.Forms.Button();
+            this.button_Clock_1 = new System.Windows.Forms.Button();
+            this.button_Clock_2 = new System.Windows.Forms.Button();
+            this.button_Clock_5 = new System.Windows.Forms.Button();
+            this.button_Clock_4 = new System.Windows.Forms.Button();
+            this.button_Clock_3 = new System.Windows.Forms.Button();
+            this.button_Clock_8 = new System.Windows.Forms.Button();
+            this.button_Clock_7 = new System.Windows.Forms.Button();
+            this.button_Clock_6 = new System.Windows.Forms.Button();
+            this.button_Clock_11 = new System.Windows.Forms.Button();
+            this.button_Clock_10 = new System.Windows.Forms.Button();
+            this.button_Clock_9 = new System.Windows.Forms.Button();
+            this.button_Clock_14 = new System.Windows.Forms.Button();
+            this.button_Clock_13 = new System.Windows.Forms.Button();
+            this.button_Clock_12 = new System.Windows.Forms.Button();
+            this.button_Clock_16 = new System.Windows.Forms.Button();
+            this.button_Clock_15 = new System.Windows.Forms.Button();
+            this.clock_begin = new System.Windows.Forms.RadioButton();
+            this.clock_end = new System.Windows.Forms.RadioButton();
+            this.Clock_List = new System.Windows.Forms.TextBox();
+            this.Back = new System.Windows.Forms.Button();
+            this.Delete = new System.Windows.Forms.Button();
+            this.Get_InitialSeed = new System.Windows.Forms.LinkLabel();
+            this.St_InitialSeed = new PokemonSunMoonRNGTool.HexNumericUpdown();
+            this.status3 = new PokemonSunMoonRNGTool.HexNumericUpdown();
+            this.status2 = new PokemonSunMoonRNGTool.HexNumericUpdown();
+            this.status1 = new PokemonSunMoonRNGTool.HexNumericUpdown();
+            this.status0 = new PokemonSunMoonRNGTool.HexNumericUpdown();
+            this.L_status3a = new PokemonSunMoonRNGTool.HexNumericUpdown();
+            this.L_status2a = new PokemonSunMoonRNGTool.HexNumericUpdown();
+            this.L_status1a = new PokemonSunMoonRNGTool.HexNumericUpdown();
+            this.L_status0a = new PokemonSunMoonRNGTool.HexNumericUpdown();
+            this.Note = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.k_dataGridView)).BeginInit();
             this.contextMenuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pre_parent1)).BeginInit();
@@ -313,10 +360,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pre_parent6)).BeginInit();
             this.Parents_Info.SuspendLayout();
             this.RNGInfo.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.status3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.status2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.status1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.status0)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.s_min)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.s_max)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.IVup2)).BeginInit();
@@ -335,30 +378,26 @@
             this.SearchSettings.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.TSV)).BeginInit();
             this.tabControl1.SuspendLayout();
-            this.Tab_Search.SuspendLayout();
-            this.Tab_Egg.SuspendLayout();
+            this.Tab_EggSearch.SuspendLayout();
+            this.Tab_EggList.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.L_dataGridView)).BeginInit();
             this.contextMenuStrip2.SuspendLayout();
             this.L_RNGInfo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Target_frame)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.L_status3a)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.L_status2a)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.L_status1a)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.L_status0a)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.n_min)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.n_max)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.tabControl2.SuspendLayout();
-            this.StationaryTab.SuspendLayout();
-            this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.St_TSV)).BeginInit();
+            this.Tab_Stationary.SuspendLayout();
+            this.tabControl3.SuspendLayout();
+            this.Tab_StationarySearch.SuspendLayout();
             this.k_groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.St_InitialSeed)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.St_min)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.St_max)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.St_TargetFrame)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.St_TargetFrame_Range)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.St_dataGridView)).BeginInit();
+            this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.St_TSV)).BeginInit();
             this.k_groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.St_stats1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.St_stats2)).BeginInit();
@@ -379,7 +418,19 @@
             ((System.ComponentModel.ISupportInitialize)(this.St_IVup1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.St_IVup3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.St_IVup2)).BeginInit();
-            this.EggTab.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.St_dataGridView)).BeginInit();
+            this.Tab_StationaryClock.SuspendLayout();
+            this.Clock_groupBox.SuspendLayout();
+            this.Tab_Egg.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.St_InitialSeed)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.status3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.status2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.status1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.status0)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.L_status3a)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.L_status2a)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.L_status1a)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.L_status0a)).BeginInit();
             this.SuspendLayout();
             // 
             // k_dataGridView
@@ -411,7 +462,7 @@
             this.k_dataGridView.Location = new System.Drawing.Point(6, 238);
             this.k_dataGridView.Name = "k_dataGridView";
             this.k_dataGridView.RowTemplate.Height = 21;
-            this.k_dataGridView.Size = new System.Drawing.Size(1104, 218);
+            this.k_dataGridView.Size = new System.Drawing.Size(1104, 258);
             this.k_dataGridView.TabIndex = 0;
             // 
             // dgvS_frame
@@ -424,7 +475,7 @@
             // 
             this.dgvS_used.HeaderText = "受取";
             this.dgvS_used.Name = "dgvS_used";
-            this.dgvS_used.Width = 80;
+            this.dgvS_used.Width = 54;
             // 
             // dgvS_seed
             // 
@@ -1174,70 +1225,6 @@
             this.RNGInfo.TabStop = false;
             this.RNGInfo.Text = "検索範囲";
             // 
-            // status3
-            // 
-            this.status3.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.status3.Hexadecimal = true;
-            this.status3.Location = new System.Drawing.Point(118, 24);
-            this.status3.Name = "status3";
-            this.status3.Size = new System.Drawing.Size(80, 22);
-            this.status3.TabIndex = 70;
-            this.status3.Value = new decimal(new int[] {
-            305419896,
-            0,
-            0,
-            0});
-            this.status3.Enter += new System.EventHandler(this.NumericUpDown_Enter);
-            this.status3.Validating += new System.ComponentModel.CancelEventHandler(this.NumericUpDown_Check);
-            // 
-            // status2
-            // 
-            this.status2.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.status2.Hexadecimal = true;
-            this.status2.Location = new System.Drawing.Point(118, 52);
-            this.status2.Name = "status2";
-            this.status2.Size = new System.Drawing.Size(80, 22);
-            this.status2.TabIndex = 71;
-            this.status2.Value = new decimal(new int[] {
-            -559023410,
-            0,
-            0,
-            0});
-            this.status2.Enter += new System.EventHandler(this.NumericUpDown_Enter);
-            this.status2.Validating += new System.ComponentModel.CancelEventHandler(this.NumericUpDown_Check);
-            // 
-            // status1
-            // 
-            this.status1.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.status1.Hexadecimal = true;
-            this.status1.Location = new System.Drawing.Point(118, 80);
-            this.status1.Name = "status1";
-            this.status1.Size = new System.Drawing.Size(80, 22);
-            this.status1.TabIndex = 72;
-            this.status1.Value = new decimal(new int[] {
-            -559038737,
-            0,
-            0,
-            0});
-            this.status1.Enter += new System.EventHandler(this.NumericUpDown_Enter);
-            this.status1.Validating += new System.ComponentModel.CancelEventHandler(this.NumericUpDown_Check);
-            // 
-            // status0
-            // 
-            this.status0.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.status0.Hexadecimal = true;
-            this.status0.Location = new System.Drawing.Point(118, 108);
-            this.status0.Name = "status0";
-            this.status0.Size = new System.Drawing.Size(80, 22);
-            this.status0.TabIndex = 73;
-            this.status0.Value = new decimal(new int[] {
-            -1091568946,
-            0,
-            0,
-            0});
-            this.status0.Enter += new System.EventHandler(this.NumericUpDown_Enter);
-            this.status0.Validating += new System.ComponentModel.CancelEventHandler(this.NumericUpDown_Check);
-            // 
             // s_min
             // 
             this.s_min.Font = new System.Drawing.Font("Consolas", 9F);
@@ -1953,42 +1940,42 @@
             this.tabControl1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.tabControl1.Controls.Add(this.Tab_Search);
-            this.tabControl1.Controls.Add(this.Tab_Egg);
+            this.tabControl1.Controls.Add(this.Tab_EggSearch);
+            this.tabControl1.Controls.Add(this.Tab_EggList);
             this.tabControl1.Location = new System.Drawing.Point(6, 6);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(1124, 486);
+            this.tabControl1.Size = new System.Drawing.Size(1124, 526);
             this.tabControl1.TabIndex = 0;
             // 
-            // Tab_Search
+            // Tab_EggSearch
             // 
-            this.Tab_Search.Controls.Add(this.Parents_Info);
-            this.Tab_Search.Controls.Add(this.Filters);
-            this.Tab_Search.Controls.Add(this.k_search);
-            this.Tab_Search.Controls.Add(this.SearchSettings);
-            this.Tab_Search.Controls.Add(this.k_dataGridView);
-            this.Tab_Search.Controls.Add(this.RNGInfo);
-            this.Tab_Search.Location = new System.Drawing.Point(4, 22);
-            this.Tab_Search.Name = "Tab_Search";
-            this.Tab_Search.Padding = new System.Windows.Forms.Padding(3);
-            this.Tab_Search.Size = new System.Drawing.Size(1116, 460);
-            this.Tab_Search.TabIndex = 0;
-            this.Tab_Search.Text = "個体検索";
-            this.Tab_Search.UseVisualStyleBackColor = true;
+            this.Tab_EggSearch.Controls.Add(this.Parents_Info);
+            this.Tab_EggSearch.Controls.Add(this.Filters);
+            this.Tab_EggSearch.Controls.Add(this.k_search);
+            this.Tab_EggSearch.Controls.Add(this.SearchSettings);
+            this.Tab_EggSearch.Controls.Add(this.k_dataGridView);
+            this.Tab_EggSearch.Controls.Add(this.RNGInfo);
+            this.Tab_EggSearch.Location = new System.Drawing.Point(4, 22);
+            this.Tab_EggSearch.Name = "Tab_EggSearch";
+            this.Tab_EggSearch.Padding = new System.Windows.Forms.Padding(3);
+            this.Tab_EggSearch.Size = new System.Drawing.Size(1116, 500);
+            this.Tab_EggSearch.TabIndex = 0;
+            this.Tab_EggSearch.Text = "個体検索";
+            this.Tab_EggSearch.UseVisualStyleBackColor = true;
             // 
-            // Tab_Egg
+            // Tab_EggList
             // 
-            this.Tab_Egg.Controls.Add(this.List_search);
-            this.Tab_Egg.Controls.Add(this.L_dataGridView);
-            this.Tab_Egg.Controls.Add(this.L_RNGInfo);
-            this.Tab_Egg.Location = new System.Drawing.Point(4, 22);
-            this.Tab_Egg.Name = "Tab_Egg";
-            this.Tab_Egg.Padding = new System.Windows.Forms.Padding(3);
-            this.Tab_Egg.Size = new System.Drawing.Size(1116, 460);
-            this.Tab_Egg.TabIndex = 1;
-            this.Tab_Egg.Text = "連続孵化リスト";
-            this.Tab_Egg.UseVisualStyleBackColor = true;
+            this.Tab_EggList.Controls.Add(this.List_search);
+            this.Tab_EggList.Controls.Add(this.L_dataGridView);
+            this.Tab_EggList.Controls.Add(this.L_RNGInfo);
+            this.Tab_EggList.Location = new System.Drawing.Point(4, 22);
+            this.Tab_EggList.Name = "Tab_EggList";
+            this.Tab_EggList.Padding = new System.Windows.Forms.Padding(3);
+            this.Tab_EggList.Size = new System.Drawing.Size(1116, 500);
+            this.Tab_EggList.TabIndex = 1;
+            this.Tab_EggList.Text = "連続孵化リスト";
+            this.Tab_EggList.UseVisualStyleBackColor = true;
             // 
             // List_search
             // 
@@ -2029,7 +2016,7 @@
             this.L_dataGridView.Location = new System.Drawing.Point(235, 6);
             this.L_dataGridView.Name = "L_dataGridView";
             this.L_dataGridView.RowTemplate.Height = 21;
-            this.L_dataGridView.Size = new System.Drawing.Size(877, 458);
+            this.L_dataGridView.Size = new System.Drawing.Size(877, 498);
             this.L_dataGridView.TabIndex = 0;
             // 
             // dgvE_frame
@@ -2212,70 +2199,6 @@
             this.L_targetframe.Size = new System.Drawing.Size(53, 12);
             this.L_targetframe.TabIndex = 83;
             this.L_targetframe.Text = "目標消費";
-            // 
-            // L_status3a
-            // 
-            this.L_status3a.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.L_status3a.Hexadecimal = true;
-            this.L_status3a.Location = new System.Drawing.Point(118, 24);
-            this.L_status3a.Name = "L_status3a";
-            this.L_status3a.Size = new System.Drawing.Size(80, 22);
-            this.L_status3a.TabIndex = 1;
-            this.L_status3a.Value = new decimal(new int[] {
-            305419896,
-            0,
-            0,
-            0});
-            this.L_status3a.Enter += new System.EventHandler(this.NumericUpDown_Enter);
-            this.L_status3a.Validating += new System.ComponentModel.CancelEventHandler(this.NumericUpDown_Check);
-            // 
-            // L_status2a
-            // 
-            this.L_status2a.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.L_status2a.Hexadecimal = true;
-            this.L_status2a.Location = new System.Drawing.Point(118, 52);
-            this.L_status2a.Name = "L_status2a";
-            this.L_status2a.Size = new System.Drawing.Size(80, 22);
-            this.L_status2a.TabIndex = 2;
-            this.L_status2a.Value = new decimal(new int[] {
-            -559023410,
-            0,
-            0,
-            0});
-            this.L_status2a.Enter += new System.EventHandler(this.NumericUpDown_Enter);
-            this.L_status2a.Validating += new System.ComponentModel.CancelEventHandler(this.NumericUpDown_Check);
-            // 
-            // L_status1a
-            // 
-            this.L_status1a.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.L_status1a.Hexadecimal = true;
-            this.L_status1a.Location = new System.Drawing.Point(118, 80);
-            this.L_status1a.Name = "L_status1a";
-            this.L_status1a.Size = new System.Drawing.Size(80, 22);
-            this.L_status1a.TabIndex = 3;
-            this.L_status1a.Value = new decimal(new int[] {
-            -559038737,
-            0,
-            0,
-            0});
-            this.L_status1a.Enter += new System.EventHandler(this.NumericUpDown_Enter);
-            this.L_status1a.Validating += new System.ComponentModel.CancelEventHandler(this.NumericUpDown_Check);
-            // 
-            // L_status0a
-            // 
-            this.L_status0a.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.L_status0a.Hexadecimal = true;
-            this.L_status0a.Location = new System.Drawing.Point(118, 108);
-            this.L_status0a.Name = "L_status0a";
-            this.L_status0a.Size = new System.Drawing.Size(80, 22);
-            this.L_status0a.TabIndex = 4;
-            this.L_status0a.Value = new decimal(new int[] {
-            -1091568946,
-            0,
-            0,
-            0});
-            this.L_status0a.Enter += new System.EventHandler(this.NumericUpDown_Enter);
-            this.L_status0a.Validating += new System.ComponentModel.CancelEventHandler(this.NumericUpDown_Check);
             // 
             // n_min
             // 
@@ -2501,30 +2424,223 @@
             this.tabControl2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.tabControl2.Controls.Add(this.StationaryTab);
-            this.tabControl2.Controls.Add(this.EggTab);
+            this.tabControl2.Controls.Add(this.Tab_Stationary);
+            this.tabControl2.Controls.Add(this.Tab_Egg);
             this.tabControl2.Controls.Add(this.other);
             this.tabControl2.Location = new System.Drawing.Point(12, 25);
             this.tabControl2.Name = "tabControl2";
             this.tabControl2.SelectedIndex = 0;
-            this.tabControl2.Size = new System.Drawing.Size(1144, 524);
+            this.tabControl2.Size = new System.Drawing.Size(1144, 564);
             this.tabControl2.TabIndex = 182;
             // 
-            // StationaryTab
+            // Tab_Stationary
             // 
-            this.StationaryTab.Controls.Add(this.groupBox1);
-            this.StationaryTab.Controls.Add(this.Stationary_List);
-            this.StationaryTab.Controls.Add(this.Stationary_Search);
-            this.StationaryTab.Controls.Add(this.k_groupBox1);
-            this.StationaryTab.Controls.Add(this.St_dataGridView);
-            this.StationaryTab.Controls.Add(this.k_groupBox2);
-            this.StationaryTab.Location = new System.Drawing.Point(4, 22);
-            this.StationaryTab.Name = "StationaryTab";
-            this.StationaryTab.Padding = new System.Windows.Forms.Padding(3);
-            this.StationaryTab.Size = new System.Drawing.Size(1136, 498);
-            this.StationaryTab.TabIndex = 0;
-            this.StationaryTab.Text = "固定乱数";
-            this.StationaryTab.UseVisualStyleBackColor = true;
+            this.Tab_Stationary.Controls.Add(this.tabControl3);
+            this.Tab_Stationary.Location = new System.Drawing.Point(4, 22);
+            this.Tab_Stationary.Name = "Tab_Stationary";
+            this.Tab_Stationary.Padding = new System.Windows.Forms.Padding(3);
+            this.Tab_Stationary.Size = new System.Drawing.Size(1136, 538);
+            this.Tab_Stationary.TabIndex = 0;
+            this.Tab_Stationary.Text = "固定乱数";
+            this.Tab_Stationary.UseVisualStyleBackColor = true;
+            // 
+            // tabControl3
+            // 
+            this.tabControl3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.tabControl3.Controls.Add(this.Tab_StationarySearch);
+            this.tabControl3.Controls.Add(this.Tab_StationaryClock);
+            this.tabControl3.Location = new System.Drawing.Point(6, 6);
+            this.tabControl3.Name = "tabControl3";
+            this.tabControl3.SelectedIndex = 0;
+            this.tabControl3.Size = new System.Drawing.Size(1124, 526);
+            this.tabControl3.TabIndex = 179;
+            // 
+            // Tab_StationarySearch
+            // 
+            this.Tab_StationarySearch.Controls.Add(this.k_groupBox1);
+            this.Tab_StationarySearch.Controls.Add(this.groupBox1);
+            this.Tab_StationarySearch.Controls.Add(this.k_groupBox2);
+            this.Tab_StationarySearch.Controls.Add(this.Stationary_List);
+            this.Tab_StationarySearch.Controls.Add(this.St_dataGridView);
+            this.Tab_StationarySearch.Controls.Add(this.Stationary_Search);
+            this.Tab_StationarySearch.Location = new System.Drawing.Point(4, 22);
+            this.Tab_StationarySearch.Name = "Tab_StationarySearch";
+            this.Tab_StationarySearch.Padding = new System.Windows.Forms.Padding(3);
+            this.Tab_StationarySearch.Size = new System.Drawing.Size(1116, 500);
+            this.Tab_StationarySearch.TabIndex = 0;
+            this.Tab_StationarySearch.Text = "個体検索";
+            this.Tab_StationarySearch.UseVisualStyleBackColor = true;
+            // 
+            // k_groupBox1
+            // 
+            this.k_groupBox1.Controls.Add(this.St_InitialSeed);
+            this.k_groupBox1.Controls.Add(this.label7);
+            this.k_groupBox1.Controls.Add(this.St_UpdateFrame);
+            this.k_groupBox1.Controls.Add(this.label50);
+            this.k_groupBox1.Controls.Add(this.label51);
+            this.k_groupBox1.Controls.Add(this.label40);
+            this.k_groupBox1.Controls.Add(this.label39);
+            this.k_groupBox1.Controls.Add(this.label3);
+            this.k_groupBox1.Controls.Add(this.St_min);
+            this.k_groupBox1.Controls.Add(this.St_max);
+            this.k_groupBox1.Controls.Add(this.St_TargetFrame);
+            this.k_groupBox1.Controls.Add(this.St_TargetFrame_Range);
+            this.k_groupBox1.Location = new System.Drawing.Point(6, 6);
+            this.k_groupBox1.Name = "k_groupBox1";
+            this.k_groupBox1.Size = new System.Drawing.Size(387, 129);
+            this.k_groupBox1.TabIndex = 22;
+            this.k_groupBox1.TabStop = false;
+            this.k_groupBox1.Text = "検索範囲";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(85, 29);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(21, 14);
+            this.label7.TabIndex = 71;
+            this.label7.Text = "0x";
+            // 
+            // St_UpdateFrame
+            // 
+            this.St_UpdateFrame.Location = new System.Drawing.Point(299, 92);
+            this.St_UpdateFrame.Name = "St_UpdateFrame";
+            this.St_UpdateFrame.Size = new System.Drawing.Size(75, 23);
+            this.St_UpdateFrame.TabIndex = 13;
+            this.St_UpdateFrame.Text = "上書き";
+            this.St_UpdateFrame.UseVisualStyleBackColor = true;
+            this.St_UpdateFrame.Click += new System.EventHandler(this.St_UpdateFrame_Click);
+            // 
+            // label50
+            // 
+            this.label50.AutoSize = true;
+            this.label50.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label50.Location = new System.Drawing.Point(34, 96);
+            this.label50.Name = "label50";
+            this.label50.Size = new System.Drawing.Size(66, 14);
+            this.label50.TabIndex = 68;
+            this.label50.Text = "目標Frame";
+            // 
+            // label51
+            // 
+            this.label51.Location = new System.Drawing.Point(198, 97);
+            this.label51.Name = "label51";
+            this.label51.Size = new System.Drawing.Size(18, 16);
+            this.label51.TabIndex = 65;
+            this.label51.Text = "±";
+            // 
+            // label40
+            // 
+            this.label40.AutoSize = true;
+            this.label40.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label40.Location = new System.Drawing.Point(58, 62);
+            this.label40.Name = "label40";
+            this.label40.Size = new System.Drawing.Size(42, 14);
+            this.label40.TabIndex = 64;
+            this.label40.Text = "Frame";
+            // 
+            // label39
+            // 
+            this.label39.Location = new System.Drawing.Point(198, 65);
+            this.label39.Name = "label39";
+            this.label39.Size = new System.Drawing.Size(18, 16);
+            this.label39.TabIndex = 61;
+            this.label39.Text = "～";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Consolas", 9F);
+            this.label3.Location = new System.Drawing.Point(21, 29);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(59, 14);
+            this.label3.TabIndex = 72;
+            this.label3.Text = "初期seed";
+            // 
+            // St_min
+            // 
+            this.St_min.Font = new System.Drawing.Font("Consolas", 9F);
+            this.St_min.Location = new System.Drawing.Point(112, 60);
+            this.St_min.Maximum = new decimal(new int[] {
+            999999999,
+            0,
+            0,
+            0});
+            this.St_min.Name = "St_min";
+            this.St_min.Size = new System.Drawing.Size(80, 22);
+            this.St_min.TabIndex = 80;
+            this.St_min.Value = new decimal(new int[] {
+            417,
+            0,
+            0,
+            0});
+            // 
+            // St_max
+            // 
+            this.St_max.Font = new System.Drawing.Font("Consolas", 9F);
+            this.St_max.Increment = new decimal(new int[] {
+            100,
+            0,
+            0,
+            0});
+            this.St_max.Location = new System.Drawing.Point(222, 60);
+            this.St_max.Maximum = new decimal(new int[] {
+            999999999,
+            0,
+            0,
+            0});
+            this.St_max.Name = "St_max";
+            this.St_max.Size = new System.Drawing.Size(80, 22);
+            this.St_max.TabIndex = 81;
+            this.St_max.Value = new decimal(new int[] {
+            3000,
+            0,
+            0,
+            0});
+            // 
+            // St_TargetFrame
+            // 
+            this.St_TargetFrame.Font = new System.Drawing.Font("Consolas", 9F);
+            this.St_TargetFrame.Location = new System.Drawing.Point(112, 92);
+            this.St_TargetFrame.Maximum = new decimal(new int[] {
+            999999999,
+            0,
+            0,
+            0});
+            this.St_TargetFrame.Name = "St_TargetFrame";
+            this.St_TargetFrame.Size = new System.Drawing.Size(80, 22);
+            this.St_TargetFrame.TabIndex = 82;
+            this.St_TargetFrame.Value = new decimal(new int[] {
+            1000,
+            0,
+            0,
+            0});
+            // 
+            // St_TargetFrame_Range
+            // 
+            this.St_TargetFrame_Range.Font = new System.Drawing.Font("Consolas", 9F);
+            this.St_TargetFrame_Range.Increment = new decimal(new int[] {
+            100,
+            0,
+            0,
+            0});
+            this.St_TargetFrame_Range.Location = new System.Drawing.Point(222, 92);
+            this.St_TargetFrame_Range.Maximum = new decimal(new int[] {
+            999999999,
+            0,
+            0,
+            0});
+            this.St_TargetFrame_Range.Name = "St_TargetFrame_Range";
+            this.St_TargetFrame_Range.Size = new System.Drawing.Size(62, 22);
+            this.St_TargetFrame_Range.TabIndex = 83;
+            this.St_TargetFrame_Range.Value = new decimal(new int[] {
+            100,
+            0,
+            0,
+            0});
             // 
             // groupBox1
             // 
@@ -2535,7 +2651,7 @@
             this.groupBox1.Controls.Add(this.label8);
             this.groupBox1.Location = new System.Drawing.Point(6, 406);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(306, 86);
+            this.groupBox1.Size = new System.Drawing.Size(306, 88);
             this.groupBox1.TabIndex = 178;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "その他";
@@ -2598,366 +2714,6 @@
             this.label8.Size = new System.Drawing.Size(28, 14);
             this.label8.TabIndex = 187;
             this.label8.Text = "TSV";
-            // 
-            // Stationary_List
-            // 
-            this.Stationary_List.Location = new System.Drawing.Point(318, 469);
-            this.Stationary_List.Name = "Stationary_List";
-            this.Stationary_List.Size = new System.Drawing.Size(75, 23);
-            this.Stationary_List.TabIndex = 53;
-            this.Stationary_List.Text = "リスト表示";
-            this.Stationary_List.UseVisualStyleBackColor = true;
-            // 
-            // Stationary_Search
-            // 
-            this.Stationary_Search.Location = new System.Drawing.Point(318, 440);
-            this.Stationary_Search.Name = "Stationary_Search";
-            this.Stationary_Search.Size = new System.Drawing.Size(75, 23);
-            this.Stationary_Search.TabIndex = 52;
-            this.Stationary_Search.Text = "計算";
-            this.Stationary_Search.UseVisualStyleBackColor = true;
-            this.Stationary_Search.Click += new System.EventHandler(this.Stationary_Search_Click);
-            // 
-            // k_groupBox1
-            // 
-            this.k_groupBox1.Controls.Add(this.St_InitialSeed);
-            this.k_groupBox1.Controls.Add(this.label7);
-            this.k_groupBox1.Controls.Add(this.St_UpdateFrame);
-            this.k_groupBox1.Controls.Add(this.label50);
-            this.k_groupBox1.Controls.Add(this.label51);
-            this.k_groupBox1.Controls.Add(this.label40);
-            this.k_groupBox1.Controls.Add(this.label39);
-            this.k_groupBox1.Controls.Add(this.label3);
-            this.k_groupBox1.Controls.Add(this.St_min);
-            this.k_groupBox1.Controls.Add(this.St_max);
-            this.k_groupBox1.Controls.Add(this.St_TargetFrame);
-            this.k_groupBox1.Controls.Add(this.St_TargetFrame_Range);
-            this.k_groupBox1.Location = new System.Drawing.Point(6, 6);
-            this.k_groupBox1.Name = "k_groupBox1";
-            this.k_groupBox1.Size = new System.Drawing.Size(387, 129);
-            this.k_groupBox1.TabIndex = 22;
-            this.k_groupBox1.TabStop = false;
-            this.k_groupBox1.Text = "検索範囲";
-            // 
-            // St_InitialSeed
-            // 
-            this.St_InitialSeed.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.St_InitialSeed.Hexadecimal = true;
-            this.St_InitialSeed.Location = new System.Drawing.Point(112, 27);
-            this.St_InitialSeed.Name = "St_InitialSeed";
-            this.St_InitialSeed.Size = new System.Drawing.Size(80, 22);
-            this.St_InitialSeed.TabIndex = 73;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(85, 29);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(21, 14);
-            this.label7.TabIndex = 71;
-            this.label7.Text = "0x";
-            // 
-            // St_UpdateFrame
-            // 
-            this.St_UpdateFrame.Location = new System.Drawing.Point(299, 92);
-            this.St_UpdateFrame.Name = "St_UpdateFrame";
-            this.St_UpdateFrame.Size = new System.Drawing.Size(23, 23);
-            this.St_UpdateFrame.TabIndex = 13;
-            this.St_UpdateFrame.Text = "↑";
-            this.St_UpdateFrame.UseVisualStyleBackColor = true;
-            // 
-            // label50
-            // 
-            this.label50.AutoSize = true;
-            this.label50.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label50.Location = new System.Drawing.Point(34, 96);
-            this.label50.Name = "label50";
-            this.label50.Size = new System.Drawing.Size(66, 14);
-            this.label50.TabIndex = 68;
-            this.label50.Text = "目標Frame";
-            // 
-            // label51
-            // 
-            this.label51.Location = new System.Drawing.Point(198, 97);
-            this.label51.Name = "label51";
-            this.label51.Size = new System.Drawing.Size(18, 16);
-            this.label51.TabIndex = 65;
-            this.label51.Text = "±";
-            // 
-            // label40
-            // 
-            this.label40.AutoSize = true;
-            this.label40.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label40.Location = new System.Drawing.Point(58, 62);
-            this.label40.Name = "label40";
-            this.label40.Size = new System.Drawing.Size(42, 14);
-            this.label40.TabIndex = 64;
-            this.label40.Text = "Frame";
-            // 
-            // label39
-            // 
-            this.label39.Location = new System.Drawing.Point(198, 65);
-            this.label39.Name = "label39";
-            this.label39.Size = new System.Drawing.Size(18, 16);
-            this.label39.TabIndex = 61;
-            this.label39.Text = "～";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Consolas", 9F);
-            this.label3.Location = new System.Drawing.Point(21, 29);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(59, 14);
-            this.label3.TabIndex = 72;
-            this.label3.Text = "初期seed";
-            // 
-            // St_min
-            // 
-            this.St_min.Font = new System.Drawing.Font("Consolas", 9F);
-            this.St_min.Location = new System.Drawing.Point(112, 60);
-            this.St_min.Maximum = new decimal(new int[] {
-            999999999,
-            0,
-            0,
-            0});
-            this.St_min.Name = "St_min";
-            this.St_min.Size = new System.Drawing.Size(80, 22);
-            this.St_min.TabIndex = 80;
-            // 
-            // St_max
-            // 
-            this.St_max.Font = new System.Drawing.Font("Consolas", 9F);
-            this.St_max.Increment = new decimal(new int[] {
-            100,
-            0,
-            0,
-            0});
-            this.St_max.Location = new System.Drawing.Point(222, 60);
-            this.St_max.Maximum = new decimal(new int[] {
-            999999999,
-            0,
-            0,
-            0});
-            this.St_max.Name = "St_max";
-            this.St_max.Size = new System.Drawing.Size(80, 22);
-            this.St_max.TabIndex = 81;
-            this.St_max.Value = new decimal(new int[] {
-            100,
-            0,
-            0,
-            0});
-            // 
-            // St_TargetFrame
-            // 
-            this.St_TargetFrame.Font = new System.Drawing.Font("Consolas", 9F);
-            this.St_TargetFrame.Location = new System.Drawing.Point(112, 92);
-            this.St_TargetFrame.Maximum = new decimal(new int[] {
-            999999999,
-            0,
-            0,
-            0});
-            this.St_TargetFrame.Name = "St_TargetFrame";
-            this.St_TargetFrame.Size = new System.Drawing.Size(80, 22);
-            this.St_TargetFrame.TabIndex = 82;
-            this.St_TargetFrame.Value = new decimal(new int[] {
-            1000,
-            0,
-            0,
-            0});
-            // 
-            // St_TargetFrame_Range
-            // 
-            this.St_TargetFrame_Range.Font = new System.Drawing.Font("Consolas", 9F);
-            this.St_TargetFrame_Range.Increment = new decimal(new int[] {
-            100,
-            0,
-            0,
-            0});
-            this.St_TargetFrame_Range.Location = new System.Drawing.Point(222, 92);
-            this.St_TargetFrame_Range.Maximum = new decimal(new int[] {
-            999999999,
-            0,
-            0,
-            0});
-            this.St_TargetFrame_Range.Name = "St_TargetFrame_Range";
-            this.St_TargetFrame_Range.Size = new System.Drawing.Size(62, 22);
-            this.St_TargetFrame_Range.TabIndex = 83;
-            this.St_TargetFrame_Range.Value = new decimal(new int[] {
-            100,
-            0,
-            0,
-            0});
-            // 
-            // St_dataGridView
-            // 
-            this.St_dataGridView.AllowUserToAddRows = false;
-            this.St_dataGridView.AllowUserToDeleteRows = false;
-            this.St_dataGridView.AllowUserToResizeRows = false;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.St_dataGridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            this.St_dataGridView.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.St_dataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.St_dataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Column1,
-            this.Column20,
-            this.Column3,
-            this.Column4,
-            this.Column5,
-            this.Column6,
-            this.Column7,
-            this.Column8,
-            this.Column9,
-            this.Column11,
-            this.Column14,
-            this.Column15,
-            this.Column16,
-            this.Column17,
-            this.Column18,
-            this.Column19,
-            this.Column10,
-            this.Column2});
-            this.St_dataGridView.ContextMenuStrip = this.contextMenuStrip1;
-            this.St_dataGridView.Location = new System.Drawing.Point(399, 4);
-            this.St_dataGridView.Name = "St_dataGridView";
-            this.St_dataGridView.ReadOnly = true;
-            this.St_dataGridView.RowTemplate.Height = 21;
-            this.St_dataGridView.Size = new System.Drawing.Size(731, 488);
-            this.St_dataGridView.TabIndex = 21;
-            this.St_dataGridView.TabStop = false;
-            // 
-            // Column1
-            // 
-            this.Column1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.Column1.HeaderText = "F";
-            this.Column1.Name = "Column1";
-            this.Column1.ReadOnly = true;
-            this.Column1.Width = 37;
-            // 
-            // Column20
-            // 
-            this.Column20.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.Column20.HeaderText = "ずれ";
-            this.Column20.Name = "Column20";
-            this.Column20.ReadOnly = true;
-            this.Column20.Width = 51;
-            // 
-            // Column3
-            // 
-            this.Column3.HeaderText = "H";
-            this.Column3.Name = "Column3";
-            this.Column3.ReadOnly = true;
-            this.Column3.Width = 27;
-            // 
-            // Column4
-            // 
-            this.Column4.HeaderText = "A";
-            this.Column4.Name = "Column4";
-            this.Column4.ReadOnly = true;
-            this.Column4.Width = 27;
-            // 
-            // Column5
-            // 
-            this.Column5.HeaderText = "B";
-            this.Column5.Name = "Column5";
-            this.Column5.ReadOnly = true;
-            this.Column5.Width = 27;
-            // 
-            // Column6
-            // 
-            this.Column6.HeaderText = "C";
-            this.Column6.Name = "Column6";
-            this.Column6.ReadOnly = true;
-            this.Column6.Width = 27;
-            // 
-            // Column7
-            // 
-            this.Column7.HeaderText = "D";
-            this.Column7.Name = "Column7";
-            this.Column7.ReadOnly = true;
-            this.Column7.Width = 27;
-            // 
-            // Column8
-            // 
-            this.Column8.HeaderText = "S";
-            this.Column8.Name = "Column8";
-            this.Column8.ReadOnly = true;
-            this.Column8.Width = 27;
-            // 
-            // Column9
-            // 
-            this.Column9.HeaderText = "性格";
-            this.Column9.Name = "Column9";
-            this.Column9.ReadOnly = true;
-            this.Column9.Width = 60;
-            // 
-            // Column11
-            // 
-            this.Column11.HeaderText = "シンクロ";
-            this.Column11.Name = "Column11";
-            this.Column11.ReadOnly = true;
-            this.Column11.Width = 64;
-            // 
-            // Column14
-            // 
-            this.Column14.HeaderText = "H";
-            this.Column14.Name = "Column14";
-            this.Column14.ReadOnly = true;
-            this.Column14.Width = 30;
-            // 
-            // Column15
-            // 
-            this.Column15.HeaderText = "A";
-            this.Column15.Name = "Column15";
-            this.Column15.ReadOnly = true;
-            this.Column15.Width = 30;
-            // 
-            // Column16
-            // 
-            this.Column16.HeaderText = "B";
-            this.Column16.Name = "Column16";
-            this.Column16.ReadOnly = true;
-            this.Column16.Width = 30;
-            // 
-            // Column17
-            // 
-            this.Column17.HeaderText = "C";
-            this.Column17.Name = "Column17";
-            this.Column17.ReadOnly = true;
-            this.Column17.Width = 30;
-            // 
-            // Column18
-            // 
-            this.Column18.HeaderText = "D";
-            this.Column18.Name = "Column18";
-            this.Column18.ReadOnly = true;
-            this.Column18.Width = 30;
-            // 
-            // Column19
-            // 
-            this.Column19.HeaderText = "S";
-            this.Column19.Name = "Column19";
-            this.Column19.ReadOnly = true;
-            this.Column19.Width = 30;
-            // 
-            // Column10
-            // 
-            this.Column10.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.Column10.HeaderText = "PSV";
-            this.Column10.Name = "Column10";
-            this.Column10.ReadOnly = true;
-            this.Column10.Width = 52;
-            // 
-            // Column2
-            // 
-            this.Column2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.Column2.HeaderText = "乱数値";
-            this.Column2.Name = "Column2";
-            this.Column2.ReadOnly = true;
-            this.Column2.Width = 66;
             // 
             // k_groupBox2
             // 
@@ -3524,36 +3280,877 @@
             this.St_Synchro_nature.Size = new System.Drawing.Size(80, 20);
             this.St_Synchro_nature.TabIndex = 188;
             // 
-            // EggTab
+            // Stationary_List
             // 
-            this.EggTab.Controls.Add(this.tabControl1);
-            this.EggTab.Location = new System.Drawing.Point(4, 22);
-            this.EggTab.Name = "EggTab";
-            this.EggTab.Padding = new System.Windows.Forms.Padding(3);
-            this.EggTab.Size = new System.Drawing.Size(1136, 498);
-            this.EggTab.TabIndex = 1;
-            this.EggTab.Text = "孵化乱数";
-            this.EggTab.UseVisualStyleBackColor = true;
+            this.Stationary_List.Location = new System.Drawing.Point(318, 471);
+            this.Stationary_List.Name = "Stationary_List";
+            this.Stationary_List.Size = new System.Drawing.Size(75, 23);
+            this.Stationary_List.TabIndex = 53;
+            this.Stationary_List.Text = "リスト表示";
+            this.Stationary_List.UseVisualStyleBackColor = true;
+            // 
+            // St_dataGridView
+            // 
+            this.St_dataGridView.AllowUserToAddRows = false;
+            this.St_dataGridView.AllowUserToDeleteRows = false;
+            this.St_dataGridView.AllowUserToResizeRows = false;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.St_dataGridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.St_dataGridView.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.St_dataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.St_dataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Column1,
+            this.Column20,
+            this.Column3,
+            this.Column4,
+            this.Column5,
+            this.Column6,
+            this.Column7,
+            this.Column8,
+            this.Column9,
+            this.Column11,
+            this.Column14,
+            this.Column15,
+            this.Column16,
+            this.Column17,
+            this.Column18,
+            this.Column19,
+            this.Column10,
+            this.Column2});
+            this.St_dataGridView.Location = new System.Drawing.Point(399, 4);
+            this.St_dataGridView.Name = "St_dataGridView";
+            this.St_dataGridView.ReadOnly = true;
+            this.St_dataGridView.RowTemplate.Height = 21;
+            this.St_dataGridView.Size = new System.Drawing.Size(711, 490);
+            this.St_dataGridView.TabIndex = 21;
+            this.St_dataGridView.TabStop = false;
+            // 
+            // Column1
+            // 
+            this.Column1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.Column1.HeaderText = "F";
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            this.Column1.Width = 37;
+            // 
+            // Column20
+            // 
+            this.Column20.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.Column20.HeaderText = "ずれ";
+            this.Column20.Name = "Column20";
+            this.Column20.ReadOnly = true;
+            this.Column20.Width = 51;
+            // 
+            // Column3
+            // 
+            this.Column3.HeaderText = "H";
+            this.Column3.Name = "Column3";
+            this.Column3.ReadOnly = true;
+            this.Column3.Width = 27;
+            // 
+            // Column4
+            // 
+            this.Column4.HeaderText = "A";
+            this.Column4.Name = "Column4";
+            this.Column4.ReadOnly = true;
+            this.Column4.Width = 27;
+            // 
+            // Column5
+            // 
+            this.Column5.HeaderText = "B";
+            this.Column5.Name = "Column5";
+            this.Column5.ReadOnly = true;
+            this.Column5.Width = 27;
+            // 
+            // Column6
+            // 
+            this.Column6.HeaderText = "C";
+            this.Column6.Name = "Column6";
+            this.Column6.ReadOnly = true;
+            this.Column6.Width = 27;
+            // 
+            // Column7
+            // 
+            this.Column7.HeaderText = "D";
+            this.Column7.Name = "Column7";
+            this.Column7.ReadOnly = true;
+            this.Column7.Width = 27;
+            // 
+            // Column8
+            // 
+            this.Column8.HeaderText = "S";
+            this.Column8.Name = "Column8";
+            this.Column8.ReadOnly = true;
+            this.Column8.Width = 27;
+            // 
+            // Column9
+            // 
+            this.Column9.HeaderText = "性格";
+            this.Column9.Name = "Column9";
+            this.Column9.ReadOnly = true;
+            this.Column9.Width = 60;
+            // 
+            // Column11
+            // 
+            this.Column11.HeaderText = "シンクロ";
+            this.Column11.Name = "Column11";
+            this.Column11.ReadOnly = true;
+            this.Column11.Width = 64;
+            // 
+            // Column14
+            // 
+            this.Column14.HeaderText = "H";
+            this.Column14.Name = "Column14";
+            this.Column14.ReadOnly = true;
+            this.Column14.Width = 30;
+            // 
+            // Column15
+            // 
+            this.Column15.HeaderText = "A";
+            this.Column15.Name = "Column15";
+            this.Column15.ReadOnly = true;
+            this.Column15.Width = 30;
+            // 
+            // Column16
+            // 
+            this.Column16.HeaderText = "B";
+            this.Column16.Name = "Column16";
+            this.Column16.ReadOnly = true;
+            this.Column16.Width = 30;
+            // 
+            // Column17
+            // 
+            this.Column17.HeaderText = "C";
+            this.Column17.Name = "Column17";
+            this.Column17.ReadOnly = true;
+            this.Column17.Width = 30;
+            // 
+            // Column18
+            // 
+            this.Column18.HeaderText = "D";
+            this.Column18.Name = "Column18";
+            this.Column18.ReadOnly = true;
+            this.Column18.Width = 30;
+            // 
+            // Column19
+            // 
+            this.Column19.HeaderText = "S";
+            this.Column19.Name = "Column19";
+            this.Column19.ReadOnly = true;
+            this.Column19.Width = 30;
+            // 
+            // Column10
+            // 
+            this.Column10.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.Column10.HeaderText = "PSV";
+            this.Column10.Name = "Column10";
+            this.Column10.ReadOnly = true;
+            this.Column10.Width = 52;
+            // 
+            // Column2
+            // 
+            this.Column2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.Column2.HeaderText = "乱数値";
+            this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
+            this.Column2.Width = 66;
+            // 
+            // Stationary_Search
+            // 
+            this.Stationary_Search.Location = new System.Drawing.Point(318, 442);
+            this.Stationary_Search.Name = "Stationary_Search";
+            this.Stationary_Search.Size = new System.Drawing.Size(75, 23);
+            this.Stationary_Search.TabIndex = 52;
+            this.Stationary_Search.Text = "計算";
+            this.Stationary_Search.UseVisualStyleBackColor = true;
+            this.Stationary_Search.Click += new System.EventHandler(this.Stationary_Search_Click);
+            // 
+            // Tab_StationaryClock
+            // 
+            this.Tab_StationaryClock.Controls.Add(this.Clock_groupBox);
+            this.Tab_StationaryClock.Location = new System.Drawing.Point(4, 22);
+            this.Tab_StationaryClock.Name = "Tab_StationaryClock";
+            this.Tab_StationaryClock.Padding = new System.Windows.Forms.Padding(3);
+            this.Tab_StationaryClock.Size = new System.Drawing.Size(1116, 500);
+            this.Tab_StationaryClock.TabIndex = 1;
+            this.Tab_StationaryClock.Text = "針検索";
+            this.Tab_StationaryClock.UseVisualStyleBackColor = true;
+            // 
+            // Clock_groupBox
+            // 
+            this.Clock_groupBox.Controls.Add(this.Note);
+            this.Clock_groupBox.Controls.Add(this.Get_InitialSeed);
+            this.Clock_groupBox.Controls.Add(this.Delete);
+            this.Clock_groupBox.Controls.Add(this.Back);
+            this.Clock_groupBox.Controls.Add(this.Clock_List);
+            this.Clock_groupBox.Controls.Add(this.clock_end);
+            this.Clock_groupBox.Controls.Add(this.clock_begin);
+            this.Clock_groupBox.Controls.Add(this.button_Clock_16);
+            this.Clock_groupBox.Controls.Add(this.button_Clock_15);
+            this.Clock_groupBox.Controls.Add(this.button_Clock_14);
+            this.Clock_groupBox.Controls.Add(this.button_Clock_13);
+            this.Clock_groupBox.Controls.Add(this.button_Clock_12);
+            this.Clock_groupBox.Controls.Add(this.button_Clock_11);
+            this.Clock_groupBox.Controls.Add(this.button_Clock_10);
+            this.Clock_groupBox.Controls.Add(this.button_Clock_9);
+            this.Clock_groupBox.Controls.Add(this.button_Clock_8);
+            this.Clock_groupBox.Controls.Add(this.button_Clock_7);
+            this.Clock_groupBox.Controls.Add(this.button_Clock_6);
+            this.Clock_groupBox.Controls.Add(this.button_Clock_5);
+            this.Clock_groupBox.Controls.Add(this.button_Clock_4);
+            this.Clock_groupBox.Controls.Add(this.button_Clock_3);
+            this.Clock_groupBox.Controls.Add(this.button_Clock_2);
+            this.Clock_groupBox.Controls.Add(this.button_Clock_1);
+            this.Clock_groupBox.Controls.Add(this.button_Clock_0);
+            this.Clock_groupBox.Controls.Add(this.Clock_3);
+            this.Clock_groupBox.Controls.Add(this.Clock_0);
+            this.Clock_groupBox.Controls.Add(this.Clock_16);
+            this.Clock_groupBox.Controls.Add(this.Clock_1);
+            this.Clock_groupBox.Controls.Add(this.Clock_15);
+            this.Clock_groupBox.Controls.Add(this.Clock_2);
+            this.Clock_groupBox.Controls.Add(this.Clock_14);
+            this.Clock_groupBox.Controls.Add(this.Clock_4);
+            this.Clock_groupBox.Controls.Add(this.Clock_13);
+            this.Clock_groupBox.Controls.Add(this.Clock_5);
+            this.Clock_groupBox.Controls.Add(this.Clock_12);
+            this.Clock_groupBox.Controls.Add(this.Clock_6);
+            this.Clock_groupBox.Controls.Add(this.Clock_11);
+            this.Clock_groupBox.Controls.Add(this.Clock_7);
+            this.Clock_groupBox.Controls.Add(this.Clock_10);
+            this.Clock_groupBox.Controls.Add(this.Clock_8);
+            this.Clock_groupBox.Controls.Add(this.Clock_9);
+            this.Clock_groupBox.Location = new System.Drawing.Point(6, 6);
+            this.Clock_groupBox.Name = "Clock_groupBox";
+            this.Clock_groupBox.Size = new System.Drawing.Size(1104, 145);
+            this.Clock_groupBox.TabIndex = 18;
+            this.Clock_groupBox.TabStop = false;
+            this.Clock_groupBox.Text = "針入力";
+            // 
+            // Clock_3
+            // 
+            this.Clock_3.BackgroundImage = global::PokemonSunMoonRNGTool.Properties.Resources.pic_Clock_3;
+            this.Clock_3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.Clock_3.Location = new System.Drawing.Point(156, 28);
+            this.Clock_3.Name = "Clock_3";
+            this.Clock_3.Size = new System.Drawing.Size(40, 40);
+            this.Clock_3.TabIndex = 3;
+            this.Clock_3.UseVisualStyleBackColor = true;
+            this.Clock_3.Click += new System.EventHandler(this.Get_Clock_Number);
+            // 
+            // Clock_0
+            // 
+            this.Clock_0.BackgroundImage = global::PokemonSunMoonRNGTool.Properties.Resources.pic_Clock_0;
+            this.Clock_0.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.Clock_0.Location = new System.Drawing.Point(18, 28);
+            this.Clock_0.Name = "Clock_0";
+            this.Clock_0.Size = new System.Drawing.Size(40, 40);
+            this.Clock_0.TabIndex = 0;
+            this.Clock_0.UseVisualStyleBackColor = true;
+            this.Clock_0.Click += new System.EventHandler(this.Get_Clock_Number);
+            // 
+            // Clock_16
+            // 
+            this.Clock_16.BackgroundImage = global::PokemonSunMoonRNGTool.Properties.Resources.pic_Clock_16;
+            this.Clock_16.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.Clock_16.Location = new System.Drawing.Point(754, 28);
+            this.Clock_16.Name = "Clock_16";
+            this.Clock_16.Size = new System.Drawing.Size(40, 40);
+            this.Clock_16.TabIndex = 16;
+            this.Clock_16.UseVisualStyleBackColor = true;
+            this.Clock_16.Click += new System.EventHandler(this.Get_Clock_Number);
+            // 
+            // Clock_1
+            // 
+            this.Clock_1.BackgroundImage = global::PokemonSunMoonRNGTool.Properties.Resources.pic_Clock_1;
+            this.Clock_1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.Clock_1.Location = new System.Drawing.Point(64, 28);
+            this.Clock_1.Name = "Clock_1";
+            this.Clock_1.Size = new System.Drawing.Size(40, 40);
+            this.Clock_1.TabIndex = 1;
+            this.Clock_1.UseVisualStyleBackColor = true;
+            this.Clock_1.Click += new System.EventHandler(this.Get_Clock_Number);
+            // 
+            // Clock_15
+            // 
+            this.Clock_15.BackgroundImage = global::PokemonSunMoonRNGTool.Properties.Resources.pic_Clock_15;
+            this.Clock_15.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.Clock_15.Location = new System.Drawing.Point(708, 28);
+            this.Clock_15.Name = "Clock_15";
+            this.Clock_15.Size = new System.Drawing.Size(40, 40);
+            this.Clock_15.TabIndex = 15;
+            this.Clock_15.UseVisualStyleBackColor = true;
+            this.Clock_15.Click += new System.EventHandler(this.Get_Clock_Number);
+            // 
+            // Clock_2
+            // 
+            this.Clock_2.BackgroundImage = global::PokemonSunMoonRNGTool.Properties.Resources.pic_Clock_2;
+            this.Clock_2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.Clock_2.Location = new System.Drawing.Point(110, 28);
+            this.Clock_2.Name = "Clock_2";
+            this.Clock_2.Size = new System.Drawing.Size(40, 40);
+            this.Clock_2.TabIndex = 2;
+            this.Clock_2.UseVisualStyleBackColor = true;
+            this.Clock_2.Click += new System.EventHandler(this.Get_Clock_Number);
+            // 
+            // Clock_14
+            // 
+            this.Clock_14.BackgroundImage = global::PokemonSunMoonRNGTool.Properties.Resources.pic_Clock_14;
+            this.Clock_14.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.Clock_14.Location = new System.Drawing.Point(662, 28);
+            this.Clock_14.Name = "Clock_14";
+            this.Clock_14.Size = new System.Drawing.Size(40, 40);
+            this.Clock_14.TabIndex = 14;
+            this.Clock_14.UseVisualStyleBackColor = true;
+            this.Clock_14.Click += new System.EventHandler(this.Get_Clock_Number);
+            // 
+            // Clock_4
+            // 
+            this.Clock_4.BackgroundImage = global::PokemonSunMoonRNGTool.Properties.Resources.pic_Clock_4;
+            this.Clock_4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.Clock_4.Location = new System.Drawing.Point(202, 28);
+            this.Clock_4.Name = "Clock_4";
+            this.Clock_4.Size = new System.Drawing.Size(40, 40);
+            this.Clock_4.TabIndex = 4;
+            this.Clock_4.UseVisualStyleBackColor = true;
+            this.Clock_4.Click += new System.EventHandler(this.Get_Clock_Number);
+            // 
+            // Clock_13
+            // 
+            this.Clock_13.BackgroundImage = global::PokemonSunMoonRNGTool.Properties.Resources.pic_Clock_13;
+            this.Clock_13.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.Clock_13.Location = new System.Drawing.Point(616, 28);
+            this.Clock_13.Name = "Clock_13";
+            this.Clock_13.Size = new System.Drawing.Size(40, 40);
+            this.Clock_13.TabIndex = 13;
+            this.Clock_13.UseVisualStyleBackColor = true;
+            this.Clock_13.Click += new System.EventHandler(this.Get_Clock_Number);
+            // 
+            // Clock_5
+            // 
+            this.Clock_5.BackgroundImage = global::PokemonSunMoonRNGTool.Properties.Resources.pic_Clock_5;
+            this.Clock_5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.Clock_5.Location = new System.Drawing.Point(248, 28);
+            this.Clock_5.Name = "Clock_5";
+            this.Clock_5.Size = new System.Drawing.Size(40, 40);
+            this.Clock_5.TabIndex = 5;
+            this.Clock_5.UseVisualStyleBackColor = true;
+            this.Clock_5.Click += new System.EventHandler(this.Get_Clock_Number);
+            // 
+            // Clock_12
+            // 
+            this.Clock_12.BackgroundImage = global::PokemonSunMoonRNGTool.Properties.Resources.pic_Clock_12;
+            this.Clock_12.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.Clock_12.Location = new System.Drawing.Point(570, 28);
+            this.Clock_12.Name = "Clock_12";
+            this.Clock_12.Size = new System.Drawing.Size(40, 40);
+            this.Clock_12.TabIndex = 12;
+            this.Clock_12.UseVisualStyleBackColor = true;
+            this.Clock_12.Click += new System.EventHandler(this.Get_Clock_Number);
+            // 
+            // Clock_6
+            // 
+            this.Clock_6.BackgroundImage = global::PokemonSunMoonRNGTool.Properties.Resources.pic_Clock_6;
+            this.Clock_6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.Clock_6.Location = new System.Drawing.Point(294, 28);
+            this.Clock_6.Name = "Clock_6";
+            this.Clock_6.Size = new System.Drawing.Size(40, 40);
+            this.Clock_6.TabIndex = 6;
+            this.Clock_6.UseVisualStyleBackColor = true;
+            this.Clock_6.Click += new System.EventHandler(this.Get_Clock_Number);
+            // 
+            // Clock_11
+            // 
+            this.Clock_11.BackgroundImage = global::PokemonSunMoonRNGTool.Properties.Resources.pic_Clock_11;
+            this.Clock_11.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.Clock_11.Location = new System.Drawing.Point(524, 28);
+            this.Clock_11.Name = "Clock_11";
+            this.Clock_11.Size = new System.Drawing.Size(40, 40);
+            this.Clock_11.TabIndex = 11;
+            this.Clock_11.UseVisualStyleBackColor = true;
+            this.Clock_11.Click += new System.EventHandler(this.Get_Clock_Number);
+            // 
+            // Clock_7
+            // 
+            this.Clock_7.BackgroundImage = global::PokemonSunMoonRNGTool.Properties.Resources.pic_Clock_7;
+            this.Clock_7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.Clock_7.Location = new System.Drawing.Point(340, 28);
+            this.Clock_7.Name = "Clock_7";
+            this.Clock_7.Size = new System.Drawing.Size(40, 40);
+            this.Clock_7.TabIndex = 7;
+            this.Clock_7.UseVisualStyleBackColor = true;
+            this.Clock_7.Click += new System.EventHandler(this.Get_Clock_Number);
+            // 
+            // Clock_10
+            // 
+            this.Clock_10.BackgroundImage = global::PokemonSunMoonRNGTool.Properties.Resources.pic_Clock_10;
+            this.Clock_10.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.Clock_10.Location = new System.Drawing.Point(478, 28);
+            this.Clock_10.Name = "Clock_10";
+            this.Clock_10.Size = new System.Drawing.Size(40, 40);
+            this.Clock_10.TabIndex = 10;
+            this.Clock_10.UseVisualStyleBackColor = true;
+            this.Clock_10.Click += new System.EventHandler(this.Get_Clock_Number);
+            // 
+            // Clock_8
+            // 
+            this.Clock_8.BackgroundImage = global::PokemonSunMoonRNGTool.Properties.Resources.pic_Clock_8;
+            this.Clock_8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.Clock_8.Location = new System.Drawing.Point(386, 28);
+            this.Clock_8.Name = "Clock_8";
+            this.Clock_8.Size = new System.Drawing.Size(40, 40);
+            this.Clock_8.TabIndex = 8;
+            this.Clock_8.UseVisualStyleBackColor = true;
+            this.Clock_8.Click += new System.EventHandler(this.Get_Clock_Number);
+            // 
+            // Clock_9
+            // 
+            this.Clock_9.BackgroundImage = global::PokemonSunMoonRNGTool.Properties.Resources.pic_Clock_9;
+            this.Clock_9.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.Clock_9.Location = new System.Drawing.Point(432, 28);
+            this.Clock_9.Name = "Clock_9";
+            this.Clock_9.Size = new System.Drawing.Size(40, 40);
+            this.Clock_9.TabIndex = 9;
+            this.Clock_9.UseVisualStyleBackColor = true;
+            this.Clock_9.Click += new System.EventHandler(this.Get_Clock_Number);
+            // 
+            // Tab_Egg
+            // 
+            this.Tab_Egg.Controls.Add(this.tabControl1);
+            this.Tab_Egg.Location = new System.Drawing.Point(4, 22);
+            this.Tab_Egg.Name = "Tab_Egg";
+            this.Tab_Egg.Padding = new System.Windows.Forms.Padding(3);
+            this.Tab_Egg.Size = new System.Drawing.Size(1136, 538);
+            this.Tab_Egg.TabIndex = 1;
+            this.Tab_Egg.Text = "孵化乱数";
+            this.Tab_Egg.UseVisualStyleBackColor = true;
             // 
             // other
             // 
             this.other.Location = new System.Drawing.Point(4, 22);
             this.other.Name = "other";
             this.other.Padding = new System.Windows.Forms.Padding(3);
-            this.other.Size = new System.Drawing.Size(1136, 498);
+            this.other.Size = new System.Drawing.Size(1136, 538);
             this.other.TabIndex = 2;
             this.other.Text = "その他";
             this.other.UseVisualStyleBackColor = true;
+            // 
+            // printPreviewDialog1
+            // 
+            this.printPreviewDialog1.AutoScrollMargin = new System.Drawing.Size(0, 0);
+            this.printPreviewDialog1.AutoScrollMinSize = new System.Drawing.Size(0, 0);
+            this.printPreviewDialog1.ClientSize = new System.Drawing.Size(400, 300);
+            this.printPreviewDialog1.Enabled = true;
+            this.printPreviewDialog1.Icon = ((System.Drawing.Icon)(resources.GetObject("printPreviewDialog1.Icon")));
+            this.printPreviewDialog1.Name = "printPreviewDialog1";
+            this.printPreviewDialog1.Visible = false;
+            // 
+            // button_Clock_0
+            // 
+            this.button_Clock_0.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_Clock_0.Location = new System.Drawing.Point(18, 74);
+            this.button_Clock_0.Name = "button_Clock_0";
+            this.button_Clock_0.Size = new System.Drawing.Size(40, 23);
+            this.button_Clock_0.TabIndex = 18;
+            this.button_Clock_0.Text = "0";
+            this.button_Clock_0.UseVisualStyleBackColor = true;
+            this.button_Clock_0.Click += new System.EventHandler(this.Get_Clock_Number);
+            // 
+            // button_Clock_1
+            // 
+            this.button_Clock_1.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_Clock_1.Location = new System.Drawing.Point(64, 74);
+            this.button_Clock_1.Name = "button_Clock_1";
+            this.button_Clock_1.Size = new System.Drawing.Size(40, 23);
+            this.button_Clock_1.TabIndex = 19;
+            this.button_Clock_1.Text = "1";
+            this.button_Clock_1.UseVisualStyleBackColor = true;
+            this.button_Clock_1.Click += new System.EventHandler(this.Get_Clock_Number);
+            // 
+            // button_Clock_2
+            // 
+            this.button_Clock_2.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_Clock_2.Location = new System.Drawing.Point(110, 74);
+            this.button_Clock_2.Name = "button_Clock_2";
+            this.button_Clock_2.Size = new System.Drawing.Size(40, 23);
+            this.button_Clock_2.TabIndex = 20;
+            this.button_Clock_2.Text = "2";
+            this.button_Clock_2.UseVisualStyleBackColor = true;
+            this.button_Clock_2.Click += new System.EventHandler(this.Get_Clock_Number);
+            // 
+            // button_Clock_5
+            // 
+            this.button_Clock_5.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_Clock_5.Location = new System.Drawing.Point(248, 74);
+            this.button_Clock_5.Name = "button_Clock_5";
+            this.button_Clock_5.Size = new System.Drawing.Size(40, 23);
+            this.button_Clock_5.TabIndex = 23;
+            this.button_Clock_5.Text = "5";
+            this.button_Clock_5.UseVisualStyleBackColor = true;
+            this.button_Clock_5.Click += new System.EventHandler(this.Get_Clock_Number);
+            // 
+            // button_Clock_4
+            // 
+            this.button_Clock_4.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_Clock_4.Location = new System.Drawing.Point(202, 74);
+            this.button_Clock_4.Name = "button_Clock_4";
+            this.button_Clock_4.Size = new System.Drawing.Size(40, 23);
+            this.button_Clock_4.TabIndex = 22;
+            this.button_Clock_4.Text = "4";
+            this.button_Clock_4.UseVisualStyleBackColor = true;
+            this.button_Clock_4.Click += new System.EventHandler(this.Get_Clock_Number);
+            // 
+            // button_Clock_3
+            // 
+            this.button_Clock_3.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_Clock_3.Location = new System.Drawing.Point(156, 74);
+            this.button_Clock_3.Name = "button_Clock_3";
+            this.button_Clock_3.Size = new System.Drawing.Size(40, 23);
+            this.button_Clock_3.TabIndex = 21;
+            this.button_Clock_3.Text = "3";
+            this.button_Clock_3.UseVisualStyleBackColor = true;
+            this.button_Clock_3.Click += new System.EventHandler(this.Get_Clock_Number);
+            // 
+            // button_Clock_8
+            // 
+            this.button_Clock_8.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_Clock_8.Location = new System.Drawing.Point(386, 74);
+            this.button_Clock_8.Name = "button_Clock_8";
+            this.button_Clock_8.Size = new System.Drawing.Size(40, 23);
+            this.button_Clock_8.TabIndex = 26;
+            this.button_Clock_8.Text = "8";
+            this.button_Clock_8.UseVisualStyleBackColor = true;
+            this.button_Clock_8.Click += new System.EventHandler(this.Get_Clock_Number);
+            // 
+            // button_Clock_7
+            // 
+            this.button_Clock_7.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_Clock_7.Location = new System.Drawing.Point(340, 74);
+            this.button_Clock_7.Name = "button_Clock_7";
+            this.button_Clock_7.Size = new System.Drawing.Size(40, 23);
+            this.button_Clock_7.TabIndex = 25;
+            this.button_Clock_7.Text = "7";
+            this.button_Clock_7.UseVisualStyleBackColor = true;
+            this.button_Clock_7.Click += new System.EventHandler(this.Get_Clock_Number);
+            // 
+            // button_Clock_6
+            // 
+            this.button_Clock_6.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_Clock_6.Location = new System.Drawing.Point(294, 74);
+            this.button_Clock_6.Name = "button_Clock_6";
+            this.button_Clock_6.Size = new System.Drawing.Size(40, 23);
+            this.button_Clock_6.TabIndex = 24;
+            this.button_Clock_6.Text = "6";
+            this.button_Clock_6.UseVisualStyleBackColor = true;
+            this.button_Clock_6.Click += new System.EventHandler(this.Get_Clock_Number);
+            // 
+            // button_Clock_11
+            // 
+            this.button_Clock_11.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_Clock_11.Location = new System.Drawing.Point(524, 74);
+            this.button_Clock_11.Name = "button_Clock_11";
+            this.button_Clock_11.Size = new System.Drawing.Size(40, 23);
+            this.button_Clock_11.TabIndex = 29;
+            this.button_Clock_11.Text = "11";
+            this.button_Clock_11.UseVisualStyleBackColor = true;
+            this.button_Clock_11.Click += new System.EventHandler(this.Get_Clock_Number);
+            // 
+            // button_Clock_10
+            // 
+            this.button_Clock_10.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_Clock_10.Location = new System.Drawing.Point(478, 74);
+            this.button_Clock_10.Name = "button_Clock_10";
+            this.button_Clock_10.Size = new System.Drawing.Size(40, 23);
+            this.button_Clock_10.TabIndex = 28;
+            this.button_Clock_10.Text = "10";
+            this.button_Clock_10.UseVisualStyleBackColor = true;
+            this.button_Clock_10.Click += new System.EventHandler(this.Get_Clock_Number);
+            // 
+            // button_Clock_9
+            // 
+            this.button_Clock_9.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_Clock_9.Location = new System.Drawing.Point(432, 74);
+            this.button_Clock_9.Name = "button_Clock_9";
+            this.button_Clock_9.Size = new System.Drawing.Size(40, 23);
+            this.button_Clock_9.TabIndex = 27;
+            this.button_Clock_9.Text = "9";
+            this.button_Clock_9.UseVisualStyleBackColor = true;
+            this.button_Clock_9.Click += new System.EventHandler(this.Get_Clock_Number);
+            // 
+            // button_Clock_14
+            // 
+            this.button_Clock_14.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_Clock_14.Location = new System.Drawing.Point(662, 74);
+            this.button_Clock_14.Name = "button_Clock_14";
+            this.button_Clock_14.Size = new System.Drawing.Size(40, 23);
+            this.button_Clock_14.TabIndex = 32;
+            this.button_Clock_14.Text = "14";
+            this.button_Clock_14.UseVisualStyleBackColor = true;
+            this.button_Clock_14.Click += new System.EventHandler(this.Get_Clock_Number);
+            // 
+            // button_Clock_13
+            // 
+            this.button_Clock_13.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_Clock_13.Location = new System.Drawing.Point(616, 74);
+            this.button_Clock_13.Name = "button_Clock_13";
+            this.button_Clock_13.Size = new System.Drawing.Size(40, 23);
+            this.button_Clock_13.TabIndex = 31;
+            this.button_Clock_13.Text = "13";
+            this.button_Clock_13.UseVisualStyleBackColor = true;
+            this.button_Clock_13.Click += new System.EventHandler(this.Get_Clock_Number);
+            // 
+            // button_Clock_12
+            // 
+            this.button_Clock_12.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_Clock_12.Location = new System.Drawing.Point(570, 74);
+            this.button_Clock_12.Name = "button_Clock_12";
+            this.button_Clock_12.Size = new System.Drawing.Size(40, 23);
+            this.button_Clock_12.TabIndex = 30;
+            this.button_Clock_12.Text = "12";
+            this.button_Clock_12.UseVisualStyleBackColor = true;
+            this.button_Clock_12.Click += new System.EventHandler(this.Get_Clock_Number);
+            // 
+            // button_Clock_16
+            // 
+            this.button_Clock_16.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_Clock_16.Location = new System.Drawing.Point(754, 74);
+            this.button_Clock_16.Name = "button_Clock_16";
+            this.button_Clock_16.Size = new System.Drawing.Size(40, 23);
+            this.button_Clock_16.TabIndex = 34;
+            this.button_Clock_16.Text = "16";
+            this.button_Clock_16.UseVisualStyleBackColor = true;
+            this.button_Clock_16.Click += new System.EventHandler(this.Get_Clock_Number);
+            // 
+            // button_Clock_15
+            // 
+            this.button_Clock_15.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_Clock_15.Location = new System.Drawing.Point(708, 74);
+            this.button_Clock_15.Name = "button_Clock_15";
+            this.button_Clock_15.Size = new System.Drawing.Size(40, 23);
+            this.button_Clock_15.TabIndex = 33;
+            this.button_Clock_15.Text = "15";
+            this.button_Clock_15.UseVisualStyleBackColor = true;
+            this.button_Clock_15.Click += new System.EventHandler(this.Get_Clock_Number);
+            // 
+            // clock_begin
+            // 
+            this.clock_begin.AutoSize = true;
+            this.clock_begin.Checked = true;
+            this.clock_begin.Location = new System.Drawing.Point(815, 28);
+            this.clock_begin.Name = "clock_begin";
+            this.clock_begin.Size = new System.Drawing.Size(93, 16);
+            this.clock_begin.TabIndex = 35;
+            this.clock_begin.TabStop = true;
+            this.clock_begin.Text = "開始時の位置";
+            this.clock_begin.UseVisualStyleBackColor = true;
+            // 
+            // clock_end
+            // 
+            this.clock_end.AutoSize = true;
+            this.clock_end.Location = new System.Drawing.Point(815, 50);
+            this.clock_end.Name = "clock_end";
+            this.clock_end.Size = new System.Drawing.Size(93, 16);
+            this.clock_end.TabIndex = 36;
+            this.clock_end.Text = "終了時の位置";
+            this.clock_end.UseVisualStyleBackColor = true;
+            // 
+            // Clock_List
+            // 
+            this.Clock_List.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Clock_List.Location = new System.Drawing.Point(815, 75);
+            this.Clock_List.Name = "Clock_List";
+            this.Clock_List.Size = new System.Drawing.Size(213, 22);
+            this.Clock_List.TabIndex = 37;
+            // 
+            // Back
+            // 
+            this.Back.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Back.Location = new System.Drawing.Point(1034, 74);
+            this.Back.Name = "Back";
+            this.Back.Size = new System.Drawing.Size(64, 23);
+            this.Back.TabIndex = 38;
+            this.Back.Text = "1つ戻る";
+            this.Back.UseVisualStyleBackColor = true;
+            this.Back.Click += new System.EventHandler(this.Back_Click);
+            // 
+            // Delete
+            // 
+            this.Delete.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Delete.Location = new System.Drawing.Point(1034, 45);
+            this.Delete.Name = "Delete";
+            this.Delete.Size = new System.Drawing.Size(64, 23);
+            this.Delete.TabIndex = 39;
+            this.Delete.Text = "消去";
+            this.Delete.UseVisualStyleBackColor = true;
+            this.Delete.Click += new System.EventHandler(this.Delete_Click);
+            // 
+            // Get_InitialSeed
+            // 
+            this.Get_InitialSeed.AutoSize = true;
+            this.Get_InitialSeed.Location = new System.Drawing.Point(813, 100);
+            this.Get_InitialSeed.Name = "Get_InitialSeed";
+            this.Get_InitialSeed.Size = new System.Drawing.Size(180, 12);
+            this.Get_InitialSeed.TabIndex = 40;
+            this.Get_InitialSeed.TabStop = true;
+            this.Get_InitialSeed.Text = "初期seedを検索(ブラウザが開きます)";
+            this.Get_InitialSeed.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.Get_InitialSeed_LinkClicked);
+            // 
+            // St_InitialSeed
+            // 
+            this.St_InitialSeed.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.St_InitialSeed.Hexadecimal = true;
+            this.St_InitialSeed.Location = new System.Drawing.Point(112, 27);
+            this.St_InitialSeed.Name = "St_InitialSeed";
+            this.St_InitialSeed.Size = new System.Drawing.Size(80, 22);
+            this.St_InitialSeed.TabIndex = 73;
+            // 
+            // status3
+            // 
+            this.status3.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.status3.Hexadecimal = true;
+            this.status3.Location = new System.Drawing.Point(118, 24);
+            this.status3.Name = "status3";
+            this.status3.Size = new System.Drawing.Size(80, 22);
+            this.status3.TabIndex = 70;
+            this.status3.Value = new decimal(new int[] {
+            305419896,
+            0,
+            0,
+            0});
+            this.status3.Enter += new System.EventHandler(this.NumericUpDown_Enter);
+            this.status3.Validating += new System.ComponentModel.CancelEventHandler(this.NumericUpDown_Check);
+            // 
+            // status2
+            // 
+            this.status2.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.status2.Hexadecimal = true;
+            this.status2.Location = new System.Drawing.Point(118, 52);
+            this.status2.Name = "status2";
+            this.status2.Size = new System.Drawing.Size(80, 22);
+            this.status2.TabIndex = 71;
+            this.status2.Value = new decimal(new int[] {
+            -559023410,
+            0,
+            0,
+            0});
+            this.status2.Enter += new System.EventHandler(this.NumericUpDown_Enter);
+            this.status2.Validating += new System.ComponentModel.CancelEventHandler(this.NumericUpDown_Check);
+            // 
+            // status1
+            // 
+            this.status1.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.status1.Hexadecimal = true;
+            this.status1.Location = new System.Drawing.Point(118, 80);
+            this.status1.Name = "status1";
+            this.status1.Size = new System.Drawing.Size(80, 22);
+            this.status1.TabIndex = 72;
+            this.status1.Value = new decimal(new int[] {
+            -559038737,
+            0,
+            0,
+            0});
+            this.status1.Enter += new System.EventHandler(this.NumericUpDown_Enter);
+            this.status1.Validating += new System.ComponentModel.CancelEventHandler(this.NumericUpDown_Check);
+            // 
+            // status0
+            // 
+            this.status0.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.status0.Hexadecimal = true;
+            this.status0.Location = new System.Drawing.Point(118, 108);
+            this.status0.Name = "status0";
+            this.status0.Size = new System.Drawing.Size(80, 22);
+            this.status0.TabIndex = 73;
+            this.status0.Value = new decimal(new int[] {
+            -1091568946,
+            0,
+            0,
+            0});
+            this.status0.Enter += new System.EventHandler(this.NumericUpDown_Enter);
+            this.status0.Validating += new System.ComponentModel.CancelEventHandler(this.NumericUpDown_Check);
+            // 
+            // L_status3a
+            // 
+            this.L_status3a.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.L_status3a.Hexadecimal = true;
+            this.L_status3a.Location = new System.Drawing.Point(118, 24);
+            this.L_status3a.Name = "L_status3a";
+            this.L_status3a.Size = new System.Drawing.Size(80, 22);
+            this.L_status3a.TabIndex = 1;
+            this.L_status3a.Value = new decimal(new int[] {
+            305419896,
+            0,
+            0,
+            0});
+            this.L_status3a.Enter += new System.EventHandler(this.NumericUpDown_Enter);
+            this.L_status3a.Validating += new System.ComponentModel.CancelEventHandler(this.NumericUpDown_Check);
+            // 
+            // L_status2a
+            // 
+            this.L_status2a.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.L_status2a.Hexadecimal = true;
+            this.L_status2a.Location = new System.Drawing.Point(118, 52);
+            this.L_status2a.Name = "L_status2a";
+            this.L_status2a.Size = new System.Drawing.Size(80, 22);
+            this.L_status2a.TabIndex = 2;
+            this.L_status2a.Value = new decimal(new int[] {
+            -559023410,
+            0,
+            0,
+            0});
+            this.L_status2a.Enter += new System.EventHandler(this.NumericUpDown_Enter);
+            this.L_status2a.Validating += new System.ComponentModel.CancelEventHandler(this.NumericUpDown_Check);
+            // 
+            // L_status1a
+            // 
+            this.L_status1a.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.L_status1a.Hexadecimal = true;
+            this.L_status1a.Location = new System.Drawing.Point(118, 80);
+            this.L_status1a.Name = "L_status1a";
+            this.L_status1a.Size = new System.Drawing.Size(80, 22);
+            this.L_status1a.TabIndex = 3;
+            this.L_status1a.Value = new decimal(new int[] {
+            -559038737,
+            0,
+            0,
+            0});
+            this.L_status1a.Enter += new System.EventHandler(this.NumericUpDown_Enter);
+            this.L_status1a.Validating += new System.ComponentModel.CancelEventHandler(this.NumericUpDown_Check);
+            // 
+            // L_status0a
+            // 
+            this.L_status0a.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.L_status0a.Hexadecimal = true;
+            this.L_status0a.Location = new System.Drawing.Point(118, 108);
+            this.L_status0a.Name = "L_status0a";
+            this.L_status0a.Size = new System.Drawing.Size(80, 22);
+            this.L_status0a.TabIndex = 4;
+            this.L_status0a.Value = new decimal(new int[] {
+            -1091568946,
+            0,
+            0,
+            0});
+            this.L_status0a.Enter += new System.EventHandler(this.NumericUpDown_Enter);
+            this.L_status0a.Validating += new System.ComponentModel.CancelEventHandler(this.NumericUpDown_Check);
+            // 
+            // Note
+            // 
+            this.Note.AutoSize = true;
+            this.Note.Location = new System.Drawing.Point(813, 122);
+            this.Note.Name = "Note";
+            this.Note.Size = new System.Drawing.Size(241, 12);
+            this.Note.TabIndex = 41;
+            this.Note.Text = "※サーバに著しく負荷をかける行為はお止め下さい";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1168, 561);
+            this.ClientSize = new System.Drawing.Size(1168, 601);
             this.Controls.Add(this.tabControl2);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
-            this.MinimumSize = new System.Drawing.Size(1184, 600);
+            this.MinimumSize = new System.Drawing.Size(1184, 640);
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Pokemon SunMoon RNG Tool";
@@ -3576,10 +4173,6 @@
             this.Parents_Info.PerformLayout();
             this.RNGInfo.ResumeLayout(false);
             this.RNGInfo.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.status3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.status2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.status1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.status0)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.s_min)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.s_max)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.IVup2)).EndInit();
@@ -3600,34 +4193,30 @@
             this.SearchSettings.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.TSV)).EndInit();
             this.tabControl1.ResumeLayout(false);
-            this.Tab_Search.ResumeLayout(false);
-            this.Tab_Egg.ResumeLayout(false);
+            this.Tab_EggSearch.ResumeLayout(false);
+            this.Tab_EggList.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.L_dataGridView)).EndInit();
             this.contextMenuStrip2.ResumeLayout(false);
             this.L_RNGInfo.ResumeLayout(false);
             this.L_RNGInfo.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Target_frame)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.L_status3a)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.L_status2a)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.L_status1a)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.L_status0a)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.n_min)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.n_max)).EndInit();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.tabControl2.ResumeLayout(false);
-            this.StationaryTab.ResumeLayout(false);
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.St_TSV)).EndInit();
+            this.Tab_Stationary.ResumeLayout(false);
+            this.tabControl3.ResumeLayout(false);
+            this.Tab_StationarySearch.ResumeLayout(false);
             this.k_groupBox1.ResumeLayout(false);
             this.k_groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.St_InitialSeed)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.St_min)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.St_max)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.St_TargetFrame)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.St_TargetFrame_Range)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.St_dataGridView)).EndInit();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.St_TSV)).EndInit();
             this.k_groupBox2.ResumeLayout(false);
             this.k_groupBox2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.St_stats1)).EndInit();
@@ -3649,7 +4238,20 @@
             ((System.ComponentModel.ISupportInitialize)(this.St_IVup1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.St_IVup3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.St_IVup2)).EndInit();
-            this.EggTab.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.St_dataGridView)).EndInit();
+            this.Tab_StationaryClock.ResumeLayout(false);
+            this.Clock_groupBox.ResumeLayout(false);
+            this.Clock_groupBox.PerformLayout();
+            this.Tab_Egg.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.St_InitialSeed)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.status3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.status2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.status1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.status0)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.L_status3a)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.L_status2a)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.L_status1a)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.L_status0a)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -3739,8 +4341,8 @@
         private System.Windows.Forms.Label L_ball;
         private System.Windows.Forms.ComboBox ball;
         private System.Windows.Forms.TabControl tabControl1;
-        private System.Windows.Forms.TabPage Tab_Search;
-        private System.Windows.Forms.TabPage Tab_Egg;
+        private System.Windows.Forms.TabPage Tab_EggSearch;
+        private System.Windows.Forms.TabPage Tab_EggList;
         private System.Windows.Forms.Button List_search;
         private System.Windows.Forms.DataGridView L_dataGridView;
         private System.Windows.Forms.GroupBox L_RNGInfo;
@@ -3800,22 +4402,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dgvE_psv;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgvE_nature;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgvE_ability;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dgvS_rand;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dgvS_ec;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dgvS_psv;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dgvS_pid;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dgvS_nature;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dgvS_ability;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dgvS_gender;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dgvS_S;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dgvS_D;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dgvS_C;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dgvS_B;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dgvS_A;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dgvS_H;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dgvS_seed;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dgvS_used;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dgvS_frame;
         private System.Windows.Forms.Label Repeat_times;
         private System.Windows.Forms.NumericUpDown Target_frame;
         private System.Windows.Forms.Label L_targetframe;
@@ -3836,8 +4422,8 @@
         public System.Windows.Forms.NumericUpDown post_parent5;
         public System.Windows.Forms.NumericUpDown post_parent6;
         private System.Windows.Forms.TabControl tabControl2;
-        private System.Windows.Forms.TabPage StationaryTab;
-        private System.Windows.Forms.TabPage EggTab;
+        private System.Windows.Forms.TabPage Tab_Stationary;
+        private System.Windows.Forms.TabPage Tab_Egg;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.NumericUpDown St_TSV;
         private System.Windows.Forms.CheckBox St_shiny;
@@ -3924,5 +4510,67 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column19;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column10;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgvS_frame;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgvS_used;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgvS_seed;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgvS_H;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgvS_A;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgvS_B;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgvS_C;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgvS_D;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgvS_S;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgvS_gender;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgvS_ability;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgvS_nature;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgvS_pid;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgvS_psv;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgvS_ec;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgvS_rand;
+        private System.Windows.Forms.TabControl tabControl3;
+        private System.Windows.Forms.TabPage Tab_StationarySearch;
+        private System.Windows.Forms.TabPage Tab_StationaryClock;
+        private System.Windows.Forms.Button Clock_16;
+        private System.Windows.Forms.Button Clock_15;
+        private System.Windows.Forms.Button Clock_14;
+        private System.Windows.Forms.Button Clock_13;
+        private System.Windows.Forms.Button Clock_12;
+        private System.Windows.Forms.Button Clock_11;
+        private System.Windows.Forms.Button Clock_10;
+        private System.Windows.Forms.Button Clock_9;
+        private System.Windows.Forms.Button Clock_8;
+        private System.Windows.Forms.Button Clock_7;
+        private System.Windows.Forms.Button Clock_6;
+        private System.Windows.Forms.Button Clock_5;
+        private System.Windows.Forms.Button Clock_4;
+        private System.Windows.Forms.Button Clock_3;
+        private System.Windows.Forms.Button Clock_2;
+        private System.Windows.Forms.Button Clock_1;
+        private System.Windows.Forms.Button Clock_0;
+        private System.Windows.Forms.GroupBox Clock_groupBox;
+        private System.Windows.Forms.PrintPreviewDialog printPreviewDialog1;
+        private System.Windows.Forms.Button button_Clock_16;
+        private System.Windows.Forms.Button button_Clock_15;
+        private System.Windows.Forms.Button button_Clock_14;
+        private System.Windows.Forms.Button button_Clock_13;
+        private System.Windows.Forms.Button button_Clock_12;
+        private System.Windows.Forms.Button button_Clock_11;
+        private System.Windows.Forms.Button button_Clock_10;
+        private System.Windows.Forms.Button button_Clock_9;
+        private System.Windows.Forms.Button button_Clock_8;
+        private System.Windows.Forms.Button button_Clock_7;
+        private System.Windows.Forms.Button button_Clock_6;
+        private System.Windows.Forms.Button button_Clock_5;
+        private System.Windows.Forms.Button button_Clock_4;
+        private System.Windows.Forms.Button button_Clock_3;
+        private System.Windows.Forms.Button button_Clock_2;
+        private System.Windows.Forms.Button button_Clock_1;
+        private System.Windows.Forms.Button button_Clock_0;
+        private System.Windows.Forms.RadioButton clock_end;
+        private System.Windows.Forms.RadioButton clock_begin;
+        private System.Windows.Forms.Button Delete;
+        private System.Windows.Forms.Button Back;
+        private System.Windows.Forms.TextBox Clock_List;
+        private System.Windows.Forms.LinkLabel Get_InitialSeed;
+        private System.Windows.Forms.Label Note;
     }
 }

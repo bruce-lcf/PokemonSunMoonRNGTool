@@ -32,19 +32,19 @@ namespace PokemonSunMoonRNGTool
         #region Translation
         private string[] natures;
         private string[] mezapa;
-		private string[] items;
+        private string[] items;
         public string[] msgstr;
         private readonly string[] genders = { "♂", "♀", "-" };
-        private readonly string[] abilities = { "1", "2", "夢"};
-        private static readonly string[] languages = {"ja", "en", "cn", "zh"};
-        private static readonly string[] any = {"指定なし", "Any", "无限制", "无限制"};
-        private static readonly string[] tempPID = {"仮性格値", "---", "伪性格值", "伪性格值"};
-        private static readonly string[] dream = {"夢", "H", "梦", "梦"};
-        private static readonly string[] first = {"先", "Male", "父", "父"};
-        private static readonly string[] second = {"後", "Female", "母", "母"};
-        private static readonly string[] parent = {"親", " Parent", "方", "方"};
-        private static readonly string[] only = { "のみ", "Only", "100%", "100%"};
-        private static readonly string[] genderless = { "無性別", "Genderless", "无性别", "无性别"};
+        private readonly string[] abilities = { "1", "2", "夢" };
+        private static readonly string[] languages = { "ja", "en", "cn", "zh" };
+        private static readonly string[] any = { "指定なし", "Any", "无限制", "无限制" };
+        private static readonly string[] tempPID = { "仮性格値", "---", "伪性格值", "伪性格值" };
+        private static readonly string[] dream = { "夢", "H", "梦", "梦" };
+        private static readonly string[] first = { "先", "Male", "父", "父" };
+        private static readonly string[] second = { "後", "Female", "母", "母" };
+        private static readonly string[] parent = { "親", " Parent", "方", "方" };
+        private static readonly string[] only = { "のみ", "Only", "100%", "100%" };
+        private static readonly string[] genderless = { "無性別", "Genderless", "无性别", "无性别" };
         private static readonly string[] main_langlist =
             {
                 "日本語", // JPN
@@ -120,10 +120,10 @@ namespace PokemonSunMoonRNGTool
 
             for (int i = 1; i < mezapa.Length - 1; i++)
                 St_mezapaType.Items[i] = mezapaType.Items[i] = mezapa[i];
-            
+
             for (int i = 0; i < natures.Length; i++)
                 St_Synchro_nature.Items[i + 1] = St_nature.Items[i + 1] = nature.Items[i + 1] = natures[i];
-            
+
         }
 
         private EggSearchSetting EgggetSettings()
@@ -267,7 +267,7 @@ namespace PokemonSunMoonRNGTool
 
             if (St_search_IV.Checked && !setting.validIVs(result.IVs))
                 return false;
-            
+
             if (!setting.mezapa_check(result.IVs))
                 return false;
 
@@ -414,14 +414,14 @@ namespace PokemonSunMoonRNGTool
             else if (IVlow6.Value > IVup6.Value)
                 Error(msgstr[6]);
             else if (0 > TSV.Value || TSV.Value > 4095)
-				Error("TSV" + msgstr[7]);
+                Error("TSV" + msgstr[7]);
             else if (sex_ratio.SelectedIndex == 6 && !(post_ditto.Checked || pre_ditto.Checked))
                 Error(msgstr[8]);
             else if (sex_ratio.SelectedIndex == 6 && pre_ditto.Checked)
                 Error(msgstr[9]);
             else
                 EggList_Search();
-                EggList_calc_target();
+            EggList_calc_target();
         }
 
         private void EggList_Search()
@@ -591,17 +591,17 @@ namespace PokemonSunMoonRNGTool
 
 
                 if (!uint.TryParse(st0, NumberStyles.HexNumber, null, out s0))
-					Error("status[0]"+ msgstr[14]);
+                    Error("status[0]" + msgstr[14]);
                 else if (!uint.TryParse(st1, NumberStyles.HexNumber, null, out s1))
-                    Error("status[1]"+ msgstr[14]);
+                    Error("status[1]" + msgstr[14]);
                 else if (!uint.TryParse(st2, NumberStyles.HexNumber, null, out s2))
-                    Error("status[2]"+ msgstr[14]);
+                    Error("status[2]" + msgstr[14]);
                 else if (!uint.TryParse(st3, NumberStyles.HexNumber, null, out s3))
-                    Error("status[3]"+ msgstr[14]);
+                    Error("status[3]" + msgstr[14]);
                 else if (!ushort.TryParse(tsvstr, out tsv))
-                    Error("TSV"+ msgstr[14]);
+                    Error("TSV" + msgstr[14]);
                 else if (tsv > 4095)
-                    Error("TSV"+ msgstr[7]);
+                    Error("TSV" + msgstr[7]);
                 else
                 {
                     status3.Value = L_status3a.Value = s3;
@@ -613,7 +613,7 @@ namespace PokemonSunMoonRNGTool
             }
             else
             {
-                Error(PATH_CONFIG + msgstr[15] +"\n" + msgstr[16]);
+                Error(PATH_CONFIG + msgstr[15] + "\n" + msgstr[16]);
             }
         }
 
@@ -711,7 +711,7 @@ namespace PokemonSunMoonRNGTool
             // > the Maximum property should be set to Int32.
             // > MaxValue and the Minimum property should be set to Int32.MinValue.
             // maximum of numeric is 0x7FFFFFFF?
-             
+
             NumericUpDown NumericUpDown = sender as NumericUpDown;
             Control ctrl = NumericUpDown;
             if (ctrl == null)
@@ -827,7 +827,7 @@ namespace PokemonSunMoonRNGTool
             }
             catch
             {
-                Error(PATH_CONFIG+msgstr[20]);
+                Error(PATH_CONFIG + msgstr[20]);
             }
         }
 
@@ -860,9 +860,9 @@ namespace PokemonSunMoonRNGTool
         }
 
         private void mainMenuExit(object sender, EventArgs e)
-		{
-			Close();
-		}
+        {
+            Close();
+        }
 
         private void Stationary_Search_Click(object sender, EventArgs e)
         {
@@ -999,6 +999,79 @@ namespace PokemonSunMoonRNGTool
                 St_pokedex.Enabled = false;
                 St_Lv.Enabled = false;
             }
+        }
+
+        private void St_UpdateFrame_Click(object sender, EventArgs e)
+        {
+            UInt32 TargetFrame = Convert.ToUInt32(St_TargetFrame.Value);
+            UInt32 TargetFrame_Range = Convert.ToUInt32(St_TargetFrame_Range.Text);
+            UInt32 min = TargetFrame - TargetFrame_Range;
+            UInt32 max = TargetFrame + TargetFrame_Range;
+
+            St_min.Text = Convert.ToString(min);
+            St_max.Text = Convert.ToString(max);
+
+        }
+
+        private void Get_Clock_Number(object sender, EventArgs e)
+        {
+            string str = ((Button)sender).Name;
+            string number = str.Remove(0, str.IndexOf("Clock_") + 6);
+
+            if (Clock_List.Text == "")
+            {
+                Clock_List.Text += Convert_Clock(number);
+            }
+            else
+            {
+                Clock_List.Text += "," + Convert_Clock(number);
+            }
+
+        }
+
+        private void Delete_Click(object sender, EventArgs e)
+        {
+            Clock_List.Text = "";
+        }
+
+        private void Back_Click(object sender, EventArgs e)
+        {
+            string str = Clock_List.Text;
+            if (Clock_List.Text != "")
+            {
+                if (str.LastIndexOf(",") != -1)
+                {
+                    str = str.Remove(str.LastIndexOf(","));
+                }
+                else
+                {
+                    str = "";
+                }
+            }
+            Clock_List.Text = str;
+        }
+
+        private string Convert_Clock(string n)
+        {
+            int tmp = Convert.ToInt32(n);
+            if (clock_end.Checked)
+            {
+                if (tmp >= 4)
+                {
+                    tmp -= 4;
+                }
+                else
+                {
+                    tmp += 13;
+                }
+                n = tmp.ToString();
+            }
+            return n;
+        }
+
+        private void Get_InitialSeed_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            System.Diagnostics.Process.Start("http://49.212.217.137:19937/gen7/sfmt/seed?needle=" + Clock_List.Text);
         }
     }
 }
