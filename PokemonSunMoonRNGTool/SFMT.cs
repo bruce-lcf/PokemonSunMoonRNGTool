@@ -178,23 +178,23 @@ namespace PokemonSunMoonRNGTool
         /// <summary>
         /// 現在時刻を種とした、(2^19937-1)周期のSFMT擬似乱数ジェネレーターを初期化します。
         /// </summary>
-        public SFMT() : this(Environment.TickCount, 19937) { }
+        public SFMT() : this((UInt32)Environment.TickCount, 19937) { }
 
         /// <summary>
         /// seedを種とした、(2^19937-1)周期の擬似乱数ジェネレーターを初期化します。
         /// </summary>
-        public SFMT(int seed) : this(seed, 19937) { }
+        public SFMT(UInt32 seed) : this(seed, 19937) { }
 
         /// <summary>
         /// seedを種とした、periodで表される周期の擬似乱数ジェネレーターを初期化します。
         /// </summary>
-        public SFMT(int seed, MTPeriodType period) : this(seed, (int)period) { }
+        public SFMT(UInt32 seed, MTPeriodType period) : this(seed, (int)period) { }
 
         /// <summary>
         /// seedを種とした、(2^mexp-1)周期の擬似乱数ジェネレーターを初期化します。
         /// mexpは607,1279,2281,4253,11213,19937,44497,86243,132049,216091のいずれかである必要があります。
         /// </summary>
-        public SFMT(int seed, int mexp)
+        public SFMT(UInt32 seed, int mexp)
         {
             this.MEXP = mexp;
             if (mexp == 607)
@@ -292,7 +292,6 @@ namespace PokemonSunMoonRNGTool
                 PARITY2 = 0x00000000U;
                 PARITY3 = 0x00000000U;
                 PARITY4 = 0x13c9e684U;
-                PARITY4 = 0x20000000U;
             }
             else if (mexp == 44497)
             {
@@ -382,7 +381,7 @@ namespace PokemonSunMoonRNGTool
         /// ジェネレーターを初期化します。
         /// </summary>
         /// <param name="seed"></param>
-        public void init_gen_rand(int seed)
+        public void init_gen_rand(UInt32 seed)
         {
             int i;
             //変数初期化

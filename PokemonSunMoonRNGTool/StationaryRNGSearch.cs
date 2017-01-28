@@ -18,6 +18,7 @@ namespace PokemonSunMoonRNGTool
             public readonly int[] BaseIV = new int[3];
             public uint[] InheritStats = new uint[3];
             public int Nature;
+            public int Clock;
             public uint PID, EC, PSV;
             public UInt64 row_r;
             public int[] IVs;
@@ -29,8 +30,10 @@ namespace PokemonSunMoonRNGTool
         public StationaryRNGResult Generate(SFMT sfmt)
         {
             StationaryRNGResult st = new StationaryRNGResult();
+            st.Synchronize = false;
 
             st.row_r = sfmt.NextUInt64();
+            st.Clock = (int)(st.row_r % 17);
 
             //暗号化定数 -- Encryption Constant
             st.EC = (uint)(st.row_r % 0x100000000);

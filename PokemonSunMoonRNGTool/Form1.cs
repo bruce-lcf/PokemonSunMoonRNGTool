@@ -322,7 +322,7 @@ namespace PokemonSunMoonRNGTool
             row.SetValues(
                 i, tolerance,
                 result.IVs[0], result.IVs[1], result.IVs[2], result.IVs[3], result.IVs[4], result.IVs[5],
-                true_nature, SynchronizeFlag, status[0], status[1], status[2], status[3], status[4], status[5], result.PSV, result.row_r.ToString("X16")
+                true_nature, SynchronizeFlag, status[0], status[1], status[2], status[3], status[4], status[5], result.PSV, result.Clock, result.row_r.ToString("X16")
                 );
 
             if (result.Shiny)
@@ -956,12 +956,12 @@ namespace PokemonSunMoonRNGTool
 
         private void StationarySearch()
         {
-            int InitialSeed = (int)St_InitialSeed.Value;
+            uint InitialSeed = (uint)St_InitialSeed.Value;
             int min = (int)St_min.Value;
             int max = (int)St_max.Value;
 
-            SFMT sfmt = new SFMT(InitialSeed, 19937);
-            SFMT seed = new SFMT(InitialSeed, 19937);
+            SFMT sfmt = new SFMT(InitialSeed);
+            SFMT seed = new SFMT(InitialSeed);
             List<DataGridViewRow> list = new List<DataGridViewRow>();
             St_dataGridView.Rows.Clear();
 
@@ -976,12 +976,9 @@ namespace PokemonSunMoonRNGTool
                 seed = (SFMT)sfmt.DeepCopy();
                 StationaryRNGSearch.StationaryRNGResult result = rng.Generate(seed);
 
-                if (i >= min)
-                {
-                    if (!StationaryframeMatch(result, setting))
-                        continue;
-                    list.Add(getRow_Sta(i, rng, result, St_dataGridView));
-                }
+                if (!StationaryframeMatch(result, setting))
+                    continue;
+                list.Add(getRow_Sta(i, rng, result, St_dataGridView));
             }
             St_dataGridView.Rows.AddRange(list.ToArray());
             St_dataGridView.CurrentCell = null;
@@ -1072,6 +1069,94 @@ namespace PokemonSunMoonRNGTool
         private void Get_InitialSeed_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             System.Diagnostics.Process.Start("http://49.212.217.137:19937/gen7/sfmt/seed?needle=" + Clock_List.Text);
+        }
+
+        private void Clock_CurrentFrame_Click(object sender, EventArgs e)
+        {
+            uint InitialSeed = (uint)Clock_InitialSeed.Value;
+            int min = (int)Clock_min.Value;
+            int max = (int)Clock_max.Value;
+            if(Clock_SearchList.Text == "")
+                return;
+            string[] str = Clock_SearchList.Text.Split(',');
+            int[] Clock_List = str.Select(s => int.Parse(s)).ToArray();
+            int[] temp_List = new int[Clock_List.Length];
+
+            SFMT sfmt = new SFMT(InitialSeed);
+            SFMT seed = new SFMT(InitialSeed);
+            bool flag;
+
+            Search_Clock.Items.Clear();
+
+            for (int i = 0; i < min; i++)
+                sfmt.NextUInt64();
+
+            for (int i = min; i <= max; i++, sfmt.NextUInt64())
+            {
+                flag = false;
+                seed = (SFMT)sfmt.DeepCopy();
+
+                for (int j = 0; j < Clock_List.Length; j++)
+                    temp_List[j] = (int)(seed.NextUInt64() % 17);
+
+                if (temp_List.SequenceEqual(Clock_List))
+                {
+                    flag = true;
+                }
+
+                if (flag)
+                {
+                    Search_Clock.Items.Add($"末尾の針の位置は{i + Clock_List.Length - 1}番目, 次は{i + Clock_List.Length}");
+                }
+                    
+            }
+        }
+
+        private void Calc_Frame_Click(object sender, EventArgs e)
+        {
+            uint InitialSeed = (uint)Calc_InitialSeed.Value;
+            int min = (int)Calc_min.Value;
+            int max = (int)Calc_max.Value;
+            SFMT sfmt = new SFMT(InitialSeed);
+
+            Calc_Output.Items.Clear();
+
+            for (int i = 0; i < min; i++)
+                sfmt.NextUInt64();
+
+            bool blink = false;
+            int blink_time = 0;
+            int blink_count = 0;
+            int total_time = 0;
+            int n_count = 0;
+
+            while (true)
+            {
+                blink = false;
+                //まばたき判定
+                blink = (sfmt.NextUInt64() % 128 == 0) ? true : false;
+                n_count++;
+
+                if (blink)
+                {
+                    blink_count++;
+                    int val = (int)(sfmt.NextUInt64() % 3);
+                    n_count++;
+
+                    if (val == 0)
+                    {
+                        blink_time = 41;
+                    }
+                    else
+                    {
+                        blink_time = 35;
+                    }
+
+                    total_time += blink_time;
+                }
+                if (n_count + min >= max) break;
+            }
+            Calc_Output.Items.Add($"設定するframe(Emtimer)：{(n_count + total_time) * 2}");
         }
     }
 }
