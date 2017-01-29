@@ -2,10 +2,10 @@
 
 [![Build status](https://ci.appveyor.com/api/projects/status/github/Quandra/smhatchingrngtool?branch=master&svg=true)](https://ci.appveyor.com/project/Quandra/smhatchingrngtool)
 
-The Pokemon SunMoon Hatching RNG Tool
+The Pokemon Sun Moon RNG Tool
 
 ## Description
-This is the Pokemon SunMoon Hatching RNG Tool.
+This is the Pokemon Sun Moon RNG Tool.
 
 ##注意事項
 本ソフトの使用により何らかのトラブルが発生しても、作者は一切の責任を負いません。
