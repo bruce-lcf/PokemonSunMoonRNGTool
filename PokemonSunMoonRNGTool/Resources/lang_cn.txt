@@ -33,6 +33,8 @@ mnuSetSearchSeed = 将此seed输入当前搜索范围
 mnuSetEggSeed = 将此seed输入连续取蛋列表
 mnu2Copy = 复制
 mnu2SelectAll = 全选
+-------------------HatchingRNG Tab---------------------
+Tab_Egg = 孵化乱数
 ---------------------Search Tab------------------------
 Tab_EggSearch = 个体检索
 --
@@ -125,3 +127,72 @@ dgvE_pid = 性格值
 dgvE_psv = SV
 dgvE_ec = 加密常数
 dgvE_rand = 乱数列
+-------------------StationaryRNG Tab---------------------
+Tab_Stationary = 固定乱数
+-----------------StationarySearch Tab--------------------
+Tab_StationarySearch = 个体检索
+--
+St_RNGInfo = 检索范围
+St_L_InitialSeed = 初始seed
+St_Frame = 帧
+St_L_TargetFrame = 目标帧
+St_UpdateFrame = 更新
+--
+St_Pokemon = 宝可梦
+St_Invalid_Refine = 取消筛选
+St_search_Status = 通过能力值检索
+St_search_IV = 通过个体值检索
+St_Status_display = 显示列表
+St_L_nature = 性格
+synchro_nature = 同步性格
+St_L_mezapa = 觉醒
+--
+dgvSt_frame = 帧
+dgvSt_tolerance = 偏差
+dgvSt_H = H
+dgvSt_A = A
+dgvSt_B = B
+dgvSt_C = C
+dgvSt_D = D
+dgvSt_S = S
+dgvSt_nature = 性格
+dgvSt_Synchronize = 同步
+dgvSt_H_Status = H
+dgvSt_A_Status = A
+dgvSt_B_Status = B
+dgvSt_C_Status = C
+dgvSt_D_Status = D
+dgvSt_S_Status = S
+dgvSt_psv = PSV
+St_Clock = 指针
+dgvSt_rand = 乱数值
+--
+St_SearchSettings = 其他
+St_SynchroOnly = 只显示同步个体
+St_shiny = 只显示闪光
+TypeNull =  属性：空
+--
+Stationary_Search = 计算
+Stationary_List = 显示列表
+----------------------StationaryClock Tab---------------------
+Tab_StationaryClock = 指针检索
+--
+Clock_groupBox = 输入指针
+clock_begin = 开始位置
+clock_end = 结束位置
+Get_InitialSeed = 初始seed检索(需打开浏览器)
+Delete = 清空
+Back = 后退
+Note = ※请勿增加服务器负担
+--
+Clock_RNGInfo = 现在位置检索
+Clock_CurrentFrame = 计算
+St_Clock_Search_InitialSeed = 初始seed
+St_Clock_Search_Frame = 帧
+St_Clocklist = 指针列表
+Calc_Frame_Info = 待机时间计算
+Calc_Frame = 计算
+St_Clock_Time_InitialSeed = 初始seed
+St_Clock_Time_Frame = 帧
+---------------------Other Tab----------------------
+other = 其他

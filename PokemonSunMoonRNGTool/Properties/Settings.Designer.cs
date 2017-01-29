@@ -22,5 +22,29 @@ namespace PokemonSunMoonRNGTool.Properties {
                 return defaultInstance;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("ja")]
+        public string lang {
+            get {
+                return ((string)(this["lang"]));
+            }
+            set {
+                this["lang"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        public bool omamori {
+            get {
+                return ((bool)(this["omamori"]));
+            }
+            set {
+                this["omamori"] = value;
+            }
+        }
     }
 }

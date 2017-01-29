@@ -33,6 +33,8 @@ mnuSetSearchSeed = Copy seed to this tab
 mnuSetEggSeed = Copy seed to other tab
 mnu2Copy = Copy
 mnu2SelectAll = Select All
+-------------------HatchingRNG Tab---------------------
+Tab_Egg = HatchingRNG
 ---------------------Search Tab------------------------
 Tab_EggSearch = Search
 --
@@ -125,3 +127,72 @@ dgvE_pid = PID
 dgvE_psv = PSV
 dgvE_ec = EC
 dgvE_rand = Rand
+-------------------StationaryRNG Tab---------------------
+Tab_Stationary = StationaryRNG
+-----------------StationarySearch Tab--------------------
+Tab_StationarySearch = IV
+--
+St_RNGInfo = RNGInfo
+St_L_InitialSeed = Initial Seed
+St_Frame = Frame
+St_L_TargetFrame = Target Frame
+St_UpdateFrame = Update
+--
+St_Pokemon = Pokemon
+St_Invalid_Refine = Disable filters
+St_search_Status = Search by Stats
+St_search_IV = Search by IVs
+St_Status_display = Show list
+St_L_nature = Nature
+synchro_nature = Sync
+St_L_mezapa = HP Type
+--
+dgvSt_frame = Frame
+dgvSt_tolerance = Shift
+dgvSt_H = Hp
+dgvSt_A = Atk
+dgvSt_B = Def
+dgvSt_C = SpA
+dgvSt_D = SpD
+dgvSt_S = Spe
+dgvSt_nature = Nature
+dgvSt_Synchronize = Sync
+dgvSt_H_Status = Hp
+dgvSt_A_Status = Atk
+dgvSt_B_Status = Def
+dgvSt_C_Status = SpA
+dgvSt_D_Status = SpD
+dgvSt_S_Status = Spe
+dgvSt_psv = PSV
+St_Clock = Needle
+dgvSt_rand = Rand
+--
+St_SearchSettings = SearchSettings
+St_SynchroOnly = Sync Only
+St_shiny = Shiny
+TypeNull =  Type:Null
+--
+Stationary_Search = Serach
+Stationary_List = Show List
+----------------------StationaryClock Tab---------------------
+Tab_StationaryClock = Needle
+--
+Clock_groupBox = Enter Needle
+clock_begin = Start Position
+clock_end = End Position
+Get_InitialSeed = Search Initial Seed(Browser will open)
+Delete = Clear
+Back = Back 
+Note = ※Do NOT abuse the server
+--
+Clock_RNGInfo = Position Search
+Clock_CurrentFrame = Search
+St_Clock_Search_InitialSeed = Initial Seed
+St_Clock_Search_Frame = Frame
+St_Clocklist = Needle list
+Calc_Frame_Info = Calculate Waiting Time
+Calc_Frame = Calculate
+St_Clock_Time_InitialSeed = Initial Seed
+St_Clock_Time_Frame = Frame
+---------------------Other Tab----------------------
+other = other
