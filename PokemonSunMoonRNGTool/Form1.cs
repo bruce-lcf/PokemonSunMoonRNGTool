@@ -1158,7 +1158,7 @@ namespace PokemonSunMoonRNGTool
             int total_time = 0;
             int n_count = 0;
 
-            while (true)
+            while (n_count + min < max)
             {
                 blink = false;
                 //まばたき判定
@@ -1173,18 +1173,19 @@ namespace PokemonSunMoonRNGTool
 
                     if (val == 0)
                     {
-                        blink_time = 39;
+                        blink_time = 41;
                     }
                     else
                     {
-                        blink_time = 33;
+                        blink_time = 35;
                     }
 
                     total_time += blink_time;
                 }
-                if (n_count + min >= max) break;
+                else
+                    total_time++;
             }
-            Calc_Output.Items.Add(msgstr[23] + $"：{(n_count + total_time) * 2}");
+            Calc_Output.Items.Add(msgstr[23] + $"：{ total_time * 2}");
         }
     }
 }
