@@ -33,6 +33,7 @@ namespace PokemonSunMoonRNGTool
         private string[] natures;
         private string[] mezapa;
         private string[] items;
+        private string[] species;
         public string[] msgstr;
         private readonly string[] genders = { "♂", "♀", "-" };
         private readonly string[] abilities = { "1", "2", "夢" };
@@ -54,7 +55,7 @@ namespace PokemonSunMoonRNGTool
                 //"Deutsch", // GER
                 //"Español", // SPA
                 //"한국어", // KOR
-                "簡體中文", // CN
+                "简体中文", // CN
                 "繁體中文", // ZH
                 //"Português", // Portuguese
             };
@@ -84,11 +85,14 @@ namespace PokemonSunMoonRNGTool
 
             curlanguage = lang;
             TranslateInterface(this, curlanguage); // Translate the UI to language.
+            Properties.Settings.Default.lang = curlanguage;
+            Properties.Settings.Default.Save();
 
             natures = getStringList("natures", curlanguage);
             mezapa = getStringList("types", curlanguage);
             items = getStringList("items", curlanguage);
             msgstr = getStringList("msgstr", curlanguage);
+            species = getStringList("species", curlanguage);
 
             STR_ANY = any[l];
             STR_TEMP_PID = tempPID[l];
@@ -123,6 +127,12 @@ namespace PokemonSunMoonRNGTool
 
             for (int i = 0; i < natures.Length; i++)
                 St_Synchro_nature.Items[i + 1] = St_nature.Items[i + 1] = nature.Items[i + 1] = natures[i];
+
+            for (int i = 0; i < 4; i++)
+                St_pokedex.Items[i] = species[785 + i];
+            for (int i = 4; i < 6; i++)
+                St_pokedex.Items[i] = species[791 + i - 4];
+            St_pokedex.Items[6] = species[772];
 
         }
 
@@ -520,12 +530,16 @@ namespace PokemonSunMoonRNGTool
             for (int i = 0; i < pokedex.GetLength(0); i++)
             {
                 St_pokedex.Items.Add("");
-                St_pokedex.Items[i] = pokedex[i, 0];
             }
 
             foreach (var cbItem in main_langlist)
                 CB_MainLanguage.Items.Add(cbItem);
-            CB_MainLanguage.SelectedIndex = 0;
+
+            string l = Properties.Settings.Default.lang;
+            int lang = Array.IndexOf(languages, l);
+            if (lang < 0) lang = Array.IndexOf(languages, "ja");
+
+            CB_MainLanguage.SelectedIndex = lang;
             changeLanguage(null, null);
 
             pre_Items.SelectedIndex = 0;
@@ -571,6 +585,14 @@ namespace PokemonSunMoonRNGTool
 
             St_pokedex.Enabled = false;
             St_Lv.Enabled = false;
+
+            omamori.Checked = Properties.Settings.Default.omamori;
+        }
+
+        private void omamori_CheckedChanged(object sender, EventArgs e)
+        {
+            Properties.Settings.Default.omamori = (sender as CheckBox).Checked;
+            Properties.Settings.Default.Save();
         }
 
         private void loadConfig()
@@ -613,7 +635,7 @@ namespace PokemonSunMoonRNGTool
             }
             else
             {
-                Error(PATH_CONFIG + msgstr[15] + "\n" + msgstr[16]);
+                Error(PATH_CONFIG + " " + msgstr[15] + "\n" + msgstr[16]);
             }
         }
 
@@ -1076,39 +1098,45 @@ namespace PokemonSunMoonRNGTool
             uint InitialSeed = (uint)Clock_InitialSeed.Value;
             int min = (int)Clock_min.Value;
             int max = (int)Clock_max.Value;
-            if(Clock_SearchList.Text == "")
+            if (Clock_SearchList.Text == "")
                 return;
             string[] str = Clock_SearchList.Text.Split(',');
-            int[] Clock_List = str.Select(s => int.Parse(s)).ToArray();
-            int[] temp_List = new int[Clock_List.Length];
-
-            SFMT sfmt = new SFMT(InitialSeed);
-            SFMT seed = new SFMT(InitialSeed);
-            bool flag;
-
-            Search_Clock.Items.Clear();
-
-            for (int i = 0; i < min; i++)
-                sfmt.NextUInt64();
-
-            for (int i = min; i <= max; i++, sfmt.NextUInt64())
+            try
             {
-                flag = false;
-                seed = (SFMT)sfmt.DeepCopy();
+                int[] Clock_List = str.Select(s => int.Parse(s)).ToArray();
+                int[] temp_List = new int[Clock_List.Length];
 
-                for (int j = 0; j < Clock_List.Length; j++)
-                    temp_List[j] = (int)(seed.NextUInt64() % 17);
+                SFMT sfmt = new SFMT(InitialSeed);
+                SFMT seed = new SFMT(InitialSeed);
+                bool flag;
 
-                if (temp_List.SequenceEqual(Clock_List))
+                Search_Clock.Items.Clear();
+
+                for (int i = 0; i < min; i++)
+                    sfmt.NextUInt64();
+
+                for (int i = min; i <= max; i++, sfmt.NextUInt64())
                 {
-                    flag = true;
-                }
+                    flag = false;
+                    seed = (SFMT)sfmt.DeepCopy();
 
-                if (flag)
-                {
-                    Search_Clock.Items.Add($"末尾の針の位置は{i + Clock_List.Length - 1}番目, 次は{i + Clock_List.Length}");
+                    for (int j = 0; j < Clock_List.Length; j++)
+                        temp_List[j] = (int)(seed.NextUInt64() % 17);
+
+                    if (temp_List.SequenceEqual(Clock_List))
+                    {
+                        flag = true;
+                    }
+
+                    if (flag)
+                    {
+                        Search_Clock.Items.Add(msgstr[21] + $"{i + Clock_List.Length - 1}" + msgstr[22] + $"{i + Clock_List.Length}");
+                    }
+
                 }
-                    
+            }
+            catch
+            {
             }
         }
 
@@ -1156,7 +1184,7 @@ namespace PokemonSunMoonRNGTool
                 }
                 if (n_count + min >= max) break;
             }
-            Calc_Output.Items.Add($"設定するframe(Emtimer)：{(n_count + total_time) * 2}");
+            Calc_Output.Items.Add(msgstr[23] + $"：{(n_count + total_time) * 2}");
         }
     }
 }

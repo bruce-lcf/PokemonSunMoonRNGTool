@@ -33,6 +33,8 @@ mnuSetSearchSeed = 検索範囲へseedを入れる
 mnuSetEggSeed = 連続孵化リストへseedを入れる
 mnu2Copy = コピー
 mnu2SelectAll = 全て選択
+--------------------HatchingRNG Tab--------------------
+Tab_Egg = 孵化乱数
 ---------------------Search Tab------------------------
 Tab_EggSearch = 個体検索
 --
@@ -125,3 +127,72 @@ dgvE_pid = 性格値
 dgvE_psv = SV
 dgvE_ec = 暗号化定数
 dgvE_rand = 乱数列
+-------------------StationaryRNG Tab---------------------
+Tab_Stationary = 固定乱数
+-----------------StationarySearch Tab--------------------
+Tab_StationarySearch = 個体検索
+--
+St_RNGInfo = 検索範囲
+St_L_InitialSeed = 初期seed
+St_Frame = Frame
+St_L_TargetFrame = 目標Frame
+St_UpdateFrame = 上書き
+--
+St_Pokemon = ポケモン
+St_Invalid_Refine = 絞り込みを無効
+St_search_Status = 能力値から検索
+St_search_IV = 個体値から検索
+St_Status_display = リスト表示
+St_L_nature = 性格
+synchro_nature = シンクロ
+St_L_mezapa = めざパ
+--
+dgvSt_frame = F
+dgvSt_tolerance = ずれ
+dgvSt_H = H
+dgvSt_A = A
+dgvSt_B = B
+dgvSt_C = C
+dgvSt_D = D
+dgvSt_S = S
+dgvSt_nature = 性格
+dgvSt_Synchronize = シンクロ
+dgvSt_H_Status = H
+dgvSt_A_Status = A
+dgvSt_B_Status = B
+dgvSt_C_Status = C
+dgvSt_D_Status = D
+dgvSt_S_Status = S
+dgvSt_psv = PSV
+St_Clock = 針
+dgvSt_rand = 乱数値
+--
+St_SearchSettings = その他
+St_SynchroOnly = シンクロ個体のみ出力
+St_shiny = 色違いのみ出力
+TypeNull = タイプ・ヌル
+--
+Stationary_Search = 計算
+Stationary_List = リスト表示
+----------------------StationaryClock Tab-----------------
+Tab_StationaryClock = 針検索
+--
+Clock_groupBox = 針入力
+clock_begin = 開始時の位置
+clock_end = 終了時の位置
+Get_InitialSeed = 初期seedを検索(ブラウザが開きます)
+Delete = 消去
+Back = 1つ戻る
+Note = ※サーバに著しく負荷をかける行為はお止め下さい
+--
+Clock_RNGInfo = 現在位置検索
+Clock_CurrentFrame = 計算
+St_Clock_Search_InitialSeed = 初期seed
+St_Clock_Search_Frame = Frame
+St_Clocklist = 針リスト
+Calc_Frame_Info = 待機時間計算
+Calc_Frame = 計算
+St_Clock_Time_InitialSeed = 初期seed
+St_Clock_Time_Frame = Frame
+---------------------Other Tab----------------------
+other = その他
