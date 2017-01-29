@@ -167,9 +167,9 @@ dgvSt_psv = PSV
 St_Clock = 指針
 dgvSt_rand = 亂數值
 --
-St_SearchSettings = 其他
+St_SearchSettings = 其它
 St_SynchroOnly = 只顯示同步個體
-St_shiny = 只顯示閃光
+St_shiny = 只顯示色違
 TypeNull =  屬性：空
 --
 Stationary_Search = 計算
@@ -180,7 +180,7 @@ Tab_StationaryClock = 指針檢索
 Clock_groupBox = 輸入指針
 clock_begin = 開始位置
 clock_end = 結束位置
-Get_InitialSeed = 初始seed檢索(需打開浏覽器)
+Get_InitialSeed = 初始seed檢索(需要打開瀏覽器)
 Delete = 清空
 Back = 後退
 Note = ※請勿增加伺服器負擔
@@ -195,4 +195,4 @@ Calc_Frame = 計算
 St_Clock_Time_InitialSeed = 初始seed
 St_Clock_Time_Frame = 幀
 ---------------------Other Tab----------------------
-other = 其他
+other = 其它
