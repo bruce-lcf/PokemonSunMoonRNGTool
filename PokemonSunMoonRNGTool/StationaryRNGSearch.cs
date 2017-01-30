@@ -30,10 +30,17 @@ namespace PokemonSunMoonRNGTool
         public StationaryRNGResult Generate(SFMT sfmt)
         {
             StationaryRNGResult st = new StationaryRNGResult();
-            st.Synchronize = false;
 
+            //シンクロ -- Synchronize
             st.row_r = sfmt.NextUInt64();
+            if (st.row_r % 100 >= 50)
+                st.Synchronize = true;
+
             st.Clock = (int)(st.row_r % 17);
+
+            //謎の消費 -- Something
+            for (int i = 0; i < 60; i++)
+                sfmt.NextUInt64();
 
             //暗号化定数 -- Encryption Constant
             st.EC = (uint)(st.row_r % 0x100000000);
