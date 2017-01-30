@@ -265,6 +265,8 @@ namespace PokemonSunMoonRNGTool
 
         private bool StationaryframeMatch(StationaryRNGSearch.StationaryRNGResult result, StationarySearchSetting setting)
         {
+            setting.getStatus(result, setting);
+
             //ここで弾く
             if (setting.Skip)
                 return true;
@@ -272,10 +274,10 @@ namespace PokemonSunMoonRNGTool
             if (St_shiny.Checked && !result.Shiny)
                 return false;
 
-            if (!setting.validStatus(result, setting) && St_search_Status.Checked)
+            if (St_search_IV.Checked && !setting.validIVs(result.IVs))
                 return false;
 
-            if (St_search_IV.Checked && !setting.validIVs(result.IVs))
+            if (St_search_Status.Checked && !setting.validStatus(result, setting))
                 return false;
 
             if (!setting.mezapa_check(result.IVs))

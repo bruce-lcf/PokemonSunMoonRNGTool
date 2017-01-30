@@ -91,6 +91,28 @@ namespace PokemonSunMoonRNGTool
             return true;
         }
 
+        public void getStatus(StationaryRNGSearch.StationaryRNGResult result, StationarySearchSetting setting)
+        {
+            setting.p_Status = new int[6];
+            int[] BS = new int[6];
+            int[] IV = new int[6];
+
+            for (int i = 0; i < 6; i++)
+            {
+                IV[i] = result.IVs[i];
+                BS[i] = Convert.ToInt32(pokedex[setting.Pokemon, i + 1]);
+            }
+
+            p_Status[0] = (int)(((BS[0] * 2 + IV[0]) * Lv) / 100) + Lv + 10;
+            for (int i = 1; i < 6; i++)
+                p_Status[i] = (int)(((int)(((BS[i] * 2 + IV[i]) * Lv) / 100) + 5) * natures_mag[result.Nature, i]);
+
+            result.p_Status = setting.p_Status;
+
+            return;
+        }
+
+
         public bool mezapa_check(int[] IV)
         {
             if (HPType == -1)
