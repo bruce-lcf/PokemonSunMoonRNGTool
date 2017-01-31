@@ -1185,8 +1185,6 @@ namespace PokemonSunMoonRNGTool
 
                     total_time += blink_time;
                 }
-                else
-                    total_time++;
             }
             Calc_Output.Items.Add(msgstr[23] + $"：{(n_count + total_time) * 2}");
         }
