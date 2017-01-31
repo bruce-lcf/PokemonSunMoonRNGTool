@@ -1175,11 +1175,11 @@ namespace PokemonSunMoonRNGTool
 
                     if (val == 0)
                     {
-                        blink_time = 41;
+                        blink_time = 39;
                     }
                     else
                     {
-                        blink_time = 35;
+                        blink_time = 33;
                     }
 
                     total_time += blink_time;
@@ -1187,7 +1187,7 @@ namespace PokemonSunMoonRNGTool
                 else
                     total_time++;
             }
-            Calc_Output.Items.Add(msgstr[23] + $"：{ total_time * 2}");
+            Calc_Output.Items.Add(msgstr[23] + $"：{(n_count + total_time) * 2}");
         }
     }
 }
