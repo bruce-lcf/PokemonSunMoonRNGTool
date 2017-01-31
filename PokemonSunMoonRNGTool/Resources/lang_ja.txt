@@ -147,6 +147,13 @@ St_L_nature = 性格
 synchro_nature = シンクロ
 St_L_mezapa = めざパ
 --
+L_St_search_H = H
+L_St_search_A = A
+L_St_search_B = B
+L_St_search_C = C
+L_St_search_D = D
+L_St_search_S = S
+--
 dgvSt_frame = F
 dgvSt_tolerance = ずれ
 dgvSt_H = H

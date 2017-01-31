@@ -233,13 +233,13 @@
             this.synchro_nature = new System.Windows.Forms.Label();
             this.St_Invalid_Refine = new System.Windows.Forms.CheckBox();
             this.St_search_Status = new System.Windows.Forms.RadioButton();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
+            this.L_St_search_S = new System.Windows.Forms.Label();
+            this.L_St_search_D = new System.Windows.Forms.Label();
             this.St_search_IV = new System.Windows.Forms.RadioButton();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label28 = new System.Windows.Forms.Label();
-            this.label30 = new System.Windows.Forms.Label();
+            this.L_St_search_C = new System.Windows.Forms.Label();
+            this.L_St_search_B = new System.Windows.Forms.Label();
+            this.L_St_search_A = new System.Windows.Forms.Label();
+            this.L_St_search_H = new System.Windows.Forms.Label();
             this.St_L_mezapa = new System.Windows.Forms.Label();
             this.St_pokedex = new System.Windows.Forms.ComboBox();
             this.St_Pokemon = new System.Windows.Forms.Label();
@@ -2528,13 +2528,13 @@
             // 
             // St_L_InitialSeed
             // 
-            this.St_L_InitialSeed.AutoSize = true;
             this.St_L_InitialSeed.Font = new System.Drawing.Font("Consolas", 9F);
-            this.St_L_InitialSeed.Location = new System.Drawing.Point(21, 29);
+            this.St_L_InitialSeed.Location = new System.Drawing.Point(0, 29);
             this.St_L_InitialSeed.Name = "St_L_InitialSeed";
-            this.St_L_InitialSeed.Size = new System.Drawing.Size(59, 14);
+            this.St_L_InitialSeed.Size = new System.Drawing.Size(80, 14);
             this.St_L_InitialSeed.TabIndex = 72;
             this.St_L_InitialSeed.Text = "初期seed";
+            this.St_L_InitialSeed.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // label7
             // 
@@ -2558,13 +2558,13 @@
             // 
             // St_L_TargetFrame
             // 
-            this.St_L_TargetFrame.AutoSize = true;
             this.St_L_TargetFrame.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.St_L_TargetFrame.Location = new System.Drawing.Point(34, 96);
+            this.St_L_TargetFrame.Location = new System.Drawing.Point(26, 96);
             this.St_L_TargetFrame.Name = "St_L_TargetFrame";
-            this.St_L_TargetFrame.Size = new System.Drawing.Size(66, 14);
+            this.St_L_TargetFrame.Size = new System.Drawing.Size(80, 14);
             this.St_L_TargetFrame.TabIndex = 68;
             this.St_L_TargetFrame.Text = "目標Frame";
+            this.St_L_TargetFrame.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // label51
             // 
@@ -2767,13 +2767,13 @@
             this.St_Filters.Controls.Add(this.synchro_nature);
             this.St_Filters.Controls.Add(this.St_Invalid_Refine);
             this.St_Filters.Controls.Add(this.St_search_Status);
-            this.St_Filters.Controls.Add(this.label4);
-            this.St_Filters.Controls.Add(this.label5);
+            this.St_Filters.Controls.Add(this.L_St_search_S);
+            this.St_Filters.Controls.Add(this.L_St_search_D);
             this.St_Filters.Controls.Add(this.St_search_IV);
-            this.St_Filters.Controls.Add(this.label2);
-            this.St_Filters.Controls.Add(this.label10);
-            this.St_Filters.Controls.Add(this.label28);
-            this.St_Filters.Controls.Add(this.label30);
+            this.St_Filters.Controls.Add(this.L_St_search_C);
+            this.St_Filters.Controls.Add(this.L_St_search_B);
+            this.St_Filters.Controls.Add(this.L_St_search_A);
+            this.St_Filters.Controls.Add(this.L_St_search_H);
             this.St_Filters.Controls.Add(this.St_L_mezapa);
             this.St_Filters.Controls.Add(this.St_pokedex);
             this.St_Filters.Controls.Add(this.St_Pokemon);
@@ -2900,12 +2900,12 @@
             // 
             // synchro_nature
             // 
-            this.synchro_nature.AutoSize = true;
-            this.synchro_nature.Location = new System.Drawing.Point(173, 98);
+            this.synchro_nature.Location = new System.Drawing.Point(177, 98);
             this.synchro_nature.Name = "synchro_nature";
-            this.synchro_nature.Size = new System.Drawing.Size(41, 12);
+            this.synchro_nature.Size = new System.Drawing.Size(57, 18);
             this.synchro_nature.TabIndex = 189;
             this.synchro_nature.Text = "シンクロ";
+            this.synchro_nature.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // St_Invalid_Refine
             // 
@@ -2928,23 +2928,23 @@
             this.St_search_Status.Text = "能力値から検索";
             this.St_search_Status.UseVisualStyleBackColor = false;
             // 
-            // label4
+            // L_St_search_S
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(22, 226);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(12, 12);
-            this.label4.TabIndex = 48;
-            this.label4.Text = "S";
+            this.L_St_search_S.Location = new System.Drawing.Point(-5, 226);
+            this.L_St_search_S.Name = "L_St_search_S";
+            this.L_St_search_S.Size = new System.Drawing.Size(40, 18);
+            this.L_St_search_S.TabIndex = 48;
+            this.L_St_search_S.Text = "S";
+            this.L_St_search_S.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // label5
+            // L_St_search_D
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(22, 194);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(13, 12);
-            this.label5.TabIndex = 46;
-            this.label5.Text = "D";
+            this.L_St_search_D.Location = new System.Drawing.Point(-5, 194);
+            this.L_St_search_D.Name = "L_St_search_D";
+            this.L_St_search_D.Size = new System.Drawing.Size(40, 18);
+            this.L_St_search_D.TabIndex = 46;
+            this.L_St_search_D.Text = "D";
+            this.L_St_search_D.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // St_search_IV
             // 
@@ -2960,50 +2960,50 @@
             this.St_search_IV.UseVisualStyleBackColor = false;
             this.St_search_IV.CheckedChanged += new System.EventHandler(this.St_search_IV_CheckedChanged);
             // 
-            // label2
+            // L_St_search_C
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(22, 162);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(13, 12);
-            this.label2.TabIndex = 44;
-            this.label2.Text = "C";
+            this.L_St_search_C.Location = new System.Drawing.Point(-5, 162);
+            this.L_St_search_C.Name = "L_St_search_C";
+            this.L_St_search_C.Size = new System.Drawing.Size(40, 18);
+            this.L_St_search_C.TabIndex = 44;
+            this.L_St_search_C.Text = "C";
+            this.L_St_search_C.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // label10
+            // L_St_search_B
             // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(22, 130);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(13, 12);
-            this.label10.TabIndex = 42;
-            this.label10.Text = "B";
+            this.L_St_search_B.Location = new System.Drawing.Point(-5, 130);
+            this.L_St_search_B.Name = "L_St_search_B";
+            this.L_St_search_B.Size = new System.Drawing.Size(40, 18);
+            this.L_St_search_B.TabIndex = 42;
+            this.L_St_search_B.Text = "B";
+            this.L_St_search_B.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // label28
+            // L_St_search_A
             // 
-            this.label28.AutoSize = true;
-            this.label28.Location = new System.Drawing.Point(22, 98);
-            this.label28.Name = "label28";
-            this.label28.Size = new System.Drawing.Size(13, 12);
-            this.label28.TabIndex = 40;
-            this.label28.Text = "A";
+            this.L_St_search_A.Location = new System.Drawing.Point(-5, 98);
+            this.L_St_search_A.Name = "L_St_search_A";
+            this.L_St_search_A.Size = new System.Drawing.Size(40, 18);
+            this.L_St_search_A.TabIndex = 40;
+            this.L_St_search_A.Text = "A";
+            this.L_St_search_A.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // label30
+            // L_St_search_H
             // 
-            this.label30.AutoSize = true;
-            this.label30.Location = new System.Drawing.Point(22, 66);
-            this.label30.Name = "label30";
-            this.label30.Size = new System.Drawing.Size(13, 12);
-            this.label30.TabIndex = 38;
-            this.label30.Text = "H";
+            this.L_St_search_H.Location = new System.Drawing.Point(-5, 66);
+            this.L_St_search_H.Name = "L_St_search_H";
+            this.L_St_search_H.Size = new System.Drawing.Size(40, 18);
+            this.L_St_search_H.TabIndex = 38;
+            this.L_St_search_H.Text = "H";
+            this.L_St_search_H.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // St_L_mezapa
             // 
-            this.St_L_mezapa.AutoSize = true;
-            this.St_L_mezapa.Location = new System.Drawing.Point(180, 130);
+            this.St_L_mezapa.Location = new System.Drawing.Point(177, 130);
             this.St_L_mezapa.Name = "St_L_mezapa";
-            this.St_L_mezapa.Size = new System.Drawing.Size(34, 12);
+            this.St_L_mezapa.Size = new System.Drawing.Size(57, 18);
             this.St_L_mezapa.TabIndex = 97;
             this.St_L_mezapa.Text = "めざパ";
+            this.St_L_mezapa.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // St_pokedex
             // 
@@ -3015,18 +3015,18 @@
             // 
             // St_Pokemon
             // 
-            this.St_Pokemon.AutoSize = true;
-            this.St_Pokemon.Location = new System.Drawing.Point(22, 30);
+            this.St_Pokemon.Location = new System.Drawing.Point(12, 30);
             this.St_Pokemon.Name = "St_Pokemon";
-            this.St_Pokemon.Size = new System.Drawing.Size(42, 12);
+            this.St_Pokemon.Size = new System.Drawing.Size(52, 12);
             this.St_Pokemon.TabIndex = 64;
             this.St_Pokemon.Text = "ポケモン";
+            this.St_Pokemon.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // St_mezapaType
             // 
             this.St_mezapaType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.St_mezapaType.FormattingEnabled = true;
-            this.St_mezapaType.Location = new System.Drawing.Point(220, 127);
+            this.St_mezapaType.Location = new System.Drawing.Point(241, 127);
             this.St_mezapaType.Name = "St_mezapaType";
             this.St_mezapaType.Size = new System.Drawing.Size(80, 20);
             this.St_mezapaType.TabIndex = 42;
@@ -3130,7 +3130,7 @@
             // 
             this.St_nature.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.St_nature.FormattingEnabled = true;
-            this.St_nature.Location = new System.Drawing.Point(220, 63);
+            this.St_nature.Location = new System.Drawing.Point(241, 63);
             this.St_nature.Name = "St_nature";
             this.St_nature.Size = new System.Drawing.Size(80, 20);
             this.St_nature.TabIndex = 40;
@@ -3211,12 +3211,12 @@
             // 
             // St_L_Nature
             // 
-            this.St_L_Nature.AutoSize = true;
-            this.St_L_Nature.Location = new System.Drawing.Point(185, 66);
+            this.St_L_Nature.Location = new System.Drawing.Point(177, 66);
             this.St_L_Nature.Name = "St_L_Nature";
-            this.St_L_Nature.Size = new System.Drawing.Size(29, 12);
+            this.St_L_Nature.Size = new System.Drawing.Size(57, 18);
             this.St_L_Nature.TabIndex = 66;
             this.St_L_Nature.Text = "性格";
+            this.St_L_Nature.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // St_IVlow6
             // 
@@ -3353,7 +3353,7 @@
             // 
             this.St_Synchro_nature.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.St_Synchro_nature.FormattingEnabled = true;
-            this.St_Synchro_nature.Location = new System.Drawing.Point(220, 95);
+            this.St_Synchro_nature.Location = new System.Drawing.Point(241, 95);
             this.St_Synchro_nature.Name = "St_Synchro_nature";
             this.St_Synchro_nature.Size = new System.Drawing.Size(80, 20);
             this.St_Synchro_nature.TabIndex = 41;
@@ -3635,7 +3635,6 @@
             // 
             // St_Clock_Time_InitialSeed
             // 
-            this.St_Clock_Time_InitialSeed.AutoSize = true;
             this.St_Clock_Time_InitialSeed.Font = new System.Drawing.Font("Consolas", 9F);
             this.St_Clock_Time_InitialSeed.Location = new System.Drawing.Point(21, 29);
             this.St_Clock_Time_InitialSeed.Name = "St_Clock_Time_InitialSeed";
@@ -3719,13 +3718,13 @@
             // 
             // St_Clocklist
             // 
-            this.St_Clocklist.AutoSize = true;
             this.St_Clocklist.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.St_Clocklist.Location = new System.Drawing.Point(58, 96);
+            this.St_Clocklist.Location = new System.Drawing.Point(8, 96);
             this.St_Clocklist.Name = "St_Clocklist";
-            this.St_Clocklist.Size = new System.Drawing.Size(43, 14);
+            this.St_Clocklist.Size = new System.Drawing.Size(93, 14);
             this.St_Clocklist.TabIndex = 82;
             this.St_Clocklist.Text = "針リスト";
+            this.St_Clocklist.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // Clock_CurrentFrame
             // 
@@ -3775,13 +3774,13 @@
             // 
             // St_Clock_Search_InitialSeed
             // 
-            this.St_Clock_Search_InitialSeed.AutoSize = true;
             this.St_Clock_Search_InitialSeed.Font = new System.Drawing.Font("Consolas", 9F);
             this.St_Clock_Search_InitialSeed.Location = new System.Drawing.Point(21, 29);
             this.St_Clock_Search_InitialSeed.Name = "St_Clock_Search_InitialSeed";
             this.St_Clock_Search_InitialSeed.Size = new System.Drawing.Size(59, 14);
             this.St_Clock_Search_InitialSeed.TabIndex = 72;
             this.St_Clock_Search_InitialSeed.Text = "初期seed";
+            this.St_Clock_Search_InitialSeed.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // Clock_min
             // 
@@ -4832,13 +4831,13 @@
         private System.Windows.Forms.NumericUpDown St_stats3;
         private System.Windows.Forms.NumericUpDown St_stats2;
         private System.Windows.Forms.RadioButton St_search_Status;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label L_St_search_S;
+        private System.Windows.Forms.Label L_St_search_D;
         private System.Windows.Forms.RadioButton St_search_IV;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Label label28;
-        private System.Windows.Forms.Label label30;
+        private System.Windows.Forms.Label L_St_search_C;
+        private System.Windows.Forms.Label L_St_search_B;
+        private System.Windows.Forms.Label L_St_search_A;
+        private System.Windows.Forms.Label L_St_search_H;
         private System.Windows.Forms.Label St_L_mezapa;
         private System.Windows.Forms.ComboBox St_pokedex;
         private System.Windows.Forms.Label St_Pokemon;

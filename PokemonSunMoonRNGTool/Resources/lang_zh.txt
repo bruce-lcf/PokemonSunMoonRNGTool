@@ -147,6 +147,13 @@ St_L_nature = 性格
 synchro_nature = 同步性格
 St_L_mezapa = 覺醒
 --
+L_St_search_H = H
+L_St_search_A = A
+L_St_search_B = B
+L_St_search_C = C
+L_St_search_D = D
+L_St_search_S = S
+--
 dgvSt_frame = 幀
 dgvSt_tolerance = 偏差
 dgvSt_H = H

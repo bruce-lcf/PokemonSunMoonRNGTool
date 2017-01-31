@@ -147,6 +147,13 @@ St_L_nature = Nature
 synchro_nature = Sync
 St_L_mezapa = HP Type
 --
+L_St_search_H = HP
+L_St_search_A = Atk
+L_St_search_B = Def
+L_St_search_C = SpA
+L_St_search_D = SpD
+L_St_search_S = Spe
+--
 dgvSt_frame = Frame
 dgvSt_tolerance = Shift
 dgvSt_H = Hp
