@@ -356,6 +356,7 @@
             this.Tab_Egg = new System.Windows.Forms.TabPage();
             this.other = new System.Windows.Forms.TabPage();
             this.printPreviewDialog1 = new System.Windows.Forms.PrintPreviewDialog();
+            this.Valid_Blink = new System.Windows.Forms.CheckBox();
             this.St_InitialSeed = new PokemonSunMoonRNGTool.HexNumericUpdown();
             this.Calc_InitialSeed = new PokemonSunMoonRNGTool.HexNumericUpdown();
             this.Clock_InitialSeed = new PokemonSunMoonRNGTool.HexNumericUpdown();
@@ -2684,6 +2685,7 @@
             // 
             // St_SearchSettings
             // 
+            this.St_SearchSettings.Controls.Add(this.Valid_Blink);
             this.St_SearchSettings.Controls.Add(this.St_SynchroOnly);
             this.St_SearchSettings.Controls.Add(this.TypeNull);
             this.St_SearchSettings.Controls.Add(this.St_TSV);
@@ -2699,7 +2701,7 @@
             // St_SynchroOnly
             // 
             this.St_SynchroOnly.AutoSize = true;
-            this.St_SynchroOnly.Location = new System.Drawing.Point(21, 49);
+            this.St_SynchroOnly.Location = new System.Drawing.Point(21, 45);
             this.St_SynchroOnly.Name = "St_SynchroOnly";
             this.St_SynchroOnly.Size = new System.Drawing.Size(129, 16);
             this.St_SynchroOnly.TabIndex = 51;
@@ -2709,7 +2711,7 @@
             // TypeNull
             // 
             this.TypeNull.AutoSize = true;
-            this.TypeNull.Location = new System.Drawing.Point(21, 29);
+            this.TypeNull.Location = new System.Drawing.Point(21, 25);
             this.TypeNull.Name = "TypeNull";
             this.TypeNull.Size = new System.Drawing.Size(75, 16);
             this.TypeNull.TabIndex = 50;
@@ -4354,6 +4356,16 @@
             this.printPreviewDialog1.Name = "printPreviewDialog1";
             this.printPreviewDialog1.Visible = false;
             // 
+            // Valid_Blink
+            // 
+            this.Valid_Blink.AutoSize = true;
+            this.Valid_Blink.Location = new System.Drawing.Point(21, 65);
+            this.Valid_Blink.Name = "Valid_Blink";
+            this.Valid_Blink.Size = new System.Drawing.Size(162, 16);
+            this.Valid_Blink.TabIndex = 188;
+            this.Valid_Blink.Text = "まばたき契機を考慮(シンクロ)";
+            this.Valid_Blink.UseVisualStyleBackColor = true;
+            // 
             // St_InitialSeed
             // 
             this.St_InitialSeed.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -4978,5 +4990,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dgvSt_psv;
         private System.Windows.Forms.DataGridViewTextBoxColumn St_Clock;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgvSt_rand;
+        private System.Windows.Forms.CheckBox Valid_Blink;
     }
 }

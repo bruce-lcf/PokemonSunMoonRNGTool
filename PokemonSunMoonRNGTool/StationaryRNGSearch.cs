@@ -12,6 +12,7 @@ namespace PokemonSunMoonRNGTool
         public int TSV;
         public bool TypeNull;
         public int Synchro_Stat;
+        public bool Valid_Blink;
 
         public class StationaryRNGResult
         {
@@ -37,6 +38,13 @@ namespace PokemonSunMoonRNGTool
                 st.Synchronize = true;
 
             st.Clock = (int)(st.row_r % 17);
+
+            //まばたき消費契機 -- maybe blinking process occurs 2 times for each character
+            if(Valid_Blink)
+            {
+                sfmt.NextUInt64();
+                sfmt.NextUInt64();
+            }
 
             //謎の消費 -- Something
             for (int i = 0; i < 60; i++)

@@ -221,7 +221,8 @@ namespace PokemonSunMoonRNGTool
             {
                 Synchro_Stat = St_Synchro_nature.SelectedIndex - 1,
                 TSV = (int)St_TSV.Value,
-                TypeNull = TypeNull.Checked
+                TypeNull = TypeNull.Checked,
+                Valid_Blink = Valid_Blink.Checked
             };
             return rng;
         }
