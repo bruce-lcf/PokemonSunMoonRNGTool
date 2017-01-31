@@ -2559,9 +2559,9 @@
             // St_L_TargetFrame
             // 
             this.St_L_TargetFrame.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.St_L_TargetFrame.Location = new System.Drawing.Point(26, 96);
+            this.St_L_TargetFrame.Location = new System.Drawing.Point(6, 96);
             this.St_L_TargetFrame.Name = "St_L_TargetFrame";
-            this.St_L_TargetFrame.Size = new System.Drawing.Size(80, 14);
+            this.St_L_TargetFrame.Size = new System.Drawing.Size(100, 14);
             this.St_L_TargetFrame.TabIndex = 68;
             this.St_L_TargetFrame.Text = "目標Frame";
             this.St_L_TargetFrame.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -2813,7 +2813,7 @@
             this.St_stats6.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.St_stats6.Location = new System.Drawing.Point(41, 221);
             this.St_stats6.Maximum = new decimal(new int[] {
-            810,
+            1000,
             0,
             0,
             0});
@@ -2828,7 +2828,7 @@
             this.St_stats3.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.St_stats3.Location = new System.Drawing.Point(41, 125);
             this.St_stats3.Maximum = new decimal(new int[] {
-            1919,
+            1000,
             0,
             0,
             0});
@@ -2843,7 +2843,7 @@
             this.St_stats4.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.St_stats4.Location = new System.Drawing.Point(41, 157);
             this.St_stats4.Maximum = new decimal(new int[] {
-            931,
+            1000,
             0,
             0,
             0});
@@ -2858,7 +2858,7 @@
             this.St_stats5.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.St_stats5.Location = new System.Drawing.Point(41, 189);
             this.St_stats5.Maximum = new decimal(new int[] {
-            810,
+            1000,
             0,
             0,
             0});
@@ -2873,7 +2873,7 @@
             this.St_stats2.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.St_stats2.Location = new System.Drawing.Point(41, 93);
             this.St_stats2.Maximum = new decimal(new int[] {
-            810,
+            1000,
             0,
             0,
             0});
@@ -2888,7 +2888,7 @@
             this.St_stats1.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.St_stats1.Location = new System.Drawing.Point(41, 61);
             this.St_stats1.Maximum = new decimal(new int[] {
-            114514,
+            1000,
             0,
             0,
             0});

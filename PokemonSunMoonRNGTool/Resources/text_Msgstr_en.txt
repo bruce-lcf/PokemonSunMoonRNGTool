@@ -21,4 +21,4 @@ Please select Seed from results.
 unable to save.
 The last needle is at 
 . The next wiil be at 
-Set Frame(Emtimer)
+Set Frame(EonTimer)
