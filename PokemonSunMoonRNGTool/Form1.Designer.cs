@@ -95,6 +95,10 @@
             this.L_sex_ratio = new System.Windows.Forms.Label();
             this.International = new System.Windows.Forms.CheckBox();
             this.RNGInfo = new System.Windows.Forms.GroupBox();
+            this.status3 = new PokemonSunMoonRNGTool.HexNumericUpdown();
+            this.status2 = new PokemonSunMoonRNGTool.HexNumericUpdown();
+            this.status1 = new PokemonSunMoonRNGTool.HexNumericUpdown();
+            this.status0 = new PokemonSunMoonRNGTool.HexNumericUpdown();
             this.s_min = new System.Windows.Forms.NumericUpDown();
             this.s_max = new System.Windows.Forms.NumericUpDown();
             this.label13 = new System.Windows.Forms.Label();
@@ -179,6 +183,10 @@
             this.Repeat_times = new System.Windows.Forms.Label();
             this.Target_frame = new System.Windows.Forms.NumericUpDown();
             this.L_targetframe = new System.Windows.Forms.Label();
+            this.L_status3a = new PokemonSunMoonRNGTool.HexNumericUpdown();
+            this.L_status2a = new PokemonSunMoonRNGTool.HexNumericUpdown();
+            this.L_status1a = new PokemonSunMoonRNGTool.HexNumericUpdown();
+            this.L_status0a = new PokemonSunMoonRNGTool.HexNumericUpdown();
             this.n_min = new System.Windows.Forms.NumericUpDown();
             this.n_max = new System.Windows.Forms.NumericUpDown();
             this.L_TSV_shiny = new System.Windows.Forms.CheckBox();
@@ -213,11 +221,13 @@
             this.label51 = new System.Windows.Forms.Label();
             this.St_Frame = new System.Windows.Forms.Label();
             this.label39 = new System.Windows.Forms.Label();
+            this.St_InitialSeed = new PokemonSunMoonRNGTool.HexNumericUpdown();
             this.St_min = new System.Windows.Forms.NumericUpDown();
             this.St_max = new System.Windows.Forms.NumericUpDown();
             this.St_TargetFrame = new System.Windows.Forms.NumericUpDown();
             this.St_TargetFrame_Range = new System.Windows.Forms.NumericUpDown();
             this.St_SearchSettings = new System.Windows.Forms.GroupBox();
+            this.Valid_Blink = new System.Windows.Forms.CheckBox();
             this.St_SynchroOnly = new System.Windows.Forms.CheckBox();
             this.TypeNull = new System.Windows.Forms.CheckBox();
             this.St_TSV = new System.Windows.Forms.NumericUpDown();
@@ -294,6 +304,7 @@
             this.Calc_Frame_Info = new System.Windows.Forms.GroupBox();
             this.Calc_Output = new System.Windows.Forms.ListBox();
             this.Calc_Frame = new System.Windows.Forms.Button();
+            this.Calc_InitialSeed = new PokemonSunMoonRNGTool.HexNumericUpdown();
             this.label24 = new System.Windows.Forms.Label();
             this.St_Clock_Time_Frame = new System.Windows.Forms.Label();
             this.label26 = new System.Windows.Forms.Label();
@@ -305,6 +316,7 @@
             this.St_Clocklist = new System.Windows.Forms.Label();
             this.Clock_CurrentFrame = new System.Windows.Forms.Button();
             this.Clock_SearchList = new System.Windows.Forms.TextBox();
+            this.Clock_InitialSeed = new PokemonSunMoonRNGTool.HexNumericUpdown();
             this.label17 = new System.Windows.Forms.Label();
             this.St_Clock_Search_Frame = new System.Windows.Forms.Label();
             this.label22 = new System.Windows.Forms.Label();
@@ -356,18 +368,6 @@
             this.Tab_Egg = new System.Windows.Forms.TabPage();
             this.other = new System.Windows.Forms.TabPage();
             this.printPreviewDialog1 = new System.Windows.Forms.PrintPreviewDialog();
-            this.Valid_Blink = new System.Windows.Forms.CheckBox();
-            this.St_InitialSeed = new PokemonSunMoonRNGTool.HexNumericUpdown();
-            this.Calc_InitialSeed = new PokemonSunMoonRNGTool.HexNumericUpdown();
-            this.Clock_InitialSeed = new PokemonSunMoonRNGTool.HexNumericUpdown();
-            this.status3 = new PokemonSunMoonRNGTool.HexNumericUpdown();
-            this.status2 = new PokemonSunMoonRNGTool.HexNumericUpdown();
-            this.status1 = new PokemonSunMoonRNGTool.HexNumericUpdown();
-            this.status0 = new PokemonSunMoonRNGTool.HexNumericUpdown();
-            this.L_status3a = new PokemonSunMoonRNGTool.HexNumericUpdown();
-            this.L_status2a = new PokemonSunMoonRNGTool.HexNumericUpdown();
-            this.L_status1a = new PokemonSunMoonRNGTool.HexNumericUpdown();
-            this.L_status0a = new PokemonSunMoonRNGTool.HexNumericUpdown();
             ((System.ComponentModel.ISupportInitialize)(this.k_dataGridView)).BeginInit();
             this.contextMenuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pre_parent1)).BeginInit();
@@ -384,6 +384,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.pre_parent6)).BeginInit();
             this.Parents_Info.SuspendLayout();
             this.RNGInfo.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.status3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.status2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.status1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.status0)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.s_min)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.s_max)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.IVup2)).BeginInit();
@@ -408,6 +412,10 @@
             this.contextMenuStrip2.SuspendLayout();
             this.L_RNGInfo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Target_frame)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.L_status3a)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.L_status2a)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.L_status1a)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.L_status0a)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.n_min)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.n_max)).BeginInit();
             this.menuStrip1.SuspendLayout();
@@ -416,6 +424,7 @@
             this.tabControl3.SuspendLayout();
             this.Tab_StationarySearch.SuspendLayout();
             this.St_RNGInfo.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.St_InitialSeed)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.St_min)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.St_max)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.St_TargetFrame)).BeginInit();
@@ -445,24 +454,15 @@
             ((System.ComponentModel.ISupportInitialize)(this.St_dataGridView)).BeginInit();
             this.Tab_StationaryClock.SuspendLayout();
             this.Calc_Frame_Info.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Calc_InitialSeed)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Calc_min)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Calc_max)).BeginInit();
             this.Clock_RNGInfo.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Clock_InitialSeed)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Clock_min)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Clock_max)).BeginInit();
             this.Clock_groupBox.SuspendLayout();
             this.Tab_Egg.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.St_InitialSeed)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Calc_InitialSeed)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Clock_InitialSeed)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.status3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.status2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.status1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.status0)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.L_status3a)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.L_status2a)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.L_status1a)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.L_status0a)).BeginInit();
             this.SuspendLayout();
             // 
             // k_dataGridView
@@ -1256,6 +1256,70 @@
             this.RNGInfo.TabIndex = 3;
             this.RNGInfo.TabStop = false;
             this.RNGInfo.Text = "検索範囲";
+            // 
+            // status3
+            // 
+            this.status3.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.status3.Hexadecimal = true;
+            this.status3.Location = new System.Drawing.Point(118, 24);
+            this.status3.Name = "status3";
+            this.status3.Size = new System.Drawing.Size(80, 22);
+            this.status3.TabIndex = 70;
+            this.status3.Value = new decimal(new int[] {
+            305419896,
+            0,
+            0,
+            0});
+            this.status3.Enter += new System.EventHandler(this.NumericUpDown_Enter);
+            this.status3.Validating += new System.ComponentModel.CancelEventHandler(this.NumericUpDown_Check);
+            // 
+            // status2
+            // 
+            this.status2.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.status2.Hexadecimal = true;
+            this.status2.Location = new System.Drawing.Point(118, 52);
+            this.status2.Name = "status2";
+            this.status2.Size = new System.Drawing.Size(80, 22);
+            this.status2.TabIndex = 71;
+            this.status2.Value = new decimal(new int[] {
+            -559023410,
+            0,
+            0,
+            0});
+            this.status2.Enter += new System.EventHandler(this.NumericUpDown_Enter);
+            this.status2.Validating += new System.ComponentModel.CancelEventHandler(this.NumericUpDown_Check);
+            // 
+            // status1
+            // 
+            this.status1.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.status1.Hexadecimal = true;
+            this.status1.Location = new System.Drawing.Point(118, 80);
+            this.status1.Name = "status1";
+            this.status1.Size = new System.Drawing.Size(80, 22);
+            this.status1.TabIndex = 72;
+            this.status1.Value = new decimal(new int[] {
+            -559038737,
+            0,
+            0,
+            0});
+            this.status1.Enter += new System.EventHandler(this.NumericUpDown_Enter);
+            this.status1.Validating += new System.ComponentModel.CancelEventHandler(this.NumericUpDown_Check);
+            // 
+            // status0
+            // 
+            this.status0.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.status0.Hexadecimal = true;
+            this.status0.Location = new System.Drawing.Point(118, 108);
+            this.status0.Name = "status0";
+            this.status0.Size = new System.Drawing.Size(80, 22);
+            this.status0.TabIndex = 73;
+            this.status0.Value = new decimal(new int[] {
+            -1091568946,
+            0,
+            0,
+            0});
+            this.status0.Enter += new System.EventHandler(this.NumericUpDown_Enter);
+            this.status0.Validating += new System.ComponentModel.CancelEventHandler(this.NumericUpDown_Check);
             // 
             // s_min
             // 
@@ -2233,6 +2297,70 @@
             this.L_targetframe.TabIndex = 83;
             this.L_targetframe.Text = "目標消費";
             // 
+            // L_status3a
+            // 
+            this.L_status3a.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.L_status3a.Hexadecimal = true;
+            this.L_status3a.Location = new System.Drawing.Point(118, 24);
+            this.L_status3a.Name = "L_status3a";
+            this.L_status3a.Size = new System.Drawing.Size(80, 22);
+            this.L_status3a.TabIndex = 1;
+            this.L_status3a.Value = new decimal(new int[] {
+            305419896,
+            0,
+            0,
+            0});
+            this.L_status3a.Enter += new System.EventHandler(this.NumericUpDown_Enter);
+            this.L_status3a.Validating += new System.ComponentModel.CancelEventHandler(this.NumericUpDown_Check);
+            // 
+            // L_status2a
+            // 
+            this.L_status2a.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.L_status2a.Hexadecimal = true;
+            this.L_status2a.Location = new System.Drawing.Point(118, 52);
+            this.L_status2a.Name = "L_status2a";
+            this.L_status2a.Size = new System.Drawing.Size(80, 22);
+            this.L_status2a.TabIndex = 2;
+            this.L_status2a.Value = new decimal(new int[] {
+            -559023410,
+            0,
+            0,
+            0});
+            this.L_status2a.Enter += new System.EventHandler(this.NumericUpDown_Enter);
+            this.L_status2a.Validating += new System.ComponentModel.CancelEventHandler(this.NumericUpDown_Check);
+            // 
+            // L_status1a
+            // 
+            this.L_status1a.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.L_status1a.Hexadecimal = true;
+            this.L_status1a.Location = new System.Drawing.Point(118, 80);
+            this.L_status1a.Name = "L_status1a";
+            this.L_status1a.Size = new System.Drawing.Size(80, 22);
+            this.L_status1a.TabIndex = 3;
+            this.L_status1a.Value = new decimal(new int[] {
+            -559038737,
+            0,
+            0,
+            0});
+            this.L_status1a.Enter += new System.EventHandler(this.NumericUpDown_Enter);
+            this.L_status1a.Validating += new System.ComponentModel.CancelEventHandler(this.NumericUpDown_Check);
+            // 
+            // L_status0a
+            // 
+            this.L_status0a.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.L_status0a.Hexadecimal = true;
+            this.L_status0a.Location = new System.Drawing.Point(118, 108);
+            this.L_status0a.Name = "L_status0a";
+            this.L_status0a.Size = new System.Drawing.Size(80, 22);
+            this.L_status0a.TabIndex = 4;
+            this.L_status0a.Value = new decimal(new int[] {
+            -1091568946,
+            0,
+            0,
+            0});
+            this.L_status0a.Enter += new System.EventHandler(this.NumericUpDown_Enter);
+            this.L_status0a.Validating += new System.ComponentModel.CancelEventHandler(this.NumericUpDown_Check);
+            // 
             // n_min
             // 
             this.n_min.Font = new System.Drawing.Font("Consolas", 9F);
@@ -2532,10 +2660,10 @@
             this.St_L_InitialSeed.Font = new System.Drawing.Font("Consolas", 9F);
             this.St_L_InitialSeed.Location = new System.Drawing.Point(0, 29);
             this.St_L_InitialSeed.Name = "St_L_InitialSeed";
-            this.St_L_InitialSeed.Size = new System.Drawing.Size(80, 14);
+            this.St_L_InitialSeed.Size = new System.Drawing.Size(80, 28);
             this.St_L_InitialSeed.TabIndex = 72;
             this.St_L_InitialSeed.Text = "初期seed";
-            this.St_L_InitialSeed.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.St_L_InitialSeed.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
             // label7
             // 
@@ -2592,6 +2720,17 @@
             this.label39.Size = new System.Drawing.Size(18, 16);
             this.label39.TabIndex = 61;
             this.label39.Text = "～";
+            // 
+            // St_InitialSeed
+            // 
+            this.St_InitialSeed.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.St_InitialSeed.Hexadecimal = true;
+            this.St_InitialSeed.Location = new System.Drawing.Point(112, 27);
+            this.St_InitialSeed.Name = "St_InitialSeed";
+            this.St_InitialSeed.Size = new System.Drawing.Size(80, 22);
+            this.St_InitialSeed.TabIndex = 1;
+            this.St_InitialSeed.Enter += new System.EventHandler(this.NumericUpDown_Enter);
+            this.St_InitialSeed.Validating += new System.ComponentModel.CancelEventHandler(this.NumericUpDown_Check);
             // 
             // St_min
             // 
@@ -2697,6 +2836,16 @@
             this.St_SearchSettings.TabIndex = 2;
             this.St_SearchSettings.TabStop = false;
             this.St_SearchSettings.Text = "その他";
+            // 
+            // Valid_Blink
+            // 
+            this.Valid_Blink.AutoSize = true;
+            this.Valid_Blink.Location = new System.Drawing.Point(21, 65);
+            this.Valid_Blink.Name = "Valid_Blink";
+            this.Valid_Blink.Size = new System.Drawing.Size(162, 16);
+            this.Valid_Blink.TabIndex = 188;
+            this.Valid_Blink.Text = "まばたき契機を考慮(シンクロ)";
+            this.Valid_Blink.UseVisualStyleBackColor = true;
             // 
             // St_SynchroOnly
             // 
@@ -3607,6 +3756,17 @@
             this.Calc_Frame.UseVisualStyleBackColor = true;
             this.Calc_Frame.Click += new System.EventHandler(this.Calc_Frame_Click);
             // 
+            // Calc_InitialSeed
+            // 
+            this.Calc_InitialSeed.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Calc_InitialSeed.Hexadecimal = true;
+            this.Calc_InitialSeed.Location = new System.Drawing.Point(112, 27);
+            this.Calc_InitialSeed.Name = "Calc_InitialSeed";
+            this.Calc_InitialSeed.Size = new System.Drawing.Size(80, 22);
+            this.Calc_InitialSeed.TabIndex = 20;
+            this.Calc_InitialSeed.Enter += new System.EventHandler(this.NumericUpDown_Enter);
+            this.Calc_InitialSeed.Validating += new System.ComponentModel.CancelEventHandler(this.NumericUpDown_Check);
+            // 
             // label24
             // 
             this.label24.AutoSize = true;
@@ -3638,11 +3798,12 @@
             // St_Clock_Time_InitialSeed
             // 
             this.St_Clock_Time_InitialSeed.Font = new System.Drawing.Font("Consolas", 9F);
-            this.St_Clock_Time_InitialSeed.Location = new System.Drawing.Point(21, 29);
+            this.St_Clock_Time_InitialSeed.Location = new System.Drawing.Point(0, 29);
             this.St_Clock_Time_InitialSeed.Name = "St_Clock_Time_InitialSeed";
-            this.St_Clock_Time_InitialSeed.Size = new System.Drawing.Size(59, 14);
+            this.St_Clock_Time_InitialSeed.Size = new System.Drawing.Size(80, 28);
             this.St_Clock_Time_InitialSeed.TabIndex = 72;
             this.St_Clock_Time_InitialSeed.Text = "初期seed";
+            this.St_Clock_Time_InitialSeed.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
             // Calc_min
             // 
@@ -3746,6 +3907,17 @@
             this.Clock_SearchList.Size = new System.Drawing.Size(192, 22);
             this.Clock_SearchList.TabIndex = 13;
             // 
+            // Clock_InitialSeed
+            // 
+            this.Clock_InitialSeed.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Clock_InitialSeed.Hexadecimal = true;
+            this.Clock_InitialSeed.Location = new System.Drawing.Point(112, 27);
+            this.Clock_InitialSeed.Name = "Clock_InitialSeed";
+            this.Clock_InitialSeed.Size = new System.Drawing.Size(80, 22);
+            this.Clock_InitialSeed.TabIndex = 10;
+            this.Clock_InitialSeed.Enter += new System.EventHandler(this.NumericUpDown_Enter);
+            this.Clock_InitialSeed.Validating += new System.ComponentModel.CancelEventHandler(this.NumericUpDown_Check);
+            // 
             // label17
             // 
             this.label17.AutoSize = true;
@@ -3777,12 +3949,12 @@
             // St_Clock_Search_InitialSeed
             // 
             this.St_Clock_Search_InitialSeed.Font = new System.Drawing.Font("Consolas", 9F);
-            this.St_Clock_Search_InitialSeed.Location = new System.Drawing.Point(21, 29);
+            this.St_Clock_Search_InitialSeed.Location = new System.Drawing.Point(0, 29);
             this.St_Clock_Search_InitialSeed.Name = "St_Clock_Search_InitialSeed";
-            this.St_Clock_Search_InitialSeed.Size = new System.Drawing.Size(59, 14);
+            this.St_Clock_Search_InitialSeed.Size = new System.Drawing.Size(80, 28);
             this.St_Clock_Search_InitialSeed.TabIndex = 72;
             this.St_Clock_Search_InitialSeed.Text = "初期seed";
-            this.St_Clock_Search_InitialSeed.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.St_Clock_Search_InitialSeed.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
             // Clock_min
             // 
@@ -4356,177 +4528,6 @@
             this.printPreviewDialog1.Name = "printPreviewDialog1";
             this.printPreviewDialog1.Visible = false;
             // 
-            // Valid_Blink
-            // 
-            this.Valid_Blink.AutoSize = true;
-            this.Valid_Blink.Location = new System.Drawing.Point(21, 65);
-            this.Valid_Blink.Name = "Valid_Blink";
-            this.Valid_Blink.Size = new System.Drawing.Size(162, 16);
-            this.Valid_Blink.TabIndex = 188;
-            this.Valid_Blink.Text = "まばたき契機を考慮(シンクロ)";
-            this.Valid_Blink.UseVisualStyleBackColor = true;
-            // 
-            // St_InitialSeed
-            // 
-            this.St_InitialSeed.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.St_InitialSeed.Hexadecimal = true;
-            this.St_InitialSeed.Location = new System.Drawing.Point(112, 27);
-            this.St_InitialSeed.Name = "St_InitialSeed";
-            this.St_InitialSeed.Size = new System.Drawing.Size(80, 22);
-            this.St_InitialSeed.TabIndex = 1;
-            this.St_InitialSeed.Enter += new System.EventHandler(this.NumericUpDown_Enter);
-            this.St_InitialSeed.Validating += new System.ComponentModel.CancelEventHandler(this.NumericUpDown_Check);
-            // 
-            // Calc_InitialSeed
-            // 
-            this.Calc_InitialSeed.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Calc_InitialSeed.Hexadecimal = true;
-            this.Calc_InitialSeed.Location = new System.Drawing.Point(112, 27);
-            this.Calc_InitialSeed.Name = "Calc_InitialSeed";
-            this.Calc_InitialSeed.Size = new System.Drawing.Size(80, 22);
-            this.Calc_InitialSeed.TabIndex = 20;
-            this.Calc_InitialSeed.Enter += new System.EventHandler(this.NumericUpDown_Enter);
-            this.Calc_InitialSeed.Validating += new System.ComponentModel.CancelEventHandler(this.NumericUpDown_Check);
-            // 
-            // Clock_InitialSeed
-            // 
-            this.Clock_InitialSeed.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Clock_InitialSeed.Hexadecimal = true;
-            this.Clock_InitialSeed.Location = new System.Drawing.Point(112, 27);
-            this.Clock_InitialSeed.Name = "Clock_InitialSeed";
-            this.Clock_InitialSeed.Size = new System.Drawing.Size(80, 22);
-            this.Clock_InitialSeed.TabIndex = 10;
-            this.Clock_InitialSeed.Enter += new System.EventHandler(this.NumericUpDown_Enter);
-            this.Clock_InitialSeed.Validating += new System.ComponentModel.CancelEventHandler(this.NumericUpDown_Check);
-            // 
-            // status3
-            // 
-            this.status3.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.status3.Hexadecimal = true;
-            this.status3.Location = new System.Drawing.Point(118, 24);
-            this.status3.Name = "status3";
-            this.status3.Size = new System.Drawing.Size(80, 22);
-            this.status3.TabIndex = 70;
-            this.status3.Value = new decimal(new int[] {
-            305419896,
-            0,
-            0,
-            0});
-            this.status3.Enter += new System.EventHandler(this.NumericUpDown_Enter);
-            this.status3.Validating += new System.ComponentModel.CancelEventHandler(this.NumericUpDown_Check);
-            // 
-            // status2
-            // 
-            this.status2.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.status2.Hexadecimal = true;
-            this.status2.Location = new System.Drawing.Point(118, 52);
-            this.status2.Name = "status2";
-            this.status2.Size = new System.Drawing.Size(80, 22);
-            this.status2.TabIndex = 71;
-            this.status2.Value = new decimal(new int[] {
-            -559023410,
-            0,
-            0,
-            0});
-            this.status2.Enter += new System.EventHandler(this.NumericUpDown_Enter);
-            this.status2.Validating += new System.ComponentModel.CancelEventHandler(this.NumericUpDown_Check);
-            // 
-            // status1
-            // 
-            this.status1.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.status1.Hexadecimal = true;
-            this.status1.Location = new System.Drawing.Point(118, 80);
-            this.status1.Name = "status1";
-            this.status1.Size = new System.Drawing.Size(80, 22);
-            this.status1.TabIndex = 72;
-            this.status1.Value = new decimal(new int[] {
-            -559038737,
-            0,
-            0,
-            0});
-            this.status1.Enter += new System.EventHandler(this.NumericUpDown_Enter);
-            this.status1.Validating += new System.ComponentModel.CancelEventHandler(this.NumericUpDown_Check);
-            // 
-            // status0
-            // 
-            this.status0.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.status0.Hexadecimal = true;
-            this.status0.Location = new System.Drawing.Point(118, 108);
-            this.status0.Name = "status0";
-            this.status0.Size = new System.Drawing.Size(80, 22);
-            this.status0.TabIndex = 73;
-            this.status0.Value = new decimal(new int[] {
-            -1091568946,
-            0,
-            0,
-            0});
-            this.status0.Enter += new System.EventHandler(this.NumericUpDown_Enter);
-            this.status0.Validating += new System.ComponentModel.CancelEventHandler(this.NumericUpDown_Check);
-            // 
-            // L_status3a
-            // 
-            this.L_status3a.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.L_status3a.Hexadecimal = true;
-            this.L_status3a.Location = new System.Drawing.Point(118, 24);
-            this.L_status3a.Name = "L_status3a";
-            this.L_status3a.Size = new System.Drawing.Size(80, 22);
-            this.L_status3a.TabIndex = 1;
-            this.L_status3a.Value = new decimal(new int[] {
-            305419896,
-            0,
-            0,
-            0});
-            this.L_status3a.Enter += new System.EventHandler(this.NumericUpDown_Enter);
-            this.L_status3a.Validating += new System.ComponentModel.CancelEventHandler(this.NumericUpDown_Check);
-            // 
-            // L_status2a
-            // 
-            this.L_status2a.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.L_status2a.Hexadecimal = true;
-            this.L_status2a.Location = new System.Drawing.Point(118, 52);
-            this.L_status2a.Name = "L_status2a";
-            this.L_status2a.Size = new System.Drawing.Size(80, 22);
-            this.L_status2a.TabIndex = 2;
-            this.L_status2a.Value = new decimal(new int[] {
-            -559023410,
-            0,
-            0,
-            0});
-            this.L_status2a.Enter += new System.EventHandler(this.NumericUpDown_Enter);
-            this.L_status2a.Validating += new System.ComponentModel.CancelEventHandler(this.NumericUpDown_Check);
-            // 
-            // L_status1a
-            // 
-            this.L_status1a.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.L_status1a.Hexadecimal = true;
-            this.L_status1a.Location = new System.Drawing.Point(118, 80);
-            this.L_status1a.Name = "L_status1a";
-            this.L_status1a.Size = new System.Drawing.Size(80, 22);
-            this.L_status1a.TabIndex = 3;
-            this.L_status1a.Value = new decimal(new int[] {
-            -559038737,
-            0,
-            0,
-            0});
-            this.L_status1a.Enter += new System.EventHandler(this.NumericUpDown_Enter);
-            this.L_status1a.Validating += new System.ComponentModel.CancelEventHandler(this.NumericUpDown_Check);
-            // 
-            // L_status0a
-            // 
-            this.L_status0a.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.L_status0a.Hexadecimal = true;
-            this.L_status0a.Location = new System.Drawing.Point(118, 108);
-            this.L_status0a.Name = "L_status0a";
-            this.L_status0a.Size = new System.Drawing.Size(80, 22);
-            this.L_status0a.TabIndex = 4;
-            this.L_status0a.Value = new decimal(new int[] {
-            -1091568946,
-            0,
-            0,
-            0});
-            this.L_status0a.Enter += new System.EventHandler(this.NumericUpDown_Enter);
-            this.L_status0a.Validating += new System.ComponentModel.CancelEventHandler(this.NumericUpDown_Check);
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -4558,6 +4559,10 @@
             this.Parents_Info.PerformLayout();
             this.RNGInfo.ResumeLayout(false);
             this.RNGInfo.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.status3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.status2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.status1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.status0)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.s_min)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.s_max)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.IVup2)).EndInit();
@@ -4585,6 +4590,10 @@
             this.L_RNGInfo.ResumeLayout(false);
             this.L_RNGInfo.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Target_frame)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.L_status3a)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.L_status2a)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.L_status1a)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.L_status0a)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.n_min)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.n_max)).EndInit();
             this.menuStrip1.ResumeLayout(false);
@@ -4595,6 +4604,7 @@
             this.Tab_StationarySearch.ResumeLayout(false);
             this.St_RNGInfo.ResumeLayout(false);
             this.St_RNGInfo.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.St_InitialSeed)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.St_min)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.St_max)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.St_TargetFrame)).EndInit();
@@ -4627,26 +4637,17 @@
             this.Tab_StationaryClock.ResumeLayout(false);
             this.Calc_Frame_Info.ResumeLayout(false);
             this.Calc_Frame_Info.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Calc_InitialSeed)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Calc_min)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Calc_max)).EndInit();
             this.Clock_RNGInfo.ResumeLayout(false);
             this.Clock_RNGInfo.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Clock_InitialSeed)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Clock_min)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Clock_max)).EndInit();
             this.Clock_groupBox.ResumeLayout(false);
             this.Clock_groupBox.PerformLayout();
             this.Tab_Egg.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.St_InitialSeed)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Calc_InitialSeed)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Clock_InitialSeed)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.status3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.status2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.status1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.status0)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.L_status3a)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.L_status2a)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.L_status1a)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.L_status0a)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
