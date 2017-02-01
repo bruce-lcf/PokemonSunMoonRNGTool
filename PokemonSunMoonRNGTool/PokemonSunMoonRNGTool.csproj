@@ -52,6 +52,7 @@
     <Reference Include="System.Core" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
   </ItemGroup>
@@ -77,6 +78,7 @@
     <Compile Include="RandomBase.cs" />
     <Compile Include="EggSearchSetting.cs" />
     <Compile Include="SFMT.cs" />
+    <Compile Include="SFMTSeedAPI.cs" />
     <Compile Include="StationaryRNGSearch.cs" />
     <Compile Include="StationarySearchSetting.cs" />
     <Compile Include="TinyMT.cs" />
