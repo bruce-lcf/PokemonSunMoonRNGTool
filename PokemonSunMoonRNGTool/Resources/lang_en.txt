@@ -201,5 +201,6 @@ Calc_Frame_Info = Calculate Waiting Time
 Calc_Frame = Calculate
 St_Clock_Time_InitialSeed = Initial Seed
 St_Clock_Time_Frame = Frame
+qty_NPC = The number of NPCs
 ---------------------Other Tab----------------------
 other = other

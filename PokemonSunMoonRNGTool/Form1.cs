@@ -1170,6 +1170,7 @@ namespace PokemonSunMoonRNGTool
             uint InitialSeed = (uint)Calc_InitialSeed.Value;
             int min = (int)Calc_min.Value;
             int max = (int)Calc_max.Value;
+            int NPC_n = (int)NPC.Value;
             SFMT sfmt = new SFMT(InitialSeed);
 
             Calc_Output.Items.Clear();
@@ -1177,38 +1178,53 @@ namespace PokemonSunMoonRNGTool
             for (int i = 0; i < min; i++)
                 sfmt.NextUInt64();
 
-            bool blink = false;
-            int blink_time = 0;
-            int blink_count = 0;
-            int total_time = 0;
             int n_count = 0;
 
-            while (n_count + min < max)
+            int[] remain_frame = new int[NPC_n];
+            int total_frame = 0;
+            bool[] blink_flag = new bool[NPC_n];
+
+     
+            while (min + n_count < max)
             {
-                blink = false;
-                //まばたき判定
-                blink = (sfmt.NextUInt64() % 128 == 0) ? true : false;
-                n_count++;
-
-                if (blink)
+                //NPCの数だけ回す -- NPC Loop
+                for (int i = 0; i < NPC_n; i++)
                 {
-                    blink_count++;
-                    int val = (int)(sfmt.NextUInt64() % 3);
-                    n_count++;
+                    if (remain_frame[i] > 0)
+                        remain_frame[i]--;
 
-                    if (val == 0)
+                    if (remain_frame[i] == 0)
                     {
-                        blink_time = 39;
+                        //まばたき中 -- Blinking
+                        if (blink_flag[i])
+                        {
+                            if ((int)(sfmt.NextUInt64() % 3) == 0)
+                            {
+                                remain_frame[i] = 36;
+                            }
+                            else
+                            {
+                                remain_frame[i] = 30;
+                            }
+                            n_count++;
+                            blink_flag[i] = false;
+                        }
+                        //非まばたき中 -- Not Blinking
+                        else
+                        {
+                            if ((int)(sfmt.NextUInt64() % 128) == 0)
+                            {
+                                remain_frame[i] = 5;
+                                blink_flag[i] = true;
+                            }
+                            n_count++;
+                        }
                     }
-                    else
-                    {
-                        blink_time = 33;
-                    }
-
-                    total_time += blink_time;
                 }
+                total_frame++;
             }
-            Calc_Output.Items.Add(msgstr[23] + $"：{(n_count + total_time) * 2}");
+
+            Calc_Output.Items.Add(msgstr[23] + $"：{(total_frame) * 2}");
         }
     }
 }
