@@ -1155,7 +1155,7 @@ namespace PokemonSunMoonRNGTool
 
                     if (flag)
                     {
-                        Search_Clock.Items.Add(msgstr[21] + $"{i + Clock_List.Length - 1}" + msgstr[22] + $"{i + Clock_List.Length}");
+                        Search_Clock.Items.Add(msgstr[21] + $"{i + Clock_List.Length - 1}" + msgstr[22] + $"{i + Clock_List.Length + 1}");
                     }
 
                 }
