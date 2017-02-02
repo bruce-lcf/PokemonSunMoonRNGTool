@@ -201,5 +201,6 @@ Calc_Frame_Info = 待機Frame計算
 Calc_Frame = 計算
 St_Clock_Time_InitialSeed = 初期seed
 St_Clock_Time_Frame = Frame
+qty_NPC = NPCの数
 ---------------------Other Tab----------------------
 other = その他

@@ -201,5 +201,6 @@ Calc_Frame_Info = 待機時間計算
 Calc_Frame = 計算
 St_Clock_Time_InitialSeed = 初始seed
 St_Clock_Time_Frame = 幀
+qty_NPC = The number of NPCs
 ---------------------Other Tab----------------------
 other = 其它
