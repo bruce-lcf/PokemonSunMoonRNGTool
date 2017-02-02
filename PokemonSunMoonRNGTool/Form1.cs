@@ -1049,6 +1049,33 @@ namespace PokemonSunMoonRNGTool
                 Clock_List.Text += "," + Convert_Clock(number);
             }
 
+            var needle = Clock_List.Text.Split(',');
+            if (Clock_List.Text.Where(c => c == ',').Count() >= 7)
+            {
+                var text = "";
+                try
+                {
+                    var results = SFMTSeedAPI.request(Clock_List.Text);
+                    if (results == null || results.Count() == 0)
+                    {
+                        text = "Not Found";
+                    }
+                    else
+                    {
+                        text = string.Join(" ", results.Select(r => r.seed));
+                    }
+                }
+                catch (Exception exc)
+                {
+
+                    text = exc.Message;
+                }
+                finally
+                {
+                    TB_Candidate_InitSeed.Text = text;
+                }
+            }
+
         }
 
         private void Delete_Click(object sender, EventArgs e)
@@ -1089,11 +1116,6 @@ namespace PokemonSunMoonRNGTool
                 n = tmp.ToString();
             }
             return n;
-        }
-
-        private void Get_InitialSeed_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
-            System.Diagnostics.Process.Start("http://49.212.217.137:19937/gen7/sfmt/seed?needle=" + Clock_List.Text);
         }
 
         private void Clock_CurrentFrame_Click(object sender, EventArgs e)
