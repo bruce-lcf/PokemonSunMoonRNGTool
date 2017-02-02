@@ -18,18 +18,9 @@ namespace PokemonSunMoonRNGTool
             var url = $"http://49.212.217.137:19937/gen7/sfmt/seed?needle={needle}";
 
             string jsonStr;
-
-            try
+            using (var webClient = new WebClient())
             {
-                using (var webClient = new WebClient())
-                {
-                    jsonStr = webClient.DownloadString(url);
-                }
-            }
-            catch (Exception)
-            {
-
-                return null;
+                jsonStr = webClient.DownloadString(url);
             }
 
             using (var ms = new MemoryStream(Encoding.UTF8.GetBytes(jsonStr)))

@@ -1052,14 +1052,27 @@ namespace PokemonSunMoonRNGTool
             var needle = Clock_List.Text.Split(',');
             if (Clock_List.Text.Where(c => c == ',').Count() >= 7)
             {
-                var results = SFMTSeedAPI.request(Clock_List.Text);
-                if (results == null || results.Count() == 0)
+                var text = "";
+                try
                 {
-                    TB_Candidate_InitSeed.Text = "Not Found";
+                    var results = SFMTSeedAPI.request(Clock_List.Text);
+                    if (results == null || results.Count() == 0)
+                    {
+                        text = "Not Found";
+                    }
+                    else
+                    {
+                        text = string.Join(" ", results.Select(r => r.seed));
+                    }
                 }
-                else
+                catch (Exception exc)
                 {
-                    TB_Candidate_InitSeed.Text = string.Join(" ", results.Select(r => r.seed));
+
+                    text = exc.Message;
+                }
+                finally
+                {
+                    TB_Candidate_InitSeed.Text = text;
                 }
             }
 
