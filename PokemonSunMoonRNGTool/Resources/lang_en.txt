@@ -179,7 +179,7 @@ St_SynchroOnly = Sync Only
 St_shiny = Shiny
 TypeNull =  Type:Null
 --
-Stationary_Search = Serach
+Stationary_Search = Search
 Stationary_List = Show List
 ----------------------StationaryClock Tab---------------------
 Tab_StationaryClock = Needle
