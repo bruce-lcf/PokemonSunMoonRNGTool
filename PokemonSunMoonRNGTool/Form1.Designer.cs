@@ -1142,7 +1142,7 @@
             this.pre_ditto.TabIndex = 15;
             this.pre_ditto.Text = "メタモン";
             this.pre_ditto.UseVisualStyleBackColor = true;
-            this.pre_ditto.Click += new System.EventHandler(this.Change_ditto);
+            this.pre_ditto.CheckedChanged += new System.EventHandler(this.Change_ditto);
             // 
             // post_ditto
             // 
@@ -1153,7 +1153,7 @@
             this.post_ditto.TabIndex = 18;
             this.post_ditto.Text = "メタモン";
             this.post_ditto.UseVisualStyleBackColor = true;
-            this.post_ditto.Click += new System.EventHandler(this.Change_ditto);
+            this.post_ditto.CheckedChanged += new System.EventHandler(this.Change_ditto);
             // 
             // L_PostAbility
             // 
@@ -3166,6 +3166,7 @@
             this.St_pokedex.Name = "St_pokedex";
             this.St_pokedex.Size = new System.Drawing.Size(80, 20);
             this.St_pokedex.TabIndex = 12;
+            this.St_pokedex.SelectedIndexChanged += new System.EventHandler(this.ChangePoke);
             // 
             // St_Pokemon
             // 
@@ -4089,12 +4090,12 @@
             // 
             // L_Candidate_InitSeed
             // 
-            this.L_Candidate_InitSeed.AutoSize = true;
-            this.L_Candidate_InitSeed.Location = new System.Drawing.Point(813, 113);
+            this.L_Candidate_InitSeed.Location = new System.Drawing.Point(808, 113);
             this.L_Candidate_InitSeed.Name = "L_Candidate_InitSeed";
-            this.L_Candidate_InitSeed.Size = new System.Drawing.Size(77, 12);
+            this.L_Candidate_InitSeed.Size = new System.Drawing.Size(80, 48);
             this.L_Candidate_InitSeed.TabIndex = 37;
             this.L_Candidate_InitSeed.Text = "初期seed候補";
+            this.L_Candidate_InitSeed.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
             // Delete
             // 
