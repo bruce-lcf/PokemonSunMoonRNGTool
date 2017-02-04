@@ -178,6 +178,7 @@ St_SearchSettings = その他
 St_SynchroOnly = シンクロ個体のみ出力
 St_shiny = 色違いのみ出力
 TypeNull = タイプ・ヌル
+Valid_Blink = まばたき契機を考慮(シンクロ)
 --
 Stationary_Search = 計算
 Stationary_List = リスト表示
@@ -187,10 +188,9 @@ Tab_StationaryClock = 針検索
 Clock_groupBox = 針入力
 clock_begin = 開始時の位置
 clock_end = 終了時の位置
-Get_InitialSeed = 初期seedを検索(ブラウザが開きます)
 Delete = 消去
 Back = 1つ戻る
-Note = ※サーバに著しく負荷をかける行為はお止め下さい
+L_Candidate_InitSeed = 初期seed候補
 --
 Clock_RNGInfo = 現在位置検索
 Clock_CurrentFrame = 計算

@@ -177,7 +177,8 @@ dgvSt_rand = 乱数值
 St_SearchSettings = 其他
 St_SynchroOnly = 只显示同步个体
 St_shiny = 只显示闪光
-TypeNull =  属性：空
+TypeNull = 属性：空
+Valid_Blink = 考虑眨眼影响（同步）
 --
 Stationary_Search = 计算
 Stationary_List = 显示列表
@@ -187,10 +188,9 @@ Tab_StationaryClock = 指针检索
 Clock_groupBox = 输入指针
 clock_begin = 开始位置
 clock_end = 结束位置
-Get_InitialSeed = 初始seed检索(需打开浏览器)
 Delete = 清空
 Back = 后退
-Note = ※请勿增加服务器负担
+L_Candidate_InitSeed = 候选初始Seed
 --
 Clock_RNGInfo = 现在位置检索
 Clock_CurrentFrame = 计算
@@ -201,6 +201,6 @@ Calc_Frame_Info = 待机时间计算
 Calc_Frame = 计算
 St_Clock_Time_InitialSeed = 初始seed
 St_Clock_Time_Frame = 帧
-qty_NPC = The number of NPCs
+qty_NPC = NPC数量
 ---------------------Other Tab----------------------
 other = 其他
