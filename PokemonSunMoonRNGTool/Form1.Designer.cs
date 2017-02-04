@@ -3761,19 +3761,9 @@
             0,
             0,
             0});
-            this.NPC.Minimum = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
             this.NPC.Name = "NPC";
             this.NPC.Size = new System.Drawing.Size(62, 22);
             this.NPC.TabIndex = 83;
-            this.NPC.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
             // 
             // Calc_Output
             // 

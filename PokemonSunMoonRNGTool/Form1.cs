@@ -1170,7 +1170,7 @@ namespace PokemonSunMoonRNGTool
             uint InitialSeed = (uint)Calc_InitialSeed.Value;
             int min = (int)Calc_min.Value;
             int max = (int)Calc_max.Value;
-            int NPC_n = (int)NPC.Value;
+            int NPC_n = (int)NPC.Value + 1;
             SFMT sfmt = new SFMT(InitialSeed);
 
             Calc_Output.Items.Clear();
