@@ -224,7 +224,7 @@ dgvID_Clock = 指針
 --
 ID_RNGInfo = 檢索範圍
 ID_Filters = 篩選
-ID_SearchSettings = 其他
+ID_SearchSettings = 其它
 --
 ID_Search = 計算
 ---------------------Other Tab----------------------
