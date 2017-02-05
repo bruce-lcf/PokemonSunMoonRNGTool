@@ -1153,14 +1153,25 @@ namespace PokemonSunMoonRNGTool
                 var text = "";
                 try
                 {
+                    TB_Candidate_InitSeed.Text = msgstr[24];
                     var results = SFMTSeedAPI.request(Clock_List.Text);
                     if (results == null || results.Count() == 0)
                     {
-                        text = "Not Found";
+                        text = msgstr[25];
                     }
                     else
                     {
                         text = string.Join(" ", results.Select(r => r.seed));
+                        if (results.Count() == 1)
+                        {
+                            uint s0;
+                            if (uint.TryParse(text, NumberStyles.HexNumber, null, out s0))
+                            {
+                                St_InitialSeed.Value = s0;
+                                Calc_InitialSeed.Value = s0;
+                                Clock_InitialSeed.Value = s0;
+                            }
+                        }
                     }
                 }
                 catch (Exception exc)
@@ -1360,9 +1371,11 @@ namespace PokemonSunMoonRNGTool
             TypeNull.Checked = (St_pokedex.SelectedIndex == 6);
             switch (St_pokedex.SelectedIndex)
             {
-                case 3: NPC.Value = 1; break; // Tapu Fini
-                case 6: NPC.Value = 8; break; // Type:Null
-                default: NPC.Value = 0; break;
+                case 3: NPC.Value = 1; St_Lv.Value = 60; break; // Tapu Fini
+                case 4: St_Lv.Value = 55; break;
+                case 5: St_Lv.Value = 55; break;// NPC # needs test
+                case 6: NPC.Value = 8; St_Lv.Value = 40; break; // Type:Null
+                default: NPC.Value = 0; St_Lv.Value = 60; break;
             }
         }
     }
