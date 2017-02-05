@@ -34,13 +34,17 @@ namespace PokemonSunMoonRNGTool
 
             //シンクロ -- Synchronize
             st.row_r = sfmt.NextUInt64();
+
             if (st.row_r % 100 >= 50)
+                st.Synchronize = true;
+
+            if (TypeNull)
                 st.Synchronize = true;
 
             st.Clock = (int)(st.row_r % 17);
 
             //まばたき消費契機 -- maybe blinking process occurs 2 times for each character
-            if(Valid_Blink)
+            if (Valid_Blink)
             {
                 sfmt.NextUInt64();
                 sfmt.NextUInt64();
@@ -81,7 +85,7 @@ namespace PokemonSunMoonRNGTool
             for (int i = 0; i < 3; i++)
                 IV[st.InheritStats[i]] = 31;
 
-            for (int i = 0, k = 0; i < 6; i++) 
+            for (int i = 0, k = 0; i < 6; i++)
             {
                 if (IV[i] != 31)
                 {
@@ -93,7 +97,7 @@ namespace PokemonSunMoonRNGTool
             st.IVs = (int[])IV.Clone();
 
             //謎消費 -- Something
-            if(TypeNull)
+            if (TypeNull)
                 sfmt.NextUInt64();
 
             //性格 -- Nature
