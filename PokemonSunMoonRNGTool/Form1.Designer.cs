@@ -30,6 +30,7 @@
         {
             this.components = new System.ComponentModel.Container();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.k_dataGridView = new System.Windows.Forms.DataGridView();
             this.dgvS_frame = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -368,6 +369,35 @@
             this.Clock_8 = new System.Windows.Forms.Button();
             this.Clock_9 = new System.Windows.Forms.Button();
             this.Tab_Egg = new System.Windows.Forms.TabPage();
+            this.Tab_ID = new System.Windows.Forms.TabPage();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.Clock_CorrectionValue = new System.Windows.Forms.NumericUpDown();
+            this.ID_Search = new System.Windows.Forms.Button();
+            this.ID_dataGridView = new System.Windows.Forms.DataGridView();
+            this.dgvID_frame = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvID_ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvID_TSV = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvID_TID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvID_SID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvID_Clock = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ID_groupBox2 = new System.Windows.Forms.GroupBox();
+            this.PartialMatch = new System.Windows.Forms.RadioButton();
+            this.PerfectMatching = new System.Windows.Forms.RadioButton();
+            this.ID_Invalid_Refine = new System.Windows.Forms.CheckBox();
+            this.ID_List = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.ID_PSVList = new System.Windows.Forms.TextBox();
+            this.ID_shiny = new System.Windows.Forms.CheckBox();
+            this.label149 = new System.Windows.Forms.Label();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.ID_InitialSeed = new PokemonSunMoonRNGTool.HexNumericUpdown();
+            this.ID_min = new System.Windows.Forms.NumericUpDown();
+            this.ID_max = new System.Windows.Forms.NumericUpDown();
             this.other = new System.Windows.Forms.TabPage();
             this.printPreviewDialog1 = new System.Windows.Forms.PrintPreviewDialog();
             ((System.ComponentModel.ISupportInitialize)(this.k_dataGridView)).BeginInit();
@@ -466,6 +496,15 @@
             ((System.ComponentModel.ISupportInitialize)(this.Clock_max)).BeginInit();
             this.Clock_groupBox.SuspendLayout();
             this.Tab_Egg.SuspendLayout();
+            this.Tab_ID.SuspendLayout();
+            this.groupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Clock_CorrectionValue)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ID_dataGridView)).BeginInit();
+            this.ID_groupBox2.SuspendLayout();
+            this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ID_InitialSeed)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ID_min)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ID_max)).BeginInit();
             this.SuspendLayout();
             // 
             // k_dataGridView
@@ -2590,6 +2629,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tabControl2.Controls.Add(this.Tab_Stationary);
             this.tabControl2.Controls.Add(this.Tab_Egg);
+            this.tabControl2.Controls.Add(this.Tab_ID);
             this.tabControl2.Controls.Add(this.other);
             this.tabControl2.Location = new System.Drawing.Point(12, 25);
             this.tabControl2.Name = "tabControl2";
@@ -4533,6 +4573,340 @@
             this.Tab_Egg.Text = "孵化乱数";
             this.Tab_Egg.UseVisualStyleBackColor = true;
             // 
+            // Tab_ID
+            // 
+            this.Tab_ID.Controls.Add(this.groupBox2);
+            this.Tab_ID.Controls.Add(this.ID_Search);
+            this.Tab_ID.Controls.Add(this.ID_dataGridView);
+            this.Tab_ID.Controls.Add(this.ID_groupBox2);
+            this.Tab_ID.Controls.Add(this.groupBox1);
+            this.Tab_ID.Location = new System.Drawing.Point(4, 22);
+            this.Tab_ID.Name = "Tab_ID";
+            this.Tab_ID.Padding = new System.Windows.Forms.Padding(3);
+            this.Tab_ID.Size = new System.Drawing.Size(1136, 538);
+            this.Tab_ID.TabIndex = 3;
+            this.Tab_ID.Text = "ID調整";
+            this.Tab_ID.UseVisualStyleBackColor = true;
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.label5);
+            this.groupBox2.Controls.Add(this.Clock_CorrectionValue);
+            this.groupBox2.Location = new System.Drawing.Point(9, 390);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(323, 113);
+            this.groupBox2.TabIndex = 62;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "その他";
+            // 
+            // label5
+            // 
+            this.label5.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(4, 29);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(93, 28);
+            this.label5.TabIndex = 84;
+            this.label5.Text = "針の補正";
+            this.label5.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            // 
+            // Clock_CorrectionValue
+            // 
+            this.Clock_CorrectionValue.Font = new System.Drawing.Font("Consolas", 9F);
+            this.Clock_CorrectionValue.Location = new System.Drawing.Point(109, 27);
+            this.Clock_CorrectionValue.Maximum = new decimal(new int[] {
+            16,
+            0,
+            0,
+            0});
+            this.Clock_CorrectionValue.Name = "Clock_CorrectionValue";
+            this.Clock_CorrectionValue.Size = new System.Drawing.Size(62, 22);
+            this.Clock_CorrectionValue.TabIndex = 85;
+            // 
+            // ID_Search
+            // 
+            this.ID_Search.Location = new System.Drawing.Point(257, 509);
+            this.ID_Search.Name = "ID_Search";
+            this.ID_Search.Size = new System.Drawing.Size(75, 23);
+            this.ID_Search.TabIndex = 61;
+            this.ID_Search.Text = "計算";
+            this.ID_Search.UseVisualStyleBackColor = true;
+            this.ID_Search.Click += new System.EventHandler(this.ID_Search_Click);
+            // 
+            // ID_dataGridView
+            // 
+            this.ID_dataGridView.AllowUserToAddRows = false;
+            this.ID_dataGridView.AllowUserToDeleteRows = false;
+            this.ID_dataGridView.AllowUserToResizeRows = false;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.ID_dataGridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle2;
+            this.ID_dataGridView.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.ID_dataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.ID_dataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dgvID_frame,
+            this.dgvID_ID,
+            this.dgvID_TSV,
+            this.dgvID_TID,
+            this.dgvID_SID,
+            this.dgvID_Clock});
+            this.ID_dataGridView.Location = new System.Drawing.Point(338, 6);
+            this.ID_dataGridView.Name = "ID_dataGridView";
+            this.ID_dataGridView.ReadOnly = true;
+            this.ID_dataGridView.RowTemplate.Height = 21;
+            this.ID_dataGridView.Size = new System.Drawing.Size(792, 526);
+            this.ID_dataGridView.TabIndex = 3;
+            // 
+            // dgvID_frame
+            // 
+            this.dgvID_frame.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.dgvID_frame.HeaderText = "Frame";
+            this.dgvID_frame.Name = "dgvID_frame";
+            this.dgvID_frame.ReadOnly = true;
+            this.dgvID_frame.Width = 62;
+            // 
+            // dgvID_ID
+            // 
+            this.dgvID_ID.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.dgvID_ID.HeaderText = "ID(通常)";
+            this.dgvID_ID.Name = "dgvID_ID";
+            this.dgvID_ID.ReadOnly = true;
+            this.dgvID_ID.Width = 73;
+            // 
+            // dgvID_TSV
+            // 
+            this.dgvID_TSV.HeaderText = "TSV";
+            this.dgvID_TSV.Name = "dgvID_TSV";
+            this.dgvID_TSV.ReadOnly = true;
+            this.dgvID_TSV.Width = 66;
+            // 
+            // dgvID_TID
+            // 
+            this.dgvID_TID.HeaderText = "TID";
+            this.dgvID_TID.Name = "dgvID_TID";
+            this.dgvID_TID.ReadOnly = true;
+            this.dgvID_TID.Width = 60;
+            // 
+            // dgvID_SID
+            // 
+            this.dgvID_SID.HeaderText = "SID";
+            this.dgvID_SID.Name = "dgvID_SID";
+            this.dgvID_SID.ReadOnly = true;
+            this.dgvID_SID.Width = 60;
+            // 
+            // dgvID_Clock
+            // 
+            this.dgvID_Clock.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.dgvID_Clock.HeaderText = "針";
+            this.dgvID_Clock.Name = "dgvID_Clock";
+            this.dgvID_Clock.ReadOnly = true;
+            this.dgvID_Clock.Width = 42;
+            // 
+            // ID_groupBox2
+            // 
+            this.ID_groupBox2.Controls.Add(this.PartialMatch);
+            this.ID_groupBox2.Controls.Add(this.PerfectMatching);
+            this.ID_groupBox2.Controls.Add(this.ID_Invalid_Refine);
+            this.ID_groupBox2.Controls.Add(this.ID_List);
+            this.ID_groupBox2.Controls.Add(this.label4);
+            this.ID_groupBox2.Controls.Add(this.ID_PSVList);
+            this.ID_groupBox2.Controls.Add(this.ID_shiny);
+            this.ID_groupBox2.Controls.Add(this.label149);
+            this.ID_groupBox2.Location = new System.Drawing.Point(9, 112);
+            this.ID_groupBox2.Name = "ID_groupBox2";
+            this.ID_groupBox2.Size = new System.Drawing.Size(323, 272);
+            this.ID_groupBox2.TabIndex = 2;
+            this.ID_groupBox2.TabStop = false;
+            this.ID_groupBox2.Text = "フィルター";
+            // 
+            // PartialMatch
+            // 
+            this.PartialMatch.AutoSize = true;
+            this.PartialMatch.Location = new System.Drawing.Point(205, 54);
+            this.PartialMatch.Name = "PartialMatch";
+            this.PartialMatch.Size = new System.Drawing.Size(71, 16);
+            this.PartialMatch.TabIndex = 110;
+            this.PartialMatch.Text = "部分一致";
+            this.PartialMatch.UseVisualStyleBackColor = true;
+            // 
+            // PerfectMatching
+            // 
+            this.PerfectMatching.AutoSize = true;
+            this.PerfectMatching.Checked = true;
+            this.PerfectMatching.Location = new System.Drawing.Point(205, 32);
+            this.PerfectMatching.Name = "PerfectMatching";
+            this.PerfectMatching.Size = new System.Drawing.Size(71, 16);
+            this.PerfectMatching.TabIndex = 109;
+            this.PerfectMatching.TabStop = true;
+            this.PerfectMatching.Text = "完全一致";
+            this.PerfectMatching.UseVisualStyleBackColor = true;
+            // 
+            // ID_Invalid_Refine
+            // 
+            this.ID_Invalid_Refine.AutoSize = true;
+            this.ID_Invalid_Refine.Location = new System.Drawing.Point(205, 105);
+            this.ID_Invalid_Refine.Name = "ID_Invalid_Refine";
+            this.ID_Invalid_Refine.Size = new System.Drawing.Size(100, 16);
+            this.ID_Invalid_Refine.TabIndex = 108;
+            this.ID_Invalid_Refine.Text = "絞り込みを無効";
+            this.ID_Invalid_Refine.UseVisualStyleBackColor = true;
+            // 
+            // ID_List
+            // 
+            this.ID_List.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ID_List.Location = new System.Drawing.Point(81, 30);
+            this.ID_List.Multiline = true;
+            this.ID_List.Name = "ID_List";
+            this.ID_List.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.ID_List.Size = new System.Drawing.Size(100, 91);
+            this.ID_List.TabIndex = 106;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.label4.Location = new System.Drawing.Point(19, 33);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(56, 14);
+            this.label4.TabIndex = 107;
+            this.label4.Text = "ID List";
+            // 
+            // ID_PSVList
+            // 
+            this.ID_PSVList.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ID_PSVList.Location = new System.Drawing.Point(81, 156);
+            this.ID_PSVList.Multiline = true;
+            this.ID_PSVList.Name = "ID_PSVList";
+            this.ID_PSVList.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.ID_PSVList.Size = new System.Drawing.Size(100, 91);
+            this.ID_PSVList.TabIndex = 13;
+            // 
+            // ID_shiny
+            // 
+            this.ID_shiny.AutoSize = true;
+            this.ID_shiny.Location = new System.Drawing.Point(205, 231);
+            this.ID_shiny.Name = "ID_shiny";
+            this.ID_shiny.Size = new System.Drawing.Size(103, 16);
+            this.ID_shiny.TabIndex = 14;
+            this.ID_shiny.Text = "色違いのみ出力";
+            this.ID_shiny.UseVisualStyleBackColor = true;
+            // 
+            // label149
+            // 
+            this.label149.AutoSize = true;
+            this.label149.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label149.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.label149.Location = new System.Drawing.Point(11, 159);
+            this.label149.Name = "label149";
+            this.label149.Size = new System.Drawing.Size(64, 14);
+            this.label149.TabIndex = 89;
+            this.label149.Text = "PSV　List";
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.label2);
+            this.groupBox1.Controls.Add(this.label3);
+            this.groupBox1.Controls.Add(this.label6);
+            this.groupBox1.Controls.Add(this.label10);
+            this.groupBox1.Controls.Add(this.ID_InitialSeed);
+            this.groupBox1.Controls.Add(this.ID_min);
+            this.groupBox1.Controls.Add(this.ID_max);
+            this.groupBox1.Location = new System.Drawing.Point(6, 6);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(326, 100);
+            this.groupBox1.TabIndex = 1;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "検索範囲";
+            // 
+            // label2
+            // 
+            this.label2.Font = new System.Drawing.Font("Consolas", 9F);
+            this.label2.Location = new System.Drawing.Point(0, 29);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(80, 28);
+            this.label2.TabIndex = 72;
+            this.label2.Text = "初期seed";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(85, 29);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(21, 14);
+            this.label3.TabIndex = 71;
+            this.label3.Text = "0x";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(58, 62);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(42, 14);
+            this.label6.TabIndex = 64;
+            this.label6.Text = "Frame";
+            // 
+            // label10
+            // 
+            this.label10.Location = new System.Drawing.Point(198, 65);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(18, 16);
+            this.label10.TabIndex = 61;
+            this.label10.Text = "～";
+            // 
+            // ID_InitialSeed
+            // 
+            this.ID_InitialSeed.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ID_InitialSeed.Hexadecimal = true;
+            this.ID_InitialSeed.Location = new System.Drawing.Point(112, 27);
+            this.ID_InitialSeed.Name = "ID_InitialSeed";
+            this.ID_InitialSeed.Size = new System.Drawing.Size(80, 22);
+            this.ID_InitialSeed.TabIndex = 1;
+            // 
+            // ID_min
+            // 
+            this.ID_min.Font = new System.Drawing.Font("Consolas", 9F);
+            this.ID_min.Location = new System.Drawing.Point(112, 60);
+            this.ID_min.Maximum = new decimal(new int[] {
+            999999999,
+            0,
+            0,
+            0});
+            this.ID_min.Name = "ID_min";
+            this.ID_min.Size = new System.Drawing.Size(80, 22);
+            this.ID_min.TabIndex = 2;
+            this.ID_min.Value = new decimal(new int[] {
+            1012,
+            0,
+            0,
+            0});
+            // 
+            // ID_max
+            // 
+            this.ID_max.Font = new System.Drawing.Font("Consolas", 9F);
+            this.ID_max.Increment = new decimal(new int[] {
+            100,
+            0,
+            0,
+            0});
+            this.ID_max.Location = new System.Drawing.Point(222, 60);
+            this.ID_max.Maximum = new decimal(new int[] {
+            999999999,
+            0,
+            0,
+            0});
+            this.ID_max.Name = "ID_max";
+            this.ID_max.Size = new System.Drawing.Size(80, 22);
+            this.ID_max.TabIndex = 3;
+            this.ID_max.Value = new decimal(new int[] {
+            3000,
+            0,
+            0,
+            0});
+            // 
             // other
             // 
             this.other.Location = new System.Drawing.Point(4, 22);
@@ -4674,6 +5048,17 @@
             this.Clock_groupBox.ResumeLayout(false);
             this.Clock_groupBox.PerformLayout();
             this.Tab_Egg.ResumeLayout(false);
+            this.Tab_ID.ResumeLayout(false);
+            this.groupBox2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.Clock_CorrectionValue)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ID_dataGridView)).EndInit();
+            this.ID_groupBox2.ResumeLayout(false);
+            this.ID_groupBox2.PerformLayout();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ID_InitialSeed)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ID_min)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ID_max)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -5020,5 +5405,34 @@
         private System.Windows.Forms.Label L_Candidate_InitSeed;
         private System.Windows.Forms.NumericUpDown NPC;
         private System.Windows.Forms.Label qty_NPC;
+        private System.Windows.Forms.TabPage Tab_ID;
+        private System.Windows.Forms.DataGridView ID_dataGridView;
+        private System.Windows.Forms.GroupBox ID_groupBox2;
+        private System.Windows.Forms.TextBox ID_PSVList;
+        private System.Windows.Forms.CheckBox ID_shiny;
+        private System.Windows.Forms.Label label149;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label10;
+        private HexNumericUpdown ID_InitialSeed;
+        private System.Windows.Forms.NumericUpDown ID_min;
+        private System.Windows.Forms.NumericUpDown ID_max;
+        private System.Windows.Forms.Button ID_Search;
+        private System.Windows.Forms.TextBox ID_List;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.CheckBox ID_Invalid_Refine;
+        private System.Windows.Forms.RadioButton PartialMatch;
+        private System.Windows.Forms.RadioButton PerfectMatching;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgvID_frame;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgvID_ID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgvID_TSV;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgvID_TID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgvID_SID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgvID_Clock;
+        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.NumericUpDown Clock_CorrectionValue;
     }
 }

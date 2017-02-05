@@ -67,6 +67,8 @@
     <Compile Include="HexNumericUpdown.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="IDRNGSearch.cs" />
+    <Compile Include="IDSearchSetting.cs" />
     <Compile Include="ParentsEntry.cs">
       <SubType>Form</SubType>
     </Compile>

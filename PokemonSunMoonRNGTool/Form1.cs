@@ -172,6 +172,19 @@ namespace PokemonSunMoonRNGTool
             };
         }
 
+        private IDSearchSetting IDgetSettings()
+        {
+            string IDList = ID_List.Text;
+            string PSV_List = ID_PSVList.Text;
+
+            return new IDSearchSetting
+            {
+                ID_List = IDList,
+                PSV_List = PSV_List,
+                Skip = ID_Invalid_Refine.Checked
+            };
+        }
+
         private EggRNGSearch getEggRNGSettings()
         {
             int[] pre_parent = { (int)pre_parent1.Value, (int)pre_parent2.Value, (int)pre_parent3.Value, (int)pre_parent4.Value, (int)pre_parent5.Value, (int)pre_parent6.Value, };
@@ -226,6 +239,16 @@ namespace PokemonSunMoonRNGTool
             };
             return rng;
         }
+
+        private IDRNGSearch getIDRNGSettings()
+        {
+            var rng = new IDRNGSearch
+            {
+                Clock_CorrectionValue = (int)Clock_CorrectionValue.Value,
+            };
+            return rng;
+        }
+
 
         private bool EggframeMatch(EggRNGSearch.EggRNGResult result, EggSearchSetting setting)
         {
@@ -293,6 +316,51 @@ namespace PokemonSunMoonRNGTool
             return true;
         }
 
+        private bool IDframeMatch(IDRNGSearch.IDRNGResult result, IDSearchSetting setting)
+        {
+            System.IO.MemoryStream msID_List = new System.IO.MemoryStream(System.Text.Encoding.UTF8.GetBytes(setting.ID_List));
+            System.IO.StreamReader srID = new System.IO.StreamReader(msID_List);
+            System.IO.MemoryStream msPSV_List = new System.IO.MemoryStream(System.Text.Encoding.UTF8.GetBytes(setting.PSV_List));
+            System.IO.StreamReader srPSV = new System.IO.StreamReader(msPSV_List);
+
+            if (setting.Skip)
+                return true;
+
+            if (ID_shiny.Checked && setting.PSV_List != "")
+            {
+                while (!srPSV.EndOfStream)
+                {
+                    uint str = Convert.ToUInt32(srPSV.ReadLine());
+                    if (result.TSV == str)
+                    {
+                        result.Shiny = true;
+                        return true;
+                    }
+                }
+                return false;
+            }
+
+            if (setting.ID_List != "")
+            {
+                while (!srID.EndOfStream)
+                {
+                    string str = string.Format("{0:D6}", srID.ReadLine());
+                    string str2 = string.Format("{0:D6}", result.ID);
+
+                    if (PerfectMatching.Checked && str2 == str)
+                        return true;
+                    if (PartialMatch.Checked && 0 <= str2.IndexOf(str))
+                        return true;
+                }
+                return false;
+            }
+            else
+            {
+                return true;
+            }
+        }
+
+
         private DataGridViewRow getRow_Egg(int i, EggRNGSearch rng, EggRNGSearch.EggRNGResult result, DataGridView dgv)
         {
             var true_psv = rng.PIDRerolls > 0 ? result.PSV.ToString("d") : "-";
@@ -336,6 +404,22 @@ namespace PokemonSunMoonRNGTool
                 i, tolerance,
                 result.IVs[0], result.IVs[1], result.IVs[2], result.IVs[3], result.IVs[4], result.IVs[5],
                 true_nature, SynchronizeFlag, status[0], status[1], status[2], status[3], status[4], status[5], result.PSV, result.Clock, result.row_r.ToString("X16")
+                );
+
+            if (result.Shiny)
+            {
+                row.DefaultCellStyle.BackColor = Color.LightCyan;
+            }
+            return row;
+        }
+
+        private DataGridViewRow getRow_ID(int i, IDRNGSearch rng, IDRNGSearch.IDRNGResult result, DataGridView dgv)
+        {
+            DataGridViewRow row = new DataGridViewRow();
+            row.CreateCells(dgv);
+
+            row.SetValues(
+                i, String.Format("{0:D6}", result.ID), result.TSV, result.TID, result.SID, result.Clock
                 );
 
             if (result.Shiny)
@@ -508,6 +592,7 @@ namespace PokemonSunMoonRNGTool
             St_dataGridView.DefaultCellStyle.Font = new Font("Consolas", 9);
             k_dataGridView.DefaultCellStyle.Font = new Font("Consolas", 9);
             L_dataGridView.DefaultCellStyle.Font = new Font("Consolas", 9);
+            ID_dataGridView.DefaultCellStyle.Font = new Font("Consolas", 9);
             k_dataGridView.Columns[9].DefaultCellStyle.Font = new Font("ＭＳ ゴシック", 9);
             L_dataGridView.Columns[9].DefaultCellStyle.Font = new Font("ＭＳ ゴシック", 9);
 
@@ -516,6 +601,7 @@ namespace PokemonSunMoonRNGTool
             dgvPropertyInfo.SetValue(St_dataGridView, true, null);
             dgvPropertyInfo.SetValue(k_dataGridView, true, null);
             dgvPropertyInfo.SetValue(L_dataGridView, true, null);
+            dgvPropertyInfo.SetValue(ID_dataGridView, true, null);
 
             for (int i = 0; i < 17; i++)
             {
@@ -1184,7 +1270,7 @@ namespace PokemonSunMoonRNGTool
             int total_frame = 0;
             bool[] blink_flag = new bool[NPC_n];
 
-     
+
             while (min + n_count < max)
             {
                 //NPCの数だけ回す -- NPC Loop
@@ -1225,6 +1311,36 @@ namespace PokemonSunMoonRNGTool
             }
 
             Calc_Output.Items.Add(msgstr[23] + $"：{(total_frame) * 2}");
+        }
+
+        private void ID_Search_Click(object sender, EventArgs e)
+        {
+            uint InitialSeed = (uint)ID_InitialSeed.Value;
+            int min = (int)ID_min.Value;
+            int max = (int)ID_max.Value;
+
+            SFMT sfmt = new SFMT(InitialSeed);
+            SFMT seed = new SFMT(InitialSeed);
+            List<DataGridViewRow> list = new List<DataGridViewRow>();
+            ID_dataGridView.Rows.Clear();
+
+            var setting = IDgetSettings();
+            var rng = getIDRNGSettings();
+
+            for (int i = 0; i < min; i++)
+                sfmt.NextUInt64();
+
+            for (int i = min; i <= max; i++, sfmt.NextUInt64())
+            {
+                seed = (SFMT)sfmt.DeepCopy();
+                IDRNGSearch.IDRNGResult result = rng.Generate(seed);
+
+                if (!IDframeMatch(result, setting))
+                    continue;
+                list.Add(getRow_ID(i, rng, result, ID_dataGridView));
+            }
+            ID_dataGridView.Rows.AddRange(list.ToArray());
+            ID_dataGridView.CurrentCell = null;
         }
     }
 }
