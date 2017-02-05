@@ -18,17 +18,6 @@ namespace PokemonSunMoonRNGTool
         private int[] other_tsv = new int[0];
         private string[] parents_list = new string[0];
 
-        public string[,] pokedex =
-        {
-            { "カプ・コケコ", "70", "115", "85", "95", "75", "130"},
-            { "カプ・テテフ", "70", "85", "75", "130", "115", "95"},
-            { "カプ・ブルル", "70", "130", "115", "85", "95", "75"},
-            { "カプ・レヒレ", "70", "75", "115", "95", "130", "85"},
-            { "ソルガレオ", "137", "137", "107", "113", "89", "97"},
-            { "ルナアーラ", "137", "113", "89", "137", "107", "97"},
-            { "タイプ：ヌル", "95", "95", "95", "95", "95", "59"},
-        };
-
         #region Translation
         private string[] natures;
         private string[] mezapa;
@@ -133,6 +122,7 @@ namespace PokemonSunMoonRNGTool
             for (int i = 4; i < 6; i++)
                 St_pokedex.Items[i] = species[791 + i - 4];
             St_pokedex.Items[6] = species[772];
+            St_pokedex.Items[7] = species[801];
 
         }
 
@@ -618,7 +608,7 @@ namespace PokemonSunMoonRNGTool
                 St_Synchro_nature.Items.Add("");
             }
 
-            for (int i = 0; i < pokedex.GetLength(0); i++)
+            for (int i = 0; i < StationarySearchSetting.pokedex.GetLength(0); i++)
             {
                 St_pokedex.Items.Add("");
             }
@@ -1153,14 +1143,25 @@ namespace PokemonSunMoonRNGTool
                 var text = "";
                 try
                 {
+                    TB_Candidate_InitSeed.Text = msgstr[24];
                     var results = SFMTSeedAPI.request(Clock_List.Text);
                     if (results == null || results.Count() == 0)
                     {
-                        text = "Not Found";
+                        text = msgstr[25];
                     }
                     else
                     {
                         text = string.Join(" ", results.Select(r => r.seed));
+                        if (results.Count() == 1)
+                        {
+                            uint s0;
+                            if (uint.TryParse(text, NumberStyles.HexNumber, null, out s0))
+                            {
+                                St_InitialSeed.Value = s0;
+                                Calc_InitialSeed.Value = s0;
+                                Clock_InitialSeed.Value = s0;
+                            }
+                        }
                     }
                 }
                 catch (Exception exc)
@@ -1173,6 +1174,8 @@ namespace PokemonSunMoonRNGTool
                     TB_Candidate_InitSeed.Text = text;
                 }
             }
+            else
+                TB_Candidate_InitSeed.Text = "";
 
         }
 
@@ -1357,12 +1360,15 @@ namespace PokemonSunMoonRNGTool
 
         private void ChangePoke(object sender, EventArgs e)
         {
-            TypeNull.Checked = (St_pokedex.SelectedIndex == 6);
+            TypeNull.Checked = (St_pokedex.SelectedIndex > 5);
             switch (St_pokedex.SelectedIndex)
             {
-                case 3: NPC.Value = 1; break; // Tapu Fini
-                case 6: NPC.Value = 8; break; // Type:Null
-                default: NPC.Value = 0; break;
+                case 3: NPC.Value = 1; St_Lv.Value = 60; break; // Tapu Fini
+                case 4: St_Lv.Value = 55; break;
+                case 5: St_Lv.Value = 55; break;// NPC # needs test
+                case 6: NPC.Value = 8; St_Lv.Value = 40; break; // Type:Null
+                case 7: NPC.Value = 6; St_Lv.Value = 50; break; // Magearna sometimes NPC# =7
+                default: NPC.Value = 0; St_Lv.Value = 60; break;
             }
         }
     }

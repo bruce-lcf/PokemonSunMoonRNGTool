@@ -6,7 +6,7 @@ namespace PokemonSunMoonRNGTool
     class StationarySearchSetting
     {
         #region pokedex
-        public string[,] pokedex =
+        public static string[,] pokedex =
         {
             { "カプ・コケコ", "70", "115", "85", "95", "75", "130"},
             { "カプ・テテフ", "70", "85", "75", "130", "115", "95"},
@@ -15,6 +15,7 @@ namespace PokemonSunMoonRNGTool
             { "ソルガレオ", "137", "137", "107", "113", "89", "97"},
             { "ルナアーラ", "137", "113", "89", "137", "107", "97"},
             { "タイプ：ヌル", "95", "95", "95", "95", "95", "59"},
+            { "マギアナ", "80", "95", "115", "130", "115", "65"},
         };
 
         #endregion

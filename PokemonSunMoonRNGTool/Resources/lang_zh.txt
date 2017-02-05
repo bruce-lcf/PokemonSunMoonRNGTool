@@ -203,15 +203,17 @@ St_Clock_Time_InitialSeed = 初始seed
 St_Clock_Time_Frame = 幀
 qty_NPC = NPC數量
 --------------------IDRNG Tab--------------------
-Tab_ID = ID RNG
+Tab_ID = ID 亂數
 --
 ID_L_InitialSeed = 初始seed
 ID_Frame = 幀
-PerfectMatching = Perfect Matching
-PartialMatch = Partial Match
+L_ID_List = ID列表
+L_PSVList = PSV列表
+PerfectMatching = 完全匹配
+PartialMatch = 部分匹配
 ID_Invalid_Refine = 取消篩選
-ID_L_CorrectionValue = Correction Value of Needle
-ID_shiny = 只顯示色違
+ID_L_CorrectionValue = 指針值矯正
+ID_shiny = 只顯示閃光
 --
 dgvID_frame = 幀
 dgvID_ID = ID
@@ -221,7 +223,7 @@ dgvID_SID = SID
 dgvID_Clock = 指針
 --
 ID_RNGInfo = 檢索範圍
-ID_Filters = 目標個體
+ID_Filters = 篩選
 ID_SearchSettings = 其它
 --
 ID_Search = 計算

@@ -375,10 +375,10 @@
             this.PerfectMatching = new System.Windows.Forms.RadioButton();
             this.ID_Invalid_Refine = new System.Windows.Forms.CheckBox();
             this.ID_List = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
+            this.L_ID_List = new System.Windows.Forms.Label();
             this.ID_PSVList = new System.Windows.Forms.TextBox();
             this.ID_shiny = new System.Windows.Forms.CheckBox();
-            this.label149 = new System.Windows.Forms.Label();
+            this.L_PSVList = new System.Windows.Forms.Label();
             this.ID_RNGInfo = new System.Windows.Forms.GroupBox();
             this.ID_L_InitialSeed = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -4548,10 +4548,10 @@
             this.ID_Filters.Controls.Add(this.PerfectMatching);
             this.ID_Filters.Controls.Add(this.ID_Invalid_Refine);
             this.ID_Filters.Controls.Add(this.ID_List);
-            this.ID_Filters.Controls.Add(this.label4);
+            this.ID_Filters.Controls.Add(this.L_ID_List);
             this.ID_Filters.Controls.Add(this.ID_PSVList);
             this.ID_Filters.Controls.Add(this.ID_shiny);
-            this.ID_Filters.Controls.Add(this.label149);
+            this.ID_Filters.Controls.Add(this.L_PSVList);
             this.ID_Filters.Location = new System.Drawing.Point(9, 112);
             this.ID_Filters.Name = "ID_Filters";
             this.ID_Filters.Size = new System.Drawing.Size(323, 272);
@@ -4601,16 +4601,16 @@
             this.ID_List.Size = new System.Drawing.Size(100, 91);
             this.ID_List.TabIndex = 106;
             // 
-            // label4
+            // L_ID_List
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.label4.Location = new System.Drawing.Point(19, 33);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(56, 14);
-            this.label4.TabIndex = 107;
-            this.label4.Text = "ID List";
+            this.L_ID_List.AutoSize = true;
+            this.L_ID_List.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.L_ID_List.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.L_ID_List.Location = new System.Drawing.Point(19, 33);
+            this.L_ID_List.Name = "L_ID_List";
+            this.L_ID_List.Size = new System.Drawing.Size(56, 14);
+            this.L_ID_List.TabIndex = 107;
+            this.L_ID_List.Text = "ID List";
             // 
             // ID_PSVList
             // 
@@ -4632,16 +4632,16 @@
             this.ID_shiny.Text = "色違いのみ出力";
             this.ID_shiny.UseVisualStyleBackColor = true;
             // 
-            // label149
+            // L_PSVList
             // 
-            this.label149.AutoSize = true;
-            this.label149.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label149.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.label149.Location = new System.Drawing.Point(11, 159);
-            this.label149.Name = "label149";
-            this.label149.Size = new System.Drawing.Size(64, 14);
-            this.label149.TabIndex = 89;
-            this.label149.Text = "PSV　List";
+            this.L_PSVList.AutoSize = true;
+            this.L_PSVList.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.L_PSVList.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.L_PSVList.Location = new System.Drawing.Point(11, 159);
+            this.L_PSVList.Name = "L_PSVList";
+            this.L_PSVList.Size = new System.Drawing.Size(64, 14);
+            this.L_PSVList.TabIndex = 89;
+            this.L_PSVList.Text = "PSV　List";
             // 
             // ID_RNGInfo
             // 
@@ -5411,7 +5411,7 @@
         private System.Windows.Forms.GroupBox ID_Filters;
         private System.Windows.Forms.TextBox ID_PSVList;
         private System.Windows.Forms.CheckBox ID_shiny;
-        private System.Windows.Forms.Label label149;
+        private System.Windows.Forms.Label L_PSVList;
         private System.Windows.Forms.GroupBox ID_RNGInfo;
         private System.Windows.Forms.Label ID_L_InitialSeed;
         private System.Windows.Forms.Label label3;
@@ -5422,7 +5422,7 @@
         private System.Windows.Forms.NumericUpDown ID_max;
         private System.Windows.Forms.Button ID_Search;
         private System.Windows.Forms.TextBox ID_List;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label L_ID_List;
         private System.Windows.Forms.CheckBox ID_Invalid_Refine;
         private System.Windows.Forms.RadioButton PartialMatch;
         private System.Windows.Forms.RadioButton PerfectMatching;

@@ -207,6 +207,8 @@ Tab_ID = ID RNG
 --
 ID_L_InitialSeed = Initial Seed
 ID_Frame = Frame
+L_ID_List = ID List
+L_PSVList = PSV List
 PerfectMatching = Perfect Matching
 PartialMatch = Partial Match
 ID_Invalid_Refine = Disable filters
