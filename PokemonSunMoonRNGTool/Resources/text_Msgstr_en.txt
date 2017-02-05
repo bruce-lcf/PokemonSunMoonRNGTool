@@ -22,5 +22,5 @@ unable to save.
 The last needle is at 
 . The next wiil be at 
 Set Frame(EonTimer)
-Waiting
+Please wait...
 Not found
