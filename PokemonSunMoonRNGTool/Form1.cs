@@ -208,7 +208,7 @@ namespace PokemonSunMoonRNGTool
                 GenderFemale = sex_ratio.SelectedIndex == 5,
                 International = International.Checked,
                 ShinyCharm = omamori.Checked,
-                Heterogeneous = pre_ditto.Checked || post_ditto.Checked || Heterogeneity.Checked,
+                Heterogeneous = Heterogeneity.Checked,
                 Both_Everstone = pre_Items.SelectedIndex == 1 && post_Items.SelectedIndex == 1,
                 Everstone = pre_Items.SelectedIndex == 1 || post_Items.SelectedIndex == 1,
                 DestinyKnot = pre_Items.SelectedIndex == 2 || post_Items.SelectedIndex == 2,
@@ -431,27 +431,7 @@ namespace PokemonSunMoonRNGTool
 
         private void EggSearch_Click(object sender, EventArgs e)
         {
-            if (s_min.Value > s_max.Value)
-                Error(msgstr[0]);
-            else if (IVlow1.Value > IVup1.Value)
-                Error(msgstr[1]);
-            else if (IVlow2.Value > IVup2.Value)
-                Error(msgstr[2]);
-            else if (IVlow3.Value > IVup3.Value)
-                Error(msgstr[3]);
-            else if (IVlow4.Value > IVup4.Value)
-                Error(msgstr[4]);
-            else if (IVlow5.Value > IVup5.Value)
-                Error(msgstr[5]);
-            else if (IVlow6.Value > IVup6.Value)
-                Error(msgstr[6]);
-            else if (0 > TSV.Value || TSV.Value > 4095)
-                Error("TSV" + msgstr[7]);
-            else if (sex_ratio.SelectedIndex == 6 && !(post_ditto.Checked || pre_ditto.Checked))
-                Error(msgstr[8]);
-            else if (sex_ratio.SelectedIndex == 6 && pre_ditto.Checked)
-                Error(msgstr[9]);
-            else
+            if (CheckValidity())
                 EggSearch();
         }
 
@@ -496,29 +476,11 @@ namespace PokemonSunMoonRNGTool
 
         private void EggList_Search_Click(object sender, EventArgs e)
         {
-            if (s_min.Value > s_max.Value)
-                Error(msgstr[0]);
-            else if (IVlow1.Value > IVup1.Value)
-                Error(msgstr[1]);
-            else if (IVlow2.Value > IVup2.Value)
-                Error(msgstr[2]);
-            else if (IVlow3.Value > IVup3.Value)
-                Error(msgstr[3]);
-            else if (IVlow4.Value > IVup4.Value)
-                Error(msgstr[4]);
-            else if (IVlow5.Value > IVup5.Value)
-                Error(msgstr[5]);
-            else if (IVlow6.Value > IVup6.Value)
-                Error(msgstr[6]);
-            else if (0 > TSV.Value || TSV.Value > 4095)
-                Error("TSV" + msgstr[7]);
-            else if (sex_ratio.SelectedIndex == 6 && !(post_ditto.Checked || pre_ditto.Checked))
-                Error(msgstr[8]);
-            else if (sex_ratio.SelectedIndex == 6 && pre_ditto.Checked)
-                Error(msgstr[9]);
-            else
+            if (CheckValidity())
+            {
                 EggList_Search();
-            EggList_calc_target();
+                EggList_calc_target();
+            }
         }
 
         private void EggList_Search()
@@ -585,6 +547,46 @@ namespace PokemonSunMoonRNGTool
                     Repeat_times.Text = msgstr[13];
                 }
             }
+        }
+
+        private bool CheckValidity()
+        {
+            if (s_min.Value > s_max.Value)
+                Error(msgstr[0]);
+            else if (IVlow1.Value > IVup1.Value)
+                Error(msgstr[1]);
+            else if (IVlow2.Value > IVup2.Value)
+                Error(msgstr[2]);
+            else if (IVlow3.Value > IVup3.Value)
+                Error(msgstr[3]);
+            else if (IVlow4.Value > IVup4.Value)
+                Error(msgstr[4]);
+            else if (IVlow5.Value > IVup5.Value)
+                Error(msgstr[5]);
+            else if (IVlow6.Value > IVup6.Value)
+                Error(msgstr[6]);
+            else if (0 > TSV.Value || TSV.Value > 4095)
+                Error("TSV" + msgstr[7]);
+            else if (sex_ratio.SelectedIndex == 4 && !(post_ditto.Checked))
+            {
+                post_ditto.Checked = true;
+                return true;
+            }
+            else if (sex_ratio.SelectedIndex == 6 && !(post_ditto.Checked || pre_ditto.Checked))
+            {
+                Error(msgstr[8]);
+                post_ditto.Checked = true;
+                return true;
+            }
+            else if (sex_ratio.SelectedIndex == 6 && pre_ditto.Checked)
+            {
+                Error(msgstr[9]);
+                post_ditto.Checked = true;
+                return true;
+            }
+            else
+                return true;
+            return false;
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -720,6 +722,7 @@ namespace PokemonSunMoonRNGTool
                     status1.Value = L_status1a.Value = s1;
                     status0.Value = L_status0a.Value = s0;
                     TSV.Value = tsv;
+                    St_TSV.Value = tsv;
                 }
             }
             else
@@ -891,7 +894,16 @@ namespace PokemonSunMoonRNGTool
         private void Change_ditto(object sender, EventArgs e)
         {
             if ((sender as CheckBox)?.Checked ?? false)
+            {
                 (sender == post_ditto ? pre_ditto : post_ditto).Checked = false;
+                Heterogeneity.Enabled = false;
+                Heterogeneity.Checked = true;
+            }
+            else
+            {
+                Heterogeneity.Checked = false;
+                Heterogeneity.Enabled = true;
+            }
         }
 
         private void Change_color(object sender, EventArgs e)
@@ -1341,6 +1353,17 @@ namespace PokemonSunMoonRNGTool
             }
             ID_dataGridView.Rows.AddRange(list.ToArray());
             ID_dataGridView.CurrentCell = null;
+        }
+
+        private void ChangePoke(object sender, EventArgs e)
+        {
+            TypeNull.Checked = (St_pokedex.SelectedIndex == 6);
+            switch (St_pokedex.SelectedIndex)
+            {
+                case 3: NPC.Value = 1; break; // Tapu Fini
+                case 6: NPC.Value = 8; break; // Type:Null
+                default: NPC.Value = 0; break;
+            }
         }
     }
 }

@@ -177,7 +177,8 @@ dgvSt_rand = Rand
 St_SearchSettings = SearchSettings
 St_SynchroOnly = Sync Only
 St_shiny = Shiny
-TypeNull =  Type:Null
+TypeNull = Type:Null
+Valid_Blink = Consider blinking process (Sync)
 --
 Stationary_Search = Search
 Stationary_List = Show List
@@ -187,10 +188,9 @@ Tab_StationaryClock = Needle
 Clock_groupBox = Enter Needle
 clock_begin = Start Position
 clock_end = End Position
-Get_InitialSeed = Search Initial Seed(Browser will open)
 Delete = Clear
 Back = Back 
-Note = ※Do NOT abuse the server
+L_Candidate_InitSeed = Candidate Initial Seed
 --
 Clock_RNGInfo = Position Search
 Clock_CurrentFrame = Search
@@ -201,6 +201,6 @@ Calc_Frame_Info = Calculate Waiting Time
 Calc_Frame = Calculate
 St_Clock_Time_InitialSeed = Initial Seed
 St_Clock_Time_Frame = Frame
-qty_NPC = The number of NPCs
+qty_NPC = # of NPCs
 ---------------------Other Tab----------------------
 other = other
