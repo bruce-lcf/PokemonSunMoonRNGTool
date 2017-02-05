@@ -177,7 +177,7 @@ dgvSt_rand = 乱数値
 St_SearchSettings = その他
 St_SynchroOnly = シンクロ個体のみ出力
 St_shiny = 色違いのみ出力
-TypeNull = タイプ・ヌル
+AlwaysSynchro = 必ずシンクロ
 Valid_Blink = まばたき契機を考慮(シンクロ)
 --
 Stationary_Search = 計算
