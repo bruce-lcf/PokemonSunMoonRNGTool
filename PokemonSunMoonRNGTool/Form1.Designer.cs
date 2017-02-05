@@ -360,7 +360,7 @@
             this.Tab_Egg = new System.Windows.Forms.TabPage();
             this.Tab_ID = new System.Windows.Forms.TabPage();
             this.ID_SearchSettings = new System.Windows.Forms.GroupBox();
-            this.label5 = new System.Windows.Forms.Label();
+            this.ID_L_CorrectionValue = new System.Windows.Forms.Label();
             this.Clock_CorrectionValue = new System.Windows.Forms.NumericUpDown();
             this.ID_Search = new System.Windows.Forms.Button();
             this.ID_dataGridView = new System.Windows.Forms.DataGridView();
@@ -380,9 +380,9 @@
             this.ID_shiny = new System.Windows.Forms.CheckBox();
             this.label149 = new System.Windows.Forms.Label();
             this.ID_RNGInfo = new System.Windows.Forms.GroupBox();
-            this.label2 = new System.Windows.Forms.Label();
+            this.ID_L_InitialSeed = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
+            this.ID_Frame = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.ID_min = new System.Windows.Forms.NumericUpDown();
             this.ID_max = new System.Windows.Forms.NumericUpDown();
@@ -4430,24 +4430,24 @@
             // 
             // ID_SearchSettings
             // 
-            this.ID_SearchSettings.Controls.Add(this.label5);
+            this.ID_SearchSettings.Controls.Add(this.ID_L_CorrectionValue);
             this.ID_SearchSettings.Controls.Add(this.Clock_CorrectionValue);
             this.ID_SearchSettings.Location = new System.Drawing.Point(9, 390);
             this.ID_SearchSettings.Name = "ID_SearchSettings";
-            this.ID_SearchSettings.Size = new System.Drawing.Size(323, 113);
+            this.ID_SearchSettings.Size = new System.Drawing.Size(323, 78);
             this.ID_SearchSettings.TabIndex = 62;
             this.ID_SearchSettings.TabStop = false;
             this.ID_SearchSettings.Text = "その他";
             // 
-            // label5
+            // ID_L_CorrectionValue
             // 
-            this.label5.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(4, 29);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(93, 28);
-            this.label5.TabIndex = 84;
-            this.label5.Text = "針の補正";
-            this.label5.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            this.ID_L_CorrectionValue.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ID_L_CorrectionValue.Location = new System.Drawing.Point(4, 29);
+            this.ID_L_CorrectionValue.Name = "ID_L_CorrectionValue";
+            this.ID_L_CorrectionValue.Size = new System.Drawing.Size(93, 42);
+            this.ID_L_CorrectionValue.TabIndex = 84;
+            this.ID_L_CorrectionValue.Text = "針の補正";
+            this.ID_L_CorrectionValue.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
             // Clock_CorrectionValue
             // 
@@ -4464,7 +4464,7 @@
             // 
             // ID_Search
             // 
-            this.ID_Search.Location = new System.Drawing.Point(257, 509);
+            this.ID_Search.Location = new System.Drawing.Point(257, 474);
             this.ID_Search.Name = "ID_Search";
             this.ID_Search.Size = new System.Drawing.Size(75, 23);
             this.ID_Search.TabIndex = 61;
@@ -4508,10 +4508,10 @@
             // dgvID_ID
             // 
             this.dgvID_ID.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.dgvID_ID.HeaderText = "ID(通常)";
+            this.dgvID_ID.HeaderText = "ID（通常）";
             this.dgvID_ID.Name = "dgvID_ID";
             this.dgvID_ID.ReadOnly = true;
-            this.dgvID_ID.Width = 73;
+            this.dgvID_ID.Width = 77;
             // 
             // dgvID_TSV
             // 
@@ -4645,9 +4645,9 @@
             // 
             // ID_RNGInfo
             // 
-            this.ID_RNGInfo.Controls.Add(this.label2);
+            this.ID_RNGInfo.Controls.Add(this.ID_L_InitialSeed);
             this.ID_RNGInfo.Controls.Add(this.label3);
-            this.ID_RNGInfo.Controls.Add(this.label6);
+            this.ID_RNGInfo.Controls.Add(this.ID_Frame);
             this.ID_RNGInfo.Controls.Add(this.label10);
             this.ID_RNGInfo.Controls.Add(this.ID_InitialSeed);
             this.ID_RNGInfo.Controls.Add(this.ID_min);
@@ -4659,15 +4659,15 @@
             this.ID_RNGInfo.TabStop = false;
             this.ID_RNGInfo.Text = "検索範囲";
             // 
-            // label2
+            // ID_L_InitialSeed
             // 
-            this.label2.Font = new System.Drawing.Font("Consolas", 9F);
-            this.label2.Location = new System.Drawing.Point(0, 29);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(80, 28);
-            this.label2.TabIndex = 72;
-            this.label2.Text = "初期seed";
-            this.label2.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            this.ID_L_InitialSeed.Font = new System.Drawing.Font("Consolas", 9F);
+            this.ID_L_InitialSeed.Location = new System.Drawing.Point(0, 29);
+            this.ID_L_InitialSeed.Name = "ID_L_InitialSeed";
+            this.ID_L_InitialSeed.Size = new System.Drawing.Size(80, 28);
+            this.ID_L_InitialSeed.TabIndex = 72;
+            this.ID_L_InitialSeed.Text = "初期seed";
+            this.ID_L_InitialSeed.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
             // label3
             // 
@@ -4679,15 +4679,15 @@
             this.label3.TabIndex = 71;
             this.label3.Text = "0x";
             // 
-            // label6
+            // ID_Frame
             // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(58, 62);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(42, 14);
-            this.label6.TabIndex = 64;
-            this.label6.Text = "Frame";
+            this.ID_Frame.AutoSize = true;
+            this.ID_Frame.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ID_Frame.Location = new System.Drawing.Point(58, 62);
+            this.ID_Frame.Name = "ID_Frame";
+            this.ID_Frame.Size = new System.Drawing.Size(42, 14);
+            this.ID_Frame.TabIndex = 64;
+            this.ID_Frame.Text = "Frame";
             // 
             // label10
             // 
@@ -5413,9 +5413,9 @@
         private System.Windows.Forms.CheckBox ID_shiny;
         private System.Windows.Forms.Label label149;
         private System.Windows.Forms.GroupBox ID_RNGInfo;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label ID_L_InitialSeed;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label ID_Frame;
         private System.Windows.Forms.Label label10;
         private HexNumericUpdown ID_InitialSeed;
         private System.Windows.Forms.NumericUpDown ID_min;
@@ -5426,14 +5426,14 @@
         private System.Windows.Forms.CheckBox ID_Invalid_Refine;
         private System.Windows.Forms.RadioButton PartialMatch;
         private System.Windows.Forms.RadioButton PerfectMatching;
+        private System.Windows.Forms.GroupBox ID_SearchSettings;
+        private System.Windows.Forms.Label ID_L_CorrectionValue;
+        private System.Windows.Forms.NumericUpDown Clock_CorrectionValue;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgvID_frame;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgvID_ID;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgvID_TSV;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgvID_TID;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgvID_SID;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgvID_Clock;
-        private System.Windows.Forms.GroupBox ID_SearchSettings;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.NumericUpDown Clock_CorrectionValue;
     }
 }

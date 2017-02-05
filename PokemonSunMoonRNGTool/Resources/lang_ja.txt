@@ -202,5 +202,28 @@ Calc_Frame = 計算
 St_Clock_Time_InitialSeed = 初期seed
 St_Clock_Time_Frame = Frame
 qty_NPC = NPCの数
+--------------------IDRNG Tab--------------------
+Tab_ID = ID調整
+--
+ID_L_InitialSeed = 初期seed
+ID_Frame = Frame
+PerfectMatching = 完全一致
+PartialMatch = 部分一致
+ID_Invalid_Refine = 絞り込みを無効
+ID_L_CorrectionValue = 針の補正
+ID_shiny = 色違いのみ出力
+--
+dgvID_frame = Frame
+dgvID_ID = ID（通常）
+dgvID_TSV = TSV
+dgvID_TID = TID
+dgvID_SID = SID
+dgvID_Clock = 針
+--
+ID_RNGInfo = 検索範囲
+ID_Filters = フィルター
+ID_SearchSettings = その他
+--
+ID_Search = 計算
 ---------------------Other Tab----------------------
 other = その他

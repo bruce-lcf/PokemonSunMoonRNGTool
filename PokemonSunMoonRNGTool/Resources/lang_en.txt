@@ -202,5 +202,28 @@ Calc_Frame = Calculate
 St_Clock_Time_InitialSeed = Initial Seed
 St_Clock_Time_Frame = Frame
 qty_NPC = # of NPCs
+--------------------IDRNG Tab--------------------
+Tab_ID = ID RNG
+--
+ID_L_InitialSeed = Initial Seed
+ID_Frame = Frame
+PerfectMatching = Perfect Matching
+PartialMatch = Partial Match
+ID_Invalid_Refine = Disable filters
+ID_L_CorrectionValue = Correction Value of Needle
+ID_shiny = Shiny
+--
+dgvID_frame = Frame
+dgvID_ID = ID
+dgvID_TSV = TSV
+dgvID_TID = TID
+dgvID_SID = SID
+dgvID_Clock = Needle
+--
+ID_RNGInfo = RNG Info
+ID_Filters = Filters
+ID_SearchSettings = Search Settings
+--
+ID_Search = Search
 ---------------------Other Tab----------------------
 other = other
