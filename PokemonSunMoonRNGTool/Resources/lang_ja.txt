@@ -207,6 +207,8 @@ Tab_ID = ID調整
 --
 ID_L_InitialSeed = 初期seed
 ID_Frame = Frame
+L_ID_List = IDリスト
+L_PSVList = PSVリスト
 PerfectMatching = 完全一致
 PartialMatch = 部分一致
 ID_Invalid_Refine = 絞り込みを無効
