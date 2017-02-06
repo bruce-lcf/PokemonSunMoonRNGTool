@@ -175,9 +175,9 @@ St_Clock = Needle
 dgvSt_rand = Rand
 --
 St_SearchSettings = SearchSettings
-St_SynchroOnly = Sync Only
+St_SynchroOnly = Synced Only
 St_shiny = Shiny
-TypeNull = Type:Null
+AlwaysSynchro = Always Synced
 Valid_Blink = Consider blinking process (Sync)
 --
 Stationary_Search = Search
@@ -209,7 +209,7 @@ ID_L_InitialSeed = Initial Seed
 ID_Frame = Frame
 L_ID_List = ID List
 L_PSVList = PSV List
-PerfectMatching = Perfect Matching
+PerfectMatching = Perfect Match
 PartialMatch = Partial Match
 ID_Invalid_Refine = Disable filters
 ID_L_CorrectionValue = Correction Value of Needle

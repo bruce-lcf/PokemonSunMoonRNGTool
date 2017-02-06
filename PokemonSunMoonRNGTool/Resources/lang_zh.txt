@@ -177,7 +177,7 @@ dgvSt_rand = 亂數值
 St_SearchSettings = 其它
 St_SynchroOnly = 只顯示同步個體
 St_shiny = 只顯示色違
-TypeNull = 屬性：空
+AlwaysSynchro = 必定同步
 Valid_Blink = 考慮眨眼影響（同步）
 --
 Stationary_Search = 計算

@@ -221,7 +221,7 @@
             this.St_SearchSettings = new System.Windows.Forms.GroupBox();
             this.Valid_Blink = new System.Windows.Forms.CheckBox();
             this.St_SynchroOnly = new System.Windows.Forms.CheckBox();
-            this.TypeNull = new System.Windows.Forms.CheckBox();
+            this.AlwaysSynchro = new System.Windows.Forms.CheckBox();
             this.St_TSV = new System.Windows.Forms.NumericUpDown();
             this.St_shiny = new System.Windows.Forms.CheckBox();
             this.label8 = new System.Windows.Forms.Label();
@@ -2730,7 +2730,7 @@
             // 
             this.St_SearchSettings.Controls.Add(this.Valid_Blink);
             this.St_SearchSettings.Controls.Add(this.St_SynchroOnly);
-            this.St_SearchSettings.Controls.Add(this.TypeNull);
+            this.St_SearchSettings.Controls.Add(this.AlwaysSynchro);
             this.St_SearchSettings.Controls.Add(this.St_TSV);
             this.St_SearchSettings.Controls.Add(this.St_shiny);
             this.St_SearchSettings.Controls.Add(this.label8);
@@ -2761,15 +2761,15 @@
             this.St_SynchroOnly.Text = "シンクロ個体のみ出力";
             this.St_SynchroOnly.UseVisualStyleBackColor = true;
             // 
-            // TypeNull
+            // AlwaysSynchro
             // 
-            this.TypeNull.AutoSize = true;
-            this.TypeNull.Location = new System.Drawing.Point(21, 25);
-            this.TypeNull.Name = "TypeNull";
-            this.TypeNull.Size = new System.Drawing.Size(75, 16);
-            this.TypeNull.TabIndex = 50;
-            this.TypeNull.Text = "タイプ・ヌル";
-            this.TypeNull.UseVisualStyleBackColor = true;
+            this.AlwaysSynchro.AutoSize = true;
+            this.AlwaysSynchro.Location = new System.Drawing.Point(21, 25);
+            this.AlwaysSynchro.Name = "AlwaysSynchro";
+            this.AlwaysSynchro.Size = new System.Drawing.Size(75, 16);
+            this.AlwaysSynchro.TabIndex = 50;
+            this.AlwaysSynchro.Text = "タイプ・ヌル";
+            this.AlwaysSynchro.UseVisualStyleBackColor = true;
             // 
             // St_TSV
             // 
@@ -3065,7 +3065,7 @@
             this.St_pokedex.FormattingEnabled = true;
             this.St_pokedex.Location = new System.Drawing.Point(70, 27);
             this.St_pokedex.Name = "St_pokedex";
-            this.St_pokedex.Size = new System.Drawing.Size(80, 20);
+            this.St_pokedex.Size = new System.Drawing.Size(90, 20);
             this.St_pokedex.TabIndex = 12;
             this.St_pokedex.SelectedIndexChanged += new System.EventHandler(this.ChangePoke);
             // 
@@ -5295,7 +5295,7 @@
         private System.Windows.Forms.ComboBox St_Synchro_nature;
         private System.Windows.Forms.NumericUpDown St_min;
         private System.Windows.Forms.NumericUpDown St_max;
-        private System.Windows.Forms.CheckBox TypeNull;
+        private System.Windows.Forms.CheckBox AlwaysSynchro;
         private System.Windows.Forms.NumericUpDown St_TargetFrame;
         private System.Windows.Forms.NumericUpDown St_TargetFrame_Range;
         private System.Windows.Forms.TabPage other;

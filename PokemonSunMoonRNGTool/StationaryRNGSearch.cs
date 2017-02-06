@@ -10,7 +10,7 @@ namespace PokemonSunMoonRNGTool
     {
         // Search Settings
         public int TSV;
-        public bool TypeNull;
+        public bool AlwaysSynchro;
         public int Synchro_Stat;
         public bool Valid_Blink;
 
@@ -38,7 +38,7 @@ namespace PokemonSunMoonRNGTool
             if (st.row_r % 100 >= 50)
                 st.Synchronize = true;
 
-            if (TypeNull)
+            if (AlwaysSynchro)
                 st.Synchronize = true;
 
             st.Clock = (int)(st.row_r % 17);
@@ -97,7 +97,7 @@ namespace PokemonSunMoonRNGTool
             st.IVs = (int[])IV.Clone();
 
             //謎消費 -- Something
-            if (TypeNull)
+            if (AlwaysSynchro)
                 sfmt.NextUInt64();
 
             //性格 -- Nature
