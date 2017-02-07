@@ -92,7 +92,7 @@ namespace PokemonSunMoonRNGTool
             STR_ONLY = only[l];
             STR_GENDERLESS = genderless[l];
 
-            pre_Items.Items[0] = post_Items.Items[0] = ability.Items[0] = sex.Items[0] = ball.Items[0] = STR_ANY;
+            pre_Items.Items[0] = post_Items.Items[0] = ability.Items[0] = Gender.Items[0] = ball.Items[0] = STR_ANY;
             pre_ability.Items[2] = post_ability.Items[2] = ability.Items[3] = abilities[2] = STR_DREAM;
 
             ball.Items[1] = STR_FIRST + STR_PARENT;
@@ -136,12 +136,12 @@ namespace PokemonSunMoonRNGTool
             {
                 Nature = nature.SelectedIndex - 1,
                 Ability = ability.SelectedIndex - 1,
-                Gender = sex.SelectedIndex - 1,
+                Gender = Gender.SelectedIndex - 1,
                 HPType = mezapaType.SelectedIndex - 1,
                 IVlow = IVlow,
                 IVup = IVup,
                 Ball = ball.SelectedIndex - 1,
-                Skip = Invalid_Refine.Checked,
+                Skip = CB_EggS_Search_DisableFilters.Checked,
             };
         }
 
@@ -198,9 +198,9 @@ namespace PokemonSunMoonRNGTool
                 GenderRandom = sex_ratio.SelectedIndex < 4,
                 GenderMale = sex_ratio.SelectedIndex == 4,
                 GenderFemale = sex_ratio.SelectedIndex == 5,
-                International = International.Checked,
-                ShinyCharm = omamori.Checked,
-                Heterogeneous = Heterogeneity.Checked,
+                International = CB_EggS_International.Checked,
+                ShinyCharm = CB_EggS_ShinyCharm.Checked,
+                Heterogeneous = CB_EggS_Heterogeneity.Checked,
                 Both_Everstone = pre_Items.SelectedIndex == 1 && post_Items.SelectedIndex == 1,
                 Everstone = pre_Items.SelectedIndex == 1 || post_Items.SelectedIndex == 1,
                 DestinyKnot = pre_Items.SelectedIndex == 2 || post_Items.SelectedIndex == 2,
@@ -208,9 +208,9 @@ namespace PokemonSunMoonRNGTool
                 Both_PowerItems = pre_Items.SelectedIndex > 2 && post_Items.SelectedIndex > 2,
                 MalePowerStat = pre_Items.SelectedIndex - 3,
                 FemalePowerStat = post_Items.SelectedIndex - 3,
-                ParentAbility = (!post_ditto.Checked ? post_ability : pre_ability).SelectedIndex,
-                ConciderTSV = k_TSV_shiny.Checked,
-                SearchOtherTSV = other_TSV.Checked,
+                ParentAbility = (!CB_EggS_post_ditto.Checked ? post_ability : pre_ability).SelectedIndex,
+                ConciderTSV = CB_EggS_TSV_Shiny.Checked,
+                SearchOtherTSV = CB_EggS_OtherTSV.Checked,
 
                 TSV = (int)TSV.Value,
                 pre_parent = pre_parent,
@@ -248,17 +248,17 @@ namespace PokemonSunMoonRNGTool
             if (setting.Skip)
                 return true;
 
-            if (!(International.Checked || omamori.Checked) && shiny.Checked)
+            if (!(CB_EggS_International.Checked || CB_EggS_ShinyCharm.Checked) && CB_EggS_Shiny.Checked)
                 return false;
 
-            if (!other_TSV.Checked)
+            if (!CB_EggS_OtherTSV.Checked)
             {
-                if (shiny.Checked && !result.Shiny)
+                if (CB_EggS_Shiny.Checked && !result.Shiny)
                     return false;
             }
             else
             {
-                if (International.Checked || omamori.Checked)
+                if (CB_EggS_International.Checked || CB_EggS_ShinyCharm.Checked)
                     result.Shiny = other_tsv.Any(item => result.PSV == item);
                 if (!result.Shiny)
                     return false;
@@ -356,7 +356,7 @@ namespace PokemonSunMoonRNGTool
         private DataGridViewRow getRow_Egg(int i, EggRNGSearch rng, EggRNGSearch.EggRNGResult result, DataGridView dgv)
         {
             var true_psv = rng.PIDRerolls > 0 ? result.PSV.ToString("d") : "-";
-            string true_pid = International.Checked || omamori.Checked ? result.PID.ToString("X8") : STR_TEMP_PID;
+            string true_pid = CB_EggS_International.Checked || CB_EggS_ShinyCharm.Checked ? result.PID.ToString("X8") : STR_TEMP_PID;
             string true_nature = rng.Everstone ? (rng.Both_Everstone ? (result.BE_InheritParents == 0 ? STR_FIRST : STR_SECOND) : items[0]) : natures[result.Nature];
 
             DataGridViewRow row = new DataGridViewRow();
@@ -370,7 +370,7 @@ namespace PokemonSunMoonRNGTool
 
             for (int k = 0; k < result.InheritStats.Length; k++)
             {
-                var color = result.InheritParents[k] == 0 ? pre.ForeColor : post.ForeColor;
+                var color = result.InheritParents[k] == 0 ? L_EggS_pre.ForeColor : L_EggS_post.ForeColor;
                 row.Cells[3 + (int)result.InheritStats[k]].Style.ForeColor = color;
             }
             if (result.Shiny)
@@ -444,7 +444,7 @@ namespace PokemonSunMoonRNGTool
             var tiny = new TinyMT(status, new TinyMTParameter(0x8f7011ee, 0xfc78ff1f, 0x3793fdff));
 
             List<DataGridViewRow> list = new List<DataGridViewRow>();
-            k_dataGridView.Rows.Clear();
+            EggS_dataGridView.Rows.Clear();
 
             var setting = EgggetSettings();
             var rng = getEggRNGSettings();
@@ -459,11 +459,11 @@ namespace PokemonSunMoonRNGTool
 
                 if (!EggframeMatch(result, setting))
                     continue;
-                list.Add(getRow_Egg(i, rng, result, k_dataGridView));
+                list.Add(getRow_Egg(i, rng, result, EggS_dataGridView));
             }
 
-            k_dataGridView.Rows.AddRange(list.ToArray());
-            k_dataGridView.CurrentCell = null;
+            EggS_dataGridView.Rows.AddRange(list.ToArray());
+            EggS_dataGridView.CurrentCell = null;
         }
 
         private void EggList_Search_Click(object sender, EventArgs e)
@@ -559,21 +559,21 @@ namespace PokemonSunMoonRNGTool
                 Error(msgstr[6]);
             else if (0 > TSV.Value || TSV.Value > 4095)
                 Error("TSV" + msgstr[7]);
-            else if (sex_ratio.SelectedIndex == 4 && !(post_ditto.Checked))
+            else if (sex_ratio.SelectedIndex == 4 && !(CB_EggS_post_ditto.Checked))
             {
-                post_ditto.Checked = true;
+                CB_EggS_post_ditto.Checked = true;
                 return true;
             }
-            else if (sex_ratio.SelectedIndex == 6 && !(post_ditto.Checked || pre_ditto.Checked))
+            else if (sex_ratio.SelectedIndex == 6 && !(CB_EggS_post_ditto.Checked || CB_EggS_pre_ditto.Checked))
             {
                 Error(msgstr[8]);
-                post_ditto.Checked = true;
+                CB_EggS_post_ditto.Checked = true;
                 return true;
             }
-            else if (sex_ratio.SelectedIndex == 6 && pre_ditto.Checked)
+            else if (sex_ratio.SelectedIndex == 6 && CB_EggS_pre_ditto.Checked)
             {
                 Error(msgstr[9]);
-                post_ditto.Checked = true;
+                CB_EggS_post_ditto.Checked = true;
                 return true;
             }
             else
@@ -584,16 +584,16 @@ namespace PokemonSunMoonRNGTool
         private void Form1_Load(object sender, EventArgs e)
         {
             St_dataGridView.DefaultCellStyle.Font = new Font("Consolas", 9);
-            k_dataGridView.DefaultCellStyle.Font = new Font("Consolas", 9);
+            EggS_dataGridView.DefaultCellStyle.Font = new Font("Consolas", 9);
             L_dataGridView.DefaultCellStyle.Font = new Font("Consolas", 9);
             ID_dataGridView.DefaultCellStyle.Font = new Font("Consolas", 9);
-            k_dataGridView.Columns[9].DefaultCellStyle.Font = new Font("ＭＳ ゴシック", 9);
+            EggS_dataGridView.Columns[9].DefaultCellStyle.Font = new Font("ＭＳ ゴシック", 9);
             L_dataGridView.Columns[9].DefaultCellStyle.Font = new Font("ＭＳ ゴシック", 9);
 
             Type dgvtype = typeof(DataGridView);
             System.Reflection.PropertyInfo dgvPropertyInfo = dgvtype.GetProperty("DoubleBuffered", System.Reflection.BindingFlags.Instance | System.Reflection.BindingFlags.NonPublic);
             dgvPropertyInfo.SetValue(St_dataGridView, true, null);
-            dgvPropertyInfo.SetValue(k_dataGridView, true, null);
+            dgvPropertyInfo.SetValue(EggS_dataGridView, true, null);
             dgvPropertyInfo.SetValue(L_dataGridView, true, null);
             dgvPropertyInfo.SetValue(ID_dataGridView, true, null);
 
@@ -632,7 +632,7 @@ namespace PokemonSunMoonRNGTool
             ability.SelectedIndex = 0;
             pre_ability.SelectedIndex = 0;
             post_ability.SelectedIndex = 0;
-            sex.SelectedIndex = 0;
+            Gender.SelectedIndex = 0;
             sex_ratio.SelectedIndex = 0;
             ball.SelectedIndex = 0;
 
@@ -642,7 +642,7 @@ namespace PokemonSunMoonRNGTool
             St_pokedex.SelectedIndex = 0;
 
             loadConfig();
-            other_TSV.Enabled = loadTSV();
+            CB_EggS_OtherTSV.Enabled = loadTSV();
             Menu_ParentsList.Enabled = loadParents();
 
             St_IVlow1.Visible = true;
@@ -669,7 +669,7 @@ namespace PokemonSunMoonRNGTool
             St_pokedex.Enabled = false;
             St_Lv.Enabled = false;
 
-            omamori.Checked = Properties.Settings.Default.omamori;
+            CB_EggS_ShinyCharm.Checked = Properties.Settings.Default.omamori;
         }
 
         private void omamori_CheckedChanged(object sender, EventArgs e)
@@ -789,14 +789,14 @@ namespace PokemonSunMoonRNGTool
 
         private void SelectAllToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            k_dataGridView.SelectAll();
+            EggS_dataGridView.SelectAll();
         }
 
         private void copyToolStripMenuItem_Click(object sender, EventArgs e)
         {
             try
             {
-                Clipboard.SetDataObject(k_dataGridView.GetClipboardContent());
+                Clipboard.SetDataObject(EggS_dataGridView.GetClipboardContent());
             }
             catch (ArgumentNullException)
             {
@@ -836,7 +836,7 @@ namespace PokemonSunMoonRNGTool
         {
             try
             {
-                var seed = (string)k_dataGridView.CurrentRow.Cells[2].Value;
+                var seed = (string)EggS_dataGridView.CurrentRow.Cells[2].Value;
                 string[] Data = seed.Split(',');
                 L_status3a.Value = Convert.ToUInt32(Data[0], 16);
                 L_status2a.Value = Convert.ToUInt32(Data[1], 16);
@@ -853,7 +853,7 @@ namespace PokemonSunMoonRNGTool
         {
             try
             {
-                var seed = (string)k_dataGridView.CurrentRow.Cells[2].Value;
+                var seed = (string)EggS_dataGridView.CurrentRow.Cells[2].Value;
                 string[] Data = seed.Split(',');
                 status3.Value = Convert.ToUInt32(Data[0], 16);
                 status2.Value = Convert.ToUInt32(Data[1], 16);
@@ -887,43 +887,43 @@ namespace PokemonSunMoonRNGTool
         {
             if ((sender as CheckBox)?.Checked ?? false)
             {
-                (sender == post_ditto ? pre_ditto : post_ditto).Checked = false;
-                Heterogeneity.Enabled = false;
-                Heterogeneity.Checked = true;
+                (sender == CB_EggS_post_ditto ? CB_EggS_pre_ditto : CB_EggS_post_ditto).Checked = false;
+                CB_EggS_Heterogeneity.Enabled = false;
+                CB_EggS_Heterogeneity.Checked = true;
             }
             else
             {
-                Heterogeneity.Checked = false;
-                Heterogeneity.Enabled = true;
+                CB_EggS_Heterogeneity.Checked = false;
+                CB_EggS_Heterogeneity.Enabled = true;
             }
         }
 
         private void Change_color(object sender, EventArgs e)
         {
             // Invert Colors
-            if (pre.ForeColor == Color.Red)
+            if (L_EggS_pre.ForeColor == Color.Red)
             {
-                pre.ForeColor = Color.DodgerBlue;
-                post.ForeColor = Color.Red;
+                L_EggS_pre.ForeColor = Color.DodgerBlue;
+                L_EggS_post.ForeColor = Color.Red;
             }
             else
             {
-                pre.ForeColor = Color.Red;
-                post.ForeColor = Color.DodgerBlue;
+                L_EggS_pre.ForeColor = Color.Red;
+                L_EggS_post.ForeColor = Color.DodgerBlue;
             }
-            pre_parent1.ForeColor = pre.ForeColor;
-            pre_parent2.ForeColor = pre.ForeColor;
-            pre_parent3.ForeColor = pre.ForeColor;
-            pre_parent4.ForeColor = pre.ForeColor;
-            pre_parent5.ForeColor = pre.ForeColor;
-            pre_parent6.ForeColor = pre.ForeColor;
+            pre_parent1.ForeColor = L_EggS_pre.ForeColor;
+            pre_parent2.ForeColor = L_EggS_pre.ForeColor;
+            pre_parent3.ForeColor = L_EggS_pre.ForeColor;
+            pre_parent4.ForeColor = L_EggS_pre.ForeColor;
+            pre_parent5.ForeColor = L_EggS_pre.ForeColor;
+            pre_parent6.ForeColor = L_EggS_pre.ForeColor;
 
-            post_parent1.ForeColor = post.ForeColor;
-            post_parent2.ForeColor = post.ForeColor;
-            post_parent3.ForeColor = post.ForeColor;
-            post_parent4.ForeColor = post.ForeColor;
-            post_parent5.ForeColor = post.ForeColor;
-            post_parent6.ForeColor = post.ForeColor;
+            post_parent1.ForeColor = L_EggS_post.ForeColor;
+            post_parent2.ForeColor = L_EggS_post.ForeColor;
+            post_parent3.ForeColor = L_EggS_post.ForeColor;
+            post_parent4.ForeColor = L_EggS_post.ForeColor;
+            post_parent5.ForeColor = L_EggS_post.ForeColor;
+            post_parent6.ForeColor = L_EggS_post.ForeColor;
         }
 
         private void B_SaveConfig_Click(object sender, EventArgs e)
@@ -948,7 +948,7 @@ namespace PokemonSunMoonRNGTool
 
         private void ConsiderTSVcheck(object sender, EventArgs e)
         {
-            k_TSV_shiny.Checked = L_TSV_shiny.Checked = (sender as CheckBox)?.Checked ?? false;
+            CB_EggS_TSV_Shiny.Checked = L_TSV_shiny.Checked = (sender as CheckBox)?.Checked ?? false;
         }
 
         private void B_TSV_Click(object sender, EventArgs e)
