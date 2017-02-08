@@ -55,7 +55,7 @@ namespace PokemonSunMoonRNGTool
                 sfmt.NextUInt64();
 
             //暗号化定数 -- Encryption Constant
-            st.EC = (uint)(st.row_r % 0x100000000);
+            st.EC = (uint)(sfmt.NextUInt64() % 0x100000000);
 
             //性格値 -- PID
             st.PID = (uint)(sfmt.NextUInt64() % 0x100000000);
