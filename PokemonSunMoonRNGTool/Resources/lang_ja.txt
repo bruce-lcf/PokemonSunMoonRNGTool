@@ -85,7 +85,6 @@ CB_EggS_ShinyCharm = 光るお守り
 CB_EggS_Shiny = 色違いのみ出力
 CB_EggS_TSV_Shiny = TSVを考慮した計算をする
 CB_EggS_OtherTSV = 他TSVで色違いを探す
-B_EggS_Search = 計算
 --
 dgv_EggS_Frame = 消費
 dgv_EggS_Used = 受取
@@ -103,6 +102,8 @@ dgv_EggS_PID = 性格値
 dgv_EggS_PSV = SV
 dgv_EggS_EC = 暗号化定数
 dgv_EggS_Rand = 乱数列
+--
+B_EggS_Search = 計算
 ----------------------EggList Tab--------------------------
 Tab_EggList = 連続孵化リスト
 GB_EggL_RNGInfo = 検索範囲
@@ -132,100 +133,102 @@ Tab_Stationary = 固定乱数
 -----------------StationarySearch Tab--------------------
 Tab_StationarySearch = 個体検索
 --
-St_RNGInfo = 検索範囲
-St_L_InitialSeed = 初期seed
-St_Frame = Frame
-St_L_TargetFrame = 目標Frame
-St_UpdateFrame = 上書き
+GB_StaS_RNGInfo = 検索範囲
+L_StaS_InitialSeed = 初期seed
+L_StaS_Frame = Frame
+L_StaS_TargetFrame = 目標Frame
+B_StaS_UpdateFrame = 上書き
 --
-St_Pokemon = ポケモン
-St_Invalid_Refine = 絞り込みを無効
-St_search_Status = 能力値から検索
-St_search_IV = 個体値から検索
-St_Status_display = 能力値を表示する
-St_L_nature = 性格
-synchro_nature = シンクロ
-St_L_mezapa = めざパ
+RB_StaS_Search_IV = 個体値から検索
+RB_StaS_Search_Status = 能力値から検索
+L_StaS_Pokemon = ポケモン
+CB_StaS_Status_Display = 能力値を表示する
+CB_StaS_Search_DisableFilters = 絞り込みを無効
+L_StaS_Search_Nature = 性格
+L_StaS_Search_SyncNature = シンクロ
+L_StaS_Search_HiddenPower = めざパ
 --
-L_St_search_H = H
-L_St_search_A = A
-L_St_search_B = B
-L_St_search_C = C
-L_St_search_D = D
-L_St_search_S = S
+L_StaS_Search_H = H
+L_StaS_Search_A = A
+L_StaS_Search_B = B
+L_StaS_Search_C = C
+L_StaS_Search_D = D
+L_StaS_Search_S = S
 --
-dgvSt_frame = F
-dgvSt_tolerance = ずれ
-dgvSt_H = H
-dgvSt_A = A
-dgvSt_B = B
-dgvSt_C = C
-dgvSt_D = D
-dgvSt_S = S
-dgvSt_nature = 性格
-dgvSt_Synchronize = シンクロ
-dgvSt_H_Status = H
-dgvSt_A_Status = A
-dgvSt_B_Status = B
-dgvSt_C_Status = C
-dgvSt_D_Status = D
-dgvSt_S_Status = S
-dgvSt_psv = PSV
-St_Clock = 針
-dgvSt_rand = 乱数値
+dgv_StaS_Frame = F
+dgv_StaS_Shift = ずれ
+dgv_StaS_H = H
+dgv_StaS_A = A
+dgv_StaS_B = B
+dgv_StaS_C = C
+dgv_StaS_D = D
+dgv_StaS_S = S
+dgv_StaS_Nature = 性格
+dgv_StaS_Synchronize = シンクロ
+dgv_StaS_H_Status = H
+dgv_StaS_A_Status = A
+dgv_StaS_B_Status = B
+dgv_StaS_C_Status = C
+dgv_StaS_D_Status = D
+dgv_StaS_S_Status = S
+dgv_StaS_PSV = PSV
+dgv_StaS_Needle = 針
+dgv_StaS_Rand = 乱数値
 --
-St_SearchSettings = その他
-St_SynchroOnly = シンクロ個体のみ出力
-St_shiny = 色違いのみ出力
-AlwaysSynchro = 必ずシンクロ
-Valid_Blink = まばたき契機を考慮(シンクロ)
+GB_StaS_SearchSettings = その他
+CB_StaS_SynchroOnly = シンクロ個体のみ出力
+CB_StaS_Shiny = 色違いのみ出力
+CB_StaS_AlwaysSynchro = 必ずシンクロ
+CB_StaS_Valid_Blink = まばたき契機を考慮(シンクロ)
 --
-Stationary_Search = 計算
-Stationary_List = リスト表示
+B_StaS_Search = 計算
 ----------------------StationaryClock Tab-----------------
 Tab_StationaryClock = 針検索
 --
-Clock_groupBox = 針入力
-clock_begin = 開始時の位置
-clock_end = 終了時の位置
-Delete = 消去
-Back = 1つ戻る
-L_Candidate_InitSeed = 初期seed候補
+GB_StaC_EnterNeedle = 針入力
+CB_StaC_Clock_Start = 開始時の位置
+CB_StaC_Clock_End = 終了時の位置
+B_StaC_Clear = 消去
+B_StaC_Back = 1つ戻る
+L_StaC_Candidate_InitialSeed = 初期seed候補
 --
-Clock_RNGInfo = 現在位置検索
-Clock_CurrentFrame = 計算
-St_Clock_Search_InitialSeed = 初期seed
-St_Clock_Search_Frame = Frame
-St_Clocklist = 針リスト
-Calc_Frame_Info = 待機Frame計算
-Calc_Frame = 計算
-St_Clock_Time_InitialSeed = 初期seed
-St_Clock_Time_Frame = Frame
-qty_NPC = NPCの数
+GB_StaC_CurrentPosition = 現在位置検索
+B_StaC_CP_Search = 計算
+L_StaC_CP_InitialSeed = 初期seed
+L_StaC_CP_Frame = Frame
+L_StaC_CP_NeedleList = 針リスト
+--
+GB_StaC_CalcWaitingTime = 待機Frame計算
+B_StaC_CWT_Search = 計算
+L_StaC_CWT_InitialSeed = 初期seed
+L_StaC_CWT_Frame = Frame
+L_StaC_CWT_Qty_NPC = NPCの数
 --------------------IDRNG Tab--------------------
 Tab_ID = ID調整
 --
-ID_L_InitialSeed = 初期seed
-ID_Frame = Frame
-L_ID_List = IDリスト
-L_PSVList = PSVリスト
-PerfectMatching = 完全一致
-PartialMatch = 部分一致
-ID_Invalid_Refine = 絞り込みを無効
-ID_L_CorrectionValue = 針の補正
-ID_shiny = 色違いのみ出力
+L_ID_InitialSeed = 初期seed
+L_ID_Frame = Frame
+L_ID_IDList = IDリスト
+L_ID_PSVList = PSVリスト
+L_ID_CorrectionValue = 針の補正
 --
-dgvID_frame = Frame
-dgvID_ID = ID（通常）
-dgvID_TSV = TSV
-dgvID_TID = TID
-dgvID_SID = SID
-dgvID_Clock = 針
+RB_ID_PerfectMatching = 完全一致
+RB_ID_PartialMatch = 部分一致
 --
-ID_RNGInfo = 検索範囲
-ID_Filters = フィルター
-ID_SearchSettings = その他
+CB_ID_DisableFilters = 絞り込みを無効
+CB_ID_Shiny = 色違いのみ出力
 --
-ID_Search = 計算
+dgv_ID_Frame = Frame
+dgv_ID_ID = ID（通常）
+dgv_ID_TSV = TSV
+dgv_ID_TID = TID
+dgv_ID_SID = SID
+dgv_ID_Needle = 針
+--
+GB_ID_RNGInfo = 検索範囲
+GB_ID_Filters = フィルター
+GB_ID_SearchSettings = その他
+--
+B_ID_Search = 計算
 ---------------------Other Tab----------------------
 other = その他

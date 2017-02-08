@@ -85,7 +85,6 @@ CB_EggS_ShinyCharm = 闪耀护符
 CB_EggS_Shiny = 只显示闪光帧
 CB_EggS_TSV_Shiny = 计算时考虑TSV的影响
 CB_EggS_OtherTSV = 检索其他TSV的闪光
-B_EggS_Search = 计算
 --
 dgv_EggS_Frame = 帧数
 dgv_EggS_Used = 取蛋消耗
@@ -103,6 +102,8 @@ dgv_EggS_PID = 性格值
 dgv_EggS_PSV = SV
 dgv_EggS_EC = 加密常数
 dgv_EggS_Rand = 乱数列
+--
+B_EggS_Search = 计算
 ----------------------EggList Tab--------------------------
 Tab_EggList = 连续取蛋列表
 GB_EggL_RNGInfo = 检索范围
@@ -132,100 +133,102 @@ Tab_Stationary = 固定乱数
 -----------------StationarySearch Tab--------------------
 Tab_StationarySearch = 个体检索
 --
-St_RNGInfo = 检索范围
-St_L_InitialSeed = 初始seed
-St_Frame = 帧
-St_L_TargetFrame = 目标帧
-St_UpdateFrame = 更新
+GB_StaS_RNGInfo = 检索范围
+L_StaS_InitialSeed = 初始seed
+L_StaS_Frame = 帧
+L_StaS_TargetFrame = 目标帧
+B_StaS_UpdateFrame = 更新
 --
-St_Pokemon = 宝可梦
-St_Invalid_Refine = 取消筛选
-St_search_Status = 通过能力值检索
-St_search_IV = 通过个体值检索
-St_Status_display = 显示能力
-St_L_nature = 性格
-synchro_nature = 同步性格
-St_L_mezapa = 觉醒
+RB_StaS_Search_IV = 通过个体值检索
+RB_StaS_Search_Status = 通过能力值检索
+L_StaS_Pokemon = 宝可梦
+CB_StaS_Status_Display = 显示能力
+CB_StaS_Search_DisableFilters = 取消筛选
+L_StaS_Search_Nature = 性格
+L_StaS_Search_SyncNature = 同步性格
+L_StaS_Search_HiddenPower = 觉醒
 --
-L_St_search_H = H
-L_St_search_A = A
-L_St_search_B = B
-L_St_search_C = C
-L_St_search_D = D
-L_St_search_S = S
+L_StaS_Search_H = H
+L_StaS_Search_A = A
+L_StaS_Search_B = B
+L_StaS_Search_C = C
+L_StaS_Search_D = D
+L_StaS_Search_S = S
 --
-dgvSt_frame = 帧
-dgvSt_tolerance = 偏差
-dgvSt_H = H
-dgvSt_A = A
-dgvSt_B = B
-dgvSt_C = C
-dgvSt_D = D
-dgvSt_S = S
-dgvSt_nature = 性格
-dgvSt_Synchronize = 同步
-dgvSt_H_Status = H
-dgvSt_A_Status = A
-dgvSt_B_Status = B
-dgvSt_C_Status = C
-dgvSt_D_Status = D
-dgvSt_S_Status = S
-dgvSt_psv = PSV
-St_Clock = 指针
-dgvSt_rand = 乱数值
+dgv_StaS_Frame = 帧
+dgv_StaS_Shift = 偏差
+dgv_StaS_H = H
+dgv_StaS_A = A
+dgv_StaS_B = B
+dgv_StaS_C = C
+dgv_StaS_D = D
+dgv_StaS_S = S
+dgv_StaS_Nature = 性格
+dgv_StaS_Synchronize = 同步
+dgv_StaS_H_Status = H
+dgv_StaS_A_Status = A
+dgv_StaS_B_Status = B
+dgv_StaS_C_Status = C
+dgv_StaS_D_Status = D
+dgv_StaS_S_Status = S
+dgv_StaS_PSV = PSV
+dgv_StaS_Needle = 指针
+dgv_StaS_Rand = 乱数值
 --
-St_SearchSettings = 其他
-St_SynchroOnly = 只显示同步个体
-St_shiny = 只显示闪光
-AlwaysSynchro = 必定同步
-Valid_Blink = 考虑眨眼影响（同步）
+GB_StaS_SearchSettings = 其他
+CB_StaS_SynchroOnly = 只显示同步个体
+CB_StaS_Shiny = 只显示闪光
+CB_StaS_AlwaysSynchro = 必定同步
+CB_StaS_Valid_Blink = 考虑眨眼影响（同步）
 --
-Stationary_Search = 计算
-Stationary_List = 显示列表
+B_StaS_Search = 计算
 ----------------------StationaryClock Tab---------------------
 Tab_StationaryClock = 指针检索
 --
-Clock_groupBox = 输入指针
-clock_begin = 开始位置
-clock_end = 结束位置
-Delete = 清空
-Back = 后退
-L_Candidate_InitSeed = 候选初始Seed
+GB_StaC_EnterNeedle = 输入指针
+CB_StaC_Clock_Start = 开始位置
+CB_StaC_Clock_End = 结束位置
+B_StaC_Clear = 清空
+B_StaC_Back = 后退
+L_StaC_Candidate_InitialSeed = 候选初始Seed
 --
-Clock_RNGInfo = 现在位置检索
-Clock_CurrentFrame = 计算
-St_Clock_Search_InitialSeed = 初始seed
-St_Clock_Search_Frame = 帧
-St_Clocklist = 指针列表
-Calc_Frame_Info = 待机时间计算
-Calc_Frame = 计算
-St_Clock_Time_InitialSeed = 初始seed
-St_Clock_Time_Frame = 帧
-qty_NPC = NPC数量
+GB_StaC_CurrentPosition = 现在位置检索
+B_StaC_CP_Search = 计算
+L_StaC_CP_InitialSeed = 初始seed
+L_StaC_CP_Frame = 帧
+L_StaC_CP_NeedleList = 指针列表
+--
+GB_StaC_CalcWaitingTime = 待机时间计算
+B_StaC_CWT_Search = 计算
+L_StaC_CWT_InitialSeed = 初始seed
+L_StaC_CWT_Frame = 帧
+L_StaC_CWT_Qty_NPC = NPC数量
 --------------------IDRNG Tab--------------------
 Tab_ID = ID 乱数
 --
-ID_L_InitialSeed = 初始seed
-ID_Frame = 帧
-L_ID_List = ID列表
-L_PSVList = PSV列表
-PerfectMatching = 完全匹配
-PartialMatch = 部分匹配
-ID_Invalid_Refine = 取消筛选
+L_ID_InitialSeed = 初始seed
+L_ID_Frame = 帧
+L_ID_IDList = ID列表
+L_ID_PSVList = PSV列表
 ID_L_CorrectionValue = 指针值矫正
-ID_shiny = 只显示闪光
 --
-dgvID_frame = 帧
-dgvID_ID = ID
-dgvID_TSV = TSV
-dgvID_TID = TID
-dgvID_SID = SID
-dgvID_Clock = 指针
+RB_ID_PerfectMatching = 完全匹配
+RB_ID_PartialMatch = 部分匹配
 --
-ID_RNGInfo = 检索范围
-ID_Filters = 筛选
-ID_SearchSettings = 其他
+CB_ID_DisableFilters = 取消筛选
+CB_ID_Shiny = 只显示闪光
 --
-ID_Search = 计算
+dgv_ID_Frame = 帧
+dgv_ID_ID = ID
+dgv_ID_TSV = TSV
+dgv_ID_TID = TID
+dgv_ID_SID = SID
+dgv_ID_Needle = 指针
+--
+GB_ID_RNGInfo = 检索范围
+GB_ID_Filters = 筛选
+GB_ID_SearchSettings = 其他
+--
+B_ID_Search = 计算
 ---------------------Other Tab----------------------
 other = 其他

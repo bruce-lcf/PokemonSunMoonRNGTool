@@ -149,7 +149,7 @@ namespace PokemonSunMoonRNGTool
         {
             int[] IVup = { (int)St_IVup1.Value, (int)St_IVup2.Value, (int)St_IVup3.Value, (int)St_IVup4.Value, (int)St_IVup5.Value, (int)St_IVup6.Value, };
             int[] IVlow = { (int)St_IVlow1.Value, (int)St_IVlow2.Value, (int)St_IVlow3.Value, (int)St_IVlow4.Value, (int)St_IVlow5.Value, (int)St_IVlow6.Value, };
-            int[] Status = { (int)St_stats1.Value, (int)St_stats2.Value, (int)St_stats3.Value, (int)St_stats4.Value, (int)St_stats5.Value, (int)St_stats6.Value, };
+            int[] Status = { (int)St_status1.Value, (int)St_status2.Value, (int)St_status3.Value, (int)St_status4.Value, (int)St_status5.Value, (int)St_status6.Value, };
 
             return new StationarySearchSetting
             {
@@ -158,7 +158,7 @@ namespace PokemonSunMoonRNGTool
                 IVlow = IVlow,
                 IVup = IVup,
                 Status = Status,
-                Skip = St_Invalid_Refine.Checked,
+                Skip = CB_StaS_Search_DisableFilters.Checked,
                 Pokemon = St_pokedex.SelectedIndex,
                 Lv = (int)St_Lv.Value
             };
@@ -173,7 +173,7 @@ namespace PokemonSunMoonRNGTool
             {
                 ID_List = IDList,
                 PSV_List = PSV_List,
-                Skip = ID_Invalid_Refine.Checked
+                Skip = CB_ID_DisableFilters.Checked
             };
         }
 
@@ -226,8 +226,8 @@ namespace PokemonSunMoonRNGTool
             {
                 Synchro_Stat = St_Synchro_nature.SelectedIndex - 1,
                 TSV = (int)St_TSV.Value,
-                AlwaysSynchro = AlwaysSynchro.Checked,
-                Valid_Blink = Valid_Blink.Checked
+                AlwaysSynchro = CB_StaS_AlwaysSynchro.Checked,
+                Valid_Blink = CB_StaS_Valid_Blink.Checked
             };
             return rng;
         }
@@ -287,19 +287,19 @@ namespace PokemonSunMoonRNGTool
             if (setting.Skip)
                 return true;
 
-            if (St_shiny.Checked && !result.Shiny)
+            if (CB_StaS_Shiny.Checked && !result.Shiny)
                 return false;
 
-            if (St_search_IV.Checked && !setting.validIVs(result.IVs))
+            if (RB_StaS_Search_IV.Checked && !setting.validIVs(result.IVs))
                 return false;
 
-            if (St_search_Status.Checked && !setting.validStatus(result, setting))
+            if (RB_StaS_Search_Status.Checked && !setting.validStatus(result, setting))
                 return false;
 
             if (!setting.mezapa_check(result.IVs))
                 return false;
 
-            if (St_SynchroOnly.Checked && !result.Synchronize)
+            if (CB_StaS_SynchroOnly.Checked && !result.Synchronize)
                 return false;
 
             if (setting.Nature != -1 && setting.Nature != result.Nature)
@@ -318,7 +318,7 @@ namespace PokemonSunMoonRNGTool
             if (setting.Skip)
                 return true;
 
-            if (ID_shiny.Checked && setting.PSV_List != "")
+            if (CB_ID_Shiny.Checked && setting.PSV_List != "")
             {
                 while (!srPSV.EndOfStream)
                 {
@@ -339,9 +339,9 @@ namespace PokemonSunMoonRNGTool
                     string str = string.Format("{0:D6}", srID.ReadLine());
                     string str2 = string.Format("{0:D6}", result.ID);
 
-                    if (PerfectMatching.Checked && str2 == str)
+                    if (RB_ID_PerfectMatching.Checked && str2 == str)
                         return true;
-                    if (PartialMatch.Checked && 0 <= str2.IndexOf(str))
+                    if (RB_ID_PartialMatch.Checked && 0 <= str2.IndexOf(str))
                         return true;
                 }
                 return false;
@@ -387,7 +387,7 @@ namespace PokemonSunMoonRNGTool
             var SynchronizeFlag = result.Synchronize ? "o" : "-";
             string[] status = new string[6];
             for (int j = 0; j < 6; j++)
-                status[j] = St_Status_display.Checked ? result.p_Status[j].ToString() : "-";
+                status[j] = CB_StaS_Status_Display.Checked ? result.p_Status[j].ToString() : "-";
 
             DataGridViewRow row = new DataGridViewRow();
             row.CreateCells(dgv);
@@ -434,10 +434,10 @@ namespace PokemonSunMoonRNGTool
 
             uint[] st =
             {
-                (uint)status0.Value,
-                (uint)status1.Value,
-                (uint)status2.Value,
-                (uint)status3.Value,
+                (uint)EggS_status0.Value,
+                (uint)EggS_status1.Value,
+                (uint)EggS_status2.Value,
+                (uint)EggS_status3.Value,
             };
 
             uint[] status = { st[0], st[1], st[2], st[3] };
@@ -482,10 +482,10 @@ namespace PokemonSunMoonRNGTool
 
             uint[] st =
             {
-                (uint)L_status0a.Value,
-                (uint)L_status1a.Value,
-                (uint)L_status2a.Value,
-                (uint)L_status3a.Value,
+                (uint)EggL_status0.Value,
+                (uint)EggL_status1.Value,
+                (uint)EggL_status2.Value,
+                (uint)EggL_status3.Value,
             };
 
             uint[] status = { st[0], st[1], st[2], st[3] };
@@ -659,12 +659,12 @@ namespace PokemonSunMoonRNGTool
             St_IVup5.Visible = true;
             St_IVup6.Visible = true;
 
-            St_stats1.Visible = false;
-            St_stats2.Visible = false;
-            St_stats3.Visible = false;
-            St_stats4.Visible = false;
-            St_stats5.Visible = false;
-            St_stats6.Visible = false;
+            St_status1.Visible = false;
+            St_status2.Visible = false;
+            St_status3.Visible = false;
+            St_status4.Visible = false;
+            St_status5.Visible = false;
+            St_status6.Visible = false;
 
             St_pokedex.Enabled = false;
             St_Lv.Enabled = false;
@@ -709,10 +709,10 @@ namespace PokemonSunMoonRNGTool
                     Error("TSV" + msgstr[7]);
                 else
                 {
-                    status3.Value = L_status3a.Value = s3;
-                    status2.Value = L_status2a.Value = s2;
-                    status1.Value = L_status1a.Value = s1;
-                    status0.Value = L_status0a.Value = s0;
+                    EggS_status3.Value = EggL_status3.Value = s3;
+                    EggS_status2.Value = EggL_status2.Value = s2;
+                    EggS_status1.Value = EggL_status1.Value = s1;
+                    EggS_status0.Value = EggL_status0.Value = s0;
                     TSV.Value = tsv;
                     St_TSV.Value = tsv;
                 }
@@ -838,10 +838,10 @@ namespace PokemonSunMoonRNGTool
             {
                 var seed = (string)EggS_dataGridView.CurrentRow.Cells[2].Value;
                 string[] Data = seed.Split(',');
-                L_status3a.Value = Convert.ToUInt32(Data[0], 16);
-                L_status2a.Value = Convert.ToUInt32(Data[1], 16);
-                L_status1a.Value = Convert.ToUInt32(Data[2], 16);
-                L_status0a.Value = Convert.ToUInt32(Data[3], 16);
+                EggL_status3.Value = Convert.ToUInt32(Data[0], 16);
+                EggL_status2.Value = Convert.ToUInt32(Data[1], 16);
+                EggL_status1.Value = Convert.ToUInt32(Data[2], 16);
+                EggL_status0.Value = Convert.ToUInt32(Data[3], 16);
             }
             catch (NullReferenceException)
             {
@@ -855,10 +855,10 @@ namespace PokemonSunMoonRNGTool
             {
                 var seed = (string)EggS_dataGridView.CurrentRow.Cells[2].Value;
                 string[] Data = seed.Split(',');
-                status3.Value = Convert.ToUInt32(Data[0], 16);
-                status2.Value = Convert.ToUInt32(Data[1], 16);
-                status1.Value = Convert.ToUInt32(Data[2], 16);
-                status0.Value = Convert.ToUInt32(Data[3], 16);
+                EggS_status3.Value = Convert.ToUInt32(Data[0], 16);
+                EggS_status2.Value = Convert.ToUInt32(Data[1], 16);
+                EggS_status1.Value = Convert.ToUInt32(Data[2], 16);
+                EggS_status0.Value = Convert.ToUInt32(Data[3], 16);
             }
             catch (NullReferenceException)
             {
@@ -930,10 +930,10 @@ namespace PokemonSunMoonRNGTool
         {
             string[] lines =
             {
-                status3.Text,
-                status2.Text,
-                status1.Text,
-                status0.Text,
+                EggS_status3.Text,
+                EggS_status2.Text,
+                EggS_status1.Text,
+                EggS_status0.Text,
                 TSV.Text,
             };
             try
@@ -1003,7 +1003,7 @@ namespace PokemonSunMoonRNGTool
 
         private void St_search_IV_CheckedChanged(object sender, EventArgs e)
         {
-            if (St_search_IV.Checked)
+            if (RB_StaS_Search_IV.Checked)
             {
                 St_IVlow1.Visible = true;
                 St_IVlow2.Visible = true;
@@ -1019,16 +1019,16 @@ namespace PokemonSunMoonRNGTool
                 St_IVup5.Visible = true;
                 St_IVup6.Visible = true;
 
-                St_stats1.Visible = false;
-                St_stats2.Visible = false;
-                St_stats3.Visible = false;
-                St_stats4.Visible = false;
-                St_stats5.Visible = false;
-                St_stats6.Visible = false;
+                St_status1.Visible = false;
+                St_status2.Visible = false;
+                St_status3.Visible = false;
+                St_status4.Visible = false;
+                St_status5.Visible = false;
+                St_status6.Visible = false;
 
-                St_Status_display.Visible = true;
+                CB_StaS_Status_Display.Visible = true;
 
-                if (St_Status_display.Checked)
+                if (CB_StaS_Status_Display.Checked)
                 {
                     St_pokedex.Enabled = true;
                     St_Lv.Enabled = true;
@@ -1056,14 +1056,14 @@ namespace PokemonSunMoonRNGTool
                 St_IVup5.Visible = false;
                 St_IVup6.Visible = false;
 
-                St_stats1.Visible = true;
-                St_stats2.Visible = true;
-                St_stats3.Visible = true;
-                St_stats4.Visible = true;
-                St_stats5.Visible = true;
-                St_stats6.Visible = true;
+                St_status1.Visible = true;
+                St_status2.Visible = true;
+                St_status3.Visible = true;
+                St_status4.Visible = true;
+                St_status5.Visible = true;
+                St_status6.Visible = true;
 
-                St_Status_display.Visible = false;
+                CB_StaS_Status_Display.Visible = false;
                 St_pokedex.Enabled = true;
                 St_Lv.Enabled = true;
             }
@@ -1101,7 +1101,7 @@ namespace PokemonSunMoonRNGTool
 
         private void St_check_display_Click(object sender, EventArgs e)
         {
-            if (St_Status_display.Checked)
+            if (CB_StaS_Status_Display.Checked)
             {
                 St_pokedex.Enabled = true;
                 St_Lv.Enabled = true;
@@ -1207,7 +1207,7 @@ namespace PokemonSunMoonRNGTool
         private string Convert_Clock(string n)
         {
             int tmp = Convert.ToInt32(n);
-            if (clock_end.Checked)
+            if (CB_StaC_Clock_End.Checked)
             {
                 if (tmp >= 4)
                 {
@@ -1239,7 +1239,7 @@ namespace PokemonSunMoonRNGTool
                 SFMT seed = new SFMT(InitialSeed);
                 bool flag;
 
-                Search_Clock.Items.Clear();
+                Clock_Output.Items.Clear();
 
                 for (int i = 0; i < min; i++)
                     sfmt.NextUInt64();
@@ -1259,7 +1259,7 @@ namespace PokemonSunMoonRNGTool
 
                     if (flag)
                     {
-                        Search_Clock.Items.Add(msgstr[21] + $"{i + Clock_List.Length - 1}" + msgstr[22] + $"{i + Clock_List.Length + 1}");
+                        Clock_Output.Items.Add(msgstr[21] + $"{i + Clock_List.Length - 1}" + msgstr[22] + $"{i + Clock_List.Length + 1}");
                     }
 
                 }
@@ -1363,7 +1363,7 @@ namespace PokemonSunMoonRNGTool
 
         private void ChangePoke(object sender, EventArgs e)
         {
-            AlwaysSynchro.Checked = (St_pokedex.SelectedIndex > 5);
+            CB_StaS_AlwaysSynchro.Checked = (St_pokedex.SelectedIndex > 5);
             switch (St_pokedex.SelectedIndex)
             {
                 case 3: NPC.Value = 1; St_Lv.Value = 60; break; // Tapu Fini

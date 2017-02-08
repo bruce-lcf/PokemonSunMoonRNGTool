@@ -85,7 +85,6 @@ CB_EggS_ShinyCharm = Shiny Charm
 CB_EggS_Shiny = Shiny Only
 CB_EggS_TSV_Shiny = Generate using TSV
 CB_EggS_OtherTSV = Search TSV list matches
-B_EggS_Search = Search
 --
 dgv_EggS_Frame = Frame
 dgv_EggS_Used = Frames adv. by receiving
@@ -103,6 +102,8 @@ dgv_EggS_PID = PID
 dgv_EggS_PSV = PSV
 dgv_EggS_EC = EC
 dgv_EggS_Rand = Rand
+--
+B_EggS_Search = Search
 ----------------------EggList Tab--------------------------
 Tab_EggList = Egg List
 GB_EggL_RNGInfo = RNG Info
@@ -132,100 +133,102 @@ Tab_Stationary = StationaryRNG
 -----------------StationarySearch Tab--------------------
 Tab_StationarySearch = IV
 --
-St_RNGInfo = RNGInfo
-St_L_InitialSeed = Initial Seed
-St_Frame = Frame
-St_L_TargetFrame = Target Frame
-St_UpdateFrame = Update
+GB_StaS_RNGInfo = RNGInfo
+L_StaS_InitialSeed = Initial Seed
+L_StaS_Frame = Frame
+L_StaS_TargetFrame = Target Frame
+B_StaS_UpdateFrame = Update
 --
-St_Pokemon = Pokemon
-St_Invalid_Refine = Disable filters
-St_search_Status = Search by Stats
-St_search_IV = Search by IVs
-St_Status_display = Show Status
-St_L_nature = Nature
-synchro_nature = Sync
-St_L_mezapa = HP Type
+RB_StaS_Search_IV = Search by IVs
+RB_StaS_Search_Status = Search by Stats
+L_StaS_Pokemon = Pokemon
+CB_StaS_Status_Display = Show Status
+CB_StaS_Search_DisableFilters = Disable filters
+L_StaS_Search_Nature = Nature
+L_StaS_Search_SyncNature = Sync
+L_StaS_Search_HiddenPower = HP Type
 --
-L_St_search_H = HP
-L_St_search_A = Atk
-L_St_search_B = Def
-L_St_search_C = SpA
-L_St_search_D = SpD
-L_St_search_S = Spe
+L_StaS_Search_H = HP
+L_StaS_Search_A = Atk
+L_StaS_Search_B = Def
+L_StaS_Search_C = SpA
+L_StaS_Search_D = SpD
+L_StaS_Search_S = Spe
 --
-dgvSt_frame = Frame
-dgvSt_tolerance = Shift
-dgvSt_H = Hp
-dgvSt_A = Atk
-dgvSt_B = Def
-dgvSt_C = SpA
-dgvSt_D = SpD
-dgvSt_S = Spe
-dgvSt_nature = Nature
-dgvSt_Synchronize = Sync
-dgvSt_H_Status = Hp
-dgvSt_A_Status = Atk
-dgvSt_B_Status = Def
-dgvSt_C_Status = SpA
-dgvSt_D_Status = SpD
-dgvSt_S_Status = Spe
-dgvSt_psv = PSV
-St_Clock = Needle
-dgvSt_rand = Rand
+dgv_StaS_Frame = Frame
+dgv_StaS_Shift = Shift
+dgv_StaS_H = Hp
+dgv_StaS_A = Atk
+dgv_StaS_B = Def
+dgv_StaS_C = SpA
+dgv_StaS_D = SpD
+dgv_StaS_S = Spe
+dgv_StaS_Nature = Nature
+dgv_StaS_Synchronize = Sync
+dgv_StaS_H_Status = Hp
+dgv_StaS_A_Status = Atk
+dgv_StaS_B_Status = Def
+dgv_StaS_C_Status = SpA
+dgv_StaS_D_Status = SpD
+dgv_StaS_S_Status = Spe
+dgv_StaS_PSV = PSV
+dgv_StaS_Needle = Needle
+dgv_StaS_Rand = Rand
 --
-St_SearchSettings = SearchSettings
-St_SynchroOnly = Synced Only
-St_shiny = Shiny
-AlwaysSynchro = Always Synced
-Valid_Blink = Consider blinking process (Sync)
+GB_StaS_SearchSettings = SearchSettings
+CB_StaS_SynchroOnly = Synced Only
+CB_StaS_Shiny = Shiny
+CB_StaS_AlwaysSynchro = Always Synced
+CB_StaS_Valid_Blink = Consider blinking process (Sync)
 --
-Stationary_Search = Search
-Stationary_List = Show List
+B_StaS_Search = Search
 ----------------------StationaryClock Tab---------------------
 Tab_StationaryClock = Needle
 --
-Clock_groupBox = Enter Needle
-clock_begin = Start Position
-clock_end = End Position
-Delete = Clear
-Back = Back 
-L_Candidate_InitSeed = Candidate Initial Seed
+GB_StaC_EnterNeedle = Enter Needle
+CB_StaC_Clock_Start = Start Position
+CB_StaC_Clock_End = End Position
+B_StaC_Clear = Clear
+B_StaC_Back = Back 
+L_StaC_Candidate_InitialSeed = Candidate Initial Seed
 --
-Clock_RNGInfo = Position Search
-Clock_CurrentFrame = Search
-St_Clock_Search_InitialSeed = Initial Seed
-St_Clock_Search_Frame = Frame
-St_Clocklist = Needle list
-Calc_Frame_Info = Calculate Waiting Time
-Calc_Frame = Calculate
-St_Clock_Time_InitialSeed = Initial Seed
-St_Clock_Time_Frame = Frame
-qty_NPC = # of NPCs
+GB_StaC_CurrentPosition = Position Search
+B_StaC_CP_Search = Search
+L_StaC_CP_InitialSeed = Initial Seed
+L_StaC_CP_Frame = Frame
+L_StaC_CP_NeedleList = Needle list
+--
+GB_StaC_CalcWaitingTime = Calculate Waiting Time
+B_StaC_CWT_Search = Calculate
+L_StaC_CWT_InitialSeed = Initial Seed
+L_StaC_CWT_Frame = Frame
+L_StaC_CWT_Qty_NPC = # of NPCs
 --------------------IDRNG Tab--------------------
 Tab_ID = ID RNG
 --
-ID_L_InitialSeed = Initial Seed
-ID_Frame = Frame
-L_ID_List = ID List
-L_PSVList = PSV List
-PerfectMatching = Perfect Match
-PartialMatch = Partial Match
-ID_Invalid_Refine = Disable filters
-ID_L_CorrectionValue = Correction Value of Needle
-ID_shiny = Shiny
+L_ID_InitialSeed = Initial Seed
+L_ID_Frame = Frame
+L_ID_IDList = ID List
+L_ID_PSVList = PSV List
+L_ID_CorrectionValue = Correction Value of Needle
 --
-dgvID_frame = Frame
-dgvID_ID = ID
-dgvID_TSV = TSV
-dgvID_TID = TID
-dgvID_SID = SID
-dgvID_Clock = Needle
+RB_ID_PerfectMatching = Perfect Match
+RB_ID_PartialMatch = Partial Match
 --
-ID_RNGInfo = RNG Info
-ID_Filters = Filters
-ID_SearchSettings = Search Settings
+CB_ID_DisableFilters = Disable filters
+CB_ID_Shiny = Shiny
 --
-ID_Search = Search
+dgv_ID_Frame = Frame
+dgv_ID_ID = ID
+dgv_ID_TSV = TSV
+dgv_ID_TID = TID
+dgv_ID_SID = SID
+dgv_ID_Needle = Needle
+--
+GB_ID_RNGInfo  = RNG Info
+GB_ID_Filters = Filters
+GB_ID_SearchSettings = Search Settings
+--
+B_ID_Search = Search
 ---------------------Other Tab----------------------
 other = other
