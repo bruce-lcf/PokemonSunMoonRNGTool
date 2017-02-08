@@ -1316,7 +1316,7 @@ namespace PokemonSunMoonRNGTool
                         //非まばたき中 -- Not Blinking
                         else
                         {
-                            if ((int)(sfmt.NextUInt64() % 128) == 0)
+                            if ((int)(sfmt.NextUInt64() & 0x7F) == 0)
                             {
                                 remain_frame[i] = 5;
                                 blink_flag[i] = true;

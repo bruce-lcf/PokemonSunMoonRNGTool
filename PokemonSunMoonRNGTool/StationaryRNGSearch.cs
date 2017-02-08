@@ -55,10 +55,10 @@ namespace PokemonSunMoonRNGTool
                 sfmt.NextUInt64();
 
             //暗号化定数 -- Encryption Constant
-            st.EC = (uint)(sfmt.NextUInt64() % 0x100000000);
+            st.EC = (uint)(sfmt.NextUInt64() & 0xFFFFFFFF);
 
             //性格値 -- PID
-            st.PID = (uint)(sfmt.NextUInt64() % 0x100000000);
+            st.PID = (uint)(sfmt.NextUInt64() & 0xFFFFFFFF);
             st.PSV = ((st.PID >> 16) ^ (st.PID & 0xFFFF)) >> 4;
 
             if (st.PSV == TSV)
