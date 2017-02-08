@@ -1,6 +1,6 @@
 # PokemonSunMoonRNGTool
 
-[![Build status](https://ci.appveyor.com/api/projects/status/github/Quandra/smhatchingrngtool?branch=master&svg=true)](https://ci.appveyor.com/project/Quandra/smhatchingrngtool)
+[![Build status](https://ci.appveyor.com/api/projects/status/github/Quandra/PokemonSunMoonRNGTool?branch=master&svg=true)](https://ci.appveyor.com/project/Quandra/PokemonSunMoonRNGTool)
 
 The Pokemon Sun Moon RNG Tool
 
