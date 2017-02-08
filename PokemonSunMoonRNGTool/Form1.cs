@@ -1377,5 +1377,94 @@ namespace PokemonSunMoonRNGTool
                 default: NPC.Value = 0; St_Lv.Value = 60; break;
             }
         }
+
+        private void B_ResetSettings_Click(object sender, EventArgs e)
+        {
+            ResetSettings(this);
+        }
+
+        public static void ResetSettings(Control hParent)
+        {
+            //hParent 内のすべてのコントロールを列挙する
+            //Enumerate all controls of hParent
+            foreach (Control cControl in hParent.Controls)
+            {
+                //列挙したコントロールにコントロールが含まれている場合は再帰呼び出しする
+                //If the enumerated control contains a control, a recursive call
+                if (cControl.HasChildren)
+                {
+                    ResetSettings(cControl);
+                }
+
+                if (cControl is NumericUpDown)
+                {
+                    NumericUpDown c = (NumericUpDown)cControl;
+
+                    if (c.Name.IndexOf("InitialSeed") >= 0)
+                    {
+                        c.Value = 0;
+                    }
+
+                    if (c.Name.IndexOf("min") >= 0)
+                    {
+                        if (c.Name.IndexOf("St") >= 0 || c.Name.IndexOf("Clock") >= 0 || c.Name.IndexOf("Calc") >= 0)
+                        {
+                            c.Value = 417;
+                        }
+                        if(c.Name.IndexOf("EggS") >= 0 || c.Name.IndexOf("EggL") >= 0)
+                        {
+                            c.Value = 0;
+                        }
+                        if (c.Name.IndexOf("ID") >= 0)
+                        {
+                            c.Value = 1012;
+                        }
+                    }
+                    if (c.Name.IndexOf("max") >= 0)
+                    {
+                        if (c.Name.IndexOf("St") >= 0 || c.Name.IndexOf("Clock") >= 0 || c.Name.IndexOf("Calc") >= 0)
+                        {
+                            c.Value = 3000;
+                        }
+                        if (c.Name.IndexOf("EggS") >= 0 || c.Name.IndexOf("EggL") >= 0)
+                        {
+                            c.Value = 100;
+                        }
+                        if (c.Name.IndexOf("ID") >= 0)
+                        {
+                            c.Value = 3000;
+                        }
+                    }
+
+                    if (c.Name.IndexOf("IV") >= 0)
+                    {
+                        if (c.Name.IndexOf("low") >= 0)
+                        {
+                            c.Value = 0;
+                        }
+                        if (cControl.Name.IndexOf("up") >= 0)
+                        {
+                            c.Value = 31;
+                        }
+                    }
+
+                    if (cControl.Name.IndexOf("status") >= 0 && cControl.Name.IndexOf("Egg") < 0)
+                    {
+                        c.Value = 0;
+                    }
+
+                    if (cControl.Name.IndexOf("parent") >= 0)
+                    {
+                        c.Value = 31;
+                    }
+                }
+
+                if (cControl is ComboBox)
+                {
+                    ComboBox c = (ComboBox)cControl;
+                    c.SelectedIndex = 0;
+                }
+            }
+        }
     }
 }

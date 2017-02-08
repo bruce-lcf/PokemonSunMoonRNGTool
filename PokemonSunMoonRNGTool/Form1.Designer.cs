@@ -33,6 +33,23 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.EggS_dataGridView = new System.Windows.Forms.DataGridView();
+            this.dgv_EggS_Frame = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgv_EggS_Used = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgv_EggS_Seed = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgv_EggS_H = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgv_EggS_A = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgv_EggS_B = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgv_EggS_C = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgv_EggS_D = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgv_EggS_S = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgv_EggS_Gender = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgv_EggS_Ability = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgv_EggS_Nature = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgv_EggS_Ball = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgv_EggS_PID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgv_EggS_PSV = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgv_EggS_EC = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgv_EggS_Rand = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.mnuCopy = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuSelectAll = new System.Windows.Forms.ToolStripMenuItem();
@@ -145,6 +162,23 @@
             this.Tab_EggList = new System.Windows.Forms.TabPage();
             this.B_EggL_Search = new System.Windows.Forms.Button();
             this.L_dataGridView = new System.Windows.Forms.DataGridView();
+            this.dgv_EggL_Frame = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgv_EggL_Used = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgv_EggL_Seed = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgv_EggL_H = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgv_EggL_A = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgv_EggL_B = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgv_EggL_C = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgv_EggL_D = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgv_EggL_S = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgv_EggL_Gender = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgv_EggL_Ability = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgv_EggL_Nature = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgv_EggL_Ball = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgv_EggL_PID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgv_EggL_PSV = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgv_EggL_EC = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgv_EggL_Rand = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.contextMenuStrip2 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.mnu2Copy = new System.Windows.Forms.ToolStripMenuItem();
             this.mnu2SelectAll = new System.Windows.Forms.ToolStripMenuItem();
@@ -178,6 +212,7 @@
             this.Menu_SaveConfig = new System.Windows.Forms.ToolStripMenuItem();
             this.Menu_TSV = new System.Windows.Forms.ToolStripMenuItem();
             this.Menu_ParentsList = new System.Windows.Forms.ToolStripMenuItem();
+            this.Menu_ResetSettings = new System.Windows.Forms.ToolStripMenuItem();
             this.tabControl2 = new System.Windows.Forms.TabControl();
             this.Tab_Stationary = new System.Windows.Forms.TabPage();
             this.tabControl3 = new System.Windows.Forms.TabControl();
@@ -367,40 +402,6 @@
             this.ID_max = new System.Windows.Forms.NumericUpDown();
             this.other = new System.Windows.Forms.TabPage();
             this.printPreviewDialog1 = new System.Windows.Forms.PrintPreviewDialog();
-            this.dgv_EggS_Frame = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgv_EggS_Used = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgv_EggS_Seed = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgv_EggS_H = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgv_EggS_A = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgv_EggS_B = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgv_EggS_C = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgv_EggS_D = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgv_EggS_S = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgv_EggS_Gender = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgv_EggS_Ability = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgv_EggS_Nature = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgv_EggS_Ball = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgv_EggS_PID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgv_EggS_PSV = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgv_EggS_EC = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgv_EggS_Rand = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgv_EggL_Frame = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgv_EggL_Used = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgv_EggL_Seed = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgv_EggL_H = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgv_EggL_A = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgv_EggL_B = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgv_EggL_C = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgv_EggL_D = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgv_EggL_S = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgv_EggL_Gender = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgv_EggL_Ability = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgv_EggL_Nature = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgv_EggL_Ball = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgv_EggL_PID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgv_EggL_PSV = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgv_EggL_EC = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgv_EggL_Rand = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.EggS_dataGridView)).BeginInit();
             this.contextMenuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pre_parent1)).BeginInit();
@@ -540,6 +541,112 @@
             this.EggS_dataGridView.RowTemplate.Height = 21;
             this.EggS_dataGridView.Size = new System.Drawing.Size(1104, 258);
             this.EggS_dataGridView.TabIndex = 0;
+            // 
+            // dgv_EggS_Frame
+            // 
+            this.dgv_EggS_Frame.HeaderText = "消費";
+            this.dgv_EggS_Frame.Name = "dgv_EggS_Frame";
+            this.dgv_EggS_Frame.Width = 54;
+            // 
+            // dgv_EggS_Used
+            // 
+            this.dgv_EggS_Used.HeaderText = "受取";
+            this.dgv_EggS_Used.Name = "dgv_EggS_Used";
+            this.dgv_EggS_Used.Width = 54;
+            // 
+            // dgv_EggS_Seed
+            // 
+            this.dgv_EggS_Seed.HeaderText = "Seed";
+            this.dgv_EggS_Seed.Name = "dgv_EggS_Seed";
+            this.dgv_EggS_Seed.Width = 270;
+            // 
+            // dgv_EggS_H
+            // 
+            this.dgv_EggS_H.HeaderText = "H";
+            this.dgv_EggS_H.Name = "dgv_EggS_H";
+            this.dgv_EggS_H.Width = 27;
+            // 
+            // dgv_EggS_A
+            // 
+            this.dgv_EggS_A.HeaderText = "A";
+            this.dgv_EggS_A.Name = "dgv_EggS_A";
+            this.dgv_EggS_A.Width = 27;
+            // 
+            // dgv_EggS_B
+            // 
+            this.dgv_EggS_B.HeaderText = "B";
+            this.dgv_EggS_B.Name = "dgv_EggS_B";
+            this.dgv_EggS_B.Width = 27;
+            // 
+            // dgv_EggS_C
+            // 
+            this.dgv_EggS_C.HeaderText = "C";
+            this.dgv_EggS_C.Name = "dgv_EggS_C";
+            this.dgv_EggS_C.Width = 27;
+            // 
+            // dgv_EggS_D
+            // 
+            this.dgv_EggS_D.HeaderText = "D";
+            this.dgv_EggS_D.Name = "dgv_EggS_D";
+            this.dgv_EggS_D.Width = 27;
+            // 
+            // dgv_EggS_S
+            // 
+            this.dgv_EggS_S.HeaderText = "S";
+            this.dgv_EggS_S.Name = "dgv_EggS_S";
+            this.dgv_EggS_S.Width = 27;
+            // 
+            // dgv_EggS_Gender
+            // 
+            this.dgv_EggS_Gender.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.dgv_EggS_Gender.HeaderText = "性別";
+            this.dgv_EggS_Gender.Name = "dgv_EggS_Gender";
+            this.dgv_EggS_Gender.Width = 54;
+            // 
+            // dgv_EggS_Ability
+            // 
+            this.dgv_EggS_Ability.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.dgv_EggS_Ability.HeaderText = "特性";
+            this.dgv_EggS_Ability.Name = "dgv_EggS_Ability";
+            this.dgv_EggS_Ability.Width = 54;
+            // 
+            // dgv_EggS_Nature
+            // 
+            this.dgv_EggS_Nature.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.dgv_EggS_Nature.HeaderText = "性格";
+            this.dgv_EggS_Nature.Name = "dgv_EggS_Nature";
+            this.dgv_EggS_Nature.Width = 54;
+            // 
+            // dgv_EggS_Ball
+            // 
+            this.dgv_EggS_Ball.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.dgv_EggS_Ball.HeaderText = "ボール";
+            this.dgv_EggS_Ball.Name = "dgv_EggS_Ball";
+            this.dgv_EggS_Ball.Width = 60;
+            // 
+            // dgv_EggS_PID
+            // 
+            this.dgv_EggS_PID.HeaderText = "性格値";
+            this.dgv_EggS_PID.Name = "dgv_EggS_PID";
+            this.dgv_EggS_PID.Width = 66;
+            // 
+            // dgv_EggS_PSV
+            // 
+            this.dgv_EggS_PSV.HeaderText = "SV";
+            this.dgv_EggS_PSV.Name = "dgv_EggS_PSV";
+            this.dgv_EggS_PSV.Width = 54;
+            // 
+            // dgv_EggS_EC
+            // 
+            this.dgv_EggS_EC.HeaderText = "暗号化定数";
+            this.dgv_EggS_EC.Name = "dgv_EggS_EC";
+            this.dgv_EggS_EC.Width = 90;
+            // 
+            // dgv_EggS_Rand
+            // 
+            this.dgv_EggS_Rand.HeaderText = "乱数列";
+            this.dgv_EggS_Rand.Name = "dgv_EggS_Rand";
+            this.dgv_EggS_Rand.Width = 66;
             // 
             // contextMenuStrip1
             // 
@@ -2062,6 +2169,112 @@
             this.L_dataGridView.Size = new System.Drawing.Size(877, 498);
             this.L_dataGridView.TabIndex = 0;
             // 
+            // dgv_EggL_Frame
+            // 
+            this.dgv_EggL_Frame.HeaderText = "受取";
+            this.dgv_EggL_Frame.Name = "dgv_EggL_Frame";
+            this.dgv_EggL_Frame.Width = 54;
+            // 
+            // dgv_EggL_Used
+            // 
+            this.dgv_EggL_Used.HeaderText = "消費";
+            this.dgv_EggL_Used.Name = "dgv_EggL_Used";
+            this.dgv_EggL_Used.Width = 54;
+            // 
+            // dgv_EggL_Seed
+            // 
+            this.dgv_EggL_Seed.HeaderText = "Seed";
+            this.dgv_EggL_Seed.Name = "dgv_EggL_Seed";
+            this.dgv_EggL_Seed.Width = 270;
+            // 
+            // dgv_EggL_H
+            // 
+            this.dgv_EggL_H.HeaderText = "H";
+            this.dgv_EggL_H.Name = "dgv_EggL_H";
+            this.dgv_EggL_H.Width = 27;
+            // 
+            // dgv_EggL_A
+            // 
+            this.dgv_EggL_A.HeaderText = "A";
+            this.dgv_EggL_A.Name = "dgv_EggL_A";
+            this.dgv_EggL_A.Width = 27;
+            // 
+            // dgv_EggL_B
+            // 
+            this.dgv_EggL_B.HeaderText = "B";
+            this.dgv_EggL_B.Name = "dgv_EggL_B";
+            this.dgv_EggL_B.Width = 27;
+            // 
+            // dgv_EggL_C
+            // 
+            this.dgv_EggL_C.HeaderText = "C";
+            this.dgv_EggL_C.Name = "dgv_EggL_C";
+            this.dgv_EggL_C.Width = 27;
+            // 
+            // dgv_EggL_D
+            // 
+            this.dgv_EggL_D.HeaderText = "D";
+            this.dgv_EggL_D.Name = "dgv_EggL_D";
+            this.dgv_EggL_D.Width = 27;
+            // 
+            // dgv_EggL_S
+            // 
+            this.dgv_EggL_S.HeaderText = "S";
+            this.dgv_EggL_S.Name = "dgv_EggL_S";
+            this.dgv_EggL_S.Width = 27;
+            // 
+            // dgv_EggL_Gender
+            // 
+            this.dgv_EggL_Gender.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.dgv_EggL_Gender.HeaderText = "性別";
+            this.dgv_EggL_Gender.Name = "dgv_EggL_Gender";
+            this.dgv_EggL_Gender.Width = 54;
+            // 
+            // dgv_EggL_Ability
+            // 
+            this.dgv_EggL_Ability.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.dgv_EggL_Ability.HeaderText = "特性";
+            this.dgv_EggL_Ability.Name = "dgv_EggL_Ability";
+            this.dgv_EggL_Ability.Width = 54;
+            // 
+            // dgv_EggL_Nature
+            // 
+            this.dgv_EggL_Nature.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.dgv_EggL_Nature.HeaderText = "性格";
+            this.dgv_EggL_Nature.Name = "dgv_EggL_Nature";
+            this.dgv_EggL_Nature.Width = 54;
+            // 
+            // dgv_EggL_Ball
+            // 
+            this.dgv_EggL_Ball.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.dgv_EggL_Ball.HeaderText = "ボール";
+            this.dgv_EggL_Ball.Name = "dgv_EggL_Ball";
+            this.dgv_EggL_Ball.Width = 60;
+            // 
+            // dgv_EggL_PID
+            // 
+            this.dgv_EggL_PID.HeaderText = "性格値";
+            this.dgv_EggL_PID.Name = "dgv_EggL_PID";
+            this.dgv_EggL_PID.Width = 66;
+            // 
+            // dgv_EggL_PSV
+            // 
+            this.dgv_EggL_PSV.HeaderText = "SV";
+            this.dgv_EggL_PSV.Name = "dgv_EggL_PSV";
+            this.dgv_EggL_PSV.Width = 54;
+            // 
+            // dgv_EggL_EC
+            // 
+            this.dgv_EggL_EC.HeaderText = "暗号化定数";
+            this.dgv_EggL_EC.Name = "dgv_EggL_EC";
+            this.dgv_EggL_EC.Width = 90;
+            // 
+            // dgv_EggL_Rand
+            // 
+            this.dgv_EggL_Rand.HeaderText = "乱数列";
+            this.dgv_EggL_Rand.Name = "dgv_EggL_Rand";
+            this.dgv_EggL_Rand.Width = 90;
+            // 
             // contextMenuStrip2
             // 
             this.contextMenuStrip2.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -2386,7 +2599,8 @@
             this.Menu_Language,
             this.Menu_SaveConfig,
             this.Menu_TSV,
-            this.Menu_ParentsList});
+            this.Menu_ParentsList,
+            this.Menu_ResetSettings});
             this.Menu_Options.Name = "Menu_Options";
             this.Menu_Options.Size = new System.Drawing.Size(63, 20);
             this.Menu_Options.Text = "Options";
@@ -2396,7 +2610,7 @@
             this.Menu_Language.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.CB_MainLanguage});
             this.Menu_Language.Name = "Menu_Language";
-            this.Menu_Language.Size = new System.Drawing.Size(143, 22);
+            this.Menu_Language.Size = new System.Drawing.Size(159, 22);
             this.Menu_Language.Text = "Language";
             // 
             // CB_MainLanguage
@@ -2409,23 +2623,30 @@
             // Menu_SaveConfig
             // 
             this.Menu_SaveConfig.Name = "Menu_SaveConfig";
-            this.Menu_SaveConfig.Size = new System.Drawing.Size(143, 22);
+            this.Menu_SaveConfig.Size = new System.Drawing.Size(159, 22);
             this.Menu_SaveConfig.Text = "Save Config";
             this.Menu_SaveConfig.Click += new System.EventHandler(this.B_SaveConfig_Click);
             // 
             // Menu_TSV
             // 
             this.Menu_TSV.Name = "Menu_TSV";
-            this.Menu_TSV.Size = new System.Drawing.Size(143, 22);
+            this.Menu_TSV.Size = new System.Drawing.Size(159, 22);
             this.Menu_TSV.Text = "TSV List";
             this.Menu_TSV.Click += new System.EventHandler(this.B_TSV_Click);
             // 
             // Menu_ParentsList
             // 
             this.Menu_ParentsList.Name = "Menu_ParentsList";
-            this.Menu_ParentsList.Size = new System.Drawing.Size(143, 22);
+            this.Menu_ParentsList.Size = new System.Drawing.Size(159, 22);
             this.Menu_ParentsList.Text = "Parents List";
             this.Menu_ParentsList.Click += new System.EventHandler(this.B_Parents_Click);
+            // 
+            // Menu_ResetSettings
+            // 
+            this.Menu_ResetSettings.Name = "Menu_ResetSettings";
+            this.Menu_ResetSettings.Size = new System.Drawing.Size(159, 22);
+            this.Menu_ResetSettings.Text = "Reset Settings";
+            this.Menu_ResetSettings.Click += new System.EventHandler(this.B_ResetSettings_Click);
             // 
             // tabControl2
             // 
@@ -4722,218 +4943,6 @@
             this.printPreviewDialog1.Name = "printPreviewDialog1";
             this.printPreviewDialog1.Visible = false;
             // 
-            // dgv_EggS_Frame
-            // 
-            this.dgv_EggS_Frame.HeaderText = "消費";
-            this.dgv_EggS_Frame.Name = "dgv_EggS_Frame";
-            this.dgv_EggS_Frame.Width = 54;
-            // 
-            // dgv_EggS_Used
-            // 
-            this.dgv_EggS_Used.HeaderText = "受取";
-            this.dgv_EggS_Used.Name = "dgv_EggS_Used";
-            this.dgv_EggS_Used.Width = 54;
-            // 
-            // dgv_EggS_Seed
-            // 
-            this.dgv_EggS_Seed.HeaderText = "Seed";
-            this.dgv_EggS_Seed.Name = "dgv_EggS_Seed";
-            this.dgv_EggS_Seed.Width = 270;
-            // 
-            // dgv_EggS_H
-            // 
-            this.dgv_EggS_H.HeaderText = "H";
-            this.dgv_EggS_H.Name = "dgv_EggS_H";
-            this.dgv_EggS_H.Width = 27;
-            // 
-            // dgv_EggS_A
-            // 
-            this.dgv_EggS_A.HeaderText = "A";
-            this.dgv_EggS_A.Name = "dgv_EggS_A";
-            this.dgv_EggS_A.Width = 27;
-            // 
-            // dgv_EggS_B
-            // 
-            this.dgv_EggS_B.HeaderText = "B";
-            this.dgv_EggS_B.Name = "dgv_EggS_B";
-            this.dgv_EggS_B.Width = 27;
-            // 
-            // dgv_EggS_C
-            // 
-            this.dgv_EggS_C.HeaderText = "C";
-            this.dgv_EggS_C.Name = "dgv_EggS_C";
-            this.dgv_EggS_C.Width = 27;
-            // 
-            // dgv_EggS_D
-            // 
-            this.dgv_EggS_D.HeaderText = "D";
-            this.dgv_EggS_D.Name = "dgv_EggS_D";
-            this.dgv_EggS_D.Width = 27;
-            // 
-            // dgv_EggS_S
-            // 
-            this.dgv_EggS_S.HeaderText = "S";
-            this.dgv_EggS_S.Name = "dgv_EggS_S";
-            this.dgv_EggS_S.Width = 27;
-            // 
-            // dgv_EggS_Gender
-            // 
-            this.dgv_EggS_Gender.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.dgv_EggS_Gender.HeaderText = "性別";
-            this.dgv_EggS_Gender.Name = "dgv_EggS_Gender";
-            this.dgv_EggS_Gender.Width = 54;
-            // 
-            // dgv_EggS_Ability
-            // 
-            this.dgv_EggS_Ability.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.dgv_EggS_Ability.HeaderText = "特性";
-            this.dgv_EggS_Ability.Name = "dgv_EggS_Ability";
-            this.dgv_EggS_Ability.Width = 54;
-            // 
-            // dgv_EggS_Nature
-            // 
-            this.dgv_EggS_Nature.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.dgv_EggS_Nature.HeaderText = "性格";
-            this.dgv_EggS_Nature.Name = "dgv_EggS_Nature";
-            this.dgv_EggS_Nature.Width = 54;
-            // 
-            // dgv_EggS_Ball
-            // 
-            this.dgv_EggS_Ball.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.dgv_EggS_Ball.HeaderText = "ボール";
-            this.dgv_EggS_Ball.Name = "dgv_EggS_Ball";
-            this.dgv_EggS_Ball.Width = 60;
-            // 
-            // dgv_EggS_PID
-            // 
-            this.dgv_EggS_PID.HeaderText = "性格値";
-            this.dgv_EggS_PID.Name = "dgv_EggS_PID";
-            this.dgv_EggS_PID.Width = 66;
-            // 
-            // dgv_EggS_PSV
-            // 
-            this.dgv_EggS_PSV.HeaderText = "SV";
-            this.dgv_EggS_PSV.Name = "dgv_EggS_PSV";
-            this.dgv_EggS_PSV.Width = 54;
-            // 
-            // dgv_EggS_EC
-            // 
-            this.dgv_EggS_EC.HeaderText = "暗号化定数";
-            this.dgv_EggS_EC.Name = "dgv_EggS_EC";
-            this.dgv_EggS_EC.Width = 90;
-            // 
-            // dgv_EggS_Rand
-            // 
-            this.dgv_EggS_Rand.HeaderText = "乱数列";
-            this.dgv_EggS_Rand.Name = "dgv_EggS_Rand";
-            this.dgv_EggS_Rand.Width = 66;
-            // 
-            // dgv_EggL_Frame
-            // 
-            this.dgv_EggL_Frame.HeaderText = "受取";
-            this.dgv_EggL_Frame.Name = "dgv_EggL_Frame";
-            this.dgv_EggL_Frame.Width = 54;
-            // 
-            // dgv_EggL_Used
-            // 
-            this.dgv_EggL_Used.HeaderText = "消費";
-            this.dgv_EggL_Used.Name = "dgv_EggL_Used";
-            this.dgv_EggL_Used.Width = 54;
-            // 
-            // dgv_EggL_Seed
-            // 
-            this.dgv_EggL_Seed.HeaderText = "Seed";
-            this.dgv_EggL_Seed.Name = "dgv_EggL_Seed";
-            this.dgv_EggL_Seed.Width = 270;
-            // 
-            // dgv_EggL_H
-            // 
-            this.dgv_EggL_H.HeaderText = "H";
-            this.dgv_EggL_H.Name = "dgv_EggL_H";
-            this.dgv_EggL_H.Width = 27;
-            // 
-            // dgv_EggL_A
-            // 
-            this.dgv_EggL_A.HeaderText = "A";
-            this.dgv_EggL_A.Name = "dgv_EggL_A";
-            this.dgv_EggL_A.Width = 27;
-            // 
-            // dgv_EggL_B
-            // 
-            this.dgv_EggL_B.HeaderText = "B";
-            this.dgv_EggL_B.Name = "dgv_EggL_B";
-            this.dgv_EggL_B.Width = 27;
-            // 
-            // dgv_EggL_C
-            // 
-            this.dgv_EggL_C.HeaderText = "C";
-            this.dgv_EggL_C.Name = "dgv_EggL_C";
-            this.dgv_EggL_C.Width = 27;
-            // 
-            // dgv_EggL_D
-            // 
-            this.dgv_EggL_D.HeaderText = "D";
-            this.dgv_EggL_D.Name = "dgv_EggL_D";
-            this.dgv_EggL_D.Width = 27;
-            // 
-            // dgv_EggL_S
-            // 
-            this.dgv_EggL_S.HeaderText = "S";
-            this.dgv_EggL_S.Name = "dgv_EggL_S";
-            this.dgv_EggL_S.Width = 27;
-            // 
-            // dgv_EggL_Gender
-            // 
-            this.dgv_EggL_Gender.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.dgv_EggL_Gender.HeaderText = "性別";
-            this.dgv_EggL_Gender.Name = "dgv_EggL_Gender";
-            this.dgv_EggL_Gender.Width = 54;
-            // 
-            // dgv_EggL_Ability
-            // 
-            this.dgv_EggL_Ability.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.dgv_EggL_Ability.HeaderText = "特性";
-            this.dgv_EggL_Ability.Name = "dgv_EggL_Ability";
-            this.dgv_EggL_Ability.Width = 54;
-            // 
-            // dgv_EggL_Nature
-            // 
-            this.dgv_EggL_Nature.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.dgv_EggL_Nature.HeaderText = "性格";
-            this.dgv_EggL_Nature.Name = "dgv_EggL_Nature";
-            this.dgv_EggL_Nature.Width = 54;
-            // 
-            // dgv_EggL_Ball
-            // 
-            this.dgv_EggL_Ball.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.dgv_EggL_Ball.HeaderText = "ボール";
-            this.dgv_EggL_Ball.Name = "dgv_EggL_Ball";
-            this.dgv_EggL_Ball.Width = 60;
-            // 
-            // dgv_EggL_PID
-            // 
-            this.dgv_EggL_PID.HeaderText = "性格値";
-            this.dgv_EggL_PID.Name = "dgv_EggL_PID";
-            this.dgv_EggL_PID.Width = 66;
-            // 
-            // dgv_EggL_PSV
-            // 
-            this.dgv_EggL_PSV.HeaderText = "SV";
-            this.dgv_EggL_PSV.Name = "dgv_EggL_PSV";
-            this.dgv_EggL_PSV.Width = 54;
-            // 
-            // dgv_EggL_EC
-            // 
-            this.dgv_EggL_EC.HeaderText = "暗号化定数";
-            this.dgv_EggL_EC.Name = "dgv_EggL_EC";
-            this.dgv_EggL_EC.Width = 90;
-            // 
-            // dgv_EggL_Rand
-            // 
-            this.dgv_EggL_Rand.HeaderText = "乱数列";
-            this.dgv_EggL_Rand.Name = "dgv_EggL_Rand";
-            this.dgv_EggL_Rand.Width = 90;
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -5442,5 +5451,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dgv_EggL_PSV;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgv_EggL_EC;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgv_EggL_Rand;
+        private System.Windows.Forms.ToolStripMenuItem Menu_ResetSettings;
     }
 }
