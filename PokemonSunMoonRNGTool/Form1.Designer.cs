@@ -33,22 +33,6 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.EggS_dataGridView = new System.Windows.Forms.DataGridView();
-            this.dgv_EggS_Frame = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgv_EggS_Used = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgv_EggS_Seed = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgv_EggS_H = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgv_EggS_A = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgv_EggS_B = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgv_EggS_C = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgv_EggS_D = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgv_EggS_S = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgv_EggS_Gender = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgv_EggS_Ability = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgv_EggS_Nature = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgv_EggS_PID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgv_EggS_PSV = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgv_EggS_EC = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgv_EggS_Rand = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.mnuCopy = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuSelectAll = new System.Windows.Forms.ToolStripMenuItem();
@@ -96,6 +80,10 @@
             this.L_EggS_Gender_ratio = new System.Windows.Forms.Label();
             this.CB_EggS_International = new System.Windows.Forms.CheckBox();
             this.GB_EggS_RNGInfo = new System.Windows.Forms.GroupBox();
+            this.EggS_status3 = new PokemonSunMoonRNGTool.HexNumericUpdown();
+            this.EggS_status2 = new PokemonSunMoonRNGTool.HexNumericUpdown();
+            this.EggS_status1 = new PokemonSunMoonRNGTool.HexNumericUpdown();
+            this.EggS_status0 = new PokemonSunMoonRNGTool.HexNumericUpdown();
             this.EggS_min = new System.Windows.Forms.NumericUpDown();
             this.EggS_max = new System.Windows.Forms.NumericUpDown();
             this.label13 = new System.Windows.Forms.Label();
@@ -157,22 +145,6 @@
             this.Tab_EggList = new System.Windows.Forms.TabPage();
             this.B_EggL_Search = new System.Windows.Forms.Button();
             this.L_dataGridView = new System.Windows.Forms.DataGridView();
-            this.dgv_EggL_Frame = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgv_EggL_Used = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgv_EggL_Seed = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgv_EggL_H = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgv_EggL_A = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgv_EggL_B = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgv_EggL_C = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgv_EggL_D = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgv_EggL_S = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgv_EggL_Gender = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgv_EggL_Ability = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgv_EggL_Nature = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgv_EggL_PID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgv_EggL_PSV = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgv_EggL_EC = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgv_EggL_Rand = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.contextMenuStrip2 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.mnu2Copy = new System.Windows.Forms.ToolStripMenuItem();
             this.mnu2SelectAll = new System.Windows.Forms.ToolStripMenuItem();
@@ -180,6 +152,10 @@
             this.Repeat_times = new System.Windows.Forms.Label();
             this.EggL_Target_frame = new System.Windows.Forms.NumericUpDown();
             this.L_EggL_TargetFrame = new System.Windows.Forms.Label();
+            this.EggL_status3 = new PokemonSunMoonRNGTool.HexNumericUpdown();
+            this.EggL_status2 = new PokemonSunMoonRNGTool.HexNumericUpdown();
+            this.EggL_status1 = new PokemonSunMoonRNGTool.HexNumericUpdown();
+            this.EggL_status0 = new PokemonSunMoonRNGTool.HexNumericUpdown();
             this.EggL_min = new System.Windows.Forms.NumericUpDown();
             this.EggL_max = new System.Windows.Forms.NumericUpDown();
             this.CB_EggL_TSV_Shiny = new System.Windows.Forms.CheckBox();
@@ -214,6 +190,7 @@
             this.label51 = new System.Windows.Forms.Label();
             this.L_StaS_Frame = new System.Windows.Forms.Label();
             this.label39 = new System.Windows.Forms.Label();
+            this.St_InitialSeed = new PokemonSunMoonRNGTool.HexNumericUpdown();
             this.St_min = new System.Windows.Forms.NumericUpDown();
             this.St_max = new System.Windows.Forms.NumericUpDown();
             this.St_TargetFrame = new System.Windows.Forms.NumericUpDown();
@@ -297,6 +274,7 @@
             this.NPC = new System.Windows.Forms.NumericUpDown();
             this.Calc_Output = new System.Windows.Forms.ListBox();
             this.B_StaC_CWT_Search = new System.Windows.Forms.Button();
+            this.Calc_InitialSeed = new PokemonSunMoonRNGTool.HexNumericUpdown();
             this.label24 = new System.Windows.Forms.Label();
             this.L_StaC_CWT_Frame = new System.Windows.Forms.Label();
             this.label26 = new System.Windows.Forms.Label();
@@ -308,6 +286,7 @@
             this.L_StaC_CP_NeedleList = new System.Windows.Forms.Label();
             this.B_StaC_CP_Search = new System.Windows.Forms.Button();
             this.Clock_SearchList = new System.Windows.Forms.TextBox();
+            this.Clock_InitialSeed = new PokemonSunMoonRNGTool.HexNumericUpdown();
             this.label17 = new System.Windows.Forms.Label();
             this.L_StaC_CP_Frame = new System.Windows.Forms.Label();
             this.label22 = new System.Windows.Forms.Label();
@@ -383,22 +362,45 @@
             this.label3 = new System.Windows.Forms.Label();
             this.L_ID_Frame = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
+            this.ID_InitialSeed = new PokemonSunMoonRNGTool.HexNumericUpdown();
             this.ID_min = new System.Windows.Forms.NumericUpDown();
             this.ID_max = new System.Windows.Forms.NumericUpDown();
             this.other = new System.Windows.Forms.TabPage();
             this.printPreviewDialog1 = new System.Windows.Forms.PrintPreviewDialog();
-            this.St_InitialSeed = new PokemonSunMoonRNGTool.HexNumericUpdown();
-            this.Calc_InitialSeed = new PokemonSunMoonRNGTool.HexNumericUpdown();
-            this.Clock_InitialSeed = new PokemonSunMoonRNGTool.HexNumericUpdown();
-            this.EggS_status3 = new PokemonSunMoonRNGTool.HexNumericUpdown();
-            this.EggS_status2 = new PokemonSunMoonRNGTool.HexNumericUpdown();
-            this.EggS_status1 = new PokemonSunMoonRNGTool.HexNumericUpdown();
-            this.EggS_status0 = new PokemonSunMoonRNGTool.HexNumericUpdown();
-            this.EggL_status3 = new PokemonSunMoonRNGTool.HexNumericUpdown();
-            this.EggL_status2 = new PokemonSunMoonRNGTool.HexNumericUpdown();
-            this.EggL_status1 = new PokemonSunMoonRNGTool.HexNumericUpdown();
-            this.EggL_status0 = new PokemonSunMoonRNGTool.HexNumericUpdown();
-            this.ID_InitialSeed = new PokemonSunMoonRNGTool.HexNumericUpdown();
+            this.dgv_EggS_Frame = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgv_EggS_Used = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgv_EggS_Seed = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgv_EggS_H = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgv_EggS_A = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgv_EggS_B = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgv_EggS_C = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgv_EggS_D = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgv_EggS_S = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgv_EggS_Gender = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgv_EggS_Ability = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgv_EggS_Nature = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgv_EggS_Ball = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgv_EggS_PID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgv_EggS_PSV = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgv_EggS_EC = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgv_EggS_Rand = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgv_EggL_Frame = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgv_EggL_Used = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgv_EggL_Seed = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgv_EggL_H = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgv_EggL_A = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgv_EggL_B = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgv_EggL_C = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgv_EggL_D = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgv_EggL_S = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgv_EggL_Gender = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgv_EggL_Ability = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgv_EggL_Nature = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgv_EggL_Ball = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgv_EggL_PID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgv_EggL_PSV = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgv_EggL_EC = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgv_EggL_Rand = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.EggS_dataGridView)).BeginInit();
             this.contextMenuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pre_parent1)).BeginInit();
@@ -415,6 +417,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.pre_parent6)).BeginInit();
             this.GB_EggS_Parents_Info.SuspendLayout();
             this.GB_EggS_RNGInfo.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.EggS_status3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.EggS_status2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.EggS_status1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.EggS_status0)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.EggS_min)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.EggS_max)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.IVup2)).BeginInit();
@@ -439,6 +445,10 @@
             this.contextMenuStrip2.SuspendLayout();
             this.GB_EggL_RNGInfo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.EggL_Target_frame)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.EggL_status3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.EggL_status2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.EggL_status1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.EggL_status0)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.EggL_min)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.EggL_max)).BeginInit();
             this.menuStrip1.SuspendLayout();
@@ -447,6 +457,7 @@
             this.tabControl3.SuspendLayout();
             this.Tab_StationarySearch.SuspendLayout();
             this.GB_StaS_RNGInfo.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.St_InitialSeed)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.St_min)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.St_max)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.St_TargetFrame)).BeginInit();
@@ -477,9 +488,11 @@
             this.Tab_StationaryClock.SuspendLayout();
             this.GB_StaC_CalcWaitingTime.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.NPC)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Calc_InitialSeed)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Calc_min)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Calc_max)).BeginInit();
             this.GB_StaC_CurrentPosition.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Clock_InitialSeed)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Clock_min)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Clock_max)).BeginInit();
             this.GB_StaC_EnterNeedle.SuspendLayout();
@@ -490,20 +503,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.ID_dataGridView)).BeginInit();
             this.GB_ID_Filters.SuspendLayout();
             this.GB_ID_RNGInfo.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ID_InitialSeed)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ID_min)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ID_max)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.St_InitialSeed)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Calc_InitialSeed)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Clock_InitialSeed)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.EggS_status3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.EggS_status2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.EggS_status1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.EggS_status0)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.EggL_status3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.EggL_status2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.EggL_status1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.EggL_status0)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ID_InitialSeed)).BeginInit();
             this.SuspendLayout();
             // 
             // EggS_dataGridView
@@ -527,6 +529,7 @@
             this.dgv_EggS_Gender,
             this.dgv_EggS_Ability,
             this.dgv_EggS_Nature,
+            this.dgv_EggS_Ball,
             this.dgv_EggS_PID,
             this.dgv_EggS_PSV,
             this.dgv_EggS_EC,
@@ -537,105 +540,6 @@
             this.EggS_dataGridView.RowTemplate.Height = 21;
             this.EggS_dataGridView.Size = new System.Drawing.Size(1104, 258);
             this.EggS_dataGridView.TabIndex = 0;
-            // 
-            // dgv_EggS_Frame
-            // 
-            this.dgv_EggS_Frame.HeaderText = "消費";
-            this.dgv_EggS_Frame.Name = "dgv_EggS_Frame";
-            this.dgv_EggS_Frame.Width = 54;
-            // 
-            // dgv_EggS_Used
-            // 
-            this.dgv_EggS_Used.HeaderText = "受取";
-            this.dgv_EggS_Used.Name = "dgv_EggS_Used";
-            this.dgv_EggS_Used.Width = 54;
-            // 
-            // dgv_EggS_Seed
-            // 
-            this.dgv_EggS_Seed.HeaderText = "Seed";
-            this.dgv_EggS_Seed.Name = "dgv_EggS_Seed";
-            this.dgv_EggS_Seed.Width = 270;
-            // 
-            // dgv_EggS_H
-            // 
-            this.dgv_EggS_H.HeaderText = "H";
-            this.dgv_EggS_H.Name = "dgv_EggS_H";
-            this.dgv_EggS_H.Width = 27;
-            // 
-            // dgv_EggS_A
-            // 
-            this.dgv_EggS_A.HeaderText = "A";
-            this.dgv_EggS_A.Name = "dgv_EggS_A";
-            this.dgv_EggS_A.Width = 27;
-            // 
-            // dgv_EggS_B
-            // 
-            this.dgv_EggS_B.HeaderText = "B";
-            this.dgv_EggS_B.Name = "dgv_EggS_B";
-            this.dgv_EggS_B.Width = 27;
-            // 
-            // dgv_EggS_C
-            // 
-            this.dgv_EggS_C.HeaderText = "C";
-            this.dgv_EggS_C.Name = "dgv_EggS_C";
-            this.dgv_EggS_C.Width = 27;
-            // 
-            // dgv_EggS_D
-            // 
-            this.dgv_EggS_D.HeaderText = "D";
-            this.dgv_EggS_D.Name = "dgv_EggS_D";
-            this.dgv_EggS_D.Width = 27;
-            // 
-            // dgv_EggS_S
-            // 
-            this.dgv_EggS_S.HeaderText = "S";
-            this.dgv_EggS_S.Name = "dgv_EggS_S";
-            this.dgv_EggS_S.Width = 27;
-            // 
-            // dgv_EggS_Gender
-            // 
-            this.dgv_EggS_Gender.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.dgv_EggS_Gender.HeaderText = "性別";
-            this.dgv_EggS_Gender.Name = "dgv_EggS_Gender";
-            this.dgv_EggS_Gender.Width = 54;
-            // 
-            // dgv_EggS_Ability
-            // 
-            this.dgv_EggS_Ability.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.dgv_EggS_Ability.HeaderText = "特性";
-            this.dgv_EggS_Ability.Name = "dgv_EggS_Ability";
-            this.dgv_EggS_Ability.Width = 54;
-            // 
-            // dgv_EggS_Nature
-            // 
-            this.dgv_EggS_Nature.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.dgv_EggS_Nature.HeaderText = "性格";
-            this.dgv_EggS_Nature.Name = "dgv_EggS_Nature";
-            this.dgv_EggS_Nature.Width = 54;
-            // 
-            // dgv_EggS_PID
-            // 
-            this.dgv_EggS_PID.HeaderText = "性格値";
-            this.dgv_EggS_PID.Name = "dgv_EggS_PID";
-            this.dgv_EggS_PID.Width = 66;
-            // 
-            // dgv_EggS_PSV
-            // 
-            this.dgv_EggS_PSV.HeaderText = "SV";
-            this.dgv_EggS_PSV.Name = "dgv_EggS_PSV";
-            this.dgv_EggS_PSV.Width = 54;
-            // 
-            // dgv_EggS_EC
-            // 
-            this.dgv_EggS_EC.HeaderText = "暗号化定数";
-            this.dgv_EggS_EC.Name = "dgv_EggS_EC";
-            this.dgv_EggS_EC.Width = 90;
-            // 
-            // dgv_EggS_Rand
-            // 
-            this.dgv_EggS_Rand.HeaderText = "乱数列";
-            this.dgv_EggS_Rand.Name = "dgv_EggS_Rand";
-            this.dgv_EggS_Rand.Width = 66;
             // 
             // contextMenuStrip1
             // 
@@ -1297,6 +1201,70 @@
             this.GB_EggS_RNGInfo.TabIndex = 3;
             this.GB_EggS_RNGInfo.TabStop = false;
             this.GB_EggS_RNGInfo.Text = "検索範囲";
+            // 
+            // EggS_status3
+            // 
+            this.EggS_status3.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.EggS_status3.Hexadecimal = true;
+            this.EggS_status3.Location = new System.Drawing.Point(118, 24);
+            this.EggS_status3.Name = "EggS_status3";
+            this.EggS_status3.Size = new System.Drawing.Size(80, 22);
+            this.EggS_status3.TabIndex = 70;
+            this.EggS_status3.Value = new decimal(new int[] {
+            305419896,
+            0,
+            0,
+            0});
+            this.EggS_status3.Enter += new System.EventHandler(this.NumericUpDown_Enter);
+            this.EggS_status3.Validating += new System.ComponentModel.CancelEventHandler(this.NumericUpDown_Check);
+            // 
+            // EggS_status2
+            // 
+            this.EggS_status2.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.EggS_status2.Hexadecimal = true;
+            this.EggS_status2.Location = new System.Drawing.Point(118, 52);
+            this.EggS_status2.Name = "EggS_status2";
+            this.EggS_status2.Size = new System.Drawing.Size(80, 22);
+            this.EggS_status2.TabIndex = 71;
+            this.EggS_status2.Value = new decimal(new int[] {
+            -559023410,
+            0,
+            0,
+            0});
+            this.EggS_status2.Enter += new System.EventHandler(this.NumericUpDown_Enter);
+            this.EggS_status2.Validating += new System.ComponentModel.CancelEventHandler(this.NumericUpDown_Check);
+            // 
+            // EggS_status1
+            // 
+            this.EggS_status1.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.EggS_status1.Hexadecimal = true;
+            this.EggS_status1.Location = new System.Drawing.Point(118, 80);
+            this.EggS_status1.Name = "EggS_status1";
+            this.EggS_status1.Size = new System.Drawing.Size(80, 22);
+            this.EggS_status1.TabIndex = 72;
+            this.EggS_status1.Value = new decimal(new int[] {
+            -559038737,
+            0,
+            0,
+            0});
+            this.EggS_status1.Enter += new System.EventHandler(this.NumericUpDown_Enter);
+            this.EggS_status1.Validating += new System.ComponentModel.CancelEventHandler(this.NumericUpDown_Check);
+            // 
+            // EggS_status0
+            // 
+            this.EggS_status0.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.EggS_status0.Hexadecimal = true;
+            this.EggS_status0.Location = new System.Drawing.Point(118, 108);
+            this.EggS_status0.Name = "EggS_status0";
+            this.EggS_status0.Size = new System.Drawing.Size(80, 22);
+            this.EggS_status0.TabIndex = 73;
+            this.EggS_status0.Value = new decimal(new int[] {
+            -1091568946,
+            0,
+            0,
+            0});
+            this.EggS_status0.Enter += new System.EventHandler(this.NumericUpDown_Enter);
+            this.EggS_status0.Validating += new System.ComponentModel.CancelEventHandler(this.NumericUpDown_Check);
             // 
             // EggS_min
             // 
@@ -2082,6 +2050,7 @@
             this.dgv_EggL_Gender,
             this.dgv_EggL_Ability,
             this.dgv_EggL_Nature,
+            this.dgv_EggL_Ball,
             this.dgv_EggL_PID,
             this.dgv_EggL_PSV,
             this.dgv_EggL_EC,
@@ -2092,105 +2061,6 @@
             this.L_dataGridView.RowTemplate.Height = 21;
             this.L_dataGridView.Size = new System.Drawing.Size(877, 498);
             this.L_dataGridView.TabIndex = 0;
-            // 
-            // dgv_EggL_Frame
-            // 
-            this.dgv_EggL_Frame.HeaderText = "受取";
-            this.dgv_EggL_Frame.Name = "dgv_EggL_Frame";
-            this.dgv_EggL_Frame.Width = 54;
-            // 
-            // dgv_EggL_Used
-            // 
-            this.dgv_EggL_Used.HeaderText = "消費";
-            this.dgv_EggL_Used.Name = "dgv_EggL_Used";
-            this.dgv_EggL_Used.Width = 54;
-            // 
-            // dgv_EggL_Seed
-            // 
-            this.dgv_EggL_Seed.HeaderText = "Seed";
-            this.dgv_EggL_Seed.Name = "dgv_EggL_Seed";
-            this.dgv_EggL_Seed.Width = 270;
-            // 
-            // dgv_EggL_H
-            // 
-            this.dgv_EggL_H.HeaderText = "H";
-            this.dgv_EggL_H.Name = "dgv_EggL_H";
-            this.dgv_EggL_H.Width = 27;
-            // 
-            // dgv_EggL_A
-            // 
-            this.dgv_EggL_A.HeaderText = "A";
-            this.dgv_EggL_A.Name = "dgv_EggL_A";
-            this.dgv_EggL_A.Width = 27;
-            // 
-            // dgv_EggL_B
-            // 
-            this.dgv_EggL_B.HeaderText = "B";
-            this.dgv_EggL_B.Name = "dgv_EggL_B";
-            this.dgv_EggL_B.Width = 27;
-            // 
-            // dgv_EggL_C
-            // 
-            this.dgv_EggL_C.HeaderText = "C";
-            this.dgv_EggL_C.Name = "dgv_EggL_C";
-            this.dgv_EggL_C.Width = 27;
-            // 
-            // dgv_EggL_D
-            // 
-            this.dgv_EggL_D.HeaderText = "D";
-            this.dgv_EggL_D.Name = "dgv_EggL_D";
-            this.dgv_EggL_D.Width = 27;
-            // 
-            // dgv_EggL_S
-            // 
-            this.dgv_EggL_S.HeaderText = "S";
-            this.dgv_EggL_S.Name = "dgv_EggL_S";
-            this.dgv_EggL_S.Width = 27;
-            // 
-            // dgv_EggL_Gender
-            // 
-            this.dgv_EggL_Gender.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.dgv_EggL_Gender.HeaderText = "性別";
-            this.dgv_EggL_Gender.Name = "dgv_EggL_Gender";
-            this.dgv_EggL_Gender.Width = 54;
-            // 
-            // dgv_EggL_Ability
-            // 
-            this.dgv_EggL_Ability.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.dgv_EggL_Ability.HeaderText = "特性";
-            this.dgv_EggL_Ability.Name = "dgv_EggL_Ability";
-            this.dgv_EggL_Ability.Width = 54;
-            // 
-            // dgv_EggL_Nature
-            // 
-            this.dgv_EggL_Nature.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.dgv_EggL_Nature.HeaderText = "性格";
-            this.dgv_EggL_Nature.Name = "dgv_EggL_Nature";
-            this.dgv_EggL_Nature.Width = 54;
-            // 
-            // dgv_EggL_PID
-            // 
-            this.dgv_EggL_PID.HeaderText = "性格値";
-            this.dgv_EggL_PID.Name = "dgv_EggL_PID";
-            this.dgv_EggL_PID.Width = 66;
-            // 
-            // dgv_EggL_PSV
-            // 
-            this.dgv_EggL_PSV.HeaderText = "SV";
-            this.dgv_EggL_PSV.Name = "dgv_EggL_PSV";
-            this.dgv_EggL_PSV.Width = 54;
-            // 
-            // dgv_EggL_EC
-            // 
-            this.dgv_EggL_EC.HeaderText = "暗号化定数";
-            this.dgv_EggL_EC.Name = "dgv_EggL_EC";
-            this.dgv_EggL_EC.Width = 90;
-            // 
-            // dgv_EggL_Rand
-            // 
-            this.dgv_EggL_Rand.HeaderText = "乱数列";
-            this.dgv_EggL_Rand.Name = "dgv_EggL_Rand";
-            this.dgv_EggL_Rand.Width = 90;
             // 
             // contextMenuStrip2
             // 
@@ -2273,6 +2143,70 @@
             this.L_EggL_TargetFrame.Size = new System.Drawing.Size(53, 12);
             this.L_EggL_TargetFrame.TabIndex = 83;
             this.L_EggL_TargetFrame.Text = "目標消費";
+            // 
+            // EggL_status3
+            // 
+            this.EggL_status3.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.EggL_status3.Hexadecimal = true;
+            this.EggL_status3.Location = new System.Drawing.Point(118, 24);
+            this.EggL_status3.Name = "EggL_status3";
+            this.EggL_status3.Size = new System.Drawing.Size(80, 22);
+            this.EggL_status3.TabIndex = 1;
+            this.EggL_status3.Value = new decimal(new int[] {
+            305419896,
+            0,
+            0,
+            0});
+            this.EggL_status3.Enter += new System.EventHandler(this.NumericUpDown_Enter);
+            this.EggL_status3.Validating += new System.ComponentModel.CancelEventHandler(this.NumericUpDown_Check);
+            // 
+            // EggL_status2
+            // 
+            this.EggL_status2.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.EggL_status2.Hexadecimal = true;
+            this.EggL_status2.Location = new System.Drawing.Point(118, 52);
+            this.EggL_status2.Name = "EggL_status2";
+            this.EggL_status2.Size = new System.Drawing.Size(80, 22);
+            this.EggL_status2.TabIndex = 2;
+            this.EggL_status2.Value = new decimal(new int[] {
+            -559023410,
+            0,
+            0,
+            0});
+            this.EggL_status2.Enter += new System.EventHandler(this.NumericUpDown_Enter);
+            this.EggL_status2.Validating += new System.ComponentModel.CancelEventHandler(this.NumericUpDown_Check);
+            // 
+            // EggL_status1
+            // 
+            this.EggL_status1.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.EggL_status1.Hexadecimal = true;
+            this.EggL_status1.Location = new System.Drawing.Point(118, 80);
+            this.EggL_status1.Name = "EggL_status1";
+            this.EggL_status1.Size = new System.Drawing.Size(80, 22);
+            this.EggL_status1.TabIndex = 3;
+            this.EggL_status1.Value = new decimal(new int[] {
+            -559038737,
+            0,
+            0,
+            0});
+            this.EggL_status1.Enter += new System.EventHandler(this.NumericUpDown_Enter);
+            this.EggL_status1.Validating += new System.ComponentModel.CancelEventHandler(this.NumericUpDown_Check);
+            // 
+            // EggL_status0
+            // 
+            this.EggL_status0.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.EggL_status0.Hexadecimal = true;
+            this.EggL_status0.Location = new System.Drawing.Point(118, 108);
+            this.EggL_status0.Name = "EggL_status0";
+            this.EggL_status0.Size = new System.Drawing.Size(80, 22);
+            this.EggL_status0.TabIndex = 4;
+            this.EggL_status0.Value = new decimal(new int[] {
+            -1091568946,
+            0,
+            0,
+            0});
+            this.EggL_status0.Enter += new System.EventHandler(this.NumericUpDown_Enter);
+            this.EggL_status0.Validating += new System.ComponentModel.CancelEventHandler(this.NumericUpDown_Check);
             // 
             // EggL_min
             // 
@@ -2633,6 +2567,17 @@
             this.label39.Size = new System.Drawing.Size(18, 16);
             this.label39.TabIndex = 61;
             this.label39.Text = "～";
+            // 
+            // St_InitialSeed
+            // 
+            this.St_InitialSeed.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.St_InitialSeed.Hexadecimal = true;
+            this.St_InitialSeed.Location = new System.Drawing.Point(112, 27);
+            this.St_InitialSeed.Name = "St_InitialSeed";
+            this.St_InitialSeed.Size = new System.Drawing.Size(80, 22);
+            this.St_InitialSeed.TabIndex = 1;
+            this.St_InitialSeed.Enter += new System.EventHandler(this.NumericUpDown_Enter);
+            this.St_InitialSeed.Validating += new System.ComponentModel.CancelEventHandler(this.NumericUpDown_Check);
             // 
             // St_min
             // 
@@ -3674,6 +3619,17 @@
             this.B_StaC_CWT_Search.UseVisualStyleBackColor = true;
             this.B_StaC_CWT_Search.Click += new System.EventHandler(this.Calc_Frame_Click);
             // 
+            // Calc_InitialSeed
+            // 
+            this.Calc_InitialSeed.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Calc_InitialSeed.Hexadecimal = true;
+            this.Calc_InitialSeed.Location = new System.Drawing.Point(112, 27);
+            this.Calc_InitialSeed.Name = "Calc_InitialSeed";
+            this.Calc_InitialSeed.Size = new System.Drawing.Size(80, 22);
+            this.Calc_InitialSeed.TabIndex = 20;
+            this.Calc_InitialSeed.Enter += new System.EventHandler(this.NumericUpDown_Enter);
+            this.Calc_InitialSeed.Validating += new System.ComponentModel.CancelEventHandler(this.NumericUpDown_Check);
+            // 
             // label24
             // 
             this.label24.AutoSize = true;
@@ -3813,6 +3769,17 @@
             this.Clock_SearchList.Name = "Clock_SearchList";
             this.Clock_SearchList.Size = new System.Drawing.Size(192, 22);
             this.Clock_SearchList.TabIndex = 13;
+            // 
+            // Clock_InitialSeed
+            // 
+            this.Clock_InitialSeed.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Clock_InitialSeed.Hexadecimal = true;
+            this.Clock_InitialSeed.Location = new System.Drawing.Point(112, 27);
+            this.Clock_InitialSeed.Name = "Clock_InitialSeed";
+            this.Clock_InitialSeed.Size = new System.Drawing.Size(80, 22);
+            this.Clock_InitialSeed.TabIndex = 10;
+            this.Clock_InitialSeed.Enter += new System.EventHandler(this.NumericUpDown_Enter);
+            this.Clock_InitialSeed.Validating += new System.ComponentModel.CancelEventHandler(this.NumericUpDown_Check);
             // 
             // label17
             // 
@@ -4685,6 +4652,15 @@
             this.label10.TabIndex = 61;
             this.label10.Text = "～";
             // 
+            // ID_InitialSeed
+            // 
+            this.ID_InitialSeed.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ID_InitialSeed.Hexadecimal = true;
+            this.ID_InitialSeed.Location = new System.Drawing.Point(112, 27);
+            this.ID_InitialSeed.Name = "ID_InitialSeed";
+            this.ID_InitialSeed.Size = new System.Drawing.Size(80, 22);
+            this.ID_InitialSeed.TabIndex = 1;
+            // 
             // ID_min
             // 
             this.ID_min.Font = new System.Drawing.Font("Consolas", 9F);
@@ -4746,175 +4722,217 @@
             this.printPreviewDialog1.Name = "printPreviewDialog1";
             this.printPreviewDialog1.Visible = false;
             // 
-            // St_InitialSeed
+            // dgv_EggS_Frame
             // 
-            this.St_InitialSeed.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.St_InitialSeed.Hexadecimal = true;
-            this.St_InitialSeed.Location = new System.Drawing.Point(112, 27);
-            this.St_InitialSeed.Name = "St_InitialSeed";
-            this.St_InitialSeed.Size = new System.Drawing.Size(80, 22);
-            this.St_InitialSeed.TabIndex = 1;
-            this.St_InitialSeed.Enter += new System.EventHandler(this.NumericUpDown_Enter);
-            this.St_InitialSeed.Validating += new System.ComponentModel.CancelEventHandler(this.NumericUpDown_Check);
+            this.dgv_EggS_Frame.HeaderText = "消費";
+            this.dgv_EggS_Frame.Name = "dgv_EggS_Frame";
+            this.dgv_EggS_Frame.Width = 54;
             // 
-            // Calc_InitialSeed
+            // dgv_EggS_Used
             // 
-            this.Calc_InitialSeed.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Calc_InitialSeed.Hexadecimal = true;
-            this.Calc_InitialSeed.Location = new System.Drawing.Point(112, 27);
-            this.Calc_InitialSeed.Name = "Calc_InitialSeed";
-            this.Calc_InitialSeed.Size = new System.Drawing.Size(80, 22);
-            this.Calc_InitialSeed.TabIndex = 20;
-            this.Calc_InitialSeed.Enter += new System.EventHandler(this.NumericUpDown_Enter);
-            this.Calc_InitialSeed.Validating += new System.ComponentModel.CancelEventHandler(this.NumericUpDown_Check);
+            this.dgv_EggS_Used.HeaderText = "受取";
+            this.dgv_EggS_Used.Name = "dgv_EggS_Used";
+            this.dgv_EggS_Used.Width = 54;
             // 
-            // Clock_InitialSeed
+            // dgv_EggS_Seed
             // 
-            this.Clock_InitialSeed.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Clock_InitialSeed.Hexadecimal = true;
-            this.Clock_InitialSeed.Location = new System.Drawing.Point(112, 27);
-            this.Clock_InitialSeed.Name = "Clock_InitialSeed";
-            this.Clock_InitialSeed.Size = new System.Drawing.Size(80, 22);
-            this.Clock_InitialSeed.TabIndex = 10;
-            this.Clock_InitialSeed.Enter += new System.EventHandler(this.NumericUpDown_Enter);
-            this.Clock_InitialSeed.Validating += new System.ComponentModel.CancelEventHandler(this.NumericUpDown_Check);
+            this.dgv_EggS_Seed.HeaderText = "Seed";
+            this.dgv_EggS_Seed.Name = "dgv_EggS_Seed";
+            this.dgv_EggS_Seed.Width = 270;
             // 
-            // EggS_status3
+            // dgv_EggS_H
             // 
-            this.EggS_status3.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.EggS_status3.Hexadecimal = true;
-            this.EggS_status3.Location = new System.Drawing.Point(118, 24);
-            this.EggS_status3.Name = "EggS_status3";
-            this.EggS_status3.Size = new System.Drawing.Size(80, 22);
-            this.EggS_status3.TabIndex = 70;
-            this.EggS_status3.Value = new decimal(new int[] {
-            305419896,
-            0,
-            0,
-            0});
-            this.EggS_status3.Enter += new System.EventHandler(this.NumericUpDown_Enter);
-            this.EggS_status3.Validating += new System.ComponentModel.CancelEventHandler(this.NumericUpDown_Check);
+            this.dgv_EggS_H.HeaderText = "H";
+            this.dgv_EggS_H.Name = "dgv_EggS_H";
+            this.dgv_EggS_H.Width = 27;
             // 
-            // EggS_status2
+            // dgv_EggS_A
             // 
-            this.EggS_status2.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.EggS_status2.Hexadecimal = true;
-            this.EggS_status2.Location = new System.Drawing.Point(118, 52);
-            this.EggS_status2.Name = "EggS_status2";
-            this.EggS_status2.Size = new System.Drawing.Size(80, 22);
-            this.EggS_status2.TabIndex = 71;
-            this.EggS_status2.Value = new decimal(new int[] {
-            -559023410,
-            0,
-            0,
-            0});
-            this.EggS_status2.Enter += new System.EventHandler(this.NumericUpDown_Enter);
-            this.EggS_status2.Validating += new System.ComponentModel.CancelEventHandler(this.NumericUpDown_Check);
+            this.dgv_EggS_A.HeaderText = "A";
+            this.dgv_EggS_A.Name = "dgv_EggS_A";
+            this.dgv_EggS_A.Width = 27;
             // 
-            // EggS_status1
+            // dgv_EggS_B
             // 
-            this.EggS_status1.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.EggS_status1.Hexadecimal = true;
-            this.EggS_status1.Location = new System.Drawing.Point(118, 80);
-            this.EggS_status1.Name = "EggS_status1";
-            this.EggS_status1.Size = new System.Drawing.Size(80, 22);
-            this.EggS_status1.TabIndex = 72;
-            this.EggS_status1.Value = new decimal(new int[] {
-            -559038737,
-            0,
-            0,
-            0});
-            this.EggS_status1.Enter += new System.EventHandler(this.NumericUpDown_Enter);
-            this.EggS_status1.Validating += new System.ComponentModel.CancelEventHandler(this.NumericUpDown_Check);
+            this.dgv_EggS_B.HeaderText = "B";
+            this.dgv_EggS_B.Name = "dgv_EggS_B";
+            this.dgv_EggS_B.Width = 27;
             // 
-            // EggS_status0
+            // dgv_EggS_C
             // 
-            this.EggS_status0.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.EggS_status0.Hexadecimal = true;
-            this.EggS_status0.Location = new System.Drawing.Point(118, 108);
-            this.EggS_status0.Name = "EggS_status0";
-            this.EggS_status0.Size = new System.Drawing.Size(80, 22);
-            this.EggS_status0.TabIndex = 73;
-            this.EggS_status0.Value = new decimal(new int[] {
-            -1091568946,
-            0,
-            0,
-            0});
-            this.EggS_status0.Enter += new System.EventHandler(this.NumericUpDown_Enter);
-            this.EggS_status0.Validating += new System.ComponentModel.CancelEventHandler(this.NumericUpDown_Check);
+            this.dgv_EggS_C.HeaderText = "C";
+            this.dgv_EggS_C.Name = "dgv_EggS_C";
+            this.dgv_EggS_C.Width = 27;
             // 
-            // EggL_status3
+            // dgv_EggS_D
             // 
-            this.EggL_status3.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.EggL_status3.Hexadecimal = true;
-            this.EggL_status3.Location = new System.Drawing.Point(118, 24);
-            this.EggL_status3.Name = "EggL_status3";
-            this.EggL_status3.Size = new System.Drawing.Size(80, 22);
-            this.EggL_status3.TabIndex = 1;
-            this.EggL_status3.Value = new decimal(new int[] {
-            305419896,
-            0,
-            0,
-            0});
-            this.EggL_status3.Enter += new System.EventHandler(this.NumericUpDown_Enter);
-            this.EggL_status3.Validating += new System.ComponentModel.CancelEventHandler(this.NumericUpDown_Check);
+            this.dgv_EggS_D.HeaderText = "D";
+            this.dgv_EggS_D.Name = "dgv_EggS_D";
+            this.dgv_EggS_D.Width = 27;
             // 
-            // EggL_status2
+            // dgv_EggS_S
             // 
-            this.EggL_status2.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.EggL_status2.Hexadecimal = true;
-            this.EggL_status2.Location = new System.Drawing.Point(118, 52);
-            this.EggL_status2.Name = "EggL_status2";
-            this.EggL_status2.Size = new System.Drawing.Size(80, 22);
-            this.EggL_status2.TabIndex = 2;
-            this.EggL_status2.Value = new decimal(new int[] {
-            -559023410,
-            0,
-            0,
-            0});
-            this.EggL_status2.Enter += new System.EventHandler(this.NumericUpDown_Enter);
-            this.EggL_status2.Validating += new System.ComponentModel.CancelEventHandler(this.NumericUpDown_Check);
+            this.dgv_EggS_S.HeaderText = "S";
+            this.dgv_EggS_S.Name = "dgv_EggS_S";
+            this.dgv_EggS_S.Width = 27;
             // 
-            // EggL_status1
+            // dgv_EggS_Gender
             // 
-            this.EggL_status1.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.EggL_status1.Hexadecimal = true;
-            this.EggL_status1.Location = new System.Drawing.Point(118, 80);
-            this.EggL_status1.Name = "EggL_status1";
-            this.EggL_status1.Size = new System.Drawing.Size(80, 22);
-            this.EggL_status1.TabIndex = 3;
-            this.EggL_status1.Value = new decimal(new int[] {
-            -559038737,
-            0,
-            0,
-            0});
-            this.EggL_status1.Enter += new System.EventHandler(this.NumericUpDown_Enter);
-            this.EggL_status1.Validating += new System.ComponentModel.CancelEventHandler(this.NumericUpDown_Check);
+            this.dgv_EggS_Gender.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.dgv_EggS_Gender.HeaderText = "性別";
+            this.dgv_EggS_Gender.Name = "dgv_EggS_Gender";
+            this.dgv_EggS_Gender.Width = 54;
             // 
-            // EggL_status0
+            // dgv_EggS_Ability
             // 
-            this.EggL_status0.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.EggL_status0.Hexadecimal = true;
-            this.EggL_status0.Location = new System.Drawing.Point(118, 108);
-            this.EggL_status0.Name = "EggL_status0";
-            this.EggL_status0.Size = new System.Drawing.Size(80, 22);
-            this.EggL_status0.TabIndex = 4;
-            this.EggL_status0.Value = new decimal(new int[] {
-            -1091568946,
-            0,
-            0,
-            0});
-            this.EggL_status0.Enter += new System.EventHandler(this.NumericUpDown_Enter);
-            this.EggL_status0.Validating += new System.ComponentModel.CancelEventHandler(this.NumericUpDown_Check);
+            this.dgv_EggS_Ability.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.dgv_EggS_Ability.HeaderText = "特性";
+            this.dgv_EggS_Ability.Name = "dgv_EggS_Ability";
+            this.dgv_EggS_Ability.Width = 54;
             // 
-            // ID_InitialSeed
+            // dgv_EggS_Nature
             // 
-            this.ID_InitialSeed.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ID_InitialSeed.Hexadecimal = true;
-            this.ID_InitialSeed.Location = new System.Drawing.Point(112, 27);
-            this.ID_InitialSeed.Name = "ID_InitialSeed";
-            this.ID_InitialSeed.Size = new System.Drawing.Size(80, 22);
-            this.ID_InitialSeed.TabIndex = 1;
+            this.dgv_EggS_Nature.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.dgv_EggS_Nature.HeaderText = "性格";
+            this.dgv_EggS_Nature.Name = "dgv_EggS_Nature";
+            this.dgv_EggS_Nature.Width = 54;
+            // 
+            // dgv_EggS_Ball
+            // 
+            this.dgv_EggS_Ball.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.dgv_EggS_Ball.HeaderText = "ボール";
+            this.dgv_EggS_Ball.Name = "dgv_EggS_Ball";
+            this.dgv_EggS_Ball.Width = 60;
+            // 
+            // dgv_EggS_PID
+            // 
+            this.dgv_EggS_PID.HeaderText = "性格値";
+            this.dgv_EggS_PID.Name = "dgv_EggS_PID";
+            this.dgv_EggS_PID.Width = 66;
+            // 
+            // dgv_EggS_PSV
+            // 
+            this.dgv_EggS_PSV.HeaderText = "SV";
+            this.dgv_EggS_PSV.Name = "dgv_EggS_PSV";
+            this.dgv_EggS_PSV.Width = 54;
+            // 
+            // dgv_EggS_EC
+            // 
+            this.dgv_EggS_EC.HeaderText = "暗号化定数";
+            this.dgv_EggS_EC.Name = "dgv_EggS_EC";
+            this.dgv_EggS_EC.Width = 90;
+            // 
+            // dgv_EggS_Rand
+            // 
+            this.dgv_EggS_Rand.HeaderText = "乱数列";
+            this.dgv_EggS_Rand.Name = "dgv_EggS_Rand";
+            this.dgv_EggS_Rand.Width = 66;
+            // 
+            // dgv_EggL_Frame
+            // 
+            this.dgv_EggL_Frame.HeaderText = "受取";
+            this.dgv_EggL_Frame.Name = "dgv_EggL_Frame";
+            this.dgv_EggL_Frame.Width = 54;
+            // 
+            // dgv_EggL_Used
+            // 
+            this.dgv_EggL_Used.HeaderText = "消費";
+            this.dgv_EggL_Used.Name = "dgv_EggL_Used";
+            this.dgv_EggL_Used.Width = 54;
+            // 
+            // dgv_EggL_Seed
+            // 
+            this.dgv_EggL_Seed.HeaderText = "Seed";
+            this.dgv_EggL_Seed.Name = "dgv_EggL_Seed";
+            this.dgv_EggL_Seed.Width = 270;
+            // 
+            // dgv_EggL_H
+            // 
+            this.dgv_EggL_H.HeaderText = "H";
+            this.dgv_EggL_H.Name = "dgv_EggL_H";
+            this.dgv_EggL_H.Width = 27;
+            // 
+            // dgv_EggL_A
+            // 
+            this.dgv_EggL_A.HeaderText = "A";
+            this.dgv_EggL_A.Name = "dgv_EggL_A";
+            this.dgv_EggL_A.Width = 27;
+            // 
+            // dgv_EggL_B
+            // 
+            this.dgv_EggL_B.HeaderText = "B";
+            this.dgv_EggL_B.Name = "dgv_EggL_B";
+            this.dgv_EggL_B.Width = 27;
+            // 
+            // dgv_EggL_C
+            // 
+            this.dgv_EggL_C.HeaderText = "C";
+            this.dgv_EggL_C.Name = "dgv_EggL_C";
+            this.dgv_EggL_C.Width = 27;
+            // 
+            // dgv_EggL_D
+            // 
+            this.dgv_EggL_D.HeaderText = "D";
+            this.dgv_EggL_D.Name = "dgv_EggL_D";
+            this.dgv_EggL_D.Width = 27;
+            // 
+            // dgv_EggL_S
+            // 
+            this.dgv_EggL_S.HeaderText = "S";
+            this.dgv_EggL_S.Name = "dgv_EggL_S";
+            this.dgv_EggL_S.Width = 27;
+            // 
+            // dgv_EggL_Gender
+            // 
+            this.dgv_EggL_Gender.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.dgv_EggL_Gender.HeaderText = "性別";
+            this.dgv_EggL_Gender.Name = "dgv_EggL_Gender";
+            this.dgv_EggL_Gender.Width = 54;
+            // 
+            // dgv_EggL_Ability
+            // 
+            this.dgv_EggL_Ability.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.dgv_EggL_Ability.HeaderText = "特性";
+            this.dgv_EggL_Ability.Name = "dgv_EggL_Ability";
+            this.dgv_EggL_Ability.Width = 54;
+            // 
+            // dgv_EggL_Nature
+            // 
+            this.dgv_EggL_Nature.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.dgv_EggL_Nature.HeaderText = "性格";
+            this.dgv_EggL_Nature.Name = "dgv_EggL_Nature";
+            this.dgv_EggL_Nature.Width = 54;
+            // 
+            // dgv_EggL_Ball
+            // 
+            this.dgv_EggL_Ball.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.dgv_EggL_Ball.HeaderText = "ボール";
+            this.dgv_EggL_Ball.Name = "dgv_EggL_Ball";
+            this.dgv_EggL_Ball.Width = 60;
+            // 
+            // dgv_EggL_PID
+            // 
+            this.dgv_EggL_PID.HeaderText = "性格値";
+            this.dgv_EggL_PID.Name = "dgv_EggL_PID";
+            this.dgv_EggL_PID.Width = 66;
+            // 
+            // dgv_EggL_PSV
+            // 
+            this.dgv_EggL_PSV.HeaderText = "SV";
+            this.dgv_EggL_PSV.Name = "dgv_EggL_PSV";
+            this.dgv_EggL_PSV.Width = 54;
+            // 
+            // dgv_EggL_EC
+            // 
+            this.dgv_EggL_EC.HeaderText = "暗号化定数";
+            this.dgv_EggL_EC.Name = "dgv_EggL_EC";
+            this.dgv_EggL_EC.Width = 90;
+            // 
+            // dgv_EggL_Rand
+            // 
+            this.dgv_EggL_Rand.HeaderText = "乱数列";
+            this.dgv_EggL_Rand.Name = "dgv_EggL_Rand";
+            this.dgv_EggL_Rand.Width = 90;
             // 
             // Form1
             // 
@@ -4947,6 +4965,10 @@
             this.GB_EggS_Parents_Info.PerformLayout();
             this.GB_EggS_RNGInfo.ResumeLayout(false);
             this.GB_EggS_RNGInfo.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.EggS_status3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.EggS_status2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.EggS_status1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.EggS_status0)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.EggS_min)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.EggS_max)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.IVup2)).EndInit();
@@ -4974,6 +4996,10 @@
             this.GB_EggL_RNGInfo.ResumeLayout(false);
             this.GB_EggL_RNGInfo.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.EggL_Target_frame)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.EggL_status3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.EggL_status2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.EggL_status1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.EggL_status0)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.EggL_min)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.EggL_max)).EndInit();
             this.menuStrip1.ResumeLayout(false);
@@ -4984,6 +5010,7 @@
             this.Tab_StationarySearch.ResumeLayout(false);
             this.GB_StaS_RNGInfo.ResumeLayout(false);
             this.GB_StaS_RNGInfo.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.St_InitialSeed)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.St_min)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.St_max)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.St_TargetFrame)).EndInit();
@@ -5017,10 +5044,12 @@
             this.GB_StaC_CalcWaitingTime.ResumeLayout(false);
             this.GB_StaC_CalcWaitingTime.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.NPC)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Calc_InitialSeed)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Calc_min)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Calc_max)).EndInit();
             this.GB_StaC_CurrentPosition.ResumeLayout(false);
             this.GB_StaC_CurrentPosition.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Clock_InitialSeed)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Clock_min)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Clock_max)).EndInit();
             this.GB_StaC_EnterNeedle.ResumeLayout(false);
@@ -5034,20 +5063,9 @@
             this.GB_ID_Filters.PerformLayout();
             this.GB_ID_RNGInfo.ResumeLayout(false);
             this.GB_ID_RNGInfo.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ID_InitialSeed)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ID_min)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ID_max)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.St_InitialSeed)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Calc_InitialSeed)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Clock_InitialSeed)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.EggS_status3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.EggS_status2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.EggS_status1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.EggS_status0)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.EggL_status3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.EggL_status2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.EggL_status1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.EggL_status0)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ID_InitialSeed)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -5365,38 +5383,6 @@
         private System.Windows.Forms.GroupBox GB_ID_SearchSettings;
         private System.Windows.Forms.Label L_ID_CorrectionValue;
         private System.Windows.Forms.NumericUpDown Clock_CorrectionValue;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dgv_EggS_Frame;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dgv_EggS_Used;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dgv_EggS_Seed;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dgv_EggS_H;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dgv_EggS_A;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dgv_EggS_B;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dgv_EggS_C;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dgv_EggS_D;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dgv_EggS_S;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dgv_EggS_Gender;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dgv_EggS_Ability;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dgv_EggS_Nature;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dgv_EggS_PID;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dgv_EggS_PSV;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dgv_EggS_EC;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dgv_EggS_Rand;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dgv_EggL_Frame;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dgv_EggL_Used;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dgv_EggL_Seed;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dgv_EggL_H;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dgv_EggL_A;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dgv_EggL_B;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dgv_EggL_C;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dgv_EggL_D;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dgv_EggL_S;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dgv_EggL_Gender;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dgv_EggL_Ability;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dgv_EggL_Nature;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dgv_EggL_PID;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dgv_EggL_PSV;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dgv_EggL_EC;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dgv_EggL_Rand;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgv_StaS_Frame;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgv_StaS_Shift;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgv_StaS_H;
@@ -5422,5 +5408,39 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dgv_ID_TID;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgv_ID_SID;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgv_ID_Needle;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgv_EggS_Frame;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgv_EggS_Used;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgv_EggS_Seed;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgv_EggS_H;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgv_EggS_A;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgv_EggS_B;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgv_EggS_C;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgv_EggS_D;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgv_EggS_S;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgv_EggS_Gender;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgv_EggS_Ability;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgv_EggS_Nature;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgv_EggS_Ball;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgv_EggS_PID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgv_EggS_PSV;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgv_EggS_EC;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgv_EggS_Rand;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgv_EggL_Frame;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgv_EggL_Used;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgv_EggL_Seed;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgv_EggL_H;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgv_EggL_A;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgv_EggL_B;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgv_EggL_C;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgv_EggL_D;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgv_EggL_S;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgv_EggL_Gender;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgv_EggL_Ability;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgv_EggL_Nature;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgv_EggL_Ball;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgv_EggL_PID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgv_EggL_PSV;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgv_EggL_EC;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgv_EggL_Rand;
     }
 }

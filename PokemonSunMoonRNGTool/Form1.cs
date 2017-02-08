@@ -358,13 +358,14 @@ namespace PokemonSunMoonRNGTool
             var true_psv = rng.PIDRerolls > 0 ? result.PSV.ToString("d") : "-";
             string true_pid = CB_EggS_International.Checked || CB_EggS_ShinyCharm.Checked ? result.PID.ToString("X8") : STR_TEMP_PID;
             string true_nature = rng.Everstone ? (rng.Both_Everstone ? (result.BE_InheritParents == 0 ? STR_FIRST : STR_SECOND) : items[0]) : natures[result.Nature];
+            string true_ball = rng.Heterogeneous ? "-" : (result.Ball == 0 ? STR_FIRST : STR_SECOND);
 
             DataGridViewRow row = new DataGridViewRow();
             row.CreateCells(dgv);
             row.SetValues(
                 i, result.FramesUsed, result.Seed128,
                 result.IVs[0], result.IVs[1], result.IVs[2], result.IVs[3], result.IVs[4], result.IVs[5],
-                genders[result.Gender], abilities[result.Ability], true_nature,
+                genders[result.Gender], abilities[result.Ability], true_nature, true_ball,
                 true_pid, true_psv, result.EC.ToString("X8"), result.row_r.ToString("X8")
                 );
 
