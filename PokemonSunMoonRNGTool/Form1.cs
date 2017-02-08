@@ -429,8 +429,8 @@ namespace PokemonSunMoonRNGTool
 
         private void EggSearch()
         {
-            int min = (int)s_min.Value;
-            int max = (int)s_max.Value;
+            int min = (int)EggS_min.Value;
+            int max = (int)EggS_max.Value;
 
             uint[] st =
             {
@@ -477,8 +477,8 @@ namespace PokemonSunMoonRNGTool
 
         private void EggList_Search()
         {
-            int min = (int)n_min.Value;
-            int max = (int)n_max.Value;
+            int min = (int)EggL_min.Value;
+            int max = (int)EggL_max.Value;
 
             uint[] st =
             {
@@ -521,7 +521,7 @@ namespace PokemonSunMoonRNGTool
         private void EggList_calc_target()
         {
             //Added function that shows how many number off eggs needed to receive and reject to advance foo number of frames
-            int target = (int)Target_frame.Value;
+            int target = (int)EggL_Target_frame.Value;
             for (int co = 1; co < L_dataGridView.Rows.Count; co++)
             {
                 if ((int)L_dataGridView[1, co].Value == target)
@@ -543,7 +543,7 @@ namespace PokemonSunMoonRNGTool
 
         private bool CheckValidity()
         {
-            if (s_min.Value > s_max.Value)
+            if (EggS_min.Value > EggS_max.Value)
                 Error(msgstr[0]);
             else if (IVlow1.Value > IVup1.Value)
                 Error(msgstr[1]);
@@ -948,7 +948,7 @@ namespace PokemonSunMoonRNGTool
 
         private void ConsiderTSVcheck(object sender, EventArgs e)
         {
-            CB_EggS_TSV_Shiny.Checked = L_TSV_shiny.Checked = (sender as CheckBox)?.Checked ?? false;
+            CB_EggS_TSV_Shiny.Checked = CB_EggL_TSV_Shiny.Checked = (sender as CheckBox)?.Checked ?? false;
         }
 
         private void B_TSV_Click(object sender, EventArgs e)
