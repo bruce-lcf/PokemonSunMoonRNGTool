@@ -25,7 +25,7 @@ Menu_Language = 語言
 Menu_SaveConfig = 保存設定
 Menu_TSV = TSV列表
 Menu_ParentsList = 父母列表
-Menu_ResetSettings = Reset settings to default
+Menu_ResetSettings = 恢復預設
 Menu_About = 關於
 --------------------Context Menus----------------------
 mnu_EggCopy = 複製(&C)
@@ -40,7 +40,7 @@ Tab_Egg = 生蛋亂數
 Tab_EggSearch = 個體檢索
 --
 GB_EggS_Parents_Info = 父母訊息
-pre = 父方
+L_EggS_pre = 父方
 L_EggS_pre_H = H
 L_EggS_pre_A = A
 L_EggS_pre_B = B
@@ -49,7 +49,7 @@ L_EggS_pre_D = D
 L_EggS_pre_S = S
 L_EggS_PreItems = 持有物
 L_EggS_PreAbility = 特性
-CB_EggS_ditto = 百變怪
+CB_EggS_pre_ditto = 百變怪
 L_EggS_post = 母方
 L_EggS_post_H = H
 L_EggS_post_A = A
@@ -81,7 +81,7 @@ GB_EggS_RNGInfo = 搜索範圍
 L_EggS_Range = 幀數
 --
 GB_EggS_SearchSettings = 其他
-GB_EggS_International = 異語言生蛋
+CB_EggS_International = 異語言生蛋
 CB_EggS_ShinyCharm = 閃耀護符
 CB_EggS_Shiny = 只顯示色違幀
 CB_EggS_TSV_Shiny = 計算時考慮TSV的影響
@@ -132,7 +132,7 @@ dgv_EggL_PSV = SV
 dgv_EggL_EC = 加密常數
 dgv_EggL_Rand = 亂數列
 -------------------StationaryRNG Tab---------------------
-Tab_Stationary = 固定亂數
+Tab_Stationary = 定點亂數
 -----------------StationarySearch Tab--------------------
 Tab_StationarySearch = 個體檢索
 --
