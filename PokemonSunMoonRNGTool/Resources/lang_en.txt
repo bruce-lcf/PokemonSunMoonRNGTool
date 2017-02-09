@@ -25,6 +25,7 @@ Menu_Language = Language
 Menu_SaveConfig = Save Config
 Menu_TSV = TSV List
 Menu_ParentsList = Parents List
+Menu_ResetSettings = Reset settings to default
 Menu_About = About
 --------------------Context Menus----------------------
 mnuCopy = Copy
