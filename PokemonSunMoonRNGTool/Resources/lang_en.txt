@@ -49,6 +49,7 @@ L_EggS_pre_D = SpD
 L_EggS_pre_S = Spe
 L_EggS_PreItems = Item:
 L_EggS_PreAbility = Ability:
+L_EggS_PostAbility = Ability:
 CB_EggS_pre_ditto = Ditto
 L_EggS_post = ♀ Parent:
 L_EggS_post_H = HP
@@ -228,7 +229,7 @@ dgv_ID_TID = TID
 dgv_ID_SID = SID
 dgv_ID_Needle = Needle
 --
-GB_ID_RNGInfo  = RNG Info
+GB_ID_RNGInfo = RNG Info
 GB_ID_Filters = Filters
 GB_ID_SearchSettings = Search Settings
 --
