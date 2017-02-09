@@ -28,12 +28,12 @@ Menu_ParentsList = 親リスト
 Menu_ResetSettings = 設定をリセット
 Menu_About = について
 --------------------Context Menus----------------------
-mnuCopy = コピー
-mnuSelectAll = 全て選択
-mnuSetSearchSeed = 検索範囲へseedを入れる
-mnuSetEggSeed = 連続孵化リストへseedを入れる
-mnu2Copy = コピー
-mnu2SelectAll = 全て選択
+mnu_EggCopy = コピー(&C)
+mnu_EggSelectAll = 全て選択(&A)
+mnu_SetEggSearchSeed = 検索範囲へseedを入れる
+mnu_SetEggListSeed = 連続孵化リストへseedを入れる
+mnu_Copy = コピー(&C)
+mnu_SelectAll = 全て選択(&A)
 --------------------HatchingRNG Tab--------------------
 Tab_Egg = 孵化乱数
 ---------------------EggSearch Tab------------------------

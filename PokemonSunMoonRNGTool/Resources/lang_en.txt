@@ -28,12 +28,12 @@ Menu_ParentsList = Parents List
 Menu_ResetSettings = Reset settings to default
 Menu_About = About
 --------------------Context Menus----------------------
-mnuCopy = Copy
-mnuSelectAll = Select All
-mnuSetSearchSeed = Copy seed to this tab
-mnuSetEggSeed = Copy seed to other tab
-mnu2Copy = Copy
-mnu2SelectAll = Select All
+mnu_EggCopy = Copy(&C)
+mnu_EggSelectAll = Select All(&A)
+mnu_SetEggSearchSeed = Copy seed to this tab
+mnu_SetEggListSeed = Copy seed to other tab
+mnu_Copy = Copy(&C)
+mnu_SelectAll = Select All(&A)
 -------------------HatchingRNG Tab---------------------
 Tab_Egg = HatchingRNG
 ---------------------EggSearch Tab------------------------

@@ -31,7 +31,6 @@
             this.components = new System.ComponentModel.Container();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.EggS_dataGridView = new System.Windows.Forms.DataGridView();
             this.dgv_EggS_Frame = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgv_EggS_Used = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -50,11 +49,12 @@
             this.dgv_EggS_PSV = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgv_EggS_EC = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgv_EggS_Rand = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.mnuCopy = new System.Windows.Forms.ToolStripMenuItem();
-            this.mnuSelectAll = new System.Windows.Forms.ToolStripMenuItem();
-            this.mnuSetSearchSeed = new System.Windows.Forms.ToolStripMenuItem();
-            this.mnuSetEggSeed = new System.Windows.Forms.ToolStripMenuItem();
+            this.Egg_contextMenuStrip = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.mnu_EggCopy = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnu_EggSelectAll = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+            this.mnu_SetEggSearchSeed = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnu_SetEggListSeed = new System.Windows.Forms.ToolStripMenuItem();
             this.L_EggS_post = new System.Windows.Forms.Label();
             this.pre_parent1 = new System.Windows.Forms.NumericUpDown();
             this.L_EggS_pre = new System.Windows.Forms.Label();
@@ -179,9 +179,9 @@
             this.dgv_EggL_PSV = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgv_EggL_EC = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgv_EggL_Rand = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.contextMenuStrip2 = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.mnu2Copy = new System.Windows.Forms.ToolStripMenuItem();
-            this.mnu2SelectAll = new System.Windows.Forms.ToolStripMenuItem();
+            this.contextMenuStrip = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.mnu_Copy = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnu_SelectAll = new System.Windows.Forms.ToolStripMenuItem();
             this.GB_EggL_RNGInfo = new System.Windows.Forms.GroupBox();
             this.Repeat_times = new System.Windows.Forms.Label();
             this.EggL_Target_frame = new System.Windows.Forms.NumericUpDown();
@@ -401,9 +401,8 @@
             this.ID_min = new System.Windows.Forms.NumericUpDown();
             this.ID_max = new System.Windows.Forms.NumericUpDown();
             this.other = new System.Windows.Forms.TabPage();
-            this.printPreviewDialog1 = new System.Windows.Forms.PrintPreviewDialog();
             ((System.ComponentModel.ISupportInitialize)(this.EggS_dataGridView)).BeginInit();
-            this.contextMenuStrip1.SuspendLayout();
+            this.Egg_contextMenuStrip.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pre_parent1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.post_parent1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.post_parent2)).BeginInit();
@@ -443,7 +442,7 @@
             this.Tab_EggSearch.SuspendLayout();
             this.Tab_EggList.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.L_dataGridView)).BeginInit();
-            this.contextMenuStrip2.SuspendLayout();
+            this.contextMenuStrip.SuspendLayout();
             this.GB_EggL_RNGInfo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.EggL_Target_frame)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.EggL_status3)).BeginInit();
@@ -535,7 +534,7 @@
             this.dgv_EggS_PSV,
             this.dgv_EggS_EC,
             this.dgv_EggS_Rand});
-            this.EggS_dataGridView.ContextMenuStrip = this.contextMenuStrip1;
+            this.EggS_dataGridView.ContextMenuStrip = this.Egg_contextMenuStrip;
             this.EggS_dataGridView.Location = new System.Drawing.Point(6, 238);
             this.EggS_dataGridView.Name = "EggS_dataGridView";
             this.EggS_dataGridView.RowTemplate.Height = 21;
@@ -648,43 +647,49 @@
             this.dgv_EggS_Rand.Name = "dgv_EggS_Rand";
             this.dgv_EggS_Rand.Width = 66;
             // 
-            // contextMenuStrip1
+            // Egg_contextMenuStrip
             // 
-            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.mnuCopy,
-            this.mnuSelectAll,
-            this.mnuSetSearchSeed,
-            this.mnuSetEggSeed});
-            this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(225, 92);
+            this.Egg_contextMenuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.mnu_EggCopy,
+            this.mnu_EggSelectAll,
+            this.toolStripSeparator1,
+            this.mnu_SetEggSearchSeed,
+            this.mnu_SetEggListSeed});
+            this.Egg_contextMenuStrip.Name = "contextMenuStrip1";
+            this.Egg_contextMenuStrip.Size = new System.Drawing.Size(225, 98);
             // 
-            // mnuCopy
+            // mnu_EggCopy
             // 
-            this.mnuCopy.Name = "mnuCopy";
-            this.mnuCopy.Size = new System.Drawing.Size(224, 22);
-            this.mnuCopy.Text = "コピー";
-            this.mnuCopy.Click += new System.EventHandler(this.copyToolStripMenuItem_Click);
+            this.mnu_EggCopy.Name = "mnu_EggCopy";
+            this.mnu_EggCopy.Size = new System.Drawing.Size(224, 22);
+            this.mnu_EggCopy.Text = "コピー(&C)";
+            this.mnu_EggCopy.Click += new System.EventHandler(this.mnuCopy_Click);
             // 
-            // mnuSelectAll
+            // mnu_EggSelectAll
             // 
-            this.mnuSelectAll.Name = "mnuSelectAll";
-            this.mnuSelectAll.Size = new System.Drawing.Size(224, 22);
-            this.mnuSelectAll.Text = "全て選択";
-            this.mnuSelectAll.Click += new System.EventHandler(this.SelectAllToolStripMenuItem_Click);
+            this.mnu_EggSelectAll.Name = "mnu_EggSelectAll";
+            this.mnu_EggSelectAll.Size = new System.Drawing.Size(224, 22);
+            this.mnu_EggSelectAll.Text = "全て選択(&A)";
+            this.mnu_EggSelectAll.Click += new System.EventHandler(this.mnuSelectAll_Click);
             // 
-            // mnuSetSearchSeed
+            // toolStripSeparator1
             // 
-            this.mnuSetSearchSeed.Name = "mnuSetSearchSeed";
-            this.mnuSetSearchSeed.Size = new System.Drawing.Size(224, 22);
-            this.mnuSetSearchSeed.Text = "検索範囲へseedを入れる";
-            this.mnuSetSearchSeed.Click += new System.EventHandler(this.Send2SearchSeed);
+            this.toolStripSeparator1.Name = "toolStripSeparator1";
+            this.toolStripSeparator1.Size = new System.Drawing.Size(221, 6);
             // 
-            // mnuSetEggSeed
+            // mnu_SetEggSearchSeed
             // 
-            this.mnuSetEggSeed.Name = "mnuSetEggSeed";
-            this.mnuSetEggSeed.Size = new System.Drawing.Size(224, 22);
-            this.mnuSetEggSeed.Text = "連続孵化リストへseedを入れる";
-            this.mnuSetEggSeed.Click += new System.EventHandler(this.Send2List);
+            this.mnu_SetEggSearchSeed.Name = "mnu_SetEggSearchSeed";
+            this.mnu_SetEggSearchSeed.Size = new System.Drawing.Size(224, 22);
+            this.mnu_SetEggSearchSeed.Text = "検索範囲へseedを入れる";
+            this.mnu_SetEggSearchSeed.Click += new System.EventHandler(this.Send2SearchSeed);
+            // 
+            // mnu_SetEggListSeed
+            // 
+            this.mnu_SetEggListSeed.Name = "mnu_SetEggListSeed";
+            this.mnu_SetEggListSeed.Size = new System.Drawing.Size(224, 22);
+            this.mnu_SetEggListSeed.Text = "連続孵化リストへseedを入れる";
+            this.mnu_SetEggListSeed.Click += new System.EventHandler(this.Send2List);
             // 
             // L_EggS_post
             // 
@@ -2162,7 +2167,7 @@
             this.dgv_EggL_PSV,
             this.dgv_EggL_EC,
             this.dgv_EggL_Rand});
-            this.L_dataGridView.ContextMenuStrip = this.contextMenuStrip2;
+            this.L_dataGridView.ContextMenuStrip = this.contextMenuStrip;
             this.L_dataGridView.Location = new System.Drawing.Point(235, 6);
             this.L_dataGridView.Name = "L_dataGridView";
             this.L_dataGridView.RowTemplate.Height = 21;
@@ -2275,27 +2280,27 @@
             this.dgv_EggL_Rand.Name = "dgv_EggL_Rand";
             this.dgv_EggL_Rand.Width = 90;
             // 
-            // contextMenuStrip2
+            // contextMenuStrip
             // 
-            this.contextMenuStrip2.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.mnu2Copy,
-            this.mnu2SelectAll});
-            this.contextMenuStrip2.Name = "contextMenuStrip1";
-            this.contextMenuStrip2.Size = new System.Drawing.Size(120, 48);
+            this.contextMenuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.mnu_Copy,
+            this.mnu_SelectAll});
+            this.contextMenuStrip.Name = "contextMenuStrip";
+            this.contextMenuStrip.Size = new System.Drawing.Size(153, 70);
             // 
-            // mnu2Copy
+            // mnu_Copy
             // 
-            this.mnu2Copy.Name = "mnu2Copy";
-            this.mnu2Copy.Size = new System.Drawing.Size(119, 22);
-            this.mnu2Copy.Text = "コピー";
-            this.mnu2Copy.Click += new System.EventHandler(this.L_copyToolStripMenuItem_Click);
+            this.mnu_Copy.Name = "mnu_Copy";
+            this.mnu_Copy.Size = new System.Drawing.Size(152, 22);
+            this.mnu_Copy.Text = "コピー(&C)";
+            this.mnu_Copy.Click += new System.EventHandler(this.mnuCopy_Click);
             // 
-            // mnu2SelectAll
+            // mnu_SelectAll
             // 
-            this.mnu2SelectAll.Name = "mnu2SelectAll";
-            this.mnu2SelectAll.Size = new System.Drawing.Size(119, 22);
-            this.mnu2SelectAll.Text = "全て選択";
-            this.mnu2SelectAll.Click += new System.EventHandler(this.L_SelectAllToolStripMenuItem_Click);
+            this.mnu_SelectAll.Name = "mnu_SelectAll";
+            this.mnu_SelectAll.Size = new System.Drawing.Size(152, 22);
+            this.mnu_SelectAll.Text = "全て選択(&A)";
+            this.mnu_SelectAll.Click += new System.EventHandler(this.mnuSelectAll_Click);
             // 
             // GB_EggL_RNGInfo
             // 
@@ -3609,6 +3614,7 @@
             this.dgv_StaS_PSV,
             this.dgv_StaS_Needle,
             this.dgv_StaS_Rand});
+            this.St_dataGridView.ContextMenuStrip = this.contextMenuStrip;
             this.St_dataGridView.Location = new System.Drawing.Point(399, 4);
             this.St_dataGridView.Name = "St_dataGridView";
             this.St_dataGridView.ReadOnly = true;
@@ -4666,6 +4672,7 @@
             this.dgv_ID_TID,
             this.dgv_ID_SID,
             this.dgv_ID_Needle});
+            this.ID_dataGridView.ContextMenuStrip = this.contextMenuStrip;
             this.ID_dataGridView.Location = new System.Drawing.Point(338, 6);
             this.ID_dataGridView.Name = "ID_dataGridView";
             this.ID_dataGridView.ReadOnly = true;
@@ -4933,16 +4940,6 @@
             this.other.Text = "その他";
             this.other.UseVisualStyleBackColor = true;
             // 
-            // printPreviewDialog1
-            // 
-            this.printPreviewDialog1.AutoScrollMargin = new System.Drawing.Size(0, 0);
-            this.printPreviewDialog1.AutoScrollMinSize = new System.Drawing.Size(0, 0);
-            this.printPreviewDialog1.ClientSize = new System.Drawing.Size(400, 300);
-            this.printPreviewDialog1.Enabled = true;
-            this.printPreviewDialog1.Icon = ((System.Drawing.Icon)(resources.GetObject("printPreviewDialog1.Icon")));
-            this.printPreviewDialog1.Name = "printPreviewDialog1";
-            this.printPreviewDialog1.Visible = false;
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -4957,7 +4954,7 @@
             this.Text = "Pokemon SunMoon RNG Tool";
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.EggS_dataGridView)).EndInit();
-            this.contextMenuStrip1.ResumeLayout(false);
+            this.Egg_contextMenuStrip.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pre_parent1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.post_parent1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.post_parent2)).EndInit();
@@ -5001,7 +4998,7 @@
             this.Tab_EggSearch.ResumeLayout(false);
             this.Tab_EggList.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.L_dataGridView)).EndInit();
-            this.contextMenuStrip2.ResumeLayout(false);
+            this.contextMenuStrip.ResumeLayout(false);
             this.GB_EggL_RNGInfo.ResumeLayout(false);
             this.GB_EggL_RNGInfo.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.EggL_Target_frame)).EndInit();
@@ -5140,9 +5137,9 @@
         private System.Windows.Forms.GroupBox GB_EggS_Filters;
         private System.Windows.Forms.NumericUpDown IVup6;
         private System.Windows.Forms.Button B_EggS_Search;
-        private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem mnuCopy;
-        private System.Windows.Forms.ToolStripMenuItem mnuSelectAll;
+        private System.Windows.Forms.ContextMenuStrip Egg_contextMenuStrip;
+        private System.Windows.Forms.ToolStripMenuItem mnu_EggCopy;
+        private System.Windows.Forms.ToolStripMenuItem mnu_EggSelectAll;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label11;
@@ -5179,12 +5176,9 @@
         private System.Windows.Forms.Label label70;
         private System.Windows.Forms.Label L_EggL_EggRange;
         private System.Windows.Forms.Label label72;
-        private System.Windows.Forms.ToolStripMenuItem mnuSetEggSeed;
+        private System.Windows.Forms.ToolStripMenuItem mnu_SetEggListSeed;
         private System.Windows.Forms.CheckBox CB_EggL_TSV_Shiny;
         private System.Windows.Forms.CheckBox CB_EggS_TSV_Shiny;
-        private System.Windows.Forms.ContextMenuStrip contextMenuStrip2;
-        private System.Windows.Forms.ToolStripMenuItem mnu2Copy;
-        private System.Windows.Forms.ToolStripMenuItem mnu2SelectAll;
         private System.Windows.Forms.CheckBox CB_EggS_Heterogeneity;
         private System.Windows.Forms.CheckBox CB_EggS_OtherTSV;
         private System.Windows.Forms.CheckBox CB_EggS_Search_DisableFilters;
@@ -5214,7 +5208,7 @@
         private System.Windows.Forms.Label L_EggL_TargetFrame;
         private System.Windows.Forms.Label L_EggS_Search_Nature;
         private System.Windows.Forms.ComboBox nature;
-        private System.Windows.Forms.ToolStripMenuItem mnuSetSearchSeed;
+        private System.Windows.Forms.ToolStripMenuItem mnu_SetEggSearchSeed;
         private System.Windows.Forms.ToolStripMenuItem Menu_ParentsList;
         public System.Windows.Forms.NumericUpDown pre_parent1;
         public System.Windows.Forms.NumericUpDown pre_parent2;
@@ -5319,7 +5313,6 @@
         private System.Windows.Forms.Button Clock_1;
         private System.Windows.Forms.Button Clock_0;
         private System.Windows.Forms.GroupBox GB_StaC_EnterNeedle;
-        private System.Windows.Forms.PrintPreviewDialog printPreviewDialog1;
         private System.Windows.Forms.Button button_Clock_16;
         private System.Windows.Forms.Button button_Clock_15;
         private System.Windows.Forms.Button button_Clock_14;
@@ -5452,5 +5445,9 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dgv_EggL_EC;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgv_EggL_Rand;
         private System.Windows.Forms.ToolStripMenuItem Menu_ResetSettings;
+        private System.Windows.Forms.ContextMenuStrip contextMenuStrip;
+        private System.Windows.Forms.ToolStripMenuItem mnu_Copy;
+        private System.Windows.Forms.ToolStripMenuItem mnu_SelectAll;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
     }
 }

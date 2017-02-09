@@ -28,12 +28,12 @@ Menu_ParentsList = 父母列表
 Menu_ResetSettings = Reset settings to default
 Menu_About = 关于
 --------------------Context Menus----------------------
-mnuCopy = 复制
-mnuSelectAll = 全选
-mnuSetSearchSeed = 将此seed输入当前搜索范围
-mnuSetEggSeed = 将此seed输入连续取蛋列表
-mnu2Copy = 复制
-mnu2SelectAll = 全选
+mnu_EggCopy = 复制(&C)
+mnu_EggSelectAll = 全选(&A)
+mnu_SetEggSearchSeed = 将此seed输入当前搜索范围
+mnu_SetEggListSeed = 将此seed输入连续取蛋列表
+mnu_Copy = 复制(&C)
+mnu_SelectAll = 全选(&A)
 -------------------HatchingRNG Tab---------------------
 Tab_Egg = 孵化乱数
 ---------------------EggSearch Tab------------------------

@@ -788,23 +788,6 @@ namespace PokemonSunMoonRNGTool
             return true;
         }
 
-        private void SelectAllToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            EggS_dataGridView.SelectAll();
-        }
-
-        private void copyToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                Clipboard.SetDataObject(EggS_dataGridView.GetClipboardContent());
-            }
-            catch (ArgumentNullException)
-            {
-                Error(msgstr[18]);
-            }
-        }
-
         private void NumericUpDown_Enter(object sender, EventArgs e)
         {
             NumericUpDown NumericUpDown = sender as NumericUpDown;
@@ -831,57 +814,6 @@ namespace PokemonSunMoonRNGTool
                 box.Undo();
                 break;
             }
-        }
-
-        private void Send2List(object sender, EventArgs e)
-        {
-            try
-            {
-                var seed = (string)EggS_dataGridView.CurrentRow.Cells[2].Value;
-                string[] Data = seed.Split(',');
-                EggL_status3.Value = Convert.ToUInt32(Data[0], 16);
-                EggL_status2.Value = Convert.ToUInt32(Data[1], 16);
-                EggL_status1.Value = Convert.ToUInt32(Data[2], 16);
-                EggL_status0.Value = Convert.ToUInt32(Data[3], 16);
-            }
-            catch (NullReferenceException)
-            {
-                Error(msgstr[19]);
-            }
-        }
-
-        private void Send2SearchSeed(object sender, EventArgs e)
-        {
-            try
-            {
-                var seed = (string)EggS_dataGridView.CurrentRow.Cells[2].Value;
-                string[] Data = seed.Split(',');
-                EggS_status3.Value = Convert.ToUInt32(Data[0], 16);
-                EggS_status2.Value = Convert.ToUInt32(Data[1], 16);
-                EggS_status1.Value = Convert.ToUInt32(Data[2], 16);
-                EggS_status0.Value = Convert.ToUInt32(Data[3], 16);
-            }
-            catch (NullReferenceException)
-            {
-                Error(msgstr[19]);
-            }
-        }
-
-        private void L_copyToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                Clipboard.SetDataObject(L_dataGridView.GetClipboardContent());
-            }
-            catch (ArgumentNullException)
-            {
-                Error(msgstr[18]);
-            }
-        }
-
-        private void L_SelectAllToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            L_dataGridView.SelectAll();
         }
 
         private void Change_ditto(object sender, EventArgs e)
@@ -1466,5 +1398,64 @@ namespace PokemonSunMoonRNGTool
                 }
             }
         }
+
+        private void mnuSelectAll_Click(object sender, EventArgs e)
+        {
+            ToolStripMenuItem tsmi = (ToolStripMenuItem)sender;
+            ContextMenuStrip cms = (ContextMenuStrip)tsmi.Owner;
+            DataGridView dgv = (DataGridView)cms.SourceControl;
+            dgv.SelectAll();
+        }
+
+        private void mnuCopy_Click(object sender, EventArgs e)
+        {
+            ToolStripMenuItem tsmi = (ToolStripMenuItem)sender;
+            ContextMenuStrip cms = (ContextMenuStrip)tsmi.Owner;
+            DataGridView dgv = (DataGridView)cms.SourceControl;
+
+            try
+            {
+                Clipboard.SetDataObject(dgv.GetClipboardContent());
+            }
+            catch (ArgumentNullException)
+            {
+                Error(msgstr[18]);
+            }
+        }
+
+        private void Send2SearchSeed(object sender, EventArgs e)
+        {
+            try
+            {
+                var seed = (string)EggS_dataGridView.CurrentRow.Cells[2].Value;
+                string[] Data = seed.Split(',');
+                EggS_status3.Value = Convert.ToUInt32(Data[0], 16);
+                EggS_status2.Value = Convert.ToUInt32(Data[1], 16);
+                EggS_status1.Value = Convert.ToUInt32(Data[2], 16);
+                EggS_status0.Value = Convert.ToUInt32(Data[3], 16);
+            }
+            catch (NullReferenceException)
+            {
+                Error(msgstr[19]);
+            }
+        }
+
+        private void Send2List(object sender, EventArgs e)
+        {
+            try
+            {
+                var seed = (string)EggS_dataGridView.CurrentRow.Cells[2].Value;
+                string[] Data = seed.Split(',');
+                EggL_status3.Value = Convert.ToUInt32(Data[0], 16);
+                EggL_status2.Value = Convert.ToUInt32(Data[1], 16);
+                EggL_status1.Value = Convert.ToUInt32(Data[2], 16);
+                EggL_status0.Value = Convert.ToUInt32(Data[3], 16);
+            }
+            catch (NullReferenceException)
+            {
+                Error(msgstr[19]);
+            }
+        }
+
     }
 }
