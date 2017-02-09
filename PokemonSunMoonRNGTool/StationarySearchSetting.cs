@@ -69,27 +69,14 @@ namespace PokemonSunMoonRNGTool
 
         public bool validStatus(StationaryRNGSearch.StationaryRNGResult result, StationarySearchSetting setting)
         {
-            int[] stats = new int[6];
-            setting.p_Status = new int[6];
-            int[] BS = new int[6];
-            int[] IV = new int[6];
+            int[] status = new int[6];
 
-            for (int i = 0; i < 6; i++) 
-            {
-                IV[i] = result.IVs[i];
-                BS[i] = Convert.ToInt32(pokedex[setting.Pokemon, i + 1]);
-                stats[i] = setting.Status[i];
-            }
+            for (int i = 0; i < 6; i++)
+                status[i] = setting.Status[i];
 
-            p_Status[0] = (int)(((BS[0] * 2 + IV[0]) * Lv) / 100) + Lv + 10;
+            if (status[0] != p_Status[0]) return false;
             for (int i = 1; i < 6; i++)
-                p_Status[i] = (int)(((int)(((BS[i] * 2 + IV[i]) * Lv) / 100) + 5) * natures_mag[result.Nature, i]);
-
-            result.p_Status = setting.p_Status;
-
-            if (stats[0] != p_Status[0]) return false;
-            for (int i = 1; i < 6; i++)
-                if (stats[i] != p_Status[i]) return false;
+                if (status[i] != p_Status[i]) return false;
 
             return true;
         }
