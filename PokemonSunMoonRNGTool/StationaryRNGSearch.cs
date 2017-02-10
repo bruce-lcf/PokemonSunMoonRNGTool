@@ -28,12 +28,13 @@ namespace PokemonSunMoonRNGTool
             public bool Synchronize;
         }
 
-        public StationaryRNGResult Generate(SFMT sfmt)
+        public StationaryRNGResult Generate()
         {
             StationaryRNGResult st = new StationaryRNGResult();
 
+            index = 0;
             //シンクロ -- Synchronize
-            st.row_r = sfmt.NextUInt64();
+            st.row_r = getrand();
 
             if (st.row_r % 100 >= 50)
                 st.Synchronize = true;
@@ -45,20 +46,16 @@ namespace PokemonSunMoonRNGTool
 
             //まばたき消費契機 -- maybe blinking process occurs 2 times for each character
             if (Valid_Blink)
-            {
-                sfmt.NextUInt64();
-                sfmt.NextUInt64();
-            }
+                Advance(2);
 
             //謎の消費 -- Something
-            for (int i = 0; i < 60; i++)
-                sfmt.NextUInt64();
+            Advance(60);
 
             //暗号化定数 -- Encryption Constant
-            st.EC = (uint)(sfmt.NextUInt64() & 0xFFFFFFFF);
+            st.EC = (uint)(getrand() & 0xFFFFFFFF);
 
             //性格値 -- PID
-            st.PID = (uint)(sfmt.NextUInt64() & 0xFFFFFFFF);
+            st.PID = (uint)(getrand() & 0xFFFFFFFF);
             st.PSV = ((st.PID >> 16) ^ (st.PID & 0xFFFF)) >> 4;
 
             if (st.PSV == TSV)
@@ -68,7 +65,7 @@ namespace PokemonSunMoonRNGTool
             for (int i = 0; i < 3; i++)
             {
             repeat:
-                st.InheritStats[i] = (uint)(sfmt.NextUInt64() % 6);
+                st.InheritStats[i] = (uint)(getrand() % 6);
 
                 // Scan for duplicate IV
                 for (int k = 0; k < i; k++)
@@ -78,7 +75,7 @@ namespace PokemonSunMoonRNGTool
 
             //基礎個体値 -- Base IVs
             for (int j = 0; j < 3; j++)
-                st.BaseIV[j] = (int)(sfmt.NextUInt64() & 0x1F);
+                st.BaseIV[j] = (int)(getrand() & 0x1F);
 
             //個体値処理
             int[] IV = new int[6] { 0, 0, 0, 0, 0, 0 };
@@ -98,16 +95,27 @@ namespace PokemonSunMoonRNGTool
 
             //謎消費 -- Something
             if (AlwaysSynchro)
-                sfmt.NextUInt64();
+                getrand();
 
             //性格 -- Nature
-            st.Nature = (int)(sfmt.NextUInt64() % 25);
+            st.Nature = (int)(getrand() % 25);
             if (Synchro_Stat >= 0 && st.Synchronize)
             {
                 st.Nature = Synchro_Stat;
             }
 
             return st;
+        }
+
+        public static List<ulong> RandList;
+        private int index;
+        private ulong getrand()
+        {
+            return RandList[index++];
+        }
+        private void Advance(int d)
+        {
+            index += d;
         }
     }
 }
