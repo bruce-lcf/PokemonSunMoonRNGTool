@@ -25,7 +25,7 @@ Menu_Language = 语言
 Menu_SaveConfig = 保存设置
 Menu_TSV = TSV列表
 Menu_ParentsList = 父母列表
-Menu_ResetSettings = Reset settings to default
+Menu_ResetSettings = 恢复默认设置
 Menu_About = 关于
 --------------------Context Menus----------------------
 mnu_EggCopy = 复制(&C)
@@ -41,12 +41,12 @@ Tab_EggSearch = 个体检索
 --
 GB_EggS_Parents_Info = 父母信息
 L_EggS_pre = 父方
-L_EggS_H = H
-L_EggS_A = A
-L_EggS_B = B
-L_EggS_C = C
-L_EggS_D = D
-L_EggS_S = S
+L_EggS_pre_H = H
+L_EggS_pre_A = A
+L_EggS_pre_B = B
+L_EggS_pre_C = C
+L_EggS_pre_D = D
+L_EggS_pre_S = S
 L_EggS_PreItems = 持有物
 L_EggS_PreAbility = 特性
 CB_EggS_pre_ditto = 百变怪
@@ -132,7 +132,7 @@ dgv_EggL_PSV = SV
 dgv_EggL_EC = 加密常数
 dgv_EggL_Rand = 乱数列
 -------------------StationaryRNG Tab---------------------
-Tab_Stationary = 固定乱数
+Tab_Stationary = 定点乱数
 -----------------StationarySearch Tab--------------------
 Tab_StationarySearch = 个体检索
 --
@@ -213,7 +213,7 @@ L_ID_InitialSeed = 初始seed
 L_ID_Frame = 帧
 L_ID_IDList = ID列表
 L_ID_PSVList = PSV列表
-ID_L_CorrectionValue = 指针值矫正
+L_ID_CorrectionValue = 指针值矫正
 --
 RB_ID_PerfectMatching = 完全匹配
 RB_ID_PartialMatch = 部分匹配
