@@ -642,6 +642,8 @@ namespace PokemonSunMoonRNGTool
             St_Synchro_nature.SelectedIndex = 0;
             St_pokedex.SelectedIndex = 0;
 
+            StationaryRNGSearch.RandList = new List<ulong>();
+
             loadConfig();
             CB_EggS_OtherTSV.Enabled = loadTSV();
             Menu_ParentsList.Enabled = loadParents();
@@ -1019,10 +1021,13 @@ namespace PokemonSunMoonRNGTool
             for (int i = 0; i < min; i++)
                 sfmt.NextUInt64();
 
-            for (int i = min; i <= max; i++, sfmt.NextUInt64())
+            StationaryRNGSearch.RandList.Clear();
+            for (int i = 0; i < 150; i++) //150 should be enough
+                StationaryRNGSearch.RandList.Add(sfmt.NextUInt64());
+
+            for (int i = min; i <= max; i++, StationaryRNGSearch.RandList.RemoveAt(0), StationaryRNGSearch.RandList.Add(sfmt.NextUInt64()))
             {
-                seed = (SFMT)sfmt.DeepCopy();
-                StationaryRNGSearch.StationaryRNGResult result = rng.Generate(seed);
+                StationaryRNGSearch.StationaryRNGResult result = rng.Generate();
 
                 if (!StationaryframeMatch(result, setting))
                     continue;
@@ -1343,7 +1348,7 @@ namespace PokemonSunMoonRNGTool
                         {
                             c.Value = 417;
                         }
-                        if(c.Name.IndexOf("EggS") >= 0 || c.Name.IndexOf("EggL") >= 0)
+                        if (c.Name.IndexOf("EggS") >= 0 || c.Name.IndexOf("EggL") >= 0)
                         {
                             c.Value = 0;
                         }
