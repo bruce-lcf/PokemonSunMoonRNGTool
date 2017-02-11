@@ -13,6 +13,7 @@ namespace PokemonSunMoonRNGTool
         public bool AlwaysSynchro;
         public int Synchro_Stat;
         public bool Valid_Blink;
+        public bool Blink_Only;
 
         public class StationaryRNGResult
         {
@@ -26,15 +27,27 @@ namespace PokemonSunMoonRNGTool
             public int[] p_Status;
             public bool Shiny;
             public bool Synchronize;
+            public bool Blink_Check;
         }
 
         public StationaryRNGResult Generate()
         {
             StationaryRNGResult st = new StationaryRNGResult();
+            index = 2;
 
-            index = 0;
+            //まばたき判定 -- Blink Check
+            if (Blink_Only)
+            {
+                index = 0;
+                if ((int)(getRand() & 0x7F) == 0)
+                {
+                    st.Blink_Check = true;
+                }
+                index = 2;
+            }
+
             //シンクロ -- Synchronize
-            st.row_r = getrand();
+            st.row_r = getRand();
 
             if (st.row_r % 100 >= 50)
                 st.Synchronize = true;
@@ -52,10 +65,10 @@ namespace PokemonSunMoonRNGTool
             Advance(60);
 
             //暗号化定数 -- Encryption Constant
-            st.EC = (uint)(getrand() & 0xFFFFFFFF);
+            st.EC = (uint)(getRand() & 0xFFFFFFFF);
 
             //性格値 -- PID
-            st.PID = (uint)(getrand() & 0xFFFFFFFF);
+            st.PID = (uint)(getRand() & 0xFFFFFFFF);
             st.PSV = ((st.PID >> 16) ^ (st.PID & 0xFFFF)) >> 4;
 
             if (st.PSV == TSV)
@@ -65,7 +78,7 @@ namespace PokemonSunMoonRNGTool
             for (int i = 0; i < 3; i++)
             {
             repeat:
-                st.InheritStats[i] = (uint)(getrand() % 6);
+                st.InheritStats[i] = (uint)(getRand() % 6);
 
                 // Scan for duplicate IV
                 for (int k = 0; k < i; k++)
@@ -75,7 +88,7 @@ namespace PokemonSunMoonRNGTool
 
             //基礎個体値 -- Base IVs
             for (int j = 0; j < 3; j++)
-                st.BaseIV[j] = (int)(getrand() & 0x1F);
+                st.BaseIV[j] = (int)(getRand() & 0x1F);
 
             //個体値処理
             int[] IV = new int[6] { 0, 0, 0, 0, 0, 0 };
@@ -95,10 +108,10 @@ namespace PokemonSunMoonRNGTool
 
             //謎消費 -- Something
             if (AlwaysSynchro)
-                getrand();
+                getRand();
 
             //性格 -- Nature
-            st.Nature = (int)(getrand() % 25);
+            st.Nature = (int)(getRand() % 25);
             if (Synchro_Stat >= 0 && st.Synchronize)
             {
                 st.Nature = Synchro_Stat;
@@ -109,7 +122,7 @@ namespace PokemonSunMoonRNGTool
 
         public static List<ulong> RandList;
         private int index;
-        private ulong getrand()
+        private ulong getRand()
         {
             return RandList[index++];
         }

@@ -227,7 +227,8 @@ namespace PokemonSunMoonRNGTool
                 Synchro_Stat = St_Synchro_nature.SelectedIndex - 1,
                 TSV = (int)St_TSV.Value,
                 AlwaysSynchro = CB_StaS_AlwaysSynchro.Checked,
-                Valid_Blink = CB_StaS_Valid_Blink.Checked
+                Valid_Blink = CB_StaS_Valid_Blink.Checked,
+                Blink_Only = CB_StaS_BlinkOnly.Checked
             };
             return rng;
         }
@@ -286,6 +287,9 @@ namespace PokemonSunMoonRNGTool
             //ここで弾く
             if (setting.Skip)
                 return true;
+
+            if (CB_StaS_BlinkOnly.Checked && !result.Blink_Check)
+                return false;
 
             if (CB_StaS_Shiny.Checked && !result.Shiny)
                 return false;
@@ -1018,11 +1022,11 @@ namespace PokemonSunMoonRNGTool
             var setting = StationarygetSettings();
             var rng = getStationaryRNGSettings();
 
-            for (int i = 0; i < min; i++)
+            for (int i = 0; i < min - 2; i++)
                 sfmt.NextUInt64();
 
             StationaryRNGSearch.RandList.Clear();
-            for (int i = 0; i < 150; i++) //150 should be enough
+            for (int i = 0; i < 152; i++) //150 should be enough
                 StationaryRNGSearch.RandList.Add(sfmt.NextUInt64());
 
             for (int i = min; i <= max; i++, StationaryRNGSearch.RandList.RemoveAt(0), StationaryRNGSearch.RandList.Add(sfmt.NextUInt64()))
