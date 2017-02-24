@@ -1022,16 +1022,18 @@ namespace PokemonSunMoonRNGTool
             var setting = StationarygetSettings();
             var rng = getStationaryRNGSettings();
 
-            for (int i = 0; i < min - 2; i++)
+            for (int i = 0; i < min - (CB_StaS_BlinkOnly.Checked ? 2 : 0); i++)
                 sfmt.NextUInt64();
 
             StationaryRNGSearch.RandList.Clear();
-            for (int i = 0; i < 152; i++) //150 should be enough
+            for (int i = 0; i < 150; i++) //150 should be enough
                 StationaryRNGSearch.RandList.Add(sfmt.NextUInt64());
 
-            for (int i = min; i <= max; i++, StationaryRNGSearch.RandList.RemoveAt(0), StationaryRNGSearch.RandList.Add(sfmt.NextUInt64()))
+            for (int i = min; i <= max; i++)
             {
                 StationaryRNGSearch.StationaryRNGResult result = rng.Generate();
+                StationaryRNGSearch.RandList.RemoveAt(0);
+                StationaryRNGSearch.RandList.Add(sfmt.NextUInt64());
 
                 if (!StationaryframeMatch(result, setting))
                     continue;

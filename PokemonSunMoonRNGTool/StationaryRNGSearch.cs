@@ -33,12 +33,11 @@ namespace PokemonSunMoonRNGTool
         public StationaryRNGResult Generate()
         {
             StationaryRNGResult st = new StationaryRNGResult();
-            index = 2;
+            index = 0;
 
             //まばたき判定 -- Blink Check
             if (Blink_Only)
             {
-                index = 0;
                 if ((int)(getRand() & 0x7F) == 0)
                 {
                     st.Blink_Check = true;
