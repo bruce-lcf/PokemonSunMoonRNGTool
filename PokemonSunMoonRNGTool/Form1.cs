@@ -1176,39 +1176,35 @@ namespace PokemonSunMoonRNGTool
             if (Clock_SearchList.Text == "")
                 return;
             string[] str = Clock_SearchList.Text.Split(',');
+
             try
             {
                 int[] Clock_List = str.Select(s => int.Parse(s)).ToArray();
-                int[] temp_List = new int[Clock_List.Length];
+                List<int> temp_List = new List<int>();
 
                 SFMT sfmt = new SFMT(InitialSeed);
-                SFMT seed = new SFMT(InitialSeed);
-                bool flag;
 
                 Clock_Output.Items.Clear();
 
                 for (int i = 0; i < min; i++)
                     sfmt.NextUInt64();
 
-                for (int i = min; i <= max; i++, sfmt.NextUInt64())
+                for (int i = 0; i < Clock_List.Length; i++)
+                    temp_List.Add((int)(sfmt.NextUInt64() % 17));
+
+                for (int i = min; i <= max; i++)
                 {
-                    flag = false;
-                    seed = (SFMT)sfmt.DeepCopy();
-
-                    for (int j = 0; j < Clock_List.Length; j++)
-                        temp_List[j] = (int)(seed.NextUInt64() % 17);
-
                     if (temp_List.SequenceEqual(Clock_List))
-                    {
-                        flag = true;
-                    }
-
-                    if (flag)
                     {
                         Clock_Output.Items.Add(msgstr[21] + $"{i + Clock_List.Length - 1}" + msgstr[22] + $"{i + Clock_List.Length + 1}");
                     }
 
+                    temp_List.RemoveAt(0);
+                    temp_List.Add((int)(sfmt.NextUInt64() % 17));
                 }
+
+                if (Clock_Output.Items.Count <= 0)
+                    Clock_Output.Items.Add(msgstr[25]);
             }
             catch
             {
