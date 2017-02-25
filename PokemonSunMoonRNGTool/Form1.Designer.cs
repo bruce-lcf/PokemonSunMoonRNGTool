@@ -222,7 +222,6 @@
             this.St_TargetFrame = new System.Windows.Forms.NumericUpDown();
             this.St_TargetFrame_Range = new System.Windows.Forms.NumericUpDown();
             this.GB_StaS_SearchSettings = new System.Windows.Forms.GroupBox();
-            this.CB_StaS_Valid_Blink = new System.Windows.Forms.CheckBox();
             this.CB_StaS_SynchroOnly = new System.Windows.Forms.CheckBox();
             this.CB_StaS_AlwaysSynchro = new System.Windows.Forms.CheckBox();
             this.St_TSV = new System.Windows.Forms.NumericUpDown();
@@ -394,6 +393,8 @@
             this.CB_StaS_BlinkOnly = new System.Windows.Forms.CheckBox();
             this.CB_StaS_UB = new System.Windows.Forms.CheckBox();
             this.St_UB = new System.Windows.Forms.NumericUpDown();
+            this.L_Sta_Valid_Blink = new System.Windows.Forms.Label();
+            this.St_Valid_Blink = new System.Windows.Forms.NumericUpDown();
             this.St_InitialSeed = new PokemonSunMoonRNGTool.HexNumericUpdown();
             this.Calc_InitialSeed = new PokemonSunMoonRNGTool.HexNumericUpdown();
             this.Clock_InitialSeed = new PokemonSunMoonRNGTool.HexNumericUpdown();
@@ -500,6 +501,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.ID_min)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ID_max)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.St_UB)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.St_Valid_Blink)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.St_InitialSeed)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Calc_InitialSeed)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Clock_InitialSeed)).BeginInit();
@@ -2764,10 +2766,11 @@
             // 
             // GB_StaS_SearchSettings
             // 
+            this.GB_StaS_SearchSettings.Controls.Add(this.St_Valid_Blink);
+            this.GB_StaS_SearchSettings.Controls.Add(this.L_Sta_Valid_Blink);
             this.GB_StaS_SearchSettings.Controls.Add(this.St_UB);
             this.GB_StaS_SearchSettings.Controls.Add(this.CB_StaS_UB);
             this.GB_StaS_SearchSettings.Controls.Add(this.CB_StaS_BlinkOnly);
-            this.GB_StaS_SearchSettings.Controls.Add(this.CB_StaS_Valid_Blink);
             this.GB_StaS_SearchSettings.Controls.Add(this.CB_StaS_SynchroOnly);
             this.GB_StaS_SearchSettings.Controls.Add(this.CB_StaS_AlwaysSynchro);
             this.GB_StaS_SearchSettings.Controls.Add(this.St_TSV);
@@ -2780,15 +2783,24 @@
             this.GB_StaS_SearchSettings.TabStop = false;
             this.GB_StaS_SearchSettings.Text = "その他";
             // 
-            // CB_StaS_Valid_Blink
+            // St_UB
             // 
-            this.CB_StaS_Valid_Blink.AutoSize = true;
-            this.CB_StaS_Valid_Blink.Location = new System.Drawing.Point(21, 61);
-            this.CB_StaS_Valid_Blink.Name = "CB_StaS_Valid_Blink";
-            this.CB_StaS_Valid_Blink.Size = new System.Drawing.Size(162, 16);
-            this.CB_StaS_Valid_Blink.TabIndex = 188;
-            this.CB_StaS_Valid_Blink.Text = "まばたき契機を考慮(シンクロ)";
-            this.CB_StaS_Valid_Blink.UseVisualStyleBackColor = true;
+            this.St_UB.Enabled = false;
+            this.St_UB.Font = new System.Drawing.Font("Consolas", 9F);
+            this.St_UB.Location = new System.Drawing.Point(231, 79);
+            this.St_UB.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            -2147483648});
+            this.St_UB.Name = "St_UB";
+            this.St_UB.Size = new System.Drawing.Size(58, 22);
+            this.St_UB.TabIndex = 190;
+            this.St_UB.Value = new decimal(new int[] {
+            15,
+            0,
+            0,
+            0});
             // 
             // CB_StaS_SynchroOnly
             // 
@@ -4795,7 +4807,7 @@
             // CB_StaS_BlinkOnly
             // 
             this.CB_StaS_BlinkOnly.AutoSize = true;
-            this.CB_StaS_BlinkOnly.Location = new System.Drawing.Point(21, 81);
+            this.CB_StaS_BlinkOnly.Location = new System.Drawing.Point(21, 86);
             this.CB_StaS_BlinkOnly.Name = "CB_StaS_BlinkOnly";
             this.CB_StaS_BlinkOnly.Size = new System.Drawing.Size(152, 16);
             this.CB_StaS_BlinkOnly.TabIndex = 189;
@@ -4812,6 +4824,15 @@
             this.CB_StaS_UB.Text = "UB";
             this.CB_StaS_UB.UseVisualStyleBackColor = true;
             this.CB_StaS_UB.CheckedChanged += new System.EventHandler(this.CB_StaS_UB_CheckedChanged);
+            //
+            // L_Sta_Valid_Blink
+            //
+            this.L_Sta_Valid_Blink.AutoSize = true;
+            this.L_Sta_Valid_Blink.Location = new System.Drawing.Point(19, 63);
+            this.L_Sta_Valid_Blink.Name = "L_Sta_Valid_Blink";
+            this.L_Sta_Valid_Blink.Size = new System.Drawing.Size(66, 12);
+            this.L_Sta_Valid_Blink.TabIndex = 191;
+            this.L_Sta_Valid_Blink.Text = "まばたき契機";
             // 
             // St_UB
             // 
@@ -4828,6 +4849,24 @@
             this.St_UB.TabIndex = 190;
             this.St_UB.Value = new decimal(new int[] {
             15,
+            0,
+            0,
+            0});
+            //
+            // St_Valid_Blink
+            //
+            this.St_Valid_Blink.Font = new System.Drawing.Font("Consolas", 9F);
+            this.St_Valid_Blink.Location = new System.Drawing.Point(108, 60);
+            this.St_Valid_Blink.Minimum = new decimal(new int[] {
+            0,
+            0,
+            0,
+            0});
+            this.St_Valid_Blink.Name = "St_Valid_Blink";
+            this.St_Valid_Blink.Size = new System.Drawing.Size(58, 22);
+            this.St_Valid_Blink.TabIndex = 192;
+            this.St_Valid_Blink.Maximum = new decimal(new int[] {
+            20,
             0,
             0,
             0});
@@ -5131,6 +5170,7 @@
             this.GB_ID_RNGInfo.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ID_min)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ID_max)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.St_Valid_Blink)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.St_InitialSeed)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Calc_InitialSeed)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Clock_InitialSeed)).EndInit();
@@ -5428,7 +5468,6 @@
         private System.Windows.Forms.NumericUpDown Calc_max;
         private System.Windows.Forms.ListBox Clock_Output;
         private System.Windows.Forms.ListBox Calc_Output;
-        private System.Windows.Forms.CheckBox CB_StaS_Valid_Blink;
         private System.Windows.Forms.TextBox TB_Candidate_InitSeed;
         private System.Windows.Forms.Label L_StaC_Candidate_InitialSeed;
         private System.Windows.Forms.NumericUpDown NPC;
@@ -5525,5 +5564,7 @@
         private System.Windows.Forms.NumericUpDown St_UB;
         private System.Windows.Forms.CheckBox CB_StaS_UB;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgv_StaS_UB;
+        private System.Windows.Forms.NumericUpDown St_Valid_Blink;
+        private System.Windows.Forms.Label L_Sta_Valid_Blink;
     }
 }

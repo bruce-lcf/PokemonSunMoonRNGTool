@@ -182,7 +182,7 @@ GB_StaS_SearchSettings = SearchSettings
 CB_StaS_SynchroOnly = Synced Only
 CB_StaS_Shiny = Shiny
 CB_StaS_AlwaysSynchro = Always Synced
-CB_StaS_Valid_Blink = Consider blinking process (Sync)
+L_Sta_Valid_Blink = Blinking process
 --
 B_StaS_Search = Search
 ----------------------StationaryClock Tab---------------------

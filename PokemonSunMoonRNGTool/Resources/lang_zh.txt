@@ -182,7 +182,7 @@ GB_StaS_SearchSettings = 其它
 CB_StaS_SynchroOnly = 只顯示同步個體
 CB_StaS_Shiny = 只顯示色違
 CB_StaS_AlwaysSynchro = 必定同步
-CB_StaS_Valid_Blink = 考慮眨眼影響（同步）
+L_Sta_Valid_Blink = 眨眼影響
 --
 B_StaS_Search = 計算
 ----------------------StationaryClock Tab---------------------

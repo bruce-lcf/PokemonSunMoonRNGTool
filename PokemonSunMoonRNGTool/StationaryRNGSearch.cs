@@ -12,7 +12,7 @@ namespace PokemonSunMoonRNGTool
         public int TSV;
         public bool AlwaysSynchro;
         public int Synchro_Stat;
-        public bool Valid_Blink;
+        public int Valid_Blink;
         public bool Blink_Only;
         public int UB_Value;
 
@@ -65,8 +65,7 @@ namespace PokemonSunMoonRNGTool
                 st.UB = (int)(getRand() % 100) < UB_Value ? "o" : "-";
 
             //まばたき消費契機 -- maybe blinking process occurs 2 times for each character
-            if (Valid_Blink)
-                Advance(2);
+            Advance(Valid_Blink);
 
             //謎の消費 -- Something
             Advance(60);
