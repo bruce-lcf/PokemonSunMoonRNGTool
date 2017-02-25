@@ -229,7 +229,8 @@ namespace PokemonSunMoonRNGTool
                 AlwaysSynchro = CB_StaS_AlwaysSynchro.Checked,
                 Valid_Blink = (int)St_Valid_Blink.Value,
                 Blink_Only = CB_StaS_BlinkOnly.Checked,
-                UB_Value = (int)St_UB.Value
+                UB_Value = (int)St_UB.Value,
+                UB_Checked = CB_StaS_UB.Checked
             };
             return rng;
         }

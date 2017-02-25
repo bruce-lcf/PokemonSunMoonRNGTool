@@ -2797,10 +2797,10 @@
             this.St_UB.Size = new System.Drawing.Size(58, 22);
             this.St_UB.TabIndex = 190;
             this.St_UB.Value = new decimal(new int[] {
-            15,
+            1,
             0,
             0,
-            0});
+            -2147483648});
             // 
             // CB_StaS_SynchroOnly
             // 
@@ -4848,10 +4848,10 @@
             this.St_UB.Size = new System.Drawing.Size(58, 22);
             this.St_UB.TabIndex = 190;
             this.St_UB.Value = new decimal(new int[] {
-            15,
+            1,
             0,
             0,
-            0});
+            -2147483648});
             //
             // St_Valid_Blink
             //
@@ -5170,6 +5170,7 @@
             this.GB_ID_RNGInfo.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ID_min)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ID_max)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.St_UB)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.St_Valid_Blink)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.St_InitialSeed)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Calc_InitialSeed)).EndInit();
