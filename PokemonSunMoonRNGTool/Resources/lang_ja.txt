@@ -183,6 +183,7 @@ CB_StaS_SynchroOnly = シンクロ個体のみ出力
 CB_StaS_Shiny = 色違いのみ出力
 CB_StaS_AlwaysSynchro = 必ずシンクロ
 L_Sta_Valid_Blink = まばたき契機
+CB_StaS_BlinkOnly = まばたき直後の個体を出力
 --
 B_StaS_Search = 計算
 ----------------------StationaryClock Tab-----------------

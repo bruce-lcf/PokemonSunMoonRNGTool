@@ -183,6 +183,7 @@ CB_StaS_SynchroOnly = Synced Only
 CB_StaS_Shiny = Shiny
 CB_StaS_AlwaysSynchro = Always Synced
 L_Sta_Valid_Blink = Blinking process
+CB_StaS_BlinkOnly = Blinking after only
 --
 B_StaS_Search = Search
 ----------------------StationaryClock Tab---------------------
