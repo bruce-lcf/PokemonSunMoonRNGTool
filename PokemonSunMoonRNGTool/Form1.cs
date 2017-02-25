@@ -228,7 +228,8 @@ namespace PokemonSunMoonRNGTool
                 TSV = (int)St_TSV.Value,
                 AlwaysSynchro = CB_StaS_AlwaysSynchro.Checked,
                 Valid_Blink = CB_StaS_Valid_Blink.Checked,
-                Blink_Only = CB_StaS_BlinkOnly.Checked
+                Blink_Only = CB_StaS_BlinkOnly.Checked,
+                UB_Value = (int)St_UB.Value
             };
             return rng;
         }
@@ -402,7 +403,7 @@ namespace PokemonSunMoonRNGTool
             row.SetValues(
                 i, tolerance,
                 result.IVs[0], result.IVs[1], result.IVs[2], result.IVs[3], result.IVs[4], result.IVs[5],
-                true_nature, SynchronizeFlag, status[0], status[1], status[2], status[3], status[4], status[5], result.PSV, result.Clock, result.row_r.ToString("X16")
+                true_nature, result.UB, SynchronizeFlag, status[0], status[1], status[2], status[3], status[4], status[5], result.PSV, result.Clock, result.row_r.ToString("X16")
                 );
 
             if (result.Shiny)
@@ -1464,6 +1465,12 @@ namespace PokemonSunMoonRNGTool
             {
                 Error(msgstr[19]);
             }
+        }
+
+        private void CB_StaS_UB_CheckedChanged(object sender, EventArgs e)
+        {
+            dgv_StaS_UB.Visible = CB_StaS_UB.Checked;
+            St_UB.Enabled = CB_StaS_UB.Checked;
         }
     }
 }

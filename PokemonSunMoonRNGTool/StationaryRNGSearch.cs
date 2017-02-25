@@ -14,6 +14,7 @@ namespace PokemonSunMoonRNGTool
         public int Synchro_Stat;
         public bool Valid_Blink;
         public bool Blink_Only;
+        public int UB_Value;
 
         public class StationaryRNGResult
         {
@@ -28,6 +29,7 @@ namespace PokemonSunMoonRNGTool
             public bool Shiny;
             public bool Synchronize;
             public bool Blink_Check;
+            public string UB;
         }
 
         public StationaryRNGResult Generate()
@@ -55,6 +57,12 @@ namespace PokemonSunMoonRNGTool
                 st.Synchronize = true;
 
             st.Clock = (int)(st.row_r % 17);
+
+            //UB
+            if (UB_Value < 0)
+                st.UB = ((int)(getRand() % 100)).ToString();
+            else
+                st.UB = (int)(getRand() % 100) < UB_Value ? "o" : "-";
 
             //まばたき消費契機 -- maybe blinking process occurs 2 times for each character
             if (Valid_Blink)

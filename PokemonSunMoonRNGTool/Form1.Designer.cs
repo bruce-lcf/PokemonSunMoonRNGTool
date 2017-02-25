@@ -283,6 +283,7 @@
             this.dgv_StaS_D = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgv_StaS_S = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgv_StaS_Nature = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgv_StaS_UB = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgv_StaS_Synchronize = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgv_StaS_H_Status = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgv_StaS_A_Status = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -391,6 +392,8 @@
             this.ID_max = new System.Windows.Forms.NumericUpDown();
             this.other = new System.Windows.Forms.TabPage();
             this.CB_StaS_BlinkOnly = new System.Windows.Forms.CheckBox();
+            this.CB_StaS_UB = new System.Windows.Forms.CheckBox();
+            this.St_UB = new System.Windows.Forms.NumericUpDown();
             this.St_InitialSeed = new PokemonSunMoonRNGTool.HexNumericUpdown();
             this.Calc_InitialSeed = new PokemonSunMoonRNGTool.HexNumericUpdown();
             this.Clock_InitialSeed = new PokemonSunMoonRNGTool.HexNumericUpdown();
@@ -496,6 +499,7 @@
             this.GB_ID_RNGInfo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ID_min)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ID_max)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.St_UB)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.St_InitialSeed)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Calc_InitialSeed)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Clock_InitialSeed)).BeginInit();
@@ -2760,6 +2764,8 @@
             // 
             // GB_StaS_SearchSettings
             // 
+            this.GB_StaS_SearchSettings.Controls.Add(this.St_UB);
+            this.GB_StaS_SearchSettings.Controls.Add(this.CB_StaS_UB);
             this.GB_StaS_SearchSettings.Controls.Add(this.CB_StaS_BlinkOnly);
             this.GB_StaS_SearchSettings.Controls.Add(this.CB_StaS_Valid_Blink);
             this.GB_StaS_SearchSettings.Controls.Add(this.CB_StaS_SynchroOnly);
@@ -3468,6 +3474,7 @@
             this.dgv_StaS_D,
             this.dgv_StaS_S,
             this.dgv_StaS_Nature,
+            this.dgv_StaS_UB,
             this.dgv_StaS_Synchronize,
             this.dgv_StaS_H_Status,
             this.dgv_StaS_A_Status,
@@ -4794,6 +4801,45 @@
             this.CB_StaS_BlinkOnly.TabIndex = 189;
             this.CB_StaS_BlinkOnly.Text = "まばたき直後の個体を出力";
             this.CB_StaS_BlinkOnly.UseVisualStyleBackColor = true;
+            //
+            // CB_StaS_UB
+            //
+            this.CB_StaS_UB.AutoSize = true;
+            this.CB_StaS_UB.Location = new System.Drawing.Point(185, 81);
+            this.CB_StaS_UB.Name = "CB_StaS_UB";
+            this.CB_StaS_UB.Size = new System.Drawing.Size(40, 16);
+            this.CB_StaS_UB.TabIndex = 183;
+            this.CB_StaS_UB.Text = "UB";
+            this.CB_StaS_UB.UseVisualStyleBackColor = true;
+            this.CB_StaS_UB.CheckedChanged += new System.EventHandler(this.CB_StaS_UB_CheckedChanged);
+            // 
+            // St_UB
+            // 
+            this.St_UB.Enabled = false;
+            this.St_UB.Font = new System.Drawing.Font("Consolas", 9F);
+            this.St_UB.Location = new System.Drawing.Point(231, 79);
+            this.St_UB.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            -2147483648});
+            this.St_UB.Name = "St_UB";
+            this.St_UB.Size = new System.Drawing.Size(58, 22);
+            this.St_UB.TabIndex = 190;
+            this.St_UB.Value = new decimal(new int[] {
+            15,
+            0,
+            0,
+            0});
+            // 
+            // dgv_StaS_UB
+            // 
+            this.dgv_StaS_UB.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.dgv_StaS_UB.HeaderText = "UB";
+            this.dgv_StaS_UB.Name = "dgv_StaS_UB";
+            this.dgv_StaS_UB.ReadOnly = true;
+            this.dgv_StaS_UB.Visible = false;
+            this.dgv_StaS_UB.Width = 46;
             // 
             // St_InitialSeed
             // 
@@ -5476,5 +5522,8 @@
         private System.Windows.Forms.ToolStripMenuItem mnu_SelectAll;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
         private System.Windows.Forms.CheckBox CB_StaS_BlinkOnly;
+        private System.Windows.Forms.NumericUpDown St_UB;
+        private System.Windows.Forms.CheckBox CB_StaS_UB;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgv_StaS_UB;
     }
 }
