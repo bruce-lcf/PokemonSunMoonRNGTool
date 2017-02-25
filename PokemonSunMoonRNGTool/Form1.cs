@@ -340,12 +340,14 @@ namespace PokemonSunMoonRNGTool
             {
                 while (!srID.EndOfStream)
                 {
-                    string str = string.Format("{0:D6}", srID.ReadLine());
+                    string str = RB_ID_RegularExpression.Checked ? srID.ReadLine() :  string.Format("{0:D6}", srID.ReadLine());
                     string str2 = string.Format("{0:D6}", result.ID);
 
                     if (RB_ID_PerfectMatching.Checked && str2 == str)
                         return true;
                     if (RB_ID_PartialMatch.Checked && 0 <= str2.IndexOf(str))
+                        return true;
+                    if (RB_ID_RegularExpression.Checked && System.Text.RegularExpressions.Regex.IsMatch(str2, str))
                         return true;
                 }
                 return false;
@@ -1467,6 +1469,5 @@ namespace PokemonSunMoonRNGTool
                 Error(msgstr[19]);
             }
         }
-
     }
 }

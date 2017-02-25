@@ -217,6 +217,7 @@ L_ID_CorrectionValue = Correction Value of Needle
 --
 RB_ID_PerfectMatching = Perfect Match
 RB_ID_PartialMatch = Partial Match
+RB_ID_RegularExpression = Regular Expression
 --
 CB_ID_DisableFilters = Disable filters
 CB_ID_Shiny = Shiny

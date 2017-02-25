@@ -217,6 +217,7 @@ L_ID_CorrectionValue = 針の補正
 --
 RB_ID_PerfectMatching = 完全一致
 RB_ID_PartialMatch = 部分一致
+RB_ID_RegularExpression = 正規表現
 --
 CB_ID_DisableFilters = 絞り込みを無効
 CB_ID_Shiny = 色違いのみ出力

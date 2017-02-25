@@ -217,6 +217,7 @@ L_ID_CorrectionValue = 指針值矯正
 --
 RB_ID_PerfectMatching = 完全匹配
 RB_ID_PartialMatch = 部分匹配
+RB_ID_RegularExpression = 正則表達式
 --
 CB_ID_DisableFilters = 取消篩選
 CB_ID_Shiny = 只顯示閃光

@@ -373,6 +373,7 @@
             this.dgv_ID_SID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgv_ID_Needle = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.GB_ID_Filters = new System.Windows.Forms.GroupBox();
+            this.RB_ID_RegularExpression = new System.Windows.Forms.RadioButton();
             this.RB_ID_PartialMatch = new System.Windows.Forms.RadioButton();
             this.RB_ID_PerfectMatching = new System.Windows.Forms.RadioButton();
             this.CB_ID_DisableFilters = new System.Windows.Forms.CheckBox();
@@ -4568,6 +4569,7 @@
             // 
             // GB_ID_Filters
             // 
+            this.GB_ID_Filters.Controls.Add(this.RB_ID_RegularExpression);
             this.GB_ID_Filters.Controls.Add(this.RB_ID_PartialMatch);
             this.GB_ID_Filters.Controls.Add(this.RB_ID_PerfectMatching);
             this.GB_ID_Filters.Controls.Add(this.CB_ID_DisableFilters);
@@ -4582,6 +4584,16 @@
             this.GB_ID_Filters.TabIndex = 2;
             this.GB_ID_Filters.TabStop = false;
             this.GB_ID_Filters.Text = "フィルター";
+            // 
+            // RB_ID_RegularExpression
+            // 
+            this.RB_ID_RegularExpression.AutoSize = true;
+            this.RB_ID_RegularExpression.Location = new System.Drawing.Point(205, 76);
+            this.RB_ID_RegularExpression.Name = "RB_ID_RegularExpression";
+            this.RB_ID_RegularExpression.Size = new System.Drawing.Size(71, 16);
+            this.RB_ID_RegularExpression.TabIndex = 111;
+            this.RB_ID_RegularExpression.Text = "正規表現";
+            this.RB_ID_RegularExpression.UseVisualStyleBackColor = true;
             // 
             // RB_ID_PartialMatch
             // 
@@ -4624,6 +4636,7 @@
             this.ID_List.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.ID_List.Size = new System.Drawing.Size(100, 91);
             this.ID_List.TabIndex = 106;
+            this.ID_List.WordWrap = false;
             // 
             // L_ID_IDList
             // 
@@ -5394,6 +5407,7 @@
         private System.Windows.Forms.CheckBox CB_ID_DisableFilters;
         private System.Windows.Forms.RadioButton RB_ID_PartialMatch;
         private System.Windows.Forms.RadioButton RB_ID_PerfectMatching;
+        private System.Windows.Forms.RadioButton RB_ID_RegularExpression;
         private System.Windows.Forms.GroupBox GB_ID_SearchSettings;
         private System.Windows.Forms.Label L_ID_CorrectionValue;
         private System.Windows.Forms.NumericUpDown Clock_CorrectionValue;
