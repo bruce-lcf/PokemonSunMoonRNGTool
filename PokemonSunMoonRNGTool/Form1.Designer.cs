@@ -222,7 +222,6 @@
             this.St_TargetFrame = new System.Windows.Forms.NumericUpDown();
             this.St_TargetFrame_Range = new System.Windows.Forms.NumericUpDown();
             this.GB_StaS_SearchSettings = new System.Windows.Forms.GroupBox();
-            this.CB_StaS_Valid_Blink = new System.Windows.Forms.CheckBox();
             this.CB_StaS_SynchroOnly = new System.Windows.Forms.CheckBox();
             this.CB_StaS_AlwaysSynchro = new System.Windows.Forms.CheckBox();
             this.St_TSV = new System.Windows.Forms.NumericUpDown();
@@ -283,6 +282,7 @@
             this.dgv_StaS_D = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgv_StaS_S = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgv_StaS_Nature = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgv_StaS_UB = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgv_StaS_Synchronize = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgv_StaS_H_Status = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgv_StaS_A_Status = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -373,6 +373,7 @@
             this.dgv_ID_SID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgv_ID_Needle = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.GB_ID_Filters = new System.Windows.Forms.GroupBox();
+            this.RB_ID_RegularExpression = new System.Windows.Forms.RadioButton();
             this.RB_ID_PartialMatch = new System.Windows.Forms.RadioButton();
             this.RB_ID_PerfectMatching = new System.Windows.Forms.RadioButton();
             this.CB_ID_DisableFilters = new System.Windows.Forms.CheckBox();
@@ -390,6 +391,10 @@
             this.ID_max = new System.Windows.Forms.NumericUpDown();
             this.other = new System.Windows.Forms.TabPage();
             this.CB_StaS_BlinkOnly = new System.Windows.Forms.CheckBox();
+            this.CB_StaS_UB = new System.Windows.Forms.CheckBox();
+            this.St_UB = new System.Windows.Forms.NumericUpDown();
+            this.L_Sta_Valid_Blink = new System.Windows.Forms.Label();
+            this.St_Valid_Blink = new System.Windows.Forms.NumericUpDown();
             this.St_InitialSeed = new PokemonSunMoonRNGTool.HexNumericUpdown();
             this.Calc_InitialSeed = new PokemonSunMoonRNGTool.HexNumericUpdown();
             this.Clock_InitialSeed = new PokemonSunMoonRNGTool.HexNumericUpdown();
@@ -495,6 +500,8 @@
             this.GB_ID_RNGInfo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ID_min)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ID_max)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.St_UB)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.St_Valid_Blink)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.St_InitialSeed)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Calc_InitialSeed)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Clock_InitialSeed)).BeginInit();
@@ -2759,8 +2766,11 @@
             // 
             // GB_StaS_SearchSettings
             // 
+            this.GB_StaS_SearchSettings.Controls.Add(this.St_Valid_Blink);
+            this.GB_StaS_SearchSettings.Controls.Add(this.L_Sta_Valid_Blink);
+            this.GB_StaS_SearchSettings.Controls.Add(this.St_UB);
+            this.GB_StaS_SearchSettings.Controls.Add(this.CB_StaS_UB);
             this.GB_StaS_SearchSettings.Controls.Add(this.CB_StaS_BlinkOnly);
-            this.GB_StaS_SearchSettings.Controls.Add(this.CB_StaS_Valid_Blink);
             this.GB_StaS_SearchSettings.Controls.Add(this.CB_StaS_SynchroOnly);
             this.GB_StaS_SearchSettings.Controls.Add(this.CB_StaS_AlwaysSynchro);
             this.GB_StaS_SearchSettings.Controls.Add(this.St_TSV);
@@ -2773,15 +2783,24 @@
             this.GB_StaS_SearchSettings.TabStop = false;
             this.GB_StaS_SearchSettings.Text = "その他";
             // 
-            // CB_StaS_Valid_Blink
+            // St_UB
             // 
-            this.CB_StaS_Valid_Blink.AutoSize = true;
-            this.CB_StaS_Valid_Blink.Location = new System.Drawing.Point(21, 61);
-            this.CB_StaS_Valid_Blink.Name = "CB_StaS_Valid_Blink";
-            this.CB_StaS_Valid_Blink.Size = new System.Drawing.Size(162, 16);
-            this.CB_StaS_Valid_Blink.TabIndex = 188;
-            this.CB_StaS_Valid_Blink.Text = "まばたき契機を考慮(シンクロ)";
-            this.CB_StaS_Valid_Blink.UseVisualStyleBackColor = true;
+            this.St_UB.Enabled = false;
+            this.St_UB.Font = new System.Drawing.Font("Consolas", 9F);
+            this.St_UB.Location = new System.Drawing.Point(231, 79);
+            this.St_UB.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            -2147483648});
+            this.St_UB.Name = "St_UB";
+            this.St_UB.Size = new System.Drawing.Size(58, 22);
+            this.St_UB.TabIndex = 190;
+            this.St_UB.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            -2147483648});
             // 
             // CB_StaS_SynchroOnly
             // 
@@ -3467,6 +3486,7 @@
             this.dgv_StaS_D,
             this.dgv_StaS_S,
             this.dgv_StaS_Nature,
+            this.dgv_StaS_UB,
             this.dgv_StaS_Synchronize,
             this.dgv_StaS_H_Status,
             this.dgv_StaS_A_Status,
@@ -4568,6 +4588,7 @@
             // 
             // GB_ID_Filters
             // 
+            this.GB_ID_Filters.Controls.Add(this.RB_ID_RegularExpression);
             this.GB_ID_Filters.Controls.Add(this.RB_ID_PartialMatch);
             this.GB_ID_Filters.Controls.Add(this.RB_ID_PerfectMatching);
             this.GB_ID_Filters.Controls.Add(this.CB_ID_DisableFilters);
@@ -4582,6 +4603,16 @@
             this.GB_ID_Filters.TabIndex = 2;
             this.GB_ID_Filters.TabStop = false;
             this.GB_ID_Filters.Text = "フィルター";
+            // 
+            // RB_ID_RegularExpression
+            // 
+            this.RB_ID_RegularExpression.AutoSize = true;
+            this.RB_ID_RegularExpression.Location = new System.Drawing.Point(205, 76);
+            this.RB_ID_RegularExpression.Name = "RB_ID_RegularExpression";
+            this.RB_ID_RegularExpression.Size = new System.Drawing.Size(71, 16);
+            this.RB_ID_RegularExpression.TabIndex = 111;
+            this.RB_ID_RegularExpression.Text = "正規表現";
+            this.RB_ID_RegularExpression.UseVisualStyleBackColor = true;
             // 
             // RB_ID_PartialMatch
             // 
@@ -4624,6 +4655,7 @@
             this.ID_List.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.ID_List.Size = new System.Drawing.Size(100, 91);
             this.ID_List.TabIndex = 106;
+            this.ID_List.WordWrap = false;
             // 
             // L_ID_IDList
             // 
@@ -4775,12 +4807,78 @@
             // CB_StaS_BlinkOnly
             // 
             this.CB_StaS_BlinkOnly.AutoSize = true;
-            this.CB_StaS_BlinkOnly.Location = new System.Drawing.Point(21, 81);
+            this.CB_StaS_BlinkOnly.Location = new System.Drawing.Point(21, 86);
             this.CB_StaS_BlinkOnly.Name = "CB_StaS_BlinkOnly";
             this.CB_StaS_BlinkOnly.Size = new System.Drawing.Size(152, 16);
             this.CB_StaS_BlinkOnly.TabIndex = 189;
             this.CB_StaS_BlinkOnly.Text = "まばたき直後の個体を出力";
             this.CB_StaS_BlinkOnly.UseVisualStyleBackColor = true;
+            //
+            // CB_StaS_UB
+            //
+            this.CB_StaS_UB.AutoSize = true;
+            this.CB_StaS_UB.Location = new System.Drawing.Point(185, 81);
+            this.CB_StaS_UB.Name = "CB_StaS_UB";
+            this.CB_StaS_UB.Size = new System.Drawing.Size(40, 16);
+            this.CB_StaS_UB.TabIndex = 183;
+            this.CB_StaS_UB.Text = "UB";
+            this.CB_StaS_UB.UseVisualStyleBackColor = true;
+            this.CB_StaS_UB.CheckedChanged += new System.EventHandler(this.CB_StaS_UB_CheckedChanged);
+            //
+            // L_Sta_Valid_Blink
+            //
+            this.L_Sta_Valid_Blink.AutoSize = true;
+            this.L_Sta_Valid_Blink.Location = new System.Drawing.Point(19, 63);
+            this.L_Sta_Valid_Blink.Name = "L_Sta_Valid_Blink";
+            this.L_Sta_Valid_Blink.Size = new System.Drawing.Size(66, 12);
+            this.L_Sta_Valid_Blink.TabIndex = 191;
+            this.L_Sta_Valid_Blink.Text = "まばたき契機";
+            // 
+            // St_UB
+            // 
+            this.St_UB.Enabled = false;
+            this.St_UB.Font = new System.Drawing.Font("Consolas", 9F);
+            this.St_UB.Location = new System.Drawing.Point(231, 79);
+            this.St_UB.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            -2147483648});
+            this.St_UB.Name = "St_UB";
+            this.St_UB.Size = new System.Drawing.Size(58, 22);
+            this.St_UB.TabIndex = 190;
+            this.St_UB.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            -2147483648});
+            //
+            // St_Valid_Blink
+            //
+            this.St_Valid_Blink.Font = new System.Drawing.Font("Consolas", 9F);
+            this.St_Valid_Blink.Location = new System.Drawing.Point(108, 60);
+            this.St_Valid_Blink.Minimum = new decimal(new int[] {
+            0,
+            0,
+            0,
+            0});
+            this.St_Valid_Blink.Name = "St_Valid_Blink";
+            this.St_Valid_Blink.Size = new System.Drawing.Size(58, 22);
+            this.St_Valid_Blink.TabIndex = 192;
+            this.St_Valid_Blink.Maximum = new decimal(new int[] {
+            20,
+            0,
+            0,
+            0});
+            // 
+            // dgv_StaS_UB
+            // 
+            this.dgv_StaS_UB.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.dgv_StaS_UB.HeaderText = "UB";
+            this.dgv_StaS_UB.Name = "dgv_StaS_UB";
+            this.dgv_StaS_UB.ReadOnly = true;
+            this.dgv_StaS_UB.Visible = false;
+            this.dgv_StaS_UB.Width = 46;
             // 
             // St_InitialSeed
             // 
@@ -5072,6 +5170,8 @@
             this.GB_ID_RNGInfo.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ID_min)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ID_max)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.St_UB)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.St_Valid_Blink)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.St_InitialSeed)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Calc_InitialSeed)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Clock_InitialSeed)).EndInit();
@@ -5369,7 +5469,6 @@
         private System.Windows.Forms.NumericUpDown Calc_max;
         private System.Windows.Forms.ListBox Clock_Output;
         private System.Windows.Forms.ListBox Calc_Output;
-        private System.Windows.Forms.CheckBox CB_StaS_Valid_Blink;
         private System.Windows.Forms.TextBox TB_Candidate_InitSeed;
         private System.Windows.Forms.Label L_StaC_Candidate_InitialSeed;
         private System.Windows.Forms.NumericUpDown NPC;
@@ -5394,6 +5493,7 @@
         private System.Windows.Forms.CheckBox CB_ID_DisableFilters;
         private System.Windows.Forms.RadioButton RB_ID_PartialMatch;
         private System.Windows.Forms.RadioButton RB_ID_PerfectMatching;
+        private System.Windows.Forms.RadioButton RB_ID_RegularExpression;
         private System.Windows.Forms.GroupBox GB_ID_SearchSettings;
         private System.Windows.Forms.Label L_ID_CorrectionValue;
         private System.Windows.Forms.NumericUpDown Clock_CorrectionValue;
@@ -5462,5 +5562,10 @@
         private System.Windows.Forms.ToolStripMenuItem mnu_SelectAll;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
         private System.Windows.Forms.CheckBox CB_StaS_BlinkOnly;
+        private System.Windows.Forms.NumericUpDown St_UB;
+        private System.Windows.Forms.CheckBox CB_StaS_UB;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgv_StaS_UB;
+        private System.Windows.Forms.NumericUpDown St_Valid_Blink;
+        private System.Windows.Forms.Label L_Sta_Valid_Blink;
     }
 }

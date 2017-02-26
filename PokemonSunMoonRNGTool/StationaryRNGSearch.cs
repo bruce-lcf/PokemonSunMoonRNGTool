@@ -12,8 +12,10 @@ namespace PokemonSunMoonRNGTool
         public int TSV;
         public bool AlwaysSynchro;
         public int Synchro_Stat;
-        public bool Valid_Blink;
+        public int Valid_Blink;
         public bool Blink_Only;
+        public int UB_Value;
+        public bool UB_Checked;
 
         public class StationaryRNGResult
         {
@@ -28,22 +30,31 @@ namespace PokemonSunMoonRNGTool
             public bool Shiny;
             public bool Synchronize;
             public bool Blink_Check;
+            public string UB;
         }
 
         public StationaryRNGResult Generate()
         {
             StationaryRNGResult st = new StationaryRNGResult();
-            index = 2;
+            index = 0;
 
             //まばたき判定 -- Blink Check
             if (Blink_Only)
             {
-                index = 0;
                 if ((int)(getRand() & 0x7F) == 0)
                 {
                     st.Blink_Check = true;
                 }
                 index = 2;
+            }
+
+            //UB
+            if (UB_Checked)
+            {
+                if (UB_Value < 0)
+                    st.UB = ((int)(getRand() % 100)).ToString();
+                else
+                    st.UB = (int)(getRand() % 100) < UB_Value ? "o" : "-";
             }
 
             //シンクロ -- Synchronize
@@ -58,8 +69,7 @@ namespace PokemonSunMoonRNGTool
             st.Clock = (int)(st.row_r % 17);
 
             //まばたき消費契機 -- maybe blinking process occurs 2 times for each character
-            if (Valid_Blink)
-                Advance(2);
+            Advance(Valid_Blink);
 
             //謎の消費 -- Something
             Advance(60);

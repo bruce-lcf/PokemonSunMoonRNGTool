@@ -227,8 +227,10 @@ namespace PokemonSunMoonRNGTool
                 Synchro_Stat = St_Synchro_nature.SelectedIndex - 1,
                 TSV = (int)St_TSV.Value,
                 AlwaysSynchro = CB_StaS_AlwaysSynchro.Checked,
-                Valid_Blink = CB_StaS_Valid_Blink.Checked,
-                Blink_Only = CB_StaS_BlinkOnly.Checked
+                Valid_Blink = (int)St_Valid_Blink.Value,
+                Blink_Only = CB_StaS_BlinkOnly.Checked,
+                UB_Value = (int)St_UB.Value,
+                UB_Checked = CB_StaS_UB.Checked
             };
             return rng;
         }
@@ -340,12 +342,14 @@ namespace PokemonSunMoonRNGTool
             {
                 while (!srID.EndOfStream)
                 {
-                    string str = string.Format("{0:D6}", srID.ReadLine());
+                    string str = RB_ID_RegularExpression.Checked ? srID.ReadLine() :  string.Format("{0:D6}", srID.ReadLine());
                     string str2 = string.Format("{0:D6}", result.ID);
 
                     if (RB_ID_PerfectMatching.Checked && str2 == str)
                         return true;
                     if (RB_ID_PartialMatch.Checked && 0 <= str2.IndexOf(str))
+                        return true;
+                    if (RB_ID_RegularExpression.Checked && System.Text.RegularExpressions.Regex.IsMatch(str2, str))
                         return true;
                 }
                 return false;
@@ -400,7 +404,7 @@ namespace PokemonSunMoonRNGTool
             row.SetValues(
                 i, tolerance,
                 result.IVs[0], result.IVs[1], result.IVs[2], result.IVs[3], result.IVs[4], result.IVs[5],
-                true_nature, SynchronizeFlag, status[0], status[1], status[2], status[3], status[4], status[5], result.PSV, result.Clock, result.row_r.ToString("X16")
+                true_nature, result.UB, SynchronizeFlag, status[0], status[1], status[2], status[3], status[4], status[5], result.PSV, result.Clock, result.row_r.ToString("X16")
                 );
 
             if (result.Shiny)
@@ -1022,16 +1026,18 @@ namespace PokemonSunMoonRNGTool
             var setting = StationarygetSettings();
             var rng = getStationaryRNGSettings();
 
-            for (int i = 0; i < min - 2; i++)
+            for (int i = 0; i < min - (CB_StaS_BlinkOnly.Checked ? 2 : 0); i++)
                 sfmt.NextUInt64();
 
             StationaryRNGSearch.RandList.Clear();
-            for (int i = 0; i < 152; i++) //150 should be enough
+            for (int i = 0; i < 150; i++) //150 should be enough
                 StationaryRNGSearch.RandList.Add(sfmt.NextUInt64());
 
-            for (int i = min; i <= max; i++, StationaryRNGSearch.RandList.RemoveAt(0), StationaryRNGSearch.RandList.Add(sfmt.NextUInt64()))
+            for (int i = min; i <= max; i++)
             {
                 StationaryRNGSearch.StationaryRNGResult result = rng.Generate();
+                StationaryRNGSearch.RandList.RemoveAt(0);
+                StationaryRNGSearch.RandList.Add(sfmt.NextUInt64());
 
                 if (!StationaryframeMatch(result, setting))
                     continue;
@@ -1172,39 +1178,35 @@ namespace PokemonSunMoonRNGTool
             if (Clock_SearchList.Text == "")
                 return;
             string[] str = Clock_SearchList.Text.Split(',');
+
             try
             {
                 int[] Clock_List = str.Select(s => int.Parse(s)).ToArray();
-                int[] temp_List = new int[Clock_List.Length];
+                List<int> temp_List = new List<int>();
 
                 SFMT sfmt = new SFMT(InitialSeed);
-                SFMT seed = new SFMT(InitialSeed);
-                bool flag;
 
                 Clock_Output.Items.Clear();
 
                 for (int i = 0; i < min; i++)
                     sfmt.NextUInt64();
 
-                for (int i = min; i <= max; i++, sfmt.NextUInt64())
+                for (int i = 0; i < Clock_List.Length; i++)
+                    temp_List.Add((int)(sfmt.NextUInt64() % 17));
+
+                for (int i = min; i <= max; i++)
                 {
-                    flag = false;
-                    seed = (SFMT)sfmt.DeepCopy();
-
-                    for (int j = 0; j < Clock_List.Length; j++)
-                        temp_List[j] = (int)(seed.NextUInt64() % 17);
-
                     if (temp_List.SequenceEqual(Clock_List))
-                    {
-                        flag = true;
-                    }
-
-                    if (flag)
                     {
                         Clock_Output.Items.Add(msgstr[21] + $"{i + Clock_List.Length - 1}" + msgstr[22] + $"{i + Clock_List.Length + 1}");
                     }
 
+                    temp_List.RemoveAt(0);
+                    temp_List.Add((int)(sfmt.NextUInt64() % 17));
                 }
+
+                if (Clock_Output.Items.Count <= 0)
+                    Clock_Output.Items.Add(msgstr[25]);
             }
             catch
             {
@@ -1466,5 +1468,10 @@ namespace PokemonSunMoonRNGTool
             }
         }
 
+        private void CB_StaS_UB_CheckedChanged(object sender, EventArgs e)
+        {
+            dgv_StaS_UB.Visible = CB_StaS_UB.Checked;
+            St_UB.Enabled = CB_StaS_UB.Checked;
+        }
     }
 }

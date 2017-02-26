@@ -182,7 +182,8 @@ GB_StaS_SearchSettings = その他
 CB_StaS_SynchroOnly = シンクロ個体のみ出力
 CB_StaS_Shiny = 色違いのみ出力
 CB_StaS_AlwaysSynchro = 必ずシンクロ
-CB_StaS_Valid_Blink = まばたき契機を考慮(シンクロ)
+L_Sta_Valid_Blink = まばたき契機
+CB_StaS_BlinkOnly = まばたき直後の個体を出力
 --
 B_StaS_Search = 計算
 ----------------------StationaryClock Tab-----------------
@@ -217,6 +218,7 @@ L_ID_CorrectionValue = 針の補正
 --
 RB_ID_PerfectMatching = 完全一致
 RB_ID_PartialMatch = 部分一致
+RB_ID_RegularExpression = 正規表現
 --
 CB_ID_DisableFilters = 絞り込みを無効
 CB_ID_Shiny = 色違いのみ出力

@@ -182,7 +182,8 @@ GB_StaS_SearchSettings = 其他
 CB_StaS_SynchroOnly = 只显示同步个体
 CB_StaS_Shiny = 只显示闪光
 CB_StaS_AlwaysSynchro = 必定同步
-CB_StaS_Valid_Blink = 考虑眨眼影响（同步）
+L_Sta_Valid_Blink = 眨眼影响
+CB_StaS_BlinkOnly = 只眨眼后来
 --
 B_StaS_Search = 计算
 ----------------------StationaryClock Tab---------------------
@@ -217,6 +218,7 @@ L_ID_CorrectionValue = 指针值矫正
 --
 RB_ID_PerfectMatching = 完全匹配
 RB_ID_PartialMatch = 部分匹配
+RB_ID_RegularExpression = 正则表达式
 --
 CB_ID_DisableFilters = 取消筛选
 CB_ID_Shiny = 只显示闪光
