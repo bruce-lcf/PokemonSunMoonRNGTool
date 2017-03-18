@@ -290,7 +290,7 @@ namespace PokemonSunMoonRNGTool
             if (setting.Skip)
                 return true;
 
-            if (CB_StaS_BlinkOnly.Checked && !result.Blink_Check)
+            if (CB_StaS_BlinkOnly.Checked && !result.Next_Frame.Blink_Check)
                 return false;
 
             if (CB_StaS_Shiny.Checked && !result.Shiny)
@@ -1032,13 +1032,18 @@ namespace PokemonSunMoonRNGTool
             StationaryRNGSearch.RandList.Clear();
             for (int i = 0; i < 150; i++) //150 should be enough
                 StationaryRNGSearch.RandList.Add(sfmt.NextUInt64());
-
+            // my code here
+            StationaryRNGSearch.StationaryRNGResult result_next = rng.Generate();
             for (int i = min; i <= max; i++)
             {
-                StationaryRNGSearch.StationaryRNGResult result = rng.Generate();
+                StationaryRNGSearch.StationaryRNGResult result = result_next;
                 StationaryRNGSearch.RandList.RemoveAt(0);
                 StationaryRNGSearch.RandList.Add(sfmt.NextUInt64());
 
+                // my code here
+                result_next = rng.Generate();
+                result.Next_Frame = result_next;
+                //
                 if (!StationaryframeMatch(result, setting))
                     continue;
                 list.Add(getRow_Sta(i, rng, result, St_dataGridView));

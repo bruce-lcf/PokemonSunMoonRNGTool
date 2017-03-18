@@ -183,7 +183,7 @@ CB_StaS_SynchroOnly = 只显示同步个体
 CB_StaS_Shiny = 只显示闪光
 CB_StaS_AlwaysSynchro = 必定同步
 L_Sta_Valid_Blink = 眨眼影响
-CB_StaS_BlinkOnly = 只眨眼后来
+CB_StaS_BlinkOnly = 只搜索眨眼帧
 --
 B_StaS_Search = 计算
 ----------------------StationaryClock Tab---------------------

@@ -29,7 +29,11 @@ namespace PokemonSunMoonRNGTool
             public int[] p_Status;
             public bool Shiny;
             public bool Synchronize;
-            public bool Blink_Check;
+            public bool Blink_Check = false;
+            // my code here
+            public StationaryRNGResult Next_Frame;
+
+            //
             public string UB;
         }
 
